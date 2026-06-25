@@ -2,29 +2,28 @@ import React from "react";
 import { motion } from "framer-motion";
 import ScrollReveal, { StaggerReveal, StaggerItem } from "./ScrollReveal";
 
-// Import lookbook images from Bandhagla and KurtaSets
-import bh1 from "@/assets/images/Bandhagla/sunil_mehra_1043.jpg";
-import bh2 from "@/assets/images/Bandhagla/sunil_mehra_1962.jpg";
-import bh3 from "@/assets/images/Bandhagla/066a0595.jpg";
-import kt1 from "@/assets/images/KurtaSets/sunil_mehra_0725.jpg";
-import kt2 from "@/assets/images/KurtaSets/sunil_mehra_0935.jpg";
-import kt3 from "@/assets/images/KurtaSets/sunil_mehra_0964.jpg";
-import suit1 from "@/assets/images/IMG9371 copy.jpg";
-import suit2 from "@/assets/images/IMG9488 copy.jpg";
-import sm1 from "@/assets/images/Sunil Mehra_2281.jpg";
-import sm2 from "@/assets/images/Sunil Mehra_3721.jpg";
+import img1 from "@/assets/images/IMG8657 copy.jpg";
+import img2 from "@/assets/images/Sunil Mehra  0019.jpg";
+import img3 from "@/assets/images/Sunil Mehra  0246.jpg";
+import img4 from "@/assets/images/IMG9488 copy.jpg";
+import img5 from "@/assets/images/Sunil Mehra_6620 - Copy.jpg";
+import img6 from "@/assets/images/suit_white.jpg";
+import img7 from "@/assets/images/sunil_mehra.jpg";
+import img8 from "@/assets/images/Sunil Mehra_9011.jpg";
+import img9 from "@/assets/images/Sunil Mehra_9112 - Copy.jpg";
+import img10 from "@/assets/images/Sunil Mehra_9262 - Copy.jpg";
 
 const LOOKBOOK_ITEMS = [
-    { id: 1, src: bh1, title: "The Royal Bandhgala", caption: "Deep navy silk with handcrafted embroidery", span: "row-span-2 col-span-1" },
-    { id: 2, src: kt1, title: "Classic Ivory Kurta", caption: "Perfect finish, structured drape", span: "row-span-1 col-span-1" },
-    { id: 3, src: suit1, title: "Imperial Charcoal Suit", caption: "Bespoke tailoring, sharp silhouette", span: "row-span-1 col-span-1" },
-    { id: 4, src: bh2, title: "Velvet Heritage Achkan", caption: "Regal styling with custom motifs", span: "row-span-2 col-span-1" },
-    { id: 5, src: kt2, title: "Pastel Sage Set", caption: "Lightweight premium handspun cotton", span: "row-span-1 col-span-1" },
-    { id: 6, src: suit2, title: "The Pinstripe Modernist", caption: "Sophisticated formal wear", span: "row-span-1 col-span-1" },
-    { id: 7, src: bh3, title: "Silk Ceremonial Sherwani", caption: "Intricate tone-on-tone embroidery", span: "row-span-1 col-span-1" },
-    { id: 8, src: kt3, title: "Crimson Festive Silk Kurta", caption: "Rich color and unmatched texture", span: "row-span-1 col-span-1" },
-    { id: 9, src: sm1, title: "The Signature Weave", caption: "Heritage craftsmanship", span: "row-span-1 col-span-1" },
-    { id: 10, src: sm2, title: "Midnight Velvet", caption: "Luxurious texture and form", span: "row-span-1 col-span-1" },
+    { id: 1, src: img1, title: "The Royal Bandhgala", caption: "Deep navy silk with handcrafted embroidery", span: "row-span-2 col-span-1" },
+    { id: 2, src: img2, title: "Classic Ivory Kurta", caption: "Perfect finish, structured drape", span: "row-span-1 col-span-1" },
+    { id: 3, src: img3, title: "Imperial Charcoal Suit", caption: "Bespoke tailoring, sharp silhouette", span: "row-span-1 col-span-1" },
+    { id: 4, src: img4, title: "Velvet Heritage Achkan", caption: "Regal styling with custom motifs", span: "row-span-2 col-span-1" },
+    { id: 5, src: img5, title: "Pastel Sage Set", caption: "Lightweight premium handspun cotton", span: "row-span-1 col-span-1" },
+    { id: 6, src: img6, title: "The Pinstripe Modernist", caption: "Sophisticated formal wear", span: "row-span-1 col-span-1" },
+    { id: 7, src: img7, title: "Silk Ceremonial Sherwani", caption: "Intricate tone-on-tone embroidery", span: "row-span-1 col-span-1" },
+    { id: 8, src: img8, title: "Crimson Festive Silk Kurta", caption: "Rich color and unmatched texture", span: "row-span-1 col-span-1" },
+    { id: 9, src: img9, title: "The Signature Weave", caption: "Heritage craftsmanship", span: "row-span-1 col-span-1" },
+    { id: 10, src: img10, title: "Midnight Velvet", caption: "Luxurious texture and form", span: "row-span-1 col-span-1" },
 ];
 
 export default function LookbookGrid() {

@@ -7,10 +7,14 @@ import img1701 from "@/assets/images/Sunil Mehra  1701.jpg";
 import img1737 from "@/assets/images/Sunil Mehra  1737.jpg";
 import img1867 from "@/assets/images/Sunil Mehra  1867.jpg";
 
+import showcase1 from "@/assets/images/Sunil Mehra  1867.jpg";
+import showcase2 from "@/assets/images/Sunil Mehra_6602.jpg";
+import showcase3 from "@/assets/images/Sunil Mehra_6910.jpg";
+
 const REELS = [
-    { id: 1, title: "The Modern Achkan", video: "/REEL 3 SM C2.mp4", description: "A study of line and flow, blending traditional tailoring with lightweight silks." },
-    { id: 2, title: "The Jawahar Edit", video: "/REEL 7 SM C2.mp4", description: "Bespoke styling featuring intricate floral motifs and custom brass buttons." },
-    { id: 3, title: "The Festive Sherwani", video: "/REEL 10 SM C2.mp4", description: "Rich tone-on-tone embroidery crafted for grand celebrations." },
+    { id: 1, title: "The Modern Achkan", video: showcase1, description: "A study of line and flow, blending traditional tailoring with lightweight silks." },
+    { id: 2, title: "The Jawahar Edit", video: showcase2, description: "Bespoke styling featuring intricate floral motifs and custom brass buttons." },
+    { id: 3, title: "The Festive Sherwani", video: showcase3, description: "Rich tone-on-tone embroidery crafted for grand celebrations." },
 ];
 
 const PHOTOS = [
@@ -34,13 +38,13 @@ export default function AtelierShowcase() {
                 <ScrollReveal variant="fade-up">
                     <div className="text-center md:text-left pb-4 border-b border-[var(--hairline)]">
                         <span className="font-luxe text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[var(--bronze)] block mb-2">
-                            Maison Reels & Focus
+                            Maison Features & Focus
                         </span>
                         <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl uppercase tracking-[0.05em] text-[var(--ink)]">
                             The <span className="font-italic-serif italic">Atelier Showcase.</span>
                         </h2>
                         <p className="font-italic-serif text-sm text-[var(--muted)] mt-2">
-                            Interactive display featuring fluid silks, detailed stitch-work, and runway presentations.
+                            Interactive display featuring fluid silks and detailed stitch-work.
                         </p>
                     </div>
                 </ScrollReveal>
@@ -52,18 +56,17 @@ export default function AtelierShowcase() {
                     <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
                         <div className="relative aspect-[16/9] w-full overflow-hidden bg-black border border-[var(--hairline)] shadow-md group">
                             <AnimatePresence mode="wait">
-                                <motion.video
+                                <motion.img
                                     key={activeReel.id}
                                     src={activeReel.video}
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
+                                    alt={activeReel.title}
+                                    loading="lazy"
+                                    decoding="async"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover object-top"
                                 />
                             </AnimatePresence>
                             <div className="absolute inset-0 bg-black/10 pointer-events-none" />

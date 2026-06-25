@@ -1,10 +1,14 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
+import img1 from "@/assets/images/Sunil Mehra  1512.jpg";
+import img2 from "@/assets/images/Sunil Mehra  1701.jpg";
+import img3 from "@/assets/images/Sunil Mehra  1737.jpg";
+
 const REELS = [
-    { id: "reel3", src: "/REEL 3 SM C2.mp4", title: "Carnival Collection", desc: "Vibrant hues and flowing fabrics." },
-    { id: "reel7", src: "/REEL 7 SM C2.mp4", title: "Atelier Process", desc: "Behind the seams of couture." },
-    { id: "reel10", src: "/REEL 10 SM C2.mp4", title: "Evening Silhouettes", desc: "Tailoring for the twilight hours." },
+    { id: "reel3", src: img1, title: "Carnival Collection", desc: "Vibrant hues and flowing fabrics." },
+    { id: "reel7", src: img2, title: "Atelier Process", desc: "Behind the seams of couture." },
+    { id: "reel10", src: img3, title: "Evening Silhouettes", desc: "Tailoring for the twilight hours." },
 ];
 
 export default function CampaignReel() {
@@ -17,7 +21,7 @@ export default function CampaignReel() {
                     Moving Image
                 </span>
                 <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl uppercase tracking-[0.05em] text-[var(--ink)]">
-                    Campaign <span className="font-italic-serif italic">Reels</span>
+                    Campaign <span className="font-italic-serif italic">Stills</span>
                 </h2>
             </div>
 
@@ -29,12 +33,11 @@ export default function CampaignReel() {
                 {REELS.map((reel) => (
                     <div key={reel.id} className="relative w-[85vw] sm:w-[60vw] lg:w-[45vw] shrink-0 snap-center group flex flex-col">
                         <div className="relative w-full aspect-[4/5] sm:aspect-[16/9] lg:aspect-[21/9] overflow-hidden border border-[var(--hairline)] bg-black">
-                            <video 
+                            <img 
                                 src={reel.src}
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
+                                alt={reel.title}
+                                loading="lazy"
+                                decoding="async"
                                 className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
                             />
                         </div>

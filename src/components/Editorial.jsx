@@ -2,10 +2,9 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 
-// Import local images
-import suit8 from "@/assets/images/Suits/suit_8.jpg";
-import bag2 from "@/assets/images/Accessories/Bags/IMG_9621_copy_2_-_Copy.jpg";
-import img0039 from "@/assets/images/Sunil Mehra_0039.jpg";
+import ed1 from "@/assets/images/IMG8871 copy.jpg";
+import ed2 from "@/assets/images/Sunil Mehra  0553.jpg";
+import ed3 from "@/assets/images/Sunil Mehra_0039.jpg";
 
 const STORIES = [
     {
@@ -14,7 +13,7 @@ const STORIES = [
         title: "Mirage & Majesty",
         excerpt: "Shot against the stark, dramatic landscapes of the Thar desert, the Mirage Suit emerges as a mirage of pristine tailoring. The stark white fabric contrasts sharply with the rugged, ancient stone, embodying the duality of the modern maharaja: rooted in history, yet decidedly contemporary.",
         quote: "There is an unspoken power in wearing white against the wild.",
-        img: suit8,
+        img: ed1,
         align: "left"
     },
     {
@@ -23,7 +22,7 @@ const STORIES = [
         title: "The Woven Journey",
         excerpt: "Our signature leather duffle is not merely constructed; it is woven by hand. The intricate bottega-style weave requires over forty hours of continuous craftsmanship, resulting in a travel companion that ages beautifully, acquiring a patina unique to your journeys.",
         quote: "True luxury is the luxury of time.",
-        img: bag2,
+        img: ed2,
         align: "right"
     },
     {
@@ -32,7 +31,7 @@ const STORIES = [
         title: "The White Sands",
         excerpt: "An ode to ethereal lightness. The new menswear line embraces fluid silhouettes and breathable cashmeres. Hand-embroidered with subtle metallic threading, this suit catches the golden hour light, making it the perfect statement for a destination occasion.",
         quote: "Elegance is the only beauty that never fades.",
-        img: img0039,
+        img: ed3,
         align: "center"
     },
 ];
