@@ -2,13 +2,13 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 // Import uploaded images
-import img1 from "@/assets/images/Sunil Mehra  0493.jpg";
+import img1 from "@/assets/images/Sunil Mehra 0156.jpg";
 import img2 from "@/assets/images/Sunil Mehra  0553.jpg";
 import img3 from "@/assets/images/Sunil Mehra_0904.jpg";
 import img4 from "@/assets/images/IMG9371 copy.jpg";
 import img5 from "@/assets/images/Sunil Mehra_3721.jpg";
 import img6 from "@/assets/images/Sunil Mehra_6602.jpg";
-import img7 from "@/assets/images/IMG8657 copy.jpg";
+import img7 from "@/assets/images/Sunil Mehra 0239.jpg";
 
 const galleryImages = [
     { id: 1, src: img1, title: "The Sartorial Eye", desc: "Precision tailoring in motion." },

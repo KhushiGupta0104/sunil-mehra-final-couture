@@ -26,6 +26,7 @@ import suit3 from "@/assets/images/Suits/suit_4.jpg";
 import suit4 from "@/assets/images/Suits/suit_5.jpg";
 import suit5 from "@/assets/images/Suits/suit_6.jpg";
 import suit6 from "@/assets/images/Suits/suit_7.jpg";
+import suit7 from "@/assets/images/Suits/suit_8.jpg";
 
 import jacket1 from "@/assets/images/Sunil Mehra_6586 - Copy.jpg";
 import jacket2 from "@/assets/images/066A0578.jpg";
@@ -40,6 +41,7 @@ import winter3 from "@/assets/images/Sunil Mehra 0239.jpg";
 import winter4 from "@/assets/images/Sunil Mehra 0278.jpg";
 import winter5 from "@/assets/images/Sunil Mehra 0862.jpg";
 import winter6 from "@/assets/images/Sunil Mehra 0628.jpg";
+import winter7 from "@/assets/images/Winter/new_winter_suit.jpg";
 
 // Accessories imports
 // Bags
@@ -136,10 +138,14 @@ const WARDROBE_DATA = {
         pieces: [
             { name: "Bandhagla/Indo-western — Piece 01", img: b1 },
             { name: "Bandhagla/Indo-western — Piece 02", img: b2 },
+            { name: "Bandhagla/Indo-western — Piece 03", img: b3 },
+            { name: "Bandhagla/Indo-western — Piece 04", img: b4 },
             { name: "Bandhagla/Indo-western — Piece 05", img: b5 },
             { name: "Bandhagla/Indo-western — Piece 06", img: b6 },
             { name: "Bandhagla/Indo-western — Piece 07", img: b7 },
-            { name: "Bandhagla/Indo-western — Piece 08", img: b8 }
+            { name: "Bandhagla/Indo-western — Piece 08", img: b8 },
+            { name: "Bandhagla/Indo-western — Piece 09", img: k1 },
+            { name: "Bandhagla/Indo-western — Piece 10", img: k2 }
         ]
     },
     "kurta-sets": {
@@ -156,7 +162,15 @@ const WARDROBE_DATA = {
             { name: "Kurta Set — Piece 07", img: k7 },
             { name: "Kurta Set — Piece 08", img: k8 },
             { name: "Kurta Set — Piece 09", img: k9 },
+            { name: "Kurta Set — Piece 10", img: k10 },
+            { name: "Kurta Set — Piece 11", img: k11 },
+            { name: "Kurta Set — Piece 12", img: k12 },
+            { name: "Kurta Set — Piece 13", img: k13 },
+            { name: "Kurta Set — Piece 14", img: k14 },
+            { name: "Kurta Set — Piece 15", img: k15 },
             { name: "Kurta Set — Piece 16", img: k16 },
+            { name: "Kurta Set — Piece 17", img: k17 },
+            { name: "Kurta Set — Piece 18", img: k18 },
             { name: "Kurta Set — Piece 19", img: k19 },
             { name: "Kurta Set — Piece 20", img: k20 },
             { name: "Kurta Set — Piece 21", img: k21 },
@@ -187,7 +201,8 @@ const WARDROBE_DATA = {
             { name: "Winter Overcoat — Piece 03", img: winter3 },
             { name: "Winter Overcoat — Piece 04", img: winter4 },
             { name: "Winter Overcoat — Piece 05", img: winter5 },
-            { name: "Winter Overcoat — Piece 06", img: winter6 }
+            { name: "Winter Overcoat — Piece 06", img: winter6 },
+            { name: "Winter Overcoat — Piece 07", img: winter7 }
         ]
     },
     suits: {
@@ -201,7 +216,8 @@ const WARDROBE_DATA = {
             { name: "Sartorial Suit — Piece 04", img: suit3 },
             { name: "Sartorial Suit — Piece 05", img: suit4 },
             { name: "Sartorial Suit — Piece 06", img: suit5 },
-            { name: "Sartorial Suit — Piece 07", img: suit6 }
+            { name: "Sartorial Suit — Piece 07", img: suit6 },
+            { name: "Sartorial Suit — Piece 08", img: suit7 }
         ]
     },
     accessories: {

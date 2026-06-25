@@ -4,20 +4,20 @@ import ScrollReveal, { StaggerReveal, StaggerItem } from "./ScrollReveal";
 
 // Import local images
 // Ivory Chapter (Beige/White/Cream)
-import ivory1_front from "@/assets/images/KurtaSets/sunil_mehra_1147.jpg";
-import ivory1_back from "@/assets/images/KurtaSets/sunil_mehra_1177.jpg";
-import ivory2_front from "@/assets/images/KurtaSets/sunil_mehra_1298.jpg";
-import ivory2_back from "@/assets/images/KurtaSets/sunil_mehra_1217.jpg";
+import ivory1_front from "@/assets/images/KurtaSets/sunil_mehra_0711.jpg";
+import ivory1_back from "@/assets/images/KurtaSets/sunil_mehra_0725.jpg";
+import ivory2_front from "@/assets/images/KurtaSets/sunil_mehra_0935.jpg";
+import ivory2_back from "@/assets/images/KurtaSets/sunil_mehra_0943.jpg";
 import ivory3_front from "@/assets/images/KurtaSets/sunil_mehra_1318.jpg";
 import ivory3_back from "@/assets/images/KurtaSets/sunil_mehra_1338.jpg";
 
 // Slate & Indigo Chapters (Neutral & Blue)
-import slate_front from "@/assets/images/IMG8912 copy.jpg";
+import slate_front from "@/assets/images/IMG8657 copy.jpg";
 import slate_back from "@/assets/images/IMG9115 copy.jpg";
 import ash_front from "@/assets/images/KurtaSets/sunil_mehra_8328.jpg";
-import ash_back from "@/assets/images/KurtaSets/sunil_mehra_8350.jpg";
-import indigo_front from "@/assets/images/Bandhagla/img9367_copy.jpg";
-import indigo_back from "@/assets/images/Bandhagla/img9702_copy.jpg";
+import ash_back from "@/assets/images/KurtaSets/sunil_mehra_8371.jpg";
+import indigo_front from "@/assets/images/KurtaSets/img8974_copy.jpg";
+import indigo_back from "@/assets/images/KurtaSets/img9136_copy.jpg";
 
 const IVORY_PRODUCTS = [
     {

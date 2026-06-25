@@ -2,9 +2,9 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 
-import ed1 from "@/assets/images/IMG8871 copy.jpg";
-import ed2 from "@/assets/images/Sunil Mehra  0553.jpg";
-import ed3 from "@/assets/images/Sunil Mehra_0039.jpg";
+import ed1 from "@/assets/images/KurtaSets/sunil_mehra_2539.jpg";
+import ed2 from "@/assets/images/Accessories/Bags/IMG_9621 copy 2 - Copy.jpg";
+import ed3 from "@/assets/images/Bandhagla/img9367_copy.jpg";
 
 const STORIES = [
     {

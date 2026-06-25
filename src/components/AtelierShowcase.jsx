@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 
-import img1512 from "@/assets/images/Sunil Mehra  1512.jpg";
-import img1701 from "@/assets/images/Sunil Mehra  1701.jpg";
-import img1737 from "@/assets/images/Sunil Mehra  1737.jpg";
-import img1867 from "@/assets/images/Sunil Mehra  1867.jpg";
+import img1512 from "@/assets/images/Sunil Mehra_6620 - Copy.jpg";
+import img1701 from "@/assets/images/Sunil Mehra_9011.jpg";
+import img1737 from "@/assets/images/Sunil Mehra_9112 - Copy.jpg";
+import img1867 from "@/assets/images/Sunil Mehra_9262 - Copy.jpg";
 
-import showcase1 from "@/assets/images/Sunil Mehra  1867.jpg";
+import showcase1 from "@/assets/images/Sunil Mehra  0493.jpg";
 import showcase2 from "@/assets/images/Sunil Mehra_6602.jpg";
 import showcase3 from "@/assets/images/Sunil Mehra_6910.jpg";
 
