@@ -13,14 +13,6 @@ export default function Hero() {
         >
             {/* Full-bleed image with Ken Burns */}
             <div className="absolute inset-0 w-full h-full">
-                <img
-                    src={coverImg}
-                    alt="Atelier — Sunil Mehra"
-                    fetchpriority="high"
-                    className="absolute inset-0 w-full h-full object-cover ken-burns-slow"
-                    style={{ objectPosition: "center bottom" }}
-                />
-                {/* Video layer on top */}
                 <video
                     src="/cover.mp4"
                     autoPlay

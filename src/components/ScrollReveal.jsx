@@ -56,6 +56,7 @@ export default function ScrollReveal({
     const isInView = useInView(ref, {
         once,
         amount: threshold,
+        margin: "400px 0px 400px 0px" // Pre-trigger before entering viewport
     });
 
     const v = VARIANTS[variant] || VARIANTS["fade-up"];
@@ -74,7 +75,7 @@ export default function ScrollReveal({
                 ease: [0.16, 1, 0.3, 1],
             }}
             className={className}
-            style={style}
+            style={{ willChange: "opacity, transform", ...style }}
             {...rest}
         >
             {children}
@@ -98,6 +99,7 @@ export function StaggerReveal({
     const isInView = useInView(ref, {
         once,
         amount: threshold,
+        margin: "400px 0px 400px 0px" // Pre-trigger
     });
 
     return (
@@ -140,6 +142,7 @@ export function StaggerItem({
                 ease: [0.16, 1, 0.3, 1],
             }}
             className={className}
+            style={{ willChange: "opacity, transform" }}
             {...rest}
         >
             {children}

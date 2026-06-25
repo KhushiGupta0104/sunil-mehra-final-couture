@@ -50,13 +50,14 @@ export default function LookbookGrid() {
                 </ScrollReveal>
 
                 {/* High Density Masonry Grid */}
-                <StaggerReveal staggerDelay={0.08} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[300px] sm:auto-rows-[350px]">
+                <StaggerReveal staggerDelay={0.08} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[300px] sm:auto-rows-[350px]" style={{ contentVisibility: 'auto', containIntrinsicSize: '1000px' }}>
                     {LOOKBOOK_ITEMS.map((item) => (
                         <StaggerItem key={item.id} variant="fade-up" className={`${item.span} group relative overflow-hidden bg-[var(--cream)] border border-[var(--hairline)] shadow-sm`}>
                             <img
                                 src={item.src}
                                 alt={item.title}
                                 loading="lazy"
+                                decoding="async"
                                 className="w-full h-full object-cover object-top transition-transform duration-[1.8s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                             />
                             {/* Hover info overlay */}

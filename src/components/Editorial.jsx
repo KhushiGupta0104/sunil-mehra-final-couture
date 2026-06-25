@@ -50,8 +50,10 @@ function EditorialBlock({ story, index }) {
                         <motion.img
                             src={story.img}
                             alt={story.title}
+                            loading="lazy"
+                            decoding="async"
                             className={`w-full object-cover transition-transform duration-1000 group-hover:scale-105 ${story.align === 'center' ? 'h-[70vh] md:h-[80vh]' : 'h-[60vh] md:h-[80vh]'}`}
-                            style={{ objectPosition: story.align === 'center' ? 'top' : 'center' }}
+                            style={{ objectPosition: story.align === 'center' ? 'top' : 'center', willChange: "transform" }}
                         />
                         <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500" />
                         <span className="absolute top-6 left-6 font-display text-4xl text-[var(--bone)] mix-blend-overlay">
