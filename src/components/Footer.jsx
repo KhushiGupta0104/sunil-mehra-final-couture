@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
-import logoImg from "@/assets/images/logo.jpg";
+import logoImg from "@/assets/images/logo.png";
 
 export default function Footer() {
     const scrollToTop = () => {
@@ -34,8 +34,8 @@ export default function Footer() {
                             <img
                                 src={logoImg}
                                 alt="Sunil Mehra"
-                                className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
-                                style={{ filter: "invert(1) contrast(120%) brightness(100%)", mixBlendMode: "screen" }}
+                                className="h-10 sm:h-12 lg:h-14 w-auto object-contain opacity-90"
+                                style={{ filter: "invert(1)" }}
                             />
                             <p className="font-italic-serif text-sm sm:text-base text-[var(--champagne)] mt-4 leading-relaxed max-w-sm" style={{ opacity: 0.7 }}>
                                 Couture menswear, hand-finished in Delhi since 1984. Every thread tells a story.

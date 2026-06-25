@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logoImg from "@/assets/images/logo.jpg";
+import logoImg from "@/assets/images/logo.png";
 
 export default function Navbar({ onMenuOpen, menuOpen, onSearchOpen }) {
     const [scrolled, setScrolled] = useState(false);
@@ -60,8 +60,7 @@ export default function Navbar({ onMenuOpen, menuOpen, onSearchOpen }) {
                     <img
                         src={logoImg}
                         alt="Sunil Mehra"
-                        className="h-6 sm:h-8 lg:h-10 w-auto object-contain"
-                        style={{ filter: "contrast(120%) brightness(102%)", mixBlendMode: "multiply" }}
+                        className="h-6 sm:h-8 lg:h-10 w-auto object-contain opacity-90"
                     />
                 </Link>
 
