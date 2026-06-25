@@ -58,23 +58,23 @@ export default function AppointmentForm() {
                     
                     {/* Left: Copy */}
                     <div className="space-y-6 lg:space-y-8">
-                        <ScrollReveal variant="fade-up">
+                        <div>
                             <span className="font-luxe text-[10px] sm:text-[11px] uppercase tracking-[0.4em] text-[var(--champagne)] block">
                                 Private Appointments
                             </span>
-                        </ScrollReveal>
-                        <ScrollReveal variant="fade-up" delay={0.15}>
+                        </div>
+                        <div>
                             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-[var(--bone)] leading-[1.1]">
                                 Step into the <br />
                                 <span className="font-italic-serif italic text-[var(--champagne)]">Atelier.</span>
                             </h2>
-                        </ScrollReveal>
-                        <ScrollReveal variant="fade-up" delay={0.25}>
+                        </div>
+                        <div>
                             <p className="text-sm sm:text-base text-[rgba(250,246,239,0.6)] leading-relaxed max-w-md font-light">
                                 Reserve an exclusive session with our Master Tailors. From the first sketch to the final fitting, experience the pinnacle of bespoke Indian menswear.
                             </p>
-                        </ScrollReveal>
-                        <ScrollReveal variant="fade-up" delay={0.35}>
+                        </div>
+                        <div>
                             <div className="flex items-center gap-8 pt-4">
                                 <div className="space-y-1">
                                     <p className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[rgba(250,246,239,0.4)]">Flagship Salon</p>
@@ -86,11 +86,11 @@ export default function AppointmentForm() {
                                     <p className="text-xs text-[var(--bone)]">+91 11 4150 1484<br/>atelier@sunilmehra.com</p>
                                 </div>
                             </div>
-                        </ScrollReveal>
+                        </div>
                     </div>
 
                     {/* Right: Form */}
-                    <ScrollReveal variant="fade-up" delay={0.2}>
+                    <div>
                         <div className="bg-[rgba(250,246,239,0.03)] border border-[rgba(250,246,239,0.08)] p-8 sm:p-12 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--champagne)] opacity-[0.05] blur-3xl rounded-full" />
                             
@@ -155,7 +155,7 @@ export default function AppointmentForm() {
                                 </form>
                             )}
                         </div>
-                    </ScrollReveal>
+                    </div>
                 </div>
             </div>
         </section>

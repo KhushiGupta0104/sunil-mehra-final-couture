@@ -27,11 +27,10 @@ export default function CampaignReel() {
 
             <div 
                 ref={scrollRef} 
-                className="flex gap-6 lg:gap-10 overflow-x-auto px-6 sm:px-10 lg:px-14 pb-10 scrollbar-none snap-x snap-mandatory"
-                style={{ scrollBehavior: 'smooth' }}
+                className="flex flex-col gap-16 lg:gap-24 px-6 sm:px-10 lg:px-14 pb-10"
             >
                 {REELS.map((reel) => (
-                    <div key={reel.id} className="relative w-[85vw] sm:w-[60vw] lg:w-[45vw] shrink-0 snap-center group flex flex-col">
+                    <div key={reel.id} className="relative w-full group flex flex-col">
                         <div className="relative w-full aspect-[4/5] sm:aspect-[16/9] lg:aspect-[21/9] overflow-hidden border border-[var(--hairline)] bg-black">
                             <img 
                                 src={reel.src}

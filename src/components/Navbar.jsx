@@ -41,9 +41,7 @@ export default function Navbar({ onMenuOpen, menuOpen, onSearchOpen }) {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 flex flex-col w-full text-[var(--ink)] transition-all duration-500 ${
-                hidden ? "-translate-y-full" : "translate-y-0"
-            } ${
+            className={`fixed top-0 left-0 right-0 z-50 flex flex-col w-full text-[var(--ink)] transition-all duration-500 translate-y-0 ${
                 scrolled
                     ? "glass border-b border-[var(--hairline)]"
                     : "bg-[var(--bone)] border-b border-[var(--hairline)]"

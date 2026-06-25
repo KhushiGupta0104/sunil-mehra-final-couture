@@ -54,7 +54,7 @@ export default function Salons() {
             >
                 <div className="max-w-[1150px] mx-auto w-full flex-1 flex flex-col justify-center py-6 lg:py-0">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                        <ScrollReveal variant="fade-right">
+                        <div>
                             <p className="eyebrow mb-5">The Salons</p>
                             <h2 className="h-display text-[8vw] sm:text-[6vw] lg:text-[4vw] leading-[1.15] mb-4">
                                 By <span className="font-italic-serif italic">invitation.</span>
@@ -68,10 +68,10 @@ export default function Salons() {
                             >
                                 Request Appointment
                             </a>
-                        </ScrollReveal>
+                        </div>
 
                         {/* Single flagship salon card */}
-                        <ScrollReveal variant="fade-left" delay={0.2}>
+                        <div>
                             <div className="border border-[var(--hairline-strong)] p-8 sm:p-10 bg-[var(--bone)] flex flex-col justify-between group hover:shadow-xl transition-all duration-700 rounded-sm hover:-translate-y-1">
                                 <div>
                                     <span className="eyebrow !text-[var(--bronze)] mb-4">Flagship Salon</span>
@@ -95,7 +95,7 @@ export default function Salons() {
                                     </p>
                                 </div>
                             </div>
-                        </ScrollReveal>
+                        </div>
                     </div>
                 </div>
             </section>
