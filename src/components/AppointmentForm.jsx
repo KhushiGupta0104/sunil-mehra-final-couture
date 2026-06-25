@@ -13,15 +13,40 @@ export default function AppointmentForm() {
     });
 
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Simulate API call
-        setTimeout(() => setIsSubmitted(true), 1000);
+        setIsSubmitting(true);
+        setErrorMessage("");
+
+        try {
+            const response = await fetch("/api/appointments", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    message: `[Phone: ${formData.phone} | Interest: ${formData.interest}] ${formData.message}`
+                }),
+            });
+
+            const data = await response.json();
+            if (response.ok && data.success) {
+                setIsSubmitted(true);
+            } else {
+                setErrorMessage(data.error || "Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            setErrorMessage("Failed to connect to the server. Please check your network connection.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -113,9 +138,18 @@ export default function AppointmentForm() {
                                         </div>
                                     </div>
 
+                                    {errorMessage && (
+                                        <div className="text-xs text-red-500 font-body mb-4">
+                                            {errorMessage}
+                                        </div>
+                                    )}
                                     <div className="relative group pt-4">
-                                        <button type="submit" className="w-full bg-[var(--champagne)] text-[var(--ink)] hover:bg-[var(--bone)] py-4 text-[11px] tracking-[0.3em] font-luxe uppercase transition-all duration-300">
-                                            Request Appointment
+                                        <button 
+                                            type="submit" 
+                                            disabled={isSubmitting}
+                                            className="w-full bg-[var(--champagne)] text-[var(--ink)] hover:bg-[var(--bone)] py-4 text-[11px] tracking-[0.3em] font-luxe uppercase transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                                        >
+                                            {isSubmitting ? "Requesting..." : "Request Appointment"}
                                         </button>
                                     </div>
                                 </form>
