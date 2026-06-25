@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 import logoImg from "@/assets/images/logo.jpg";
 
@@ -71,8 +72,15 @@ export default function Footer() {
                 </ScrollReveal>
 
                 {/* Bottom Bar */}
-                <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs opacity-50">
-                    <p>© Sunil Mehra Couture House 1984</p>
+                <div className="mt-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 text-xs opacity-50">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+                        <p>© Sunil Mehra Couture House 1984</p>
+                        <div className="flex gap-4 uppercase font-luxe tracking-[0.2em] text-[9px] opacity-80">
+                            <Link to="/terms" className="hover:text-[var(--champagne)] transition hover:opacity-100">Terms</Link>
+                            <Link to="/privacy" className="hover:text-[var(--champagne)] transition hover:opacity-100">Privacy</Link>
+                            <Link to="/faq" className="hover:text-[var(--champagne)] transition hover:opacity-100">FAQ</Link>
+                        </div>
+                    </div>
                     <div className="flex items-center gap-6">
                         <p className="font-italic-serif text-sm text-[var(--champagne)]">
                             Hand-finished in Delhi · Photographed in the Thar

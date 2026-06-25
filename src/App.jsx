@@ -28,6 +28,9 @@ const Atelier = lazy(() => import("@/components/Atelier"));
 const Gallery = lazy(() => import("@/components/Gallery"));
 const Editorial = lazy(() => import("@/components/Editorial"));
 const WardrobeCategoryDetail = lazy(() => import("@/components/WardrobeCategoryDetail"));
+const Terms = lazy(() => import("@/components/Terms"));
+const Privacy = lazy(() => import("@/components/Privacy"));
+const Faq = lazy(() => import("@/components/Faq"));
 
 const PageLoader = () => (
     <div className="min-h-screen bg-[var(--bone)] flex items-center justify-center">
@@ -173,6 +176,9 @@ function App() {
                     <Route path="/atelier" element={<AtelierPage />} />
                     <Route path="/gallery" element={<GalleryPage />} />
                     <Route path="/editorial" element={<EditorialPage />} />
+                    <Route path="/terms" element={<PageLayout><Terms /></PageLayout>} />
+                    <Route path="/privacy" element={<PageLayout><Privacy /></PageLayout>} />
+                    <Route path="/faq" element={<PageLayout><Faq /></PageLayout>} />
                 </Routes>
             </Suspense>
         </BrowserRouter>
