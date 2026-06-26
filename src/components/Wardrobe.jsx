@@ -93,30 +93,43 @@ function CategoryCard({ c }) {
 export default function Wardrobe() {
     return (
         <div className="bg-[var(--bone)] text-[var(--ink)] min-h-screen">
-            {/* ═══ AIRY TYPOGRAPHIC HEADER ═══ */}
+            {/* ═══ CINEMATIC HERO HEADER ═══ */}
             <section
-                className="pt-40 sm:pt-48 lg:pt-56 pb-20 sm:pb-32 px-6 sm:px-10 lg:px-14 flex flex-col items-center justify-center text-center max-w-4xl mx-auto"
+                className="relative h-[60vh] sm:h-[70vh] lg:h-[80vh] w-full flex items-center justify-center overflow-hidden"
                 data-testid="wardrobe-hero"
             >
+                <div className="absolute inset-0 w-full h-full">
+                    <img 
+                        src={bandhaglaCover} 
+                        alt="The Wardrobe" 
+                        className="w-full h-full object-cover object-top opacity-60"
+                        style={{ filter: "brightness(0.6) contrast(1.1)" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[var(--ink)]/50 via-[var(--ink)]/30 to-[var(--ink)]/80 mix-blend-multiply" />
+                </div>
+                
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                    className="flex flex-col items-center"
+                    transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                    className="relative z-10 flex flex-col items-center text-center px-6 mt-16"
                 >
-                    <span className="font-luxe text-[10px] uppercase tracking-[0.5em] text-[var(--muted)] mb-6 sm:mb-8">
-                        The Collections
+                    <span className="font-luxe text-[10px] sm:text-[11px] uppercase tracking-[0.5em] text-[var(--champagne)] mb-4 sm:mb-6">
+                        Six Chapters of Couture
                     </span>
-                    <h1 className="h-display text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-tight">
-                        Wardrobe
+                    <h1 className="h-display text-6xl sm:text-8xl lg:text-9xl text-[var(--bone)] leading-[0.95] tracking-tight mb-6 sm:mb-8">
+                        The Wardrobe
                     </h1>
+                    <p className="font-italic-serif text-lg sm:text-xl text-[rgba(250,246,239,0.7)] max-w-lg mx-auto italic">
+                        Cut for the modern maharaja — hand-finished garments across six defining silhouettes.
+                    </p>
                 </motion.div>
             </section>
 
             {/* ═══ MINIMALIST GRID ═══ */}
             <section
                 id="wardrobe"
-                className="pb-24 sm:pb-32 lg:pb-40 px-6 sm:px-10 lg:px-14"
+                className="pt-20 sm:pt-32 pb-24 sm:pb-32 lg:pb-40 px-6 sm:px-10 lg:px-14"
                 data-testid="wardrobe-section"
             >
                 <div className="max-w-[1500px] mx-auto w-full">

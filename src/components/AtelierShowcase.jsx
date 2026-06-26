@@ -5,16 +5,16 @@ import ScrollReveal from "./ScrollReveal";
 import { WARDROBE_DATA } from "../data/wardrobeData";
 
 const REELS = [
-    { id: 1, title: "The Modern Achkan", video: WARDROBE_DATA["kurta-sets"].pieces[9].img, description: "A study of line and flow, blending traditional tailoring with lightweight silks." },
-    { id: 2, title: "The Jawahar Edit", video: WARDROBE_DATA["jawahar-jackets"].pieces[2].img, description: "Bespoke styling featuring intricate floral motifs and custom brass buttons." },
-    { id: 3, title: "The Festive Sherwani", video: WARDROBE_DATA["bandhagala-indo-western"].pieces[8].img, description: "Rich tone-on-tone embroidery crafted for grand celebrations." },
+    { id: 1, title: "The Modern Achkan", video: WARDROBE_DATA["kurta-sets"].looks[9].images[0], description: "A study of line and flow, blending traditional tailoring with lightweight silks." },
+    { id: 2, title: "The Jawahar Edit", video: WARDROBE_DATA["jawahar-jackets"].looks[2].images[0], description: "Bespoke styling featuring intricate floral motifs and custom brass buttons." },
+    { id: 3, title: "The Festive Sherwani", video: WARDROBE_DATA["bandhagala-indo-western"].looks[8].images[0], description: "Rich tone-on-tone embroidery crafted for grand celebrations." },
 ];
 
 const PHOTOS = [
-    { src: WARDROBE_DATA.suits.pieces[12].img, title: "Structured Collar", category: "Fabric & Fit" },
-    { src: WARDROBE_DATA["kurta-sets"].pieces[15].img, title: "Handspun Weave", category: "Atelier details" },
-    { src: WARDROBE_DATA["bandhagala-indo-western"].pieces[12].img, title: "Ivory Embroidery", category: "Zardozi craft" },
-    { src: WARDROBE_DATA.suits.pieces[22].img, title: "Bespoke Cut", category: "Classic Tailoring" },
+    { src: WARDROBE_DATA.suits.looks[12].images[0], title: "Structured Collar", category: "Fabric & Fit" },
+    { src: WARDROBE_DATA["kurta-sets"].looks[15].images[0], title: "Handspun Weave", category: "Atelier details" },
+    { src: WARDROBE_DATA["bandhagala-indo-western"].looks[12].images[0], title: "Ivory Embroidery", category: "Zardozi craft" },
+    { src: WARDROBE_DATA.suits.looks[22].images[0], title: "Bespoke Cut", category: "Classic Tailoring" },
 ];
 
 export default function AtelierShowcase() {

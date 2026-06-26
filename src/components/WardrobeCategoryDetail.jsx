@@ -10,24 +10,28 @@ const ITEMS_PER_PAGE = 12;
 export default function WardrobeCategoryDetail() {
     const { categorySlug, subCategorySlug } = useParams();
     const category = WARDROBE_DATA[categorySlug];
-    const [selectedPiece, setSelectedPiece] = useState(null);
+    
+    // selectedLook will hold the entire array of images for a shoot to display in lightbox
+    const [selectedLook, setSelectedLook] = useState(null); 
+    const [lightboxIndex, setLightboxIndex] = useState(0);
+
     const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
 
     // Reset visible count when navigating between categories
     useEffect(() => {
         setVisibleCount(ITEMS_PER_PAGE);
-        setSelectedPiece(null);
+        setSelectedLook(null);
     }, [categorySlug, subCategorySlug]);
 
     // Lock body scroll when lightbox is open
     useEffect(() => {
-        if (selectedPiece) {
+        if (selectedLook) {
             document.body.classList.add("no-scroll");
         } else {
             document.body.classList.remove("no-scroll");
         }
         return () => document.body.classList.remove("no-scroll");
-    }, [selectedPiece]);
+    }, [selectedLook]);
 
     // 404 guards
     if (!category) {
@@ -44,6 +48,7 @@ export default function WardrobeCategoryDetail() {
     // Context flags
     const isAccessoriesHub = categorySlug === "accessories" && !subCategorySlug;
     const isSubcategoryDetail = categorySlug === "accessories" && subCategorySlug;
+    const isClothing = categorySlug !== "accessories";
 
     const subcatInfo = isSubcategoryDetail
         ? category.subcategories.find(s => s.id === subCategorySlug)
@@ -60,59 +65,63 @@ export default function WardrobeCategoryDetail() {
         );
     }
 
-    // Displayed items
-    const allPieces = isSubcategoryDetail
-        ? category.pieces.filter(p => p.subcat === subCategorySlug)
-        : category.pieces;
+    // --- DATA HANDLING ---
+    // If clothing, we use category.looks. If accessories subcat, we use category.pieces filtered.
+    let allItems = [];
+    if (isClothing) {
+        allItems = category.looks || [];
+    } else if (isSubcategoryDetail) {
+        // Accessories still use single pieces
+        const pieces = category.pieces.filter(p => p.subcat === subCategorySlug);
+        // Wrap pieces into single-image 'looks' to unify the rendering logic
+        allItems = pieces.map(p => ({
+            id: p.name,
+            title: p.name,
+            images: [p.img]
+        }));
+    }
 
-    const displayedPieces = allPieces.slice(0, visibleCount);
-    const hasMore = visibleCount < allPieces.length;
+    const displayedItems = allItems.slice(0, visibleCount);
+    const hasMore = visibleCount < allItems.length;
 
-    // Lightbox navigation
-    const handlePrev = useCallback((e) => {
-        e.stopPropagation();
-        const currentIndex = allPieces.findIndex(p => p.img === selectedPiece.img);
-        const prevIndex = (currentIndex - 1 + allPieces.length) % allPieces.length;
-        setSelectedPiece(allPieces[prevIndex]);
-    }, [selectedPiece, allPieces]);
+    // --- LIGHTBOX NAVIGATION ---
+    const closeLightbox = useCallback(() => setSelectedLook(null), []);
 
-    const handleNext = useCallback((e) => {
-        e.stopPropagation();
-        const currentIndex = allPieces.findIndex(p => p.img === selectedPiece.img);
-        const nextIndex = (currentIndex + 1) % allPieces.length;
-        setSelectedPiece(allPieces[nextIndex]);
-    }, [selectedPiece, allPieces]);
+    const handleLightboxPrev = useCallback((e) => {
+        e?.stopPropagation();
+        if (!selectedLook) return;
+        setLightboxIndex((prev) => (prev - 1 + selectedLook.images.length) % selectedLook.images.length);
+    }, [selectedLook]);
 
-    const closeLightbox = useCallback(() => setSelectedPiece(null), []);
+    const handleLightboxNext = useCallback((e) => {
+        e?.stopPropagation();
+        if (!selectedLook) return;
+        setLightboxIndex((prev) => (prev + 1) % selectedLook.images.length);
+    }, [selectedLook]);
 
     // Keyboard navigation for lightbox
     useEffect(() => {
-        if (!selectedPiece) return;
-
+        if (!selectedLook) return;
         const handleKeyDown = (e) => {
-            if (e.key === "ArrowLeft") handlePrev(e);
-            else if (e.key === "ArrowRight") handleNext(e);
+            if (e.key === "ArrowLeft") handleLightboxPrev(e);
+            else if (e.key === "ArrowRight") handleLightboxNext(e);
             else if (e.key === "Escape") closeLightbox();
         };
-
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [selectedPiece, handlePrev, handleNext, closeLightbox]);
-
-    const currentIndex = selectedPiece
-        ? allPieces.findIndex(p => p.img === selectedPiece.img) + 1
-        : 0;
+    }, [selectedLook, handleLightboxPrev, handleLightboxNext, closeLightbox]);
 
     const pageTitle = isSubcategoryDetail ? subcatInfo.name : category.name;
     const pageEdit = isSubcategoryDetail ? "Atelier Accessories" : category.edit;
+    const heroImage = isSubcategoryDetail ? subcatInfo.img : category.img; // use the cover image for hero
 
     // ─────────────── ACCESSORIES HUB ───────────────
     if (isAccessoriesHub) {
         return (
-            <div className="bg-[var(--bone)] text-[var(--ink)] min-h-screen w-full flex flex-col pt-32 sm:pt-40 pb-20">
-                <AiryHeader title={category.name} subtitle={category.edit} count={category.pieces.length} />
+            <div className="bg-[var(--bone)] text-[var(--ink)] min-h-screen w-full flex flex-col">
+                <CinematicHeader title={category.name} subtitle={category.edit} count={category.pieces.length} bgImage={category.img} />
 
-                <div className="max-w-[1500px] mx-auto w-full px-6 sm:px-10 lg:px-14">
+                <div className="max-w-[1500px] mx-auto w-full px-6 sm:px-10 lg:px-14 pb-20">
                     <Breadcrumb to="/wardrobe" label="Wardrobe" />
 
                     <StaggerReveal staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20 mt-16">
@@ -151,10 +160,10 @@ export default function WardrobeCategoryDetail() {
 
     // ─────────────── STANDARD / SUBCATEGORY GRID ───────────────
     return (
-        <div className="bg-[var(--bone)] text-[var(--ink)] min-h-screen w-full flex flex-col pt-32 sm:pt-40 pb-20">
-            <AiryHeader title={pageTitle} subtitle={pageEdit} count={allPieces.length} />
+        <div className="bg-[var(--bone)] text-[var(--ink)] min-h-screen w-full flex flex-col">
+            <CinematicHeader title={pageTitle} subtitle={pageEdit} count={allItems.length} bgImage={heroImage} label="Looks" />
 
-            <div className="max-w-[1500px] mx-auto w-full px-6 sm:px-10 lg:px-14">
+            <div className="max-w-[1500px] mx-auto w-full px-6 sm:px-10 lg:px-14 pb-20">
                 
                 {isSubcategoryDetail ? (
                     <Breadcrumb to="/wardrobe/accessories" label="Accessories" />
@@ -163,25 +172,16 @@ export default function WardrobeCategoryDetail() {
                 )}
 
                 {/* ═══ CLEAN EDITORIAL GRID ═══ */}
-                <StaggerReveal staggerDelay={0.08} className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-10 mt-12 sm:mt-16">
-                    {displayedPieces.map((piece, index) => (
-                        <StaggerItem
-                            key={index}
-                            variant="fade-up"
-                            className="group cursor-pointer"
-                        >
-                            <div
-                                className="w-full aspect-[3/4] overflow-hidden bg-[var(--bone)]"
-                                onClick={() => setSelectedPiece(piece)}
-                            >
-                                <img
-                                    src={piece.img}
-                                    alt={piece.name}
-                                    loading="lazy"
-                                    decoding="async"
-                                    className="w-full h-full object-cover object-top transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.02]"
-                                />
-                            </div>
+                <StaggerReveal staggerDelay={0.08} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-14 mt-12 sm:mt-16">
+                    {displayedItems.map((look) => (
+                        <StaggerItem key={look.id} variant="fade-up">
+                            <LookCarousel 
+                                look={look} 
+                                onExpand={() => {
+                                    setSelectedLook(look);
+                                    setLightboxIndex(0);
+                                }} 
+                            />
                         </StaggerItem>
                     ))}
                 </StaggerReveal>
@@ -193,12 +193,12 @@ export default function WardrobeCategoryDetail() {
                             onClick={() => setVisibleCount(prev => prev + ITEMS_PER_PAGE)}
                             className="font-luxe text-[10px] uppercase tracking-[0.3em] text-[var(--ink)] hover:text-[var(--bronze)] transition-colors"
                         >
-                            + Load More
+                            + Load More Looks
                         </button>
                     </div>
                 )}
 
-                {!hasMore && allPieces.length > ITEMS_PER_PAGE && (
+                {!hasMore && allItems.length > ITEMS_PER_PAGE && (
                     <div className="mt-24 flex justify-center">
                         <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--muted)]">
                             End of Collection
@@ -211,7 +211,7 @@ export default function WardrobeCategoryDetail() {
 
             {/* ═══ LIGHTBOX ═══ */}
             <AnimatePresence>
-                {selectedPiece && (
+                {selectedLook && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -223,7 +223,7 @@ export default function WardrobeCategoryDetail() {
                         {/* Top bar */}
                         <div className="flex justify-between items-center w-full shrink-0">
                             <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--muted)]">
-                                {currentIndex} / {allPieces.length}
+                                {selectedLook.title} — {lightboxIndex + 1} / {selectedLook.images.length}
                             </span>
                             <button
                                 onClick={closeLightbox}
@@ -237,7 +237,7 @@ export default function WardrobeCategoryDetail() {
                         <div className="relative flex items-center justify-center grow my-8 max-h-[85vh]">
                             <AnimatePresence mode="wait">
                                 <motion.div
-                                    key={selectedPiece.img}
+                                    key={selectedLook.images[lightboxIndex]}
                                     initial={{ opacity: 0, scale: 0.98 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0, scale: 0.98 }}
@@ -245,31 +245,49 @@ export default function WardrobeCategoryDetail() {
                                     className="max-w-full max-h-full overflow-hidden"
                                 >
                                     <img
-                                        src={selectedPiece.img}
-                                        alt={selectedPiece.name}
+                                        src={selectedLook.images[lightboxIndex]}
+                                        alt={`${selectedLook.title} angle ${lightboxIndex + 1}`}
                                         className="max-w-full max-h-[75vh] sm:max-h-[85vh] object-contain mx-auto"
                                     />
                                 </motion.div>
                             </AnimatePresence>
+
+                            {/* Left/Right click areas for lightbox */}
+                            {selectedLook.images.length > 1 && (
+                                <>
+                                    <div 
+                                        className="absolute left-0 top-0 bottom-0 w-1/4 cursor-w-resize z-10" 
+                                        onClick={handleLightboxPrev}
+                                    />
+                                    <div 
+                                        className="absolute right-0 top-0 bottom-0 w-1/4 cursor-e-resize z-10" 
+                                        onClick={handleLightboxNext}
+                                    />
+                                </>
+                            )}
                         </div>
 
                         {/* Bottom info */}
                         <div className="text-center shrink-0 flex items-center justify-between">
-                             <button
-                                onClick={handlePrev}
-                                className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--ink)] hover:text-[var(--muted)] transition p-2"
-                            >
-                                Prev
-                            </button>
+                            {selectedLook.images.length > 1 ? (
+                                <button
+                                    onClick={handleLightboxPrev}
+                                    className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--ink)] hover:text-[var(--muted)] transition p-2"
+                                >
+                                    Prev
+                                </button>
+                            ) : <div className="w-10" />}
                             <span className="font-luxe text-[9px] uppercase tracking-[0.2em] text-[var(--ink)]">
                                 {pageTitle}
                             </span>
-                            <button
-                                onClick={handleNext}
-                                className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--ink)] hover:text-[var(--muted)] transition p-2"
-                            >
-                                Next
-                            </button>
+                            {selectedLook.images.length > 1 ? (
+                                <button
+                                    onClick={handleLightboxNext}
+                                    className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--ink)] hover:text-[var(--muted)] transition p-2"
+                                >
+                                    Next
+                                </button>
+                            ) : <div className="w-10" />}
                         </div>
                     </motion.div>
                 )}
@@ -282,23 +300,33 @@ export default function WardrobeCategoryDetail() {
 // SUBCOMPONENTS
 // ═══════════════════════════════════════════════
 
-function AiryHeader({ title, subtitle, count }) {
+function CinematicHeader({ title, subtitle, count, bgImage, label = "Pieces" }) {
     return (
-        <section className="px-6 sm:px-10 lg:px-14 flex flex-col items-center justify-center text-center pb-12 sm:pb-20 border-b border-[var(--hairline)] max-w-[1500px] mx-auto w-full">
+        <section className="relative h-[60vh] sm:h-[70vh] w-full flex items-center justify-center overflow-hidden mb-12">
+            <div className="absolute inset-0 w-full h-full">
+                <img 
+                    src={bgImage} 
+                    alt={title} 
+                    className="w-full h-full object-cover object-top opacity-60"
+                    style={{ filter: "brightness(0.65) contrast(1.1)" }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-[var(--ink)]/40 via-[var(--ink)]/30 to-[var(--ink)]/70 mix-blend-multiply" />
+            </div>
+            
             <motion.div
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col items-center gap-6"
+                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+                className="relative z-10 flex flex-col items-center gap-6 mt-16 px-6 text-center"
             >
-                <span className="font-luxe text-[9px] uppercase tracking-[0.4em] text-[var(--muted)]">
+                <span className="font-luxe text-[9px] sm:text-[10px] uppercase tracking-[0.4em] text-[var(--champagne)]">
                     {subtitle}
                 </span>
-                <h1 className="h-display text-4xl sm:text-5xl lg:text-7xl leading-none">
+                <h1 className="h-display text-5xl sm:text-7xl lg:text-8xl text-[var(--bone)] leading-none drop-shadow-md">
                     {title}
                 </h1>
-                <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--muted)] pt-2">
-                    {count} Pieces
+                <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[rgba(250,246,239,0.7)] pt-2">
+                    {count} {label}
                 </span>
             </motion.div>
         </section>
@@ -307,7 +335,7 @@ function AiryHeader({ title, subtitle, count }) {
 
 function Breadcrumb({ to, label }) {
     return (
-        <div className="pt-8">
+        <div className="pt-4 pb-8">
             <Link to={to} className="font-luxe text-[9px] tracking-[0.3em] uppercase text-[var(--muted)] hover:text-[var(--ink)] transition">
                 ← {label}
             </Link>
@@ -325,6 +353,86 @@ function BottomCTA() {
             >
                 Request a Fitting
             </Link>
+        </div>
+    );
+}
+
+// ═══════════════════════════════════════════════
+// SLIDESHOW CAROUSEL
+// ═══════════════════════════════════════════════
+
+function LookCarousel({ look, onExpand }) {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const hasMultiple = look.images.length > 1;
+
+    const handlePrev = (e) => {
+        e.stopPropagation();
+        setCurrentIndex((prev) => (prev - 1 + look.images.length) % look.images.length);
+    };
+
+    const handleNext = (e) => {
+        e.stopPropagation();
+        setCurrentIndex((prev) => (prev + 1) % look.images.length);
+    };
+
+    return (
+        <div className="group flex flex-col w-full cursor-pointer" onClick={onExpand}>
+            <div className="relative w-full aspect-[3/4] overflow-hidden bg-[var(--bone)]">
+                <AnimatePresence initial={false}>
+                    <motion.img
+                        key={look.images[currentIndex]}
+                        src={look.images[currentIndex]}
+                        alt={look.title}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
+                    />
+                </AnimatePresence>
+
+                {/* Slideshow Arrows (visible on hover) */}
+                {hasMultiple && (
+                    <div className="absolute inset-0 flex items-center justify-between px-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button 
+                            onClick={handlePrev} 
+                            className="w-8 h-8 rounded-full bg-white/80 text-[var(--ink)] flex items-center justify-center hover:bg-white transition shadow-sm backdrop-blur-sm"
+                            aria-label="Previous image"
+                        >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                        </button>
+                        <button 
+                            onClick={handleNext} 
+                            className="w-8 h-8 rounded-full bg-white/80 text-[var(--ink)] flex items-center justify-center hover:bg-white transition shadow-sm backdrop-blur-sm"
+                            aria-label="Next image"
+                        >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                        </button>
+                    </div>
+                )}
+                
+                {/* Dots indicator */}
+                {hasMultiple && (
+                    <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5 z-10">
+                        {look.images.map((_, idx) => (
+                            <div 
+                                key={idx} 
+                                className={`h-1 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-4 bg-white' : 'w-1.5 bg-white/50'}`}
+                            />
+                        ))}
+                    </div>
+                )}
+            </div>
+
+            {/* Decoupled look title */}
+            <div className="mt-4 flex justify-between items-center">
+                <span className="font-luxe text-[10px] tracking-[0.2em] uppercase text-[var(--ink)]">
+                    {look.title}
+                </span>
+                <span className="font-luxe text-[9px] tracking-[0.2em] uppercase text-[var(--muted)]">
+                    {hasMultiple ? `${look.images.length} Angles` : '1 Angle'}
+                </span>
+            </div>
         </div>
     );
 }
