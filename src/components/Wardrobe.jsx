@@ -14,7 +14,6 @@ import accessoryCover from "@/assets/images/Accessories/Bags/Sunil Mehra_7074.jp
 const CATEGORIES = [
     {
         no: "01",
-        edit: "Tailored Royalty",
         name: "Bandhagla & Indo-Western",
         slug: "bandhagala-indo-western",
         img: bandhaglaCover,
@@ -22,7 +21,6 @@ const CATEGORIES = [
     },
     {
         no: "02",
-        edit: "Sharply Cut",
         name: "Sartorial Suits",
         slug: "suits",
         img: img8657,
@@ -30,7 +28,6 @@ const CATEGORIES = [
     },
     {
         no: "03",
-        edit: "Quiet Luxury",
         name: "Kurta Sets",
         slug: "kurta-sets",
         img: kurtaCover,
@@ -38,7 +35,6 @@ const CATEGORIES = [
     },
     {
         no: "04",
-        edit: "Modern Maharaja",
         name: "Jawahar Jacket Sets",
         slug: "jawahar-jackets",
         img: jacketCover,
@@ -46,7 +42,6 @@ const CATEGORIES = [
     },
     {
         no: "05",
-        edit: "Princely Silhouettes",
         name: "Winter Collection",
         slug: "winter-collection",
         img: winterCover,
@@ -54,7 +49,6 @@ const CATEGORIES = [
     },
     {
         no: "06",
-        edit: "Finishing Details",
         name: "Accessories",
         slug: "accessories",
         img: accessoryCover,
@@ -62,45 +56,35 @@ const CATEGORIES = [
     },
 ];
 
-function CategoryCard({ c, size = "regular" }) {
-    const isLarge = size === "large";
-
+function CategoryCard({ c }) {
     return (
         <Link
             to={`/wardrobe/${c.slug}`}
-            className="cat-card group block w-full relative overflow-hidden"
+            className="group block w-full relative"
             data-testid={`wardrobe-card-${c.slug}`}
         >
-            <div className={`relative w-full overflow-hidden ${isLarge ? "aspect-[4/5] lg:aspect-[3/4]" : "aspect-[3/4]"}`}>
+            <div className="relative w-full overflow-hidden aspect-[3/4] bg-[var(--bone)]">
                 <img
                     src={c.img}
                     alt={c.name}
                     loading="lazy"
-                    className="w-full h-full object-cover object-top transition-transform duration-[1.8s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
+                    className="w-full h-full object-cover object-top transition-all duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03] opacity-90 group-hover:opacity-100"
                 />
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent group-hover:from-black/85 transition-all duration-700" />
-
-                {/* Chapter number */}
-                <span className="absolute top-6 right-6 font-display text-xl lg:text-2xl text-[var(--bone)] opacity-40 group-hover:opacity-80 transition-opacity duration-500">
-                    {c.no}
-                </span>
-
-                {/* Text overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-[var(--bone)] transform translate-y-1 group-hover:translate-y-0 transition-transform duration-700 ease-out">
-                    <p className="font-italic-serif text-sm sm:text-base opacity-80 mb-1">
-                        {c.edit}
-                    </p>
-                    <h3 className={`h-display leading-tight ${isLarge ? "text-2xl sm:text-3xl lg:text-4xl" : "text-xl sm:text-2xl lg:text-3xl"}`}>
+            </div>
+            
+            {/* Decoupled Text Below Image */}
+            <div className="mt-5 flex justify-between items-start">
+                <div>
+                    <h3 className="font-luxe text-xs uppercase tracking-[0.2em] text-[var(--ink)] mb-1">
                         {c.name}
                     </h3>
-                    <div className="flex items-center gap-3 mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                        <span className="w-6 h-px bg-[var(--champagne)]" />
-                        <span className="font-luxe text-[9px] uppercase tracking-[0.25em] text-[var(--champagne)]">
-                            {c.pieces} Pieces
-                        </span>
-                    </div>
+                    <p className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--muted)]">
+                        {c.no}
+                    </p>
                 </div>
+                <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--muted)]">
+                    {c.pieces} Items
+                </span>
             </div>
         </Link>
     );
@@ -108,123 +92,61 @@ function CategoryCard({ c, size = "regular" }) {
 
 export default function Wardrobe() {
     return (
-        <>
-            {/* ═══ CINEMATIC HERO ═══ */}
+        <div className="bg-[var(--bone)] text-[var(--ink)] min-h-screen">
+            {/* ═══ AIRY TYPOGRAPHIC HEADER ═══ */}
             <section
-                className="relative bg-black text-[var(--bone)] h-[70vh] sm:h-[80vh] w-full flex flex-col overflow-hidden"
+                className="pt-40 sm:pt-48 lg:pt-56 pb-20 sm:pb-32 px-6 sm:px-10 lg:px-14 flex flex-col items-center justify-center text-center max-w-4xl mx-auto"
                 data-testid="wardrobe-hero"
             >
-                {/* Background image */}
-                <div className="absolute inset-0">
-                    <img
-                        src={bandhaglaCover}
-                        alt="The Wardrobe — Sunil Mehra"
-                        className="w-full h-full object-cover object-top ken-burns-slow"
-                    />
-                </div>
-
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30 z-[1]" />
-                <div className="grain z-[2]" />
-
-                {/* Content */}
-                <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                        className="flex flex-col items-center gap-4"
-                    >
-                        <span className="font-luxe text-[10px] uppercase tracking-[0.5em] text-[var(--champagne)] opacity-80">
-                            Six Chapters of Couture
-                        </span>
-                        <h1 className="h-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-none">
-                            The <span className="font-italic-serif italic">Wardrobe</span>
-                        </h1>
-                        <p className="font-italic-serif text-base sm:text-lg text-[var(--bone)] opacity-60 max-w-md mt-2">
-                            Cut for the modern maharaja — hand-finished garments across six defining silhouettes.
-                        </p>
-                    </motion.div>
-                </div>
-
-                {/* Scroll indicator */}
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 2, duration: 1 }}
-                    className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                    className="flex flex-col items-center"
                 >
-                    <span className="font-luxe text-[8px] uppercase tracking-[0.4em] text-[var(--bone)] opacity-40">
-                        Explore
+                    <span className="font-luxe text-[10px] uppercase tracking-[0.5em] text-[var(--muted)] mb-6 sm:mb-8">
+                        The Collections
                     </span>
-                    <div className="scroll-indicator">
-                        <svg width="14" height="20" viewBox="0 0 16 24" fill="none" className="text-[var(--bone)] opacity-30">
-                            <path d="M8 4V20M8 20L2 14M8 20L14 14" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </div>
+                    <h1 className="h-display text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-tight">
+                        Wardrobe
+                    </h1>
                 </motion.div>
             </section>
 
-            {/* ═══ UNIFIED CATEGORY GRID ═══ */}
+            {/* ═══ MINIMALIST GRID ═══ */}
             <section
                 id="wardrobe"
-                className="relative bg-[var(--bone)] text-[var(--ink)] py-16 sm:py-20 lg:py-28 px-6 sm:px-10 lg:px-14"
+                className="pb-24 sm:pb-32 lg:pb-40 px-6 sm:px-10 lg:px-14"
                 data-testid="wardrobe-section"
             >
                 <div className="max-w-[1500px] mx-auto w-full">
-                    {/* Section header */}
-                    <ScrollReveal variant="fade-up" className="mb-12 sm:mb-16">
-                        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 pb-6 border-b border-[var(--hairline)]">
-                            <div>
-                                <span className="eyebrow block mb-3">The Collection</span>
-                                <h2 className="h-display text-3xl sm:text-4xl lg:text-5xl">
-                                    Six Chapters
-                                </h2>
-                            </div>
-                            <p className="font-italic-serif text-sm sm:text-base text-[var(--muted)] max-w-sm">
-                                From tailored bandhgalas to refined accessories — each chapter is a world unto itself.
-                            </p>
-                        </div>
-                    </ScrollReveal>
-
-                    {/* Grid — 2 large heroes + 4 regular */}
-                    <StaggerReveal staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
-                        {/* First 2 categories: large, spanning 2 columns each */}
-                        {CATEGORIES.slice(0, 2).map((c) => (
-                            <StaggerItem key={c.no} variant="fade-up" className="lg:col-span-2">
-                                <CategoryCard c={c} size="large" />
-                            </StaggerItem>
-                        ))}
-
-                        {/* Remaining 4 categories: regular single column */}
-                        {CATEGORIES.slice(2).map((c) => (
-                            <StaggerItem key={c.no} variant="fade-up" className="lg:col-span-1">
-                                <CategoryCard c={c} size="regular" />
+                    {/* Clean 2-column grid on desktop, 1 on mobile */}
+                    <StaggerReveal staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20 lg:gap-x-24 lg:gap-y-32">
+                        {CATEGORIES.map((c, index) => (
+                            <StaggerItem 
+                                key={c.no} 
+                                variant="fade-up" 
+                                className={`lg:col-span-1 ${index % 2 !== 0 ? 'md:mt-32' : ''}`} // Staggered layout on desktop
+                            >
+                                <CategoryCard c={c} />
                             </StaggerItem>
                         ))}
                     </StaggerReveal>
 
-                    {/* Bottom appointment CTA */}
+                    {/* Minimal Appointment CTA */}
                     <ScrollReveal variant="fade-up" delay={0.2}>
-                        <div className="mt-20 sm:mt-28 lg:mt-36 border-t border-[var(--hairline)] pt-14 text-center max-w-xl mx-auto space-y-5">
-                            <h3 className="font-display text-xl sm:text-2xl text-[var(--ink)]">
-                                Tailored for your presence.
-                            </h3>
-                            <p className="text-xs sm:text-sm text-[var(--ink-soft)] leading-relaxed font-light font-body max-w-md mx-auto">
-                                Experience our signature fits and consult fabric swatches directly with our tailoring concierges at our Sundar Nagar Salon.
-                            </p>
-                            <div className="pt-3">
-                                <Link
-                                    to="/appointment"
-                                    className="bg-[var(--bronze)] text-[var(--bone)] hover:bg-[var(--ink)] px-10 py-4 text-[10px] tracking-[0.3em] font-luxe uppercase transition-all duration-300 inline-block"
-                                >
-                                    Request Fitting Appointment
-                                </Link>
-                            </div>
+                        <div className="mt-32 sm:mt-48 text-center max-w-md mx-auto">
+                            <span className="w-px h-12 bg-[var(--hairline-strong)] mx-auto block mb-12" />
+                            <Link
+                                to="/appointment"
+                                className="font-luxe text-[10px] uppercase tracking-[0.3em] text-[var(--ink)] hover:text-[var(--bronze)] transition-colors"
+                            >
+                                Request a Fitting
+                            </Link>
                         </div>
                     </ScrollReveal>
                 </div>
             </section>
-        </>
+        </div>
     );
 }
