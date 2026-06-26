@@ -98,24 +98,24 @@ export default function AtelierShowcase() {
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0 }}
                                     transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                                    className="w-full h-full object-cover object-top"
+                                    className="w-full h-full object-cover object-top grayscale-[0.6] contrast-125 sepia-[0.2] brightness-95"
                                 />
                             </AnimatePresence>
                         </div>
                     </div>
 
                     {/* Right: Fine Details Stack */}
-                    <div className="lg:col-span-4 flex flex-col gap-6 lg:gap-8 order-3 lg:order-3 mt-10 lg:mt-0 justify-center">
+                    <div className="lg:col-span-4 flex flex-col gap-4 lg:gap-5 order-3 lg:order-3 mt-10 lg:mt-0 justify-center">
                         {PHOTOS.map((photo, idx) => (
                             <div
                                 key={idx}
-                                className={`group relative overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] shadow-sm ${idx === 0 ? "aspect-[4/3]" : "aspect-[1/1]"}`}
+                                className={`group relative w-full overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] shadow-sm ${idx === 0 ? "aspect-[16/9]" : "aspect-[5/4]"}`}
                             >
                                 <img
                                     src={photo.src}
                                     alt={photo.title}
                                     loading="lazy"
-                                    className="w-full h-full object-cover object-top transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
+                                    className="w-full h-full object-cover object-top transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03] grayscale-[0.6] contrast-125 sepia-[0.2] brightness-95"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-5 pointer-events-none">
                                     <span className="font-luxe text-[9px] uppercase tracking-[0.25em] text-[var(--champagne)] mb-1">
