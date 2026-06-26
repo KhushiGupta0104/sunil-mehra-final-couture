@@ -27,7 +27,8 @@ export default function Footer() {
 
             <div className="relative z-10 max-w-[1300px] mx-auto px-6 sm:px-12 lg:px-20 pt-20 pb-10">
                 {/* Main content */}
-                <ScrollReveal variant="fade-up">
+                {/* Main content */}
+                <div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start pb-16 border-b border-[rgba(250,246,239,0.08)]">
                         {/* Brand column */}
                         <div className="flex flex-col items-start py-1">
@@ -69,7 +70,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                </ScrollReveal>
+                </div>
 
                 {/* Bottom Bar */}
                 <div className="mt-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 text-xs opacity-50">

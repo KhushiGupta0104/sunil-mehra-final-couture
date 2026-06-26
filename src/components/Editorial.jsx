@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 
 import ed1 from "@/assets/images/KurtaSets/sunil_mehra_2539.jpg";

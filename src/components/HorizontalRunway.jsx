@@ -33,21 +33,20 @@ export default function HorizontalRunway() {
                                 Seasonal Presentation
                             </span>
                             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl uppercase tracking-[0.05em] text-[var(--ink)]">
-                                The <span className="font-italic-serif italic">Horizontal Runway.</span>
+                                The <span className="font-italic-serif italic">Runway.</span>
                             </h2>
                         </div>
                         <p className="font-italic-serif text-sm text-[var(--muted)] max-w-sm">
-                            Swipe or scroll horizontally to explore the key silhouettes from this season's atelier presentation.
+                            Scroll to explore the key silhouettes from this season's atelier presentation.
                         </p>
                     </div>
                 </ScrollReveal>
 
-                {/* Horizontal Scroll Grid */}
-                <div className="w-full overflow-x-auto flex gap-6 pb-6 snap-x snap-mandatory scrollbar-thin">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pb-6">
                     {LOOKS.map((look) => (
                         <div
                             key={look.id}
-                            className="min-w-[280px] sm:min-w-[360px] md:min-w-[420px] aspect-[3/4] relative overflow-hidden bg-[var(--cream)] border border-[var(--hairline)] shadow-md group snap-start"
+                            className="w-full aspect-[3/4] relative overflow-hidden bg-[var(--cream)] border border-[var(--hairline)] shadow-md group"
                         >
                             <img
                                 src={look.src}

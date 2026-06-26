@@ -91,13 +91,13 @@ export default function Gallery() {
                     </div>
                 </ScrollReveal>
 
-                {/* Full-bleed Horizontal Scroll */}
+                {/* Grid Layout */}
                 <div className="w-full relative px-6 sm:px-10 lg:px-14">
-                    <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-4 sm:gap-8 pb-12 pt-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 pb-12 pt-4">
                         {CELEBRITIES.map((celeb) => (
                             <div 
                                 key={celeb.id} 
-                                className="snap-center shrink-0 w-[85vw] sm:w-[50vw] lg:w-[35vw] xl:w-[28vw] aspect-[3/4] flex flex-col group cursor-pointer"
+                                className="w-full aspect-[3/4] flex flex-col group cursor-pointer"
                                 onClick={() => setSelectedCeleb(celeb)}
                             >
                                 <div className="relative w-full h-full overflow-hidden bg-black shadow-2xl">
