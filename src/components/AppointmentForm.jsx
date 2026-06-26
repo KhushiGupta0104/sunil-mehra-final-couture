@@ -153,6 +153,23 @@ export default function AppointmentForm() {
                                         </div>
                                     </motion.div>
 
+                                    <motion.div 
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.8, delay: 0.3 }}
+                                        viewport={{ once: true, margin: "-100px" }}
+                                        className="grid grid-cols-1 sm:grid-cols-2 gap-8"
+                                    >
+                                        <div className="relative group">
+                                            <input type="date" name="date" id="date" required value={formData.date} onChange={handleChange} className="block w-full bg-transparent border-0 border-b border-[rgba(250,246,239,0.2)] text-[var(--bone)] text-sm py-2 px-0 focus:ring-0 focus:border-[var(--champagne)] peer transition-colors" />
+                                            <label htmlFor="date" className="absolute text-[11px] font-luxe tracking-[0.2em] uppercase text-[rgba(250,246,239,0.4)] duration-300 transform -translate-y-6 scale-90 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[var(--champagne)] peer-focus:scale-90 peer-focus:-translate-y-6">Preferred Date *</label>
+                                        </div>
+                                        <div className="relative group">
+                                            <textarea name="message" id="message" rows="1" value={formData.message} onChange={handleChange} className="block w-full bg-transparent border-0 border-b border-[rgba(250,246,239,0.2)] text-[var(--bone)] text-sm py-2 px-0 focus:ring-0 focus:border-[var(--champagne)] peer placeholder-transparent transition-colors resize-none" placeholder="Message"></textarea>
+                                            <label htmlFor="message" className="absolute text-[11px] font-luxe tracking-[0.2em] uppercase text-[rgba(250,246,239,0.4)] duration-300 transform -translate-y-6 scale-90 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[var(--champagne)] peer-focus:scale-90 peer-focus:-translate-y-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Additional Notes</label>
+                                        </div>
+                                    </motion.div>
+
                                     {errorMessage && (
                                         <motion.div 
                                             initial={{ opacity: 0 }}
