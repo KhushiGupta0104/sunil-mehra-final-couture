@@ -32,7 +32,10 @@ export default function AppointmentForm() {
                 body: JSON.stringify({
                     name: formData.name,
                     email: formData.email,
-                    message: `[Phone: ${formData.phone} | Interest: ${formData.interest}] ${formData.message}`
+                    phone: formData.phone,
+                    date: formData.date,
+                    interest: formData.interest,
+                    message: formData.message
                 }),
             });
 
