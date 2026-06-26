@@ -2,28 +2,19 @@ import React from "react";
 import { motion } from "framer-motion";
 import ScrollReveal, { StaggerReveal, StaggerItem } from "./ScrollReveal";
 
-import img1 from "@/assets/images/IMG9488 copy.jpg"; // Deep navy
-import img2 from "@/assets/images/KurtaSets/sunil_mehra_9283.jpg"; // Ivory Kurta
-import img3 from "@/assets/images/Suits/suit_5.jpg"; // Charcoal Suit
-import img4 from "@/assets/images/IMG8912 copy.jpg"; // Red Velvet
-import img5 from "@/assets/images/KurtaSets/img9176_copy.jpg"; // Sage Set
-import img6 from "@/assets/images/Suits/suit_7.jpg"; // Modernist
-import img7 from "@/assets/images/Bandhagla/img9367_copy.jpg"; // Sherwani
-import img8 from "@/assets/images/Bandhagla/066a0317.jpg"; // Crimson
-import img9 from "@/assets/images/Sunil Mehra_6620 - Copy.jpg"; // Signature Weave
-import img10 from "@/assets/images/IMG9115 copy.jpg"; // Midnight
+import { WARDROBE_DATA } from "../data/wardrobeData";
 
 const LOOKBOOK_ITEMS = [
-    { id: 1, src: img1, title: "The Royal Bandhgala", caption: "Deep navy silk with handcrafted embroidery", span: "row-span-2 col-span-1" },
-    { id: 2, src: img2, title: "Classic Ivory Kurta", caption: "Perfect finish, structured drape", span: "row-span-1 col-span-1" },
-    { id: 3, src: img3, title: "Imperial Charcoal Suit", caption: "Bespoke tailoring, sharp silhouette", span: "row-span-1 col-span-1" },
-    { id: 4, src: img4, title: "Velvet Heritage Achkan", caption: "Regal styling with custom motifs", span: "row-span-2 col-span-1" },
-    { id: 5, src: img5, title: "Pastel Sage Set", caption: "Lightweight premium handspun cotton", span: "row-span-1 col-span-1" },
-    { id: 6, src: img6, title: "The Pinstripe Modernist", caption: "Sophisticated formal wear", span: "row-span-1 col-span-1" },
-    { id: 7, src: img7, title: "Silk Ceremonial Sherwani", caption: "Intricate tone-on-tone embroidery", span: "row-span-1 col-span-1" },
-    { id: 8, src: img8, title: "Crimson Festive Silk Kurta", caption: "Rich color and unmatched texture", span: "row-span-1 col-span-1" },
-    { id: 9, src: img9, title: "The Signature Weave", caption: "Heritage craftsmanship", span: "row-span-1 col-span-1" },
-    { id: 10, src: img10, title: "Midnight Velvet", caption: "Luxurious texture and form", span: "row-span-1 col-span-1" },
+    { id: 1, src: WARDROBE_DATA.suits.pieces[0].img, title: "The Royal Bandhgala", caption: "Deep navy silk with handcrafted embroidery", span: "row-span-2 col-span-1" },
+    { id: 2, src: WARDROBE_DATA["kurta-sets"].pieces[1].img, title: "Classic Ivory Kurta", caption: "Perfect finish, structured drape", span: "row-span-1 col-span-1" },
+    { id: 3, src: WARDROBE_DATA.suits.pieces[2].img, title: "Imperial Charcoal Suit", caption: "Bespoke tailoring, sharp silhouette", span: "row-span-1 col-span-1" },
+    { id: 4, src: WARDROBE_DATA["bandhagala-indo-western"].pieces[0].img, title: "Velvet Heritage Achkan", caption: "Regal styling with custom motifs", span: "row-span-2 col-span-1" },
+    { id: 5, src: WARDROBE_DATA["kurta-sets"].pieces[2].img, title: "Pastel Sage Set", caption: "Lightweight premium handspun cotton", span: "row-span-1 col-span-1" },
+    { id: 6, src: WARDROBE_DATA.suits.pieces[3].img, title: "The Pinstripe Modernist", caption: "Sophisticated formal wear", span: "row-span-1 col-span-1" },
+    { id: 7, src: WARDROBE_DATA["bandhagala-indo-western"].pieces[1].img, title: "Silk Ceremonial Sherwani", caption: "Intricate tone-on-tone embroidery", span: "row-span-1 col-span-1" },
+    { id: 8, src: WARDROBE_DATA["kurta-sets"].pieces[3].img, title: "Crimson Festive Silk Kurta", caption: "Rich color and unmatched texture", span: "row-span-1 col-span-1" },
+    { id: 9, src: WARDROBE_DATA["winter-collection"].pieces[0].img, title: "The Signature Weave", caption: "Heritage craftsmanship", span: "row-span-1 col-span-1" },
+    { id: 10, src: WARDROBE_DATA.suits.pieces[4].img, title: "Midnight Velvet", caption: "Luxurious texture and form", span: "row-span-1 col-span-1" },
 ];
 
 export default function LookbookGrid() {

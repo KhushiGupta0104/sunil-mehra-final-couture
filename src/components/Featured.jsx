@@ -2,44 +2,29 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal, { StaggerReveal, StaggerItem } from "./ScrollReveal";
 
-// Import local images
-// Ivory Chapter (Beige/White/Cream)
-import ivory1_front from "@/assets/images/KurtaSets/sunil_mehra_0711.jpg";
-import ivory1_back from "@/assets/images/KurtaSets/sunil_mehra_0725.jpg";
-import ivory2_front from "@/assets/images/KurtaSets/sunil_mehra_0935.jpg";
-import ivory2_back from "@/assets/images/KurtaSets/sunil_mehra_0943.jpg";
-import ivory3_front from "@/assets/images/KurtaSets/sunil_mehra_1318.jpg";
-import ivory3_back from "@/assets/images/KurtaSets/sunil_mehra_1338.jpg";
-
-// Slate & Indigo Chapters (Neutral & Blue)
-import slate_front from "@/assets/images/IMG8657 copy.jpg";
-import slate_back from "@/assets/images/IMG9115 copy.jpg";
-import ash_front from "@/assets/images/KurtaSets/sunil_mehra_8328.jpg";
-import ash_back from "@/assets/images/KurtaSets/sunil_mehra_8371.jpg";
-import indigo_front from "@/assets/images/KurtaSets/img8974_copy.jpg";
-import indigo_back from "@/assets/images/KurtaSets/img9136_copy.jpg";
+import { WARDROBE_DATA } from "../data/wardrobeData";
 
 const IVORY_PRODUCTS = [
     {
         id: "p1",
         name: "Mirage Silk Kurta Set",
         tag: "Couture",
-        front: ivory1_front,
-        back: ivory1_back,
+        front: WARDROBE_DATA["kurta-sets"].pieces[6].img,
+        back: WARDROBE_DATA["kurta-sets"].pieces[7].img,
     },
     {
         id: "p2",
         name: "Bone Silk Kurta Set",
         tag: "New",
-        front: ivory2_front,
-        back: ivory2_back,
+        front: WARDROBE_DATA["kurta-sets"].pieces[8].img,
+        back: WARDROBE_DATA["kurta-sets"].pieces[9].img,
     },
     {
         id: "p3",
         name: "Classic Atelier Kurta",
         tag: null,
-        front: ivory3_front,
-        back: ivory3_back,
+        front: WARDROBE_DATA["kurta-sets"].pieces[10].img,
+        back: WARDROBE_DATA["kurta-sets"].pieces[11].img,
     },
 ];
 
@@ -48,22 +33,22 @@ const COLORED_PRODUCTS = [
         id: "p4",
         name: "Slate Blue Tailored Suit",
         tag: "New",
-        front: slate_front,
-        back: slate_back,
+        front: WARDROBE_DATA.suits.pieces[7].img,
+        back: WARDROBE_DATA.suits.pieces[8].img,
     },
     {
         id: "p5",
         name: "Ash Grey Silk Kurta Set",
         tag: null,
-        front: ash_front,
-        back: ash_back,
+        front: WARDROBE_DATA["kurta-sets"].pieces[12].img,
+        back: WARDROBE_DATA["kurta-sets"].pieces[13].img,
     },
     {
         id: "p6",
         name: "Indigo Couture Sherwani",
         tag: "Couture",
-        front: indigo_front,
-        back: indigo_back,
+        front: WARDROBE_DATA["bandhagala-indo-western"].pieces[4].img,
+        back: WARDROBE_DATA["bandhagala-indo-western"].pieces[5].img,
     },
 ];
 

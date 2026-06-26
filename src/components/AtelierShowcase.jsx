@@ -2,26 +2,19 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 
-import img1512 from "@/assets/images/Sunil Mehra_6620 - Copy.jpg";
-import img1701 from "@/assets/images/Sunil Mehra_9011.jpg";
-import img1737 from "@/assets/images/Sunil Mehra_9112 - Copy.jpg";
-import img1867 from "@/assets/images/Sunil Mehra_9262 - Copy.jpg";
-
-import showcase1 from "@/assets/images/Sunil Mehra  0493.jpg";
-import showcase2 from "@/assets/images/Sunil Mehra_6602.jpg";
-import showcase3 from "@/assets/images/Sunil Mehra_6910.jpg";
+import { WARDROBE_DATA } from "../data/wardrobeData";
 
 const REELS = [
-    { id: 1, title: "The Modern Achkan", video: showcase1, description: "A study of line and flow, blending traditional tailoring with lightweight silks." },
-    { id: 2, title: "The Jawahar Edit", video: showcase2, description: "Bespoke styling featuring intricate floral motifs and custom brass buttons." },
-    { id: 3, title: "The Festive Sherwani", video: showcase3, description: "Rich tone-on-tone embroidery crafted for grand celebrations." },
+    { id: 1, title: "The Modern Achkan", video: WARDROBE_DATA["kurta-sets"].pieces[4].img, description: "A study of line and flow, blending traditional tailoring with lightweight silks." },
+    { id: 2, title: "The Jawahar Edit", video: WARDROBE_DATA["jawahar-jackets"].pieces[0].img, description: "Bespoke styling featuring intricate floral motifs and custom brass buttons." },
+    { id: 3, title: "The Festive Sherwani", video: WARDROBE_DATA["bandhagala-indo-western"].pieces[2].img, description: "Rich tone-on-tone embroidery crafted for grand celebrations." },
 ];
 
 const PHOTOS = [
-    { src: img1512, title: "Structured Collar", category: "Fabric & Fit" },
-    { src: img1701, title: "Handspun Weave", category: "Atelier details" },
-    { src: img1737, title: "Ivory Embroidery", category: "Zardozi craft" },
-    { src: img1867, title: "Bespoke Cut", category: "Classic Tailoring" },
+    { src: WARDROBE_DATA.suits.pieces[5].img, title: "Structured Collar", category: "Fabric & Fit" },
+    { src: WARDROBE_DATA["kurta-sets"].pieces[5].img, title: "Handspun Weave", category: "Atelier details" },
+    { src: WARDROBE_DATA["bandhagala-indo-western"].pieces[3].img, title: "Ivory Embroidery", category: "Zardozi craft" },
+    { src: WARDROBE_DATA.suits.pieces[6].img, title: "Bespoke Cut", category: "Classic Tailoring" },
 ];
 
 export default function AtelierShowcase() {
