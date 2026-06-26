@@ -41,7 +41,11 @@ export default function Navbar({ onMenuOpen, menuOpen, onSearchOpen }) {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 flex flex-col w-full transition-all duration-700 translate-y-0 glass text-[var(--ink)] border-b border-[var(--hairline)] py-0 ${hidden ? "-translate-y-full" : ""}`}
+            className={`fixed top-0 left-0 right-0 z-50 flex flex-col w-full transition-all duration-700 translate-y-0 ${
+                scrolled
+                    ? "glass text-[var(--ink)] border-b border-[var(--hairline)] py-0"
+                    : "bg-transparent text-[var(--bone)] border-b border-transparent py-2"
+            } ${hidden ? "-translate-y-full" : ""}`}
             data-testid="site-navbar"
         >
             {/* Top Tier: Brand Name + Search */}
@@ -54,7 +58,7 @@ export default function Navbar({ onMenuOpen, menuOpen, onSearchOpen }) {
                     <img
                         src={logoImg}
                         alt="Sunil Mehra"
-                        className="h-6 sm:h-8 lg:h-10 w-auto object-contain transition-all duration-700 opacity-90"
+                        className={`h-6 sm:h-8 lg:h-10 w-auto object-contain transition-all duration-700 ${scrolled ? "opacity-90" : "brightness-0 invert opacity-90"}`}
                     />
                 </Link>
 

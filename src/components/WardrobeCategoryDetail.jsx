@@ -5,38 +5,38 @@ import ScrollReveal, { StaggerReveal, StaggerItem } from "./ScrollReveal";
 
 import { WARDROBE_DATA } from "../data/wardrobeData";
 
-// Pagination removed to show all looks at once
+const ITEMS_PER_PAGE = 12;
 
 export default function WardrobeCategoryDetail() {
     const { categorySlug, subCategorySlug } = useParams();
     const category = WARDROBE_DATA[categorySlug];
-    
-    // selectedLook will hold the entire array of images for a shoot to display in lightbox
-    const [selectedLook, setSelectedLook] = useState(null); 
-    const [lightboxIndex, setLightboxIndex] = useState(0);
+    const [selectedPiece, setSelectedPiece] = useState(null);
+    const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
 
-    // Reset state when navigating between categories
+    // Reset visible count when navigating between categories
     useEffect(() => {
-        setSelectedLook(null);
+        setVisibleCount(ITEMS_PER_PAGE);
+        setSelectedPiece(null);
     }, [categorySlug, subCategorySlug]);
 
     // Lock body scroll when lightbox is open
     useEffect(() => {
-        if (selectedLook) {
+        if (selectedPiece) {
             document.body.classList.add("no-scroll");
         } else {
             document.body.classList.remove("no-scroll");
         }
         return () => document.body.classList.remove("no-scroll");
-    }, [selectedLook]);
+    }, [selectedPiece]);
 
     // 404 guards
     if (!category) {
         return (
-            <div className="relative bg-[var(--bone)] text-[var(--ink)] min-h-screen w-full flex flex-col items-center justify-center p-8">
+            <div className="relative bg-[var(--bone)] text-[var(--ink)] min-h-[80vh] w-full flex flex-col items-center justify-center p-8">
                 <h2 className="font-display text-3xl mb-4">Category Not Found</h2>
-                <Link to="/wardrobe" className="font-luxe text-[10px] uppercase tracking-[0.3em] hover:text-[var(--bronze)] transition">
-                    Back to Wardrobe
+                <p className="text-sm text-[var(--muted)] mb-6">The wardrobe selection you are looking for does not exist.</p>
+                <Link to="/wardrobe" className="hairline-link">
+                    ← Back to Wardrobe
                 </Link>
             </div>
         );
@@ -45,7 +45,6 @@ export default function WardrobeCategoryDetail() {
     // Context flags
     const isAccessoriesHub = categorySlug === "accessories" && !subCategorySlug;
     const isSubcategoryDetail = categorySlug === "accessories" && subCategorySlug;
-    const isClothing = categorySlug !== "accessories";
 
     const subcatInfo = isSubcategoryDetail
         ? category.subcategories.find(s => s.id === subCategorySlug)
@@ -53,102 +52,121 @@ export default function WardrobeCategoryDetail() {
 
     if (isSubcategoryDetail && !subcatInfo) {
         return (
-            <div className="relative bg-[var(--bone)] text-[var(--ink)] min-h-screen w-full flex flex-col items-center justify-center p-8">
+            <div className="relative bg-[var(--bone)] text-[var(--ink)] min-h-[80vh] w-full flex flex-col items-center justify-center p-8">
                 <h2 className="font-display text-3xl mb-4">Subcategory Not Found</h2>
-                <Link to="/wardrobe/accessories" className="font-luxe text-[10px] uppercase tracking-[0.3em] hover:text-[var(--bronze)] transition">
-                    Back to Accessories
+                <p className="text-sm text-[var(--muted)] mb-6">The accessories group you are looking for does not exist.</p>
+                <Link to="/wardrobe/accessories" className="hairline-link">
+                    ← Back to Accessories
                 </Link>
             </div>
         );
     }
 
-    // --- DATA HANDLING ---
-    // If clothing, we use category.looks. If accessories subcat, we use category.pieces filtered.
-    let allItems = [];
-    if (isClothing) {
-        allItems = category.looks || [];
-    } else if (isSubcategoryDetail) {
-        // Accessories still use single pieces
-        const pieces = category.pieces.filter(p => p.subcat === subCategorySlug);
-        // Wrap pieces into single-image 'looks' to unify the rendering logic
-        allItems = pieces.map(p => ({
-            id: p.name,
-            title: p.name,
-            images: [p.img]
-        }));
-    }
+    // Displayed items
+    const allPieces = isSubcategoryDetail
+        ? category.pieces.filter(p => p.subcat === subCategorySlug)
+        : category.pieces;
 
-    const displayedItems = allItems;
-    const hasMore = false;
+    const displayedPieces = allPieces.slice(0, visibleCount);
+    const hasMore = visibleCount < allPieces.length;
+    const remaining = allPieces.length - visibleCount;
 
-    // --- LIGHTBOX NAVIGATION ---
-    const closeLightbox = useCallback(() => setSelectedLook(null), []);
+    // Lightbox navigation
+    const handlePrev = useCallback((e) => {
+        e.stopPropagation();
+        const currentIndex = allPieces.findIndex(p => p.img === selectedPiece.img);
+        const prevIndex = (currentIndex - 1 + allPieces.length) % allPieces.length;
+        setSelectedPiece(allPieces[prevIndex]);
+    }, [selectedPiece, allPieces]);
 
-    const handleLightboxPrev = useCallback((e) => {
-        e?.stopPropagation();
-        if (!selectedLook) return;
-        setLightboxIndex((prev) => (prev - 1 + selectedLook.images.length) % selectedLook.images.length);
-    }, [selectedLook]);
+    const handleNext = useCallback((e) => {
+        e.stopPropagation();
+        const currentIndex = allPieces.findIndex(p => p.img === selectedPiece.img);
+        const nextIndex = (currentIndex + 1) % allPieces.length;
+        setSelectedPiece(allPieces[nextIndex]);
+    }, [selectedPiece, allPieces]);
 
-    const handleLightboxNext = useCallback((e) => {
-        e?.stopPropagation();
-        if (!selectedLook) return;
-        setLightboxIndex((prev) => (prev + 1) % selectedLook.images.length);
-    }, [selectedLook]);
+    const closeLightbox = useCallback(() => setSelectedPiece(null), []);
 
     // Keyboard navigation for lightbox
     useEffect(() => {
-        if (!selectedLook) return;
+        if (!selectedPiece) return;
+
         const handleKeyDown = (e) => {
-            if (e.key === "ArrowLeft") handleLightboxPrev(e);
-            else if (e.key === "ArrowRight") handleLightboxNext(e);
+            if (e.key === "ArrowLeft") handlePrev(e);
+            else if (e.key === "ArrowRight") handleNext(e);
             else if (e.key === "Escape") closeLightbox();
         };
+
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [selectedLook, handleLightboxPrev, handleLightboxNext, closeLightbox]);
+    }, [selectedPiece, handlePrev, handleNext, closeLightbox]);
 
+    // Current image index for counter
+    const currentIndex = selectedPiece
+        ? allPieces.findIndex(p => p.img === selectedPiece.img) + 1
+        : 0;
+
+    // Title & breadcrumb
     const pageTitle = isSubcategoryDetail ? subcatInfo.name : category.name;
     const pageEdit = isSubcategoryDetail ? "Atelier Accessories" : category.edit;
-    const heroImage = isSubcategoryDetail ? subcatInfo.img : category.img; // use the cover image for hero
+    const pageDesc = isSubcategoryDetail ? subcatInfo.desc : category.description;
+    const coverImage = isSubcategoryDetail
+        ? subcatInfo.img
+        : (allPieces[0]?.img || null);
 
     // ─────────────── ACCESSORIES HUB ───────────────
     if (isAccessoriesHub) {
         return (
-            <div className="bg-[var(--bone)] text-[var(--ink)] min-h-screen w-full flex flex-col">
-                <CinematicHeader title={category.name} subtitle={category.edit} count={category.pieces.length} bgImage={category.img} />
+            <div className="relative bg-[var(--bone)] text-[var(--ink)] min-h-screen w-full flex flex-col" data-testid="wardrobe-accessories-hub">
+                {/* Hero */}
+                <HeroHeader title={category.name} edit={category.edit} description={category.description} image={allPieces[0]?.img} />
 
-                <div className="max-w-[1500px] mx-auto w-full px-6 sm:px-10 lg:px-14 pb-20">
+                <div className="max-w-[1500px] mx-auto w-full px-6 sm:px-10 lg:px-14 py-16 lg:py-24">
+
+                    {/* Breadcrumb */}
                     <Breadcrumb to="/wardrobe" label="Wardrobe" />
 
-                    <StaggerReveal staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20 mt-16">
+                    {/* Subcategories Grid */}
+                    <StaggerReveal staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-14 sm:gap-x-8">
                         {category.subcategories.map((subcat) => (
                             <StaggerItem key={subcat.id} variant="fade-up">
                                 <Link
                                     to={`/wardrobe/accessories/${subcat.id}`}
-                                    className="group flex flex-col w-full"
+                                    className="group cursor-pointer flex flex-col w-full"
                                 >
-                                    <div className="w-full aspect-[3/4] overflow-hidden bg-[var(--bone)]">
+                                    <div className="relative overflow-hidden border border-[var(--hairline)] aspect-[3/4] bg-[var(--cream)] shadow-sm">
                                         <img
                                             src={subcat.img}
                                             alt={subcat.name}
                                             loading="lazy"
-                                            className="w-full h-full object-cover object-top transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
+                                            className="w-full h-full object-cover object-top transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
                                         />
+                                        <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                            <span className="bg-[var(--bone)] text-[var(--ink)] text-[9px] uppercase tracking-[0.25em] font-luxe px-5 py-2.5 border border-[var(--hairline)]">
+                                                Explore
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div className="mt-6 text-center">
-                                        <h3 className="font-luxe text-xs uppercase tracking-[0.2em] text-[var(--ink)] mb-2">
-                                            {subcat.name}
-                                        </h3>
-                                        <span className="font-luxe text-[9px] tracking-[0.2em] text-[var(--muted)] uppercase">
-                                            {subcat.count} Items
-                                        </span>
+                                    <div className="mt-5 flex flex-col w-full">
+                                        <div className="flex justify-between items-baseline w-full">
+                                            <h3 className="font-luxe text-sm uppercase tracking-[0.15em] text-[var(--ink)] group-hover:text-[var(--bronze)] transition duration-300">
+                                                {subcat.name}
+                                            </h3>
+                                            <span className="font-display text-[10px] tracking-[0.1em] text-[var(--bronze)] font-semibold uppercase">
+                                                {subcat.count} {subcat.count === 1 ? 'Item' : 'Items'}
+                                            </span>
+                                        </div>
+                                        <p className="text-[11px] sm:text-xs text-[var(--ink-soft)] leading-relaxed font-light font-body mt-2">
+                                            {subcat.desc}
+                                        </p>
                                     </div>
                                 </Link>
                             </StaggerItem>
                         ))}
                     </StaggerReveal>
 
+                    {/* Bottom CTA */}
                     <BottomCTA />
                 </div>
             </div>
@@ -157,121 +175,188 @@ export default function WardrobeCategoryDetail() {
 
     // ─────────────── STANDARD / SUBCATEGORY GRID ───────────────
     return (
-        <div className="bg-[var(--bone)] text-[var(--ink)] min-h-screen w-full flex flex-col">
-            <CinematicHeader title={pageTitle} subtitle={pageEdit} count={allItems.length} bgImage={heroImage} label="Looks" />
+        <div className="relative bg-[var(--bone)] text-[var(--ink)] min-h-screen w-full flex flex-col" data-testid="wardrobe-category-page">
+            {/* Hero */}
+            <HeroHeader
+                title={pageTitle}
+                edit={pageEdit}
+                description={pageDesc}
+                image={coverImage}
+                count={allPieces.length}
+            />
 
-            <div className="max-w-[1500px] mx-auto w-full px-6 sm:px-10 lg:px-14 pb-20">
-                
+            <div className="max-w-[1500px] mx-auto w-full px-6 sm:px-10 lg:px-14 py-16 lg:py-24">
+
+                {/* Breadcrumb */}
                 {isSubcategoryDetail ? (
                     <Breadcrumb to="/wardrobe/accessories" label="Accessories" />
                 ) : (
                     <Breadcrumb to="/wardrobe" label="Wardrobe" />
                 )}
 
-                {/* ═══ CLEAN EDITORIAL GRID ═══ */}
-                <StaggerReveal staggerDelay={0.08} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-14 mt-12 sm:mt-16">
-                    {displayedItems.map((look) => (
-                        <StaggerItem key={look.id} variant="fade-up">
-                            <LookCarousel 
-                                look={look} 
-                                onExpand={() => {
-                                    setSelectedLook(look);
-                                    setLightboxIndex(0);
-                                }} 
-                            />
-                        </StaggerItem>
-                    ))}
-                </StaggerReveal>
-
-                {/* No load more button - displaying entire collection */}
-                <div className="mt-24 flex justify-center">
-                    <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--muted)]">
-                        End of Collection
+                {/* Piece count indicator */}
+                <div className="flex items-center justify-between mb-8 pb-4 border-b border-[var(--hairline)]">
+                    <span className="font-luxe text-[10px] uppercase tracking-[0.25em] text-[var(--muted)]">
+                        Showing {Math.min(visibleCount, allPieces.length)} of {allPieces.length} pieces
                     </span>
+                    {hasMore && (
+                        <span className="font-italic-serif text-sm text-[var(--bronze)] opacity-70">
+                            {remaining} more below
+                        </span>
+                    )}
                 </div>
 
+                {/* ═══ IMAGE GRID — 3 columns on desktop ═══ */}
+                <StaggerReveal staggerDelay={0.08} className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
+                    {displayedPieces.map((piece, index) => {
+                        // Asymmetric layout: every 7th image spans 2 columns
+                        const isWide = index % 7 === 0 && index > 0;
+                        const spanClass = isWide ? "col-span-2 lg:col-span-2" : "col-span-1";
+
+                        return (
+                            <StaggerItem
+                                key={index}
+                                variant="fade-up"
+                                className={`group cursor-pointer ${spanClass}`}
+                            >
+                                <div
+                                    className={`relative w-full overflow-hidden bg-[var(--cream)] border border-[var(--hairline)] ${isWide ? "aspect-[16/9]" : "aspect-[3/4]"}`}
+                                    onClick={() => setSelectedPiece(piece)}
+                                >
+                                    <img
+                                        src={piece.img}
+                                        alt={piece.name}
+                                        loading="lazy"
+                                        decoding="async"
+                                        className="w-full h-full object-cover object-top transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+                                    />
+                                    {/* Hover overlay */}
+                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-500 pointer-events-none" />
+
+                                    {/* Expand icon on hover */}
+                                    <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <div className="w-8 h-8 rounded-full bg-[var(--bone)]/90 backdrop-blur-sm flex items-center justify-center border border-[var(--hairline)]">
+                                            <svg className="w-3.5 h-3.5 text-[var(--ink)]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9m11.25-5.25v4.5m0-4.5h-4.5m4.5 0L15 9m-11.25 11.25v-4.5m0 4.5h4.5m-4.5 0L9 15m11.25 5.25v-4.5m0 4.5h-4.5m4.5 0L15 15" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </StaggerItem>
+                        );
+                    })}
+                </StaggerReveal>
+
+                {/* ═══ LOAD MORE BUTTON ═══ */}
+                {hasMore && (
+                    <div className="mt-14 sm:mt-20 flex flex-col items-center gap-4">
+                        <button
+                            onClick={() => setVisibleCount(prev => prev + ITEMS_PER_PAGE)}
+                            className="bg-transparent border border-[var(--ink)] text-[var(--ink)] hover:bg-[var(--ink)] hover:text-[var(--bone)] px-12 py-4 text-[10px] tracking-[0.3em] font-luxe uppercase transition-all duration-300"
+                        >
+                            Show More Pieces
+                        </button>
+                        <span className="font-italic-serif text-xs text-[var(--muted)]">
+                            {remaining} more {remaining === 1 ? "piece" : "pieces"} remaining
+                        </span>
+                    </div>
+                )}
+
+                {/* ═══ ALL LOADED INDICATOR ═══ */}
+                {!hasMore && allPieces.length > ITEMS_PER_PAGE && (
+                    <div className="mt-14 flex items-center justify-center gap-4">
+                        <span className="w-10 h-px bg-[var(--hairline)]" />
+                        <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--muted)]">
+                            All {allPieces.length} pieces shown
+                        </span>
+                        <span className="w-10 h-px bg-[var(--hairline)]" />
+                    </div>
+                )}
+
+                {/* Bottom CTA */}
                 <BottomCTA />
             </div>
 
             {/* ═══ LIGHTBOX ═══ */}
             <AnimatePresence>
-                {selectedLook && (
+                {selectedPiece && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
                         onClick={closeLightbox}
-                        className="fixed inset-0 z-[100] flex flex-col bg-white p-4 sm:p-8"
+                        className="fixed inset-0 z-[100] flex flex-col bg-black/95 backdrop-blur-lg p-4 sm:p-8"
                     >
                         {/* Top bar */}
                         <div className="flex justify-between items-center w-full shrink-0">
-                            <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--muted)]">
-                                {selectedLook.title} — {lightboxIndex + 1} / {selectedLook.images.length}
-                            </span>
+                            <div className="flex items-center gap-3">
+                                <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--champagne)]">
+                                    {pageTitle}
+                                </span>
+                                <span className="w-px h-3 bg-white/20" />
+                                <span className="font-luxe text-[9px] uppercase tracking-[0.2em] text-white/50">
+                                    {currentIndex} / {allPieces.length}
+                                </span>
+                            </div>
                             <button
                                 onClick={closeLightbox}
-                                className="font-luxe text-[10px] uppercase tracking-[0.3em] text-[var(--ink)] hover:text-[var(--muted)] transition"
+                                className="font-luxe text-[10px] uppercase tracking-[0.3em] text-white/70 hover:text-white border border-white/15 hover:border-white/40 px-5 py-2.5 transition duration-300"
                             >
-                                Close
+                                Close <span aria-hidden>×</span>
                             </button>
                         </div>
 
                         {/* Image */}
-                        <div className="relative flex items-center justify-center grow my-8 max-h-[85vh]">
+                        <div className="relative flex items-center justify-center grow my-4 max-h-[80vh]">
+                            {/* Prev */}
+                            <button
+                                onClick={handlePrev}
+                                className="absolute left-0 sm:left-2 z-10 w-11 h-11 flex items-center justify-center text-white/60 hover:text-white bg-white/5 hover:bg-white/15 rounded-full border border-white/10 hover:border-white/30 transition duration-300"
+                                aria-label="Previous image"
+                            >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                </svg>
+                            </button>
+
                             <AnimatePresence mode="wait">
                                 <motion.div
-                                    key={selectedLook.images[lightboxIndex]}
-                                    initial={{ opacity: 0, scale: 0.98 }}
+                                    key={selectedPiece.img}
+                                    initial={{ opacity: 0, scale: 0.97 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.98 }}
+                                    exit={{ opacity: 0, scale: 0.97 }}
                                     transition={{ duration: 0.25, ease: "easeOut" }}
                                     className="max-w-full max-h-full overflow-hidden"
                                 >
                                     <img
-                                        src={selectedLook.images[lightboxIndex]}
-                                        alt={`${selectedLook.title} angle ${lightboxIndex + 1}`}
-                                        className="max-w-full max-h-[75vh] sm:max-h-[85vh] object-contain mx-auto"
+                                        src={selectedPiece.img}
+                                        alt={selectedPiece.name}
+                                        className="max-w-full max-h-[70vh] sm:max-h-[75vh] object-contain mx-auto"
                                     />
                                 </motion.div>
                             </AnimatePresence>
 
-                            {/* Left/Right click areas for lightbox */}
-                            {selectedLook.images.length > 1 && (
-                                <>
-                                    <div 
-                                        className="absolute left-0 top-0 bottom-0 w-1/4 cursor-w-resize z-10" 
-                                        onClick={handleLightboxPrev}
-                                    />
-                                    <div 
-                                        className="absolute right-0 top-0 bottom-0 w-1/4 cursor-e-resize z-10" 
-                                        onClick={handleLightboxNext}
-                                    />
-                                </>
-                            )}
+                            {/* Next */}
+                            <button
+                                onClick={handleNext}
+                                className="absolute right-0 sm:right-2 z-10 w-11 h-11 flex items-center justify-center text-white/60 hover:text-white bg-white/5 hover:bg-white/15 rounded-full border border-white/10 hover:border-white/30 transition duration-300"
+                                aria-label="Next image"
+                            >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </button>
                         </div>
 
                         {/* Bottom info */}
-                        <div className="text-center shrink-0 flex items-center justify-between">
-                            {selectedLook.images.length > 1 ? (
-                                <button
-                                    onClick={handleLightboxPrev}
-                                    className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--ink)] hover:text-[var(--muted)] transition p-2"
-                                >
-                                    Prev
-                                </button>
-                            ) : <div className="w-10" />}
-                            <span className="font-luxe text-[9px] uppercase tracking-[0.2em] text-[var(--ink)]">
-                                {pageTitle}
+                        <div className="text-center shrink-0 flex flex-col items-center gap-1">
+                            <span className="font-luxe text-[9px] uppercase tracking-[0.2em] text-[var(--champagne)]">
+                                {selectedPiece.name}
                             </span>
-                            {selectedLook.images.length > 1 ? (
-                                <button
-                                    onClick={handleLightboxNext}
-                                    className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--ink)] hover:text-[var(--muted)] transition p-2"
-                                >
-                                    Next
-                                </button>
-                            ) : <div className="w-10" />}
+                            <span className="font-luxe text-[8px] uppercase tracking-[0.15em] text-white/30">
+                                ← → to navigate · Esc to close
+                            </span>
                         </div>
                     </motion.div>
                 )}
@@ -280,48 +365,63 @@ export default function WardrobeCategoryDetail() {
     );
 }
 
+
 // ═══════════════════════════════════════════════
 // SUBCOMPONENTS
 // ═══════════════════════════════════════════════
 
-function CinematicHeader({ title, subtitle, count, bgImage, label = "Pieces" }) {
+function HeroHeader({ title, edit, description, image, count }) {
     return (
-        <section className="relative h-[60vh] sm:h-[70vh] w-full flex items-center justify-center overflow-hidden mb-12">
-            <div className="absolute inset-0 w-full h-full">
-                <img 
-                    src={bgImage} 
-                    alt={title} 
-                    className="w-full h-full object-cover object-top opacity-60"
-                    style={{ filter: "brightness(0.65) contrast(1.1)" }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-[var(--ink)]/40 via-[var(--ink)]/30 to-[var(--ink)]/70 mix-blend-multiply" />
+        <section className="relative bg-black text-[var(--bone)] h-[50vh] sm:h-[55vh] w-full flex flex-col overflow-hidden">
+            {image && (
+                <div className="absolute inset-0">
+                    <img
+                        src={image}
+                        alt={title}
+                        className="w-full h-full object-cover object-top ken-burns-slow"
+                    />
+                </div>
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/25 z-[1]" />
+            <div className="grain z-[2]" />
+
+            <div className="relative z-10 flex flex-col items-center justify-end h-full text-center px-6 pb-12 sm:pb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                    className="flex flex-col items-center gap-3"
+                >
+                    <span className="font-luxe text-[10px] uppercase tracking-[0.4em] text-[var(--champagne)] opacity-80">
+                        {edit}
+                    </span>
+                    <h1 className="h-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-none">
+                        {title}
+                    </h1>
+                    {description && (
+                        <p className="font-italic-serif text-sm sm:text-base text-[var(--bone)] opacity-50 max-w-md mt-1">
+                            {description}
+                        </p>
+                    )}
+                    {count && (
+                        <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--bone)] opacity-30 mt-2">
+                            {count} pieces
+                        </span>
+                    )}
+                </motion.div>
             </div>
-            
-            <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-                className="relative z-10 flex flex-col items-center gap-6 mt-16 px-6 text-center"
-            >
-                <span className="font-luxe text-[9px] sm:text-[10px] uppercase tracking-[0.4em] text-[var(--champagne)]">
-                    {subtitle}
-                </span>
-                <h1 className="h-display text-5xl sm:text-7xl lg:text-8xl text-[var(--bone)] leading-none drop-shadow-md">
-                    {title}
-                </h1>
-                <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[rgba(250,246,239,0.7)] pt-2">
-                    {count} {label}
-                </span>
-            </motion.div>
         </section>
     );
 }
 
 function Breadcrumb({ to, label }) {
     return (
-        <div className="pt-4 pb-8">
-            <Link to={to} className="font-luxe text-[9px] tracking-[0.3em] uppercase text-[var(--muted)] hover:text-[var(--ink)] transition">
-                ← {label}
+        <div className="mb-10 lg:mb-14">
+            <Link to={to} className="font-luxe text-[10px] tracking-[0.25em] uppercase text-[var(--muted)] hover:text-[var(--ink)] transition flex items-center gap-2 group">
+                <svg className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+                {label}
             </Link>
         </div>
     );
@@ -329,93 +429,20 @@ function Breadcrumb({ to, label }) {
 
 function BottomCTA() {
     return (
-        <div className="mt-32 sm:mt-48 text-center max-w-md mx-auto">
-            <span className="w-px h-12 bg-[var(--hairline-strong)] mx-auto block mb-12" />
-            <Link
-                to="/appointment"
-                className="font-luxe text-[10px] uppercase tracking-[0.3em] text-[var(--ink)] hover:text-[var(--bronze)] transition-colors"
-            >
-                Request a Fitting
-            </Link>
-        </div>
-    );
-}
-
-// ═══════════════════════════════════════════════
-// SLIDESHOW CAROUSEL
-// ═══════════════════════════════════════════════
-
-function LookCarousel({ look, onExpand }) {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const hasMultiple = look.images.length > 1;
-
-    const handlePrev = (e) => {
-        e.stopPropagation();
-        setCurrentIndex((prev) => (prev - 1 + look.images.length) % look.images.length);
-    };
-
-    const handleNext = (e) => {
-        e.stopPropagation();
-        setCurrentIndex((prev) => (prev + 1) % look.images.length);
-    };
-
-    return (
-        <div className="group flex flex-col w-full cursor-pointer" onClick={onExpand}>
-            <div className="relative w-full aspect-[3/4] overflow-hidden bg-[var(--bone)]">
-                <AnimatePresence initial={false}>
-                    <motion.img
-                        key={look.images[currentIndex]}
-                        src={look.images[currentIndex]}
-                        alt={look.title}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
-                    />
-                </AnimatePresence>
-
-                {/* Slideshow Arrows (visible on hover) */}
-                {hasMultiple && (
-                    <div className="absolute inset-0 flex items-center justify-between px-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <button 
-                            onClick={handlePrev} 
-                            className="w-8 h-8 rounded-full bg-white/80 text-[var(--ink)] flex items-center justify-center hover:bg-white transition shadow-sm backdrop-blur-sm"
-                            aria-label="Previous image"
-                        >
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
-                        </button>
-                        <button 
-                            onClick={handleNext} 
-                            className="w-8 h-8 rounded-full bg-white/80 text-[var(--ink)] flex items-center justify-center hover:bg-white transition shadow-sm backdrop-blur-sm"
-                            aria-label="Next image"
-                        >
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
-                        </button>
-                    </div>
-                )}
-                
-                {/* Dots indicator */}
-                {hasMultiple && (
-                    <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5 z-10">
-                        {look.images.map((_, idx) => (
-                            <div 
-                                key={idx} 
-                                className={`h-1 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-4 bg-white' : 'w-1.5 bg-white/50'}`}
-                            />
-                        ))}
-                    </div>
-                )}
-            </div>
-
-            {/* Decoupled look title */}
-            <div className="mt-4 flex justify-between items-center">
-                <span className="font-luxe text-[10px] tracking-[0.2em] uppercase text-[var(--ink)]">
-                    {look.title}
-                </span>
-                <span className="font-luxe text-[9px] tracking-[0.2em] uppercase text-[var(--muted)]">
-                    {hasMultiple ? `${look.images.length} Angles` : '1 Angle'}
-                </span>
+        <div className="mt-20 sm:mt-28 lg:mt-36 border-t border-[var(--hairline)] pt-14 text-center max-w-xl mx-auto space-y-5">
+            <h3 className="font-display text-xl sm:text-2xl text-[var(--ink)]">
+                Tailored for your presence.
+            </h3>
+            <p className="text-xs sm:text-sm text-[var(--ink-soft)] leading-relaxed font-light font-body max-w-md mx-auto">
+                Experience our signature fits and consult fabric swatches directly with our tailoring concierges at our Sundar Nagar Salon.
+            </p>
+            <div className="pt-3">
+                <Link
+                    to="/appointment"
+                    className="bg-[var(--bronze)] text-[var(--bone)] hover:bg-[var(--ink)] px-10 py-4 text-[10px] tracking-[0.3em] font-luxe uppercase transition-all duration-300 inline-block"
+                >
+                    Request Fitting Appointment
+                </Link>
             </div>
         </div>
     );

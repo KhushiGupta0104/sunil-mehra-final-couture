@@ -9,22 +9,22 @@ const IVORY_PRODUCTS = [
         id: "p1",
         name: "Mirage Silk Kurta Set",
         tag: "Couture",
-        front: WARDROBE_DATA["kurta-sets"].looks[10].images[0],
-        back: WARDROBE_DATA["kurta-sets"].looks[11].images[0],
+        front: WARDROBE_DATA["kurta-sets"].pieces[10].img,
+        back: WARDROBE_DATA["kurta-sets"].pieces[11].img,
     },
     {
         id: "p2",
         name: "Bone Silk Kurta Set",
         tag: "New",
-        front: WARDROBE_DATA["kurta-sets"].looks[13].images[0],
-        back: WARDROBE_DATA["kurta-sets"].looks[14].images[0],
+        front: WARDROBE_DATA["kurta-sets"].pieces[13].img,
+        back: WARDROBE_DATA["kurta-sets"].pieces[14].img,
     },
     {
         id: "p3",
         name: "Classic Atelier Kurta",
         tag: null,
-        front: WARDROBE_DATA["kurta-sets"].looks[2].images[0],
-        back: WARDROBE_DATA["kurta-sets"].looks[3].images[0],
+        front: WARDROBE_DATA["kurta-sets"].pieces[0].img,
+        back: WARDROBE_DATA["kurta-sets"].pieces[1].img,
     },
 ];
 
@@ -33,22 +33,22 @@ const COLORED_PRODUCTS = [
         id: "p4",
         name: "Slate Blue Tailored Suit",
         tag: "New",
-        front: WARDROBE_DATA.suits.looks[4].images[0],
-        back: WARDROBE_DATA.suits.looks[5].images[0],
+        front: WARDROBE_DATA.suits.pieces[4].img,
+        back: WARDROBE_DATA.suits.pieces[5].img,
     },
     {
         id: "p5",
         name: "Ash Grey Silk Kurta Set",
         tag: null,
-        front: WARDROBE_DATA["kurta-sets"].looks[6].images[0],
-        back: WARDROBE_DATA["kurta-sets"].looks[7].images[0],
+        front: WARDROBE_DATA["kurta-sets"].pieces[16].img,
+        back: WARDROBE_DATA["kurta-sets"].pieces[17].img,
     },
     {
         id: "p6",
         name: "Indigo Couture Sherwani",
         tag: "Couture",
-        front: WARDROBE_DATA["bandhagala-indo-western"].looks[2].images[0],
-        back: WARDROBE_DATA["bandhagala-indo-western"].looks[3].images[0],
+        front: WARDROBE_DATA["bandhagala-indo-western"].pieces[2].img,
+        back: WARDROBE_DATA["bandhagala-indo-western"].pieces[3].img,
     },
 ];
 
@@ -243,7 +243,7 @@ function ProductCard({ prod, onSelect, featured = false }) {
             className="block w-full flex flex-col group"
             data-testid={`product-${prod.id}`}
         >
-            <div className="relative overflow-hidden border border-[var(--hairline)] aspect-[3/4] bg-[var(--bone)] shadow-sm">
+            <div className="relative overflow-hidden border border-[var(--hairline)] aspect-[3/4] bg-[var(--cream)] shadow-sm">
                 <img
                     src={prod.front}
                     alt={prod.name}
