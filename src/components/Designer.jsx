@@ -3,75 +3,87 @@ import designerImg from "@/assets/images/enhanced image Sunil mehra.png";
 import ScrollReveal from "./ScrollReveal";
 
 export default function Designer() {
-
     return (
         <section
             id="designer"
-            className="relative bg-[var(--bone)] text-[var(--ink)] min-h-screen lg:h-auto w-full py-20 lg:py-32 px-6 sm:px-10 lg:px-14"
+            className="relative bg-[var(--bone)] text-[var(--ink)] py-24 lg:py-40 px-6 sm:px-10 lg:px-14 overflow-hidden"
             data-testid="designer-section"
         >
-            <div className="max-w-[1500px] mx-auto w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-start">
+            {/* Background Texture */}
+            <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
+                style={{
+                    backgroundImage: `radial-gradient(circle at 80% 20%, rgba(201,180,139,0.3) 0%, transparent 50%)`
+                }} 
+            />
 
-                    {/* Visual Column */}
-                    <div className="lg:col-span-5 flex justify-center lg:sticky lg:top-[120px]">
-                        <div className="relative w-full max-w-[450px] aspect-[1.1/1] lg:aspect-auto lg:h-[65vh] overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] shadow-sm">
-                            <img
-                                src={designerImg}
-                                alt="Sunil Mehra — The Designer"
-                                loading="lazy"
-                                className="w-full h-full object-cover object-top transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.03]"
-                            />
-                            <div className="absolute inset-0 bg-black/5 pointer-events-none" />
-                            <div className="grain" />
-                        </div>
+            <div className="max-w-[1400px] mx-auto w-full relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center">
+
+                    {/* Image Column */}
+                    <div className="lg:col-span-5 relative">
+                        <ScrollReveal variant="fade-up">
+                            <div className="relative w-full max-w-[500px] mx-auto aspect-[3/4] overflow-hidden bg-[var(--ink)] border border-[var(--hairline)] shadow-xl group p-2">
+                                {/* Inner framing for a vintage photo look */}
+                                <div className="relative w-full h-full overflow-hidden border border-[rgba(250,246,239,0.1)]">
+                                    <img
+                                        src={designerImg}
+                                        alt="Sunil Mehra — The Designer"
+                                        loading="lazy"
+                                        className="w-full h-full object-cover object-center transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03] grayscale contrast-125 sepia-[0.15] brightness-90"
+                                    />
+                                    {/* Overlay gradient for depth */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80" />
+                                </div>
+                            </div>
+                        </ScrollReveal>
+                        
+                        {/* Decorative element behind image */}
+                        <div className="absolute -z-10 -bottom-6 -left-6 w-32 h-32 border-l border-b border-[var(--bronze)] opacity-30" />
+                        <div className="absolute -z-10 -top-6 -right-6 w-32 h-32 border-r border-t border-[var(--bronze)] opacity-30" />
                     </div>
 
                     {/* Text Column */}
-                    <div className="lg:col-span-7 flex flex-col justify-center space-y-8">
-                        <ScrollReveal variant="fade-up">
-                            <div>
-                                <span className="eyebrow block mb-2">Maison — The Designer</span>
-                                <h2 className="h-display text-3xl sm:text-4xl lg:text-5xl font-light mb-1">
-                                    Sunil Mehra
+                    <div className="lg:col-span-6 lg:col-start-7 flex flex-col justify-center space-y-12">
+                        <ScrollReveal variant="fade-up" delay={0.1}>
+                            <div className="relative">
+                                <span className="font-luxe text-[10px] uppercase tracking-[0.35em] text-[var(--bronze)] block mb-6">
+                                    Maison — The Designer
+                                </span>
+                                <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl tracking-tight text-[var(--ink)] leading-[0.9] mb-4">
+                                    Sunil <br className="hidden sm:block" />
+                                    <span className="font-italic-serif italic text-[var(--ink-soft)]">Mehra</span>
                                 </h2>
-                                <h3 className="font-italic-serif text-lg sm:text-xl text-[var(--bronze)] mb-2">
+                                <h3 className="font-luxe uppercase tracking-[0.2em] text-[10px] sm:text-[11px] text-[var(--muted)] mb-2 mt-8">
                                     Where Couture Meets Divinity
                                 </h3>
                             </div>
                         </ScrollReveal>
 
-                        <ScrollReveal variant="fade-up" delay={0.1}>
-                            <div>
-                                <p className="text-xs sm:text-sm text-[var(--ink-soft)] leading-relaxed max-w-2xl font-light">
-                                    For over four decades, the Mehra family has been synonymous with timeless Indian couture. Building upon the celebrated legacy of Study by Janak, Sunil Mehra established his bespoke menswear atelier in New Delhi with a singular vision: to create garments that embody elegance, individuality, and meaning.
+                        <div className="space-y-6 relative before:absolute before:left-0 before:top-2 before:bottom-2 before:w-px before:bg-[var(--bronze)] before:opacity-30 pl-6 sm:pl-8">
+                            <ScrollReveal variant="fade-up" delay={0.2}>
+                                <p className="text-sm sm:text-base text-[var(--ink)] leading-relaxed max-w-xl font-body">
+                                    For over four decades, the Mehra family has been synonymous with timeless Indian couture. Building upon the celebrated legacy of Study by Janak, Sunil Mehra established his bespoke menswear atelier with a singular vision: to create garments that embody elegance, individuality, and meaning.
                                 </p>
-                            </div>
-                        </ScrollReveal>
+                            </ScrollReveal>
 
-                        <ScrollReveal variant="fade-up" delay={0.2}>
-                            <div>
-                                <p className="text-xs sm:text-sm text-[var(--ink-soft)] leading-relaxed max-w-2xl font-light">
-                                    From meticulously tailored bandhgalas and regal sherwanis to elevated occasion wear and refined accessories, each piece is crafted using exceptional fabrics sourced from around the world. Every garment reflects a commitment to quality, precision, and personal expression.
+                            <ScrollReveal variant="fade-up" delay={0.3}>
+                                <p className="text-sm text-[var(--ink-soft)] leading-relaxed max-w-xl font-body">
+                                    From meticulously tailored bandhgalas and regal sherwanis to elevated occasion wear, each piece is crafted using exceptional fabrics sourced globally. Every garment reflects an uncompromising commitment to precision and personal expression.
                                 </p>
-                            </div>
-                        </ScrollReveal>
+                            </ScrollReveal>
 
-                        <ScrollReveal variant="fade-up" delay={0.3}>
-                            <div>
-                                <p className="text-xs sm:text-sm text-[var(--ink-soft)] leading-relaxed max-w-2xl font-light">
+                            <ScrollReveal variant="fade-up" delay={0.4}>
+                                <p className="text-sm text-[var(--ink-soft)] leading-relaxed max-w-xl font-body">
                                     Today, alongside Karan Mehra, the next generation of the brand, Sunil Mehra continues to evolve this legacy for the modern gentleman while preserving the values that have defined it for decades.
                                 </p>
-                            </div>
-                        </ScrollReveal>
+                            </ScrollReveal>
+                        </div>
 
-                        <ScrollReveal variant="fade-up" delay={0.4}>
-                            <div>
-                                <div className="pt-3 border-t border-[var(--hairline)]">
-                                    <p className="font-italic-serif text-sm text-[var(--ink)]">
-                                        More than a couture house, Sunil Mehra is a celebration of artistry, heritage, and individuality — where every thread tells a story.
-                                    </p>
-                                </div>
+                        <ScrollReveal variant="fade-up" delay={0.5}>
+                            <div className="pt-8 border-t border-[var(--hairline)] max-w-xl">
+                                <p className="font-italic-serif text-base sm:text-lg text-[var(--ink)] opacity-90 leading-relaxed">
+                                    "More than a couture house, Sunil Mehra is a celebration of artistry, heritage, and individuality — where every thread tells a story."
+                                </p>
                             </div>
                         </ScrollReveal>
                     </div>
