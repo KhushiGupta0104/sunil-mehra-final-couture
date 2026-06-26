@@ -4,7 +4,7 @@ export default function Manifesto() {
     return (
         <section
             id="manifesto"
-            className="relative bg-[var(--section-dark-bg)] text-[var(--bone)] h-screen w-full flex flex-col overflow-hidden"
+            className="relative bg-[var(--section-dark-bg)] text-[var(--bone)] py-24 sm:py-32 lg:py-40 w-full flex flex-col overflow-hidden"
             data-testid="manifesto-section"
         >
             <div className="grain" />
@@ -18,7 +18,7 @@ export default function Manifesto() {
                 }}
             />
 
-            <div className="relative z-10 max-w-[1200px] mx-auto w-full h-full flex flex-col justify-center text-center px-6 sm:px-10">
+            <div className="relative z-10 max-w-[1400px] mx-auto w-full flex flex-col justify-center text-center px-6 sm:px-10">
                 {/* Eyebrow */}
                 <p className="eyebrow !text-[var(--champagne)] justify-center mb-8 sm:mb-10">
                     The House Manifesto
@@ -32,7 +32,7 @@ export default function Manifesto() {
                 </span>
 
                 {/* Quote in 2 lines */}
-                <div className="font-italic-serif text-[6vw] sm:text-[4.5vw] lg:text-[3.2vw] leading-[1.3] tracking-tight max-w-4xl mx-auto flex flex-col items-center">
+                <div className="font-italic-serif text-[6vw] sm:text-[4.5vw] lg:text-[3vw] leading-[1.3] tracking-tight max-w-[95%] lg:max-w-5xl mx-auto flex flex-col items-center">
                     <p>We do not chase seasons. We chase silhouette, drape, and</p>
                     <p>the small architectures inside a coat that you can only feel when it is on.</p>
                 </div>
