@@ -4,12 +4,12 @@ import ScrollReveal from "./ScrollReveal";
 import { WARDROBE_DATA } from "../data/wardrobeData";
 
 const LOOKS = [
-    { id: 1, src: WARDROBE_DATA["winter-collection"].pieces[1].img, title: "The Royal Charcoal Suit", category: "Look 01 / Heritage" },
-    { id: 2, src: WARDROBE_DATA.suits.pieces[9].img, title: "Classic Double Breasted", category: "Look 02 / Bespoke" },
-    { id: 3, src: WARDROBE_DATA.suits.pieces[10].img, title: "Imperial Navy Suit", category: "Look 03 / Tailored" },
-    { id: 4, src: WARDROBE_DATA.suits.pieces[11].img, title: "Embroidery Border Tuxedo", category: "Look 04 / Occasion" },
-    { id: 5, src: WARDROBE_DATA["bandhagala-indo-western"].pieces[6].img, title: "Muted Bronze Two-Piece", category: "Look 05 / Signature" },
-    { id: 6, src: WARDROBE_DATA.suits.pieces[14].img, title: "Pinstripe Silk Suit", category: "Look 06 / Modernist" },
+    { id: 1, src: WARDROBE_DATA["winter-collection"].pieces[0].img, title: "The Royal Charcoal Suit", category: "Look 01 / Heritage" },
+    { id: 2, src: WARDROBE_DATA.suits.pieces[6].img, title: "Classic Double Breasted", category: "Look 02 / Bespoke" },
+    { id: 3, src: WARDROBE_DATA.suits.pieces[20].img, title: "Imperial Navy Suit", category: "Look 03 / Tailored" },
+    { id: 4, src: WARDROBE_DATA.suits.pieces[40].img, title: "Embroidery Border Tuxedo", category: "Look 04 / Occasion" },
+    { id: 5, src: WARDROBE_DATA["bandhagala-indo-western"].pieces[15].img, title: "Muted Bronze Two-Piece", category: "Look 05 / Signature" },
+    { id: 6, src: WARDROBE_DATA.suits.pieces[60].img, title: "Pinstripe Silk Suit", category: "Look 06 / Modernist" },
 ];
 
 export default function HorizontalRunway() {

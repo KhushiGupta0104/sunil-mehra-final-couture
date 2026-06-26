@@ -31,8 +31,40 @@ export default function Hero() {
             {/* Enhanced grain */}
             <div className="grain z-[2]" />
 
-            {/* Content overlay (empty to let the background garments shine) */}
-            <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+            {/* Content overlay */}
+            <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 pointer-events-none">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                    className="flex flex-col items-center gap-4"
+                >
+                    <h1 className="h-display text-4xl sm:text-6xl lg:text-7xl xl:text-[8vw] leading-none tracking-[-0.02em] text-[var(--bone)]">
+                        {letters.map((letter, index) => (
+                            <motion.span
+                                key={index}
+                                initial={{ opacity: 0, y: 40 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    duration: 1,
+                                    delay: 0.8 + index * 0.05,
+                                    ease: [0.2, 0.65, 0.3, 0.9],
+                                }}
+                                className="inline-block"
+                            >
+                                {letter === " " ? "\u00A0" : letter}
+                            </motion.span>
+                        ))}
+                    </h1>
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1.5, delay: 1.8 }}
+                        className="font-italic-serif text-lg sm:text-xl lg:text-2xl text-[var(--champagne)] mt-2"
+                    >
+                        Master Tailors & Purveyors of Luxury
+                    </motion.p>
+                </motion.div>
             </div>
 
             {/* Scroll indicator */}

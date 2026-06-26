@@ -4,22 +4,22 @@
 
 /* ============ LUXE PALETTE ============ */
 :root {
-    --bone: #faf6ef;
-    --cream: #f1ead9;
+    --bone: #f8f6f0;
+    --cream: #f2ebd9;
     --sand: #d8c8aa;
     --champagne: #c9b48b;
     --bronze: #8b6f47;
-    --ink: #1a1814;
-    --ink-soft: #2d2a23;
+    --ink: #0a0a0a;
+    --ink-soft: #222222;
     --muted: #7a7568;
-    --hairline: rgba(26, 24, 20, 0.12);
-    --hairline-strong: rgba(26, 24, 20, 0.28);
+    --hairline: rgba(10, 10, 10, 0.12);
+    --hairline-strong: rgba(10, 10, 10, 0.28);
 
     /* Dark section variants */
-    --section-dark-bg: #0f0e0c;
-    --section-dark-text: #faf6ef;
-    --section-dark-muted: rgba(250, 246, 239, 0.5);
-    --section-dark-hairline: rgba(250, 246, 239, 0.08);
+    --section-dark-bg: #0a0a0a;
+    --section-dark-text: #f8f6f0;
+    --section-dark-muted: rgba(248, 246, 240, 0.5);
+    --section-dark-hairline: rgba(248, 246, 240, 0.08);
 }
 
 html {
@@ -345,12 +345,14 @@ div[id="request-form"] {
     font-weight: 400;
     line-height: 1.25;
     letter-spacing: -0.005em;
+    font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
 }
 .h-luxe {
     font-family: "Tenor Sans", sans-serif;
     font-weight: 400;
     line-height: 1.05;
     letter-spacing: 0.005em;
+    font-size: clamp(2rem, 4vw + 0.5rem, 3.5rem);
 }
 
 /* tailwind base layer for borders */

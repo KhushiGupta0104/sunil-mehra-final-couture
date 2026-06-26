@@ -108,7 +108,13 @@ export default function AppointmentForm() {
                                 </motion.div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                    <motion.div 
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.8, staggerChildren: 0.1 }}
+                                        viewport={{ once: true, margin: "-100px" }}
+                                        className="grid grid-cols-1 sm:grid-cols-2 gap-8"
+                                    >
                                         <div className="relative group">
                                             <input type="text" name="name" id="name" required value={formData.name} onChange={handleChange} className="block w-full bg-transparent border-0 border-b border-[rgba(250,246,239,0.2)] text-[var(--bone)] text-sm py-2 px-0 focus:ring-0 focus:border-[var(--champagne)] peer placeholder-transparent transition-colors" placeholder="Name" />
                                             <label htmlFor="name" className="absolute text-[11px] font-luxe tracking-[0.2em] uppercase text-[rgba(250,246,239,0.4)] duration-300 transform -translate-y-6 scale-90 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[var(--champagne)] peer-focus:scale-90 peer-focus:-translate-y-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Full Name *</label>
@@ -117,9 +123,15 @@ export default function AppointmentForm() {
                                             <input type="email" name="email" id="email" required value={formData.email} onChange={handleChange} className="block w-full bg-transparent border-0 border-b border-[rgba(250,246,239,0.2)] text-[var(--bone)] text-sm py-2 px-0 focus:ring-0 focus:border-[var(--champagne)] peer placeholder-transparent transition-colors" placeholder="Email" />
                                             <label htmlFor="email" className="absolute text-[11px] font-luxe tracking-[0.2em] uppercase text-[rgba(250,246,239,0.4)] duration-300 transform -translate-y-6 scale-90 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[var(--champagne)] peer-focus:scale-90 peer-focus:-translate-y-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Email Address *</label>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                     
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                    <motion.div 
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.8, delay: 0.2 }}
+                                        viewport={{ once: true, margin: "-100px" }}
+                                        className="grid grid-cols-1 sm:grid-cols-2 gap-8"
+                                    >
                                         <div className="relative group">
                                             <input type="tel" name="phone" id="phone" value={formData.phone} onChange={handleChange} className="block w-full bg-transparent border-0 border-b border-[rgba(250,246,239,0.2)] text-[var(--bone)] text-sm py-2 px-0 focus:ring-0 focus:border-[var(--champagne)] peer placeholder-transparent transition-colors" placeholder="Phone" />
                                             <label htmlFor="phone" className="absolute text-[11px] font-luxe tracking-[0.2em] uppercase text-[rgba(250,246,239,0.4)] duration-300 transform -translate-y-6 scale-90 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[var(--champagne)] peer-focus:scale-90 peer-focus:-translate-y-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Phone Number</label>
@@ -136,14 +148,24 @@ export default function AppointmentForm() {
                                                 <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                                             </div>
                                         </div>
-                                    </div>
+                                    </motion.div>
 
                                     {errorMessage && (
-                                        <div className="text-xs text-red-500 font-body mb-4">
+                                        <motion.div 
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            className="text-xs text-red-500 font-body mb-4"
+                                        >
                                             {errorMessage}
-                                        </div>
+                                        </motion.div>
                                     )}
-                                    <div className="relative group pt-4">
+                                    <motion.div 
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.8, delay: 0.4 }}
+                                        viewport={{ once: true, margin: "-100px" }}
+                                        className="relative group pt-4"
+                                    >
                                         <button 
                                             type="submit" 
                                             disabled={isSubmitting}
@@ -151,7 +173,7 @@ export default function AppointmentForm() {
                                         >
                                             {isSubmitting ? "Requesting..." : "Request Appointment"}
                                         </button>
-                                    </div>
+                                    </motion.div>
                                 </form>
                             )}
                         </div>

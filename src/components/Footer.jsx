@@ -29,23 +29,44 @@ export default function Footer() {
                 {/* Main content */}
                 {/* Main content */}
                 <div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start pb-16 border-b border-[rgba(250,246,239,0.08)]">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start pb-16 border-b border-[rgba(250,246,239,0.08)]">
                         {/* Brand column */}
-                        <div className="flex flex-col items-start py-1">
+                        <div className="lg:col-span-4 flex flex-col items-start py-1">
                             <img
                                 src={logoImg}
                                 alt="Sunil Mehra"
                                 className="h-10 sm:h-12 lg:h-14 w-auto object-contain opacity-90"
                                 style={{ filter: "invert(1)" }}
                             />
-                            <p className="font-italic-serif text-sm sm:text-base text-[var(--champagne)] mt-4 leading-relaxed max-w-sm" style={{ opacity: 0.7 }}>
+                            <p className="font-italic-serif text-sm sm:text-base text-[var(--champagne)] mt-4 leading-relaxed max-w-xs" style={{ opacity: 0.7 }}>
                                 Couture menswear, hand-finished in Delhi since 1984. Every thread tells a story.
                             </p>
                         </div>
 
+                        {/* Newsletter column */}
+                        <div className="lg:col-span-4 flex flex-col items-start">
+                            <p className="font-luxe text-[10px] uppercase tracking-[0.25em] opacity-40 mb-3">
+                                The Society
+                            </p>
+                            <p className="font-body opacity-80 leading-relaxed text-sm mb-4">
+                                Subscribe for invitations to private collections and editorial features.
+                            </p>
+                            <form className="w-full flex items-center border-b border-[rgba(250,246,239,0.2)] pb-2 group focus-within:border-[var(--champagne)] transition-colors">
+                                <input 
+                                    type="email" 
+                                    placeholder="Your email address" 
+                                    className="bg-transparent border-none outline-none text-sm w-full text-[var(--bone)] placeholder-[rgba(250,246,239,0.3)]"
+                                    required
+                                />
+                                <button type="submit" className="text-[10px] uppercase tracking-[0.2em] font-luxe text-[var(--champagne)] opacity-80 hover:opacity-100 transition px-2">
+                                    Join
+                                </button>
+                            </form>
+                        </div>
+
                         {/* Contact details column */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm">
-                            <div>
+                        <div className="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm lg:justify-items-end">
+                            <div className="lg:text-right">
                                 <p className="font-luxe text-[10px] uppercase tracking-[0.25em] opacity-40 mb-3">
                                     Flagship Salon
                                 </p>
@@ -54,7 +75,7 @@ export default function Footer() {
                                     New Delhi, 110003, India
                                 </p>
                             </div>
-                            <div>
+                            <div className="lg:text-right">
                                 <p className="font-luxe text-[10px] uppercase tracking-[0.25em] opacity-40 mb-3">
                                     Correspondence
                                 </p>
@@ -62,7 +83,7 @@ export default function Footer() {
                                     T: +91 11 4150 1484<br />
                                     E: <a href="mailto:atelier@sunilmehra.com" className="hover:text-[var(--champagne)] transition">atelier@sunilmehra.com</a>
                                 </p>
-                                <div className="flex gap-4 font-luxe uppercase tracking-[0.25em] text-[10px] mt-4">
+                                <div className="flex lg:justify-end gap-4 font-luxe uppercase tracking-[0.25em] text-[10px] mt-4">
                                     <a href="https://www.instagram.com/sunilmehraart/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--champagne)] transition opacity-70 hover:opacity-100">
                                         Instagram
                                     </a>
