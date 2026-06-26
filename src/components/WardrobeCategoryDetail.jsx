@@ -10,9 +10,13 @@ export default function WardrobeCategoryDetail() {
     const category = WARDROBE_DATA[categorySlug];
     const [selectedPiece, setSelectedPiece] = useState(null);
 
+    const ITEMS_PER_PAGE = 21; // Multiple of 7 for grid layout
+    const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
+
     // Reset visible count when navigating between categories
     useEffect(() => {
         setSelectedPiece(null);
+        setVisibleCount(ITEMS_PER_PAGE);
     }, [categorySlug, subCategorySlug]);
 
     // Lock body scroll when lightbox is open
@@ -63,9 +67,9 @@ export default function WardrobeCategoryDetail() {
         ? category.pieces.filter(p => p.subcat === subCategorySlug)
         : category.pieces;
 
-    const displayedPieces = allPieces;
-    const hasMore = false;
-    const remaining = 0;
+    const displayedPieces = allPieces.slice(0, visibleCount);
+    const hasMore = visibleCount < allPieces.length;
+    const remaining = allPieces.length - visibleCount;
 
     // Lightbox navigation
     const handlePrev = useCallback((e) => {
