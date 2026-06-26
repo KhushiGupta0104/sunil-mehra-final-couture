@@ -41,7 +41,7 @@ export default function Footer() {
                     </div>
 
                     {/* Column 2: Newsletter (4 cols) */}
-                    <div className="lg:col-span-4 lg:col-start-5 flex flex-col items-start">
+                    <div className="lg:col-span-4 flex flex-col items-start lg:pl-8">
                         <p className="font-luxe text-[10px] uppercase tracking-[0.25em] text-[var(--bone)] opacity-50 mb-4">
                             The Society
                         </p>
