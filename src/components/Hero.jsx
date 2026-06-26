@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import coverImg from "@/assets/images/cover.jpg";
+import coverImg from "@/assets/images/new_content/Untitled folder 4/Suits/IMG_7019_R.jpg";
 
 export default function Hero() {
     const brandName = "SUNIL MEHRA";
@@ -13,15 +13,12 @@ export default function Hero() {
         >
             {/* Full-bleed image with Ken Burns */}
             <div className="absolute inset-0 w-full h-full">
-                <video
-                    src="/cover.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
+                <img
+                    src={coverImg}
+                    alt="Sunil Mehra"
                     className="absolute inset-0 w-full h-full object-cover"
-                    style={{ objectPosition: "center top" }}
-                    data-testid="hero-video"
+                    style={{ objectPosition: "center 30%" }}
+                    data-testid="hero-image"
                 />
             </div>
 
