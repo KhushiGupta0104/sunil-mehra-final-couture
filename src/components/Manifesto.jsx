@@ -4,7 +4,7 @@ export default function Manifesto() {
     return (
         <section
             id="manifesto"
-            className="relative bg-[var(--section-dark-bg)] text-[var(--bone)] py-24 sm:py-32 lg:py-40 w-full flex flex-col overflow-hidden"
+            className="relative bg-[var(--section-dark-bg)] text-[var(--bone)] py-16 sm:py-20 lg:py-24 w-full flex flex-col overflow-hidden"
             data-testid="manifesto-section"
         >
             <div className="grain" />
