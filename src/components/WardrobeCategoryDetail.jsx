@@ -5,7 +5,7 @@ import ScrollReveal, { StaggerReveal, StaggerItem } from "./ScrollReveal";
 
 import { WARDROBE_DATA } from "../data/wardrobeData";
 
-const ITEMS_PER_PAGE = 12;
+// Pagination removed to show all looks at once
 
 export default function WardrobeCategoryDetail() {
     const { categorySlug, subCategorySlug } = useParams();
@@ -15,11 +15,8 @@ export default function WardrobeCategoryDetail() {
     const [selectedLook, setSelectedLook] = useState(null); 
     const [lightboxIndex, setLightboxIndex] = useState(0);
 
-    const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
-
-    // Reset visible count when navigating between categories
+    // Reset state when navigating between categories
     useEffect(() => {
-        setVisibleCount(ITEMS_PER_PAGE);
         setSelectedLook(null);
     }, [categorySlug, subCategorySlug]);
 
@@ -81,8 +78,8 @@ export default function WardrobeCategoryDetail() {
         }));
     }
 
-    const displayedItems = allItems.slice(0, visibleCount);
-    const hasMore = visibleCount < allItems.length;
+    const displayedItems = allItems;
+    const hasMore = false;
 
     // --- LIGHTBOX NAVIGATION ---
     const closeLightbox = useCallback(() => setSelectedLook(null), []);
@@ -186,25 +183,12 @@ export default function WardrobeCategoryDetail() {
                     ))}
                 </StaggerReveal>
 
-                {/* ═══ MINIMAL LOAD MORE ═══ */}
-                {hasMore && (
-                    <div className="mt-24 flex justify-center">
-                        <button
-                            onClick={() => setVisibleCount(prev => prev + ITEMS_PER_PAGE)}
-                            className="font-luxe text-[10px] uppercase tracking-[0.3em] text-[var(--ink)] hover:text-[var(--bronze)] transition-colors"
-                        >
-                            + Load More Looks
-                        </button>
-                    </div>
-                )}
-
-                {!hasMore && allItems.length > ITEMS_PER_PAGE && (
-                    <div className="mt-24 flex justify-center">
-                        <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--muted)]">
-                            End of Collection
-                        </span>
-                    </div>
-                )}
+                {/* No load more button - displaying entire collection */}
+                <div className="mt-24 flex justify-center">
+                    <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--muted)]">
+                        End of Collection
+                    </span>
+                </div>
 
                 <BottomCTA />
             </div>
