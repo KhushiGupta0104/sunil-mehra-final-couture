@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
+import { Link } from "react-router-dom";
 
 export default function Salons() {
     const [name, setName] = useState("");
@@ -62,12 +63,12 @@ export default function Salons() {
                             <p className="text-[var(--ink-soft)] leading-relaxed max-w-md mb-6 text-sm">
                                 Step inside our flagship salon in Sundar Nagar for a private consultation — espresso, fabric swatches, and the quiet of the atelier.
                             </p>
-                            <a
-                                href="#request-form"
+                            <Link
+                                to="/appointment"
                                 className="bg-[var(--bronze)] text-[var(--bone)] hover:bg-[var(--ink)] hover:text-white px-8 py-3.5 text-[10px] tracking-[0.3em] font-luxe uppercase transition-all duration-300 inline-block"
                             >
                                 Request Appointment
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Single flagship salon card */}

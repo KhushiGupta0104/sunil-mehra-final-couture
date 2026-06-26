@@ -85,7 +85,7 @@ export default function Atelier() {
 
                             <div className="flex flex-wrap items-center gap-8">
                                 <Link
-                                    to="/#request-form"
+                                    to="/appointment"
                                     className="hairline-link"
                                     data-testid="atelier-book"
                                 >

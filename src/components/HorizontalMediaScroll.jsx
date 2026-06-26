@@ -32,9 +32,14 @@ export default function HorizontalMediaScroll() {
                 </h2>
             </ScrollReveal>
             
-            <StaggerReveal staggerDelay={0.15} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 px-6 sm:px-10 lg:px-14">
-                {galleryImages.map((item) => (
-                    <StaggerItem key={item.id} variant="fade-up" className="relative group">
+            <div className="flex flex-row overflow-x-auto snap-x snap-mandatory gap-8 lg:gap-12 px-6 sm:px-10 lg:px-14 pb-12 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                {galleryImages.map((item, index) => (
+                    <ScrollReveal 
+                        key={item.id} 
+                        variant="fade-up" 
+                        delay={index * 0.1}
+                        className="relative group shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] lg:w-[30vw] snap-center"
+                    >
                         <div className="w-full aspect-[4/5] overflow-hidden border border-white/10">
                             <img 
                                 src={item.src} 
@@ -46,9 +51,9 @@ export default function HorizontalMediaScroll() {
                             <h3 className="font-luxe text-xs uppercase tracking-[0.2em]">{item.title}</h3>
                             <p className="font-italic-serif text-[12px] text-white/50 mt-1">{item.desc}</p>
                         </div>
-                    </StaggerItem>
+                    </ScrollReveal>
                 ))}
-            </StaggerReveal>
+            </div>
         </section>
     );
 }

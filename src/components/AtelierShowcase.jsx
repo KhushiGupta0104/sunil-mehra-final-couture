@@ -54,7 +54,7 @@ export default function AtelierShowcase() {
                     
                     {/* Left: Video Showcase Panel */}
                     <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
-                        <div className="relative aspect-[16/9] w-full overflow-hidden bg-black border border-[var(--hairline)] shadow-md group">
+                        <div className="relative aspect-[4/5] w-full overflow-hidden bg-black border border-[var(--hairline)] shadow-md group">
                             <AnimatePresence mode="wait">
                                 <motion.img
                                     key={activeReel.id}

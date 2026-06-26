@@ -30,8 +30,8 @@ export default function CampaignReel() {
                 className="flex flex-col gap-16 lg:gap-24 px-6 sm:px-10 lg:px-14 pb-10"
             >
                 {REELS.map((reel) => (
-                    <div key={reel.id} className="relative w-full group flex flex-col">
-                        <div className="relative w-full aspect-[4/5] sm:aspect-[16/9] lg:aspect-[21/9] overflow-hidden border border-[var(--hairline)] bg-black">
+                    <div key={reel.id} className="relative w-full group flex flex-col items-center">
+                        <div className="relative w-full max-w-2xl mx-auto aspect-[4/5] overflow-hidden border border-[var(--hairline)] bg-black">
                             <img 
                                 src={reel.src}
                                 alt={reel.title}
@@ -40,7 +40,7 @@ export default function CampaignReel() {
                                 className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
                             />
                         </div>
-                        <div className="mt-6 flex justify-between items-start">
+                        <div className="mt-6 flex justify-between items-start w-full max-w-2xl mx-auto">
                             <div>
                                 <h3 className="font-luxe text-sm sm:text-base uppercase tracking-[0.1em] text-[var(--ink)]">
                                     {reel.title}

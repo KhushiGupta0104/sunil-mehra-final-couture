@@ -123,7 +123,7 @@ export default function Navbar({ onMenuOpen, menuOpen, onSearchOpen }) {
                     <Link to="/#salons" className="hidden lg:inline-block hover:opacity-60 transition">
                         Salons
                     </Link>
-                    <Link to="/#request-form" className="hover:opacity-60 transition font-medium text-[var(--bronze)]">
+                    <Link to="/appointment" className="hover:opacity-60 transition font-medium text-[var(--bronze)]">
                         Book Appointment
                     </Link>
                 </div>

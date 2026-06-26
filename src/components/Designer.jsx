@@ -1,11 +1,7 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import ScrollReveal from "./ScrollReveal";
+import React from "react";
 import designerImg from "@/assets/images/enhanced image Sunil mehra.png";
 
 export default function Designer() {
-    const quoteRef = useRef(null);
-    const quoteInView = useInView(quoteRef, { once: true, amount: 0.5 });
 
     return (
         <section
@@ -48,24 +44,7 @@ export default function Designer() {
                             </p>
                         </div>
 
-                        {/* Pull-quote — the cinematic moment */}
-                        <div ref={quoteRef}>
-                            <motion.div
-                                initial={{ opacity: 0, scaleX: 0 }}
-                                animate={quoteInView ? { opacity: 1, scaleX: 1 } : {}}
-                                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                                className="border-l-2 border-[var(--bronze)] pl-6 py-4 my-2 origin-left"
-                            >
-                                <motion.p
-                                    initial={{ opacity: 0 }}
-                                    animate={quoteInView ? { opacity: 1 } : {}}
-                                    transition={{ duration: 0.8, delay: 0.5 }}
-                                    className="font-italic-serif text-xl sm:text-2xl text-[var(--ink)] leading-relaxed"
-                                >
-                                    Inspired by the eternal love and harmony of Lord Krishna and Goddess Radha, every creation is designed with intention.
-                                </motion.p>
-                            </motion.div>
-                        </div>
+
 
                         <div>
                             <p className="text-xs sm:text-sm text-[var(--ink-soft)] leading-relaxed max-w-2xl font-light">

@@ -12,7 +12,7 @@ const MENU = [
     { label: "About Us", hover: "about sunil mehra", to: "/#designer" },
     { label: "Lookbook", hover: "stories in cloth", to: "/editorial" },
     { label: "Salons", hover: "by invitation", to: "/#salons" },
-    { label: "Appointment", hover: "private fitting", to: "/#request-form" },
+    { label: "Appointment", hover: "private fitting", to: "/appointment" },
 ];
 
 const META = [

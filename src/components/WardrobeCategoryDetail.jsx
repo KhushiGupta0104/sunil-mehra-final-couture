@@ -421,7 +421,7 @@ export default function WardrobeCategoryDetail() {
                         </p>
                         <div className="pt-4">
                             <Link 
-                                to="/#request-form"
+                                to="/appointment"
                                 className="bg-[var(--bronze)] text-[var(--bone)] hover:bg-[var(--ink)] hover:text-white px-10 py-4 text-[10px] tracking-[0.3em] font-luxe uppercase transition-all duration-300 inline-block"
                             >
                                 Request Fitting Appointment
@@ -473,8 +473,8 @@ export default function WardrobeCategoryDetail() {
                         let spanClass = "lg:col-span-1 aspect-[3/4]";
                         
                         if (i === 0) spanClass = "lg:col-span-2 lg:row-span-2 aspect-[3/4] sm:aspect-[4/5]"; // Large hero portrait
-                        else if (i === 4) spanClass = "lg:col-span-2 aspect-[16/9]"; // Wide landscape
-                        else if (i === 7) spanClass = "lg:col-span-2 aspect-[4/3]"; // Medium landscape
+                        else if (i === 4) spanClass = "lg:col-span-2 lg:row-span-2 aspect-[3/4] sm:aspect-[4/5]"; // Another large portrait
+                        else if (i === 7) spanClass = "lg:col-span-1 aspect-[3/4]"; // Regular portrait
 
                         return (
                             <StaggerItem 
@@ -520,8 +520,8 @@ export default function WardrobeCategoryDetail() {
                     </p>
                     <div className="pt-4">
                         <Link 
-                            to="/#request-form"
-                            className="bg-[var(--bronze)] text-[var(--bone)] hover:bg-[var(--ink)] hover:text-white px-10 py-4 text-[10px] tracking-[0.3em] font-luxe uppercase transition-all duration-300 inline-block"
+                            to="/appointment"
+                            className="bg-[var(--bronze)] text-[var(--bone)] px-10 py-4 text-[11px] tracking-[0.3em] font-luxe uppercase hover:bg-[var(--ink)] transition-colors duration-300 inline-block"
                         >
                             Request Fitting Appointment
                         </Link>

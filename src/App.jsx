@@ -120,13 +120,11 @@ const Home = () => {
             <CampaignReel />
             <SectionDivider variant="monogram" className="py-4" />
             <AtelierShowcase />
-            <BespokeJourney />
             <Designer />
             <SectionDivider variant="dot" className="py-4" />
             <Manifesto />
             <VerticalVideoTriptych />
             <Salons />
-            <AppointmentForm />
         </PageLayout>
     );
 };
@@ -170,6 +168,7 @@ function App() {
             <Suspense fallback={<PageLoader />}>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/appointment" element={<PageLayout><AppointmentForm /></PageLayout>} />
                     <Route path="/wardrobe" element={<WardrobePage />} />
                     <Route path="/wardrobe/:categorySlug" element={<PageLayout><WardrobeCategoryDetail /></PageLayout>} />
                     <Route path="/wardrobe/:categorySlug/:subCategorySlug" element={<PageLayout><WardrobeCategoryDetail /></PageLayout>} />

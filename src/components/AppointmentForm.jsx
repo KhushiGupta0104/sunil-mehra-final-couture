@@ -50,7 +50,7 @@ export default function AppointmentForm() {
     };
 
     return (
-        <section id="request-form" className="w-full bg-[var(--section-dark-bg)] text-[var(--bone)] py-20 lg:py-32 relative overflow-hidden">
+        <section id="request-form" className="w-full bg-[var(--section-dark-bg)] text-[var(--bone)] min-h-screen pt-32 lg:pt-48 pb-20 lg:pb-32 relative overflow-hidden flex items-center">
             <div className="grain" />
             
             <div className="max-w-[1500px] mx-auto px-6 sm:px-10 lg:px-14 relative z-10">
