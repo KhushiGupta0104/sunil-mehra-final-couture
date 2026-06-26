@@ -105,7 +105,7 @@ export default function OverlayMenu({ open, onClose }) {
                             src={coverImg}
                             alt="Atelier — Sunil Mehra"
                             className="absolute inset-0 w-full h-full object-cover ken-burns-slow"
-                            style={{ objectPosition: "center bottom" }}
+                            style={{ objectPosition: "center" }}
                         />
                         <div className="absolute inset-0 bg-[rgba(20,18,14,0.18)]" />
                         <div className="absolute bottom-10 left-10 right-10 text-[var(--bone)]">
