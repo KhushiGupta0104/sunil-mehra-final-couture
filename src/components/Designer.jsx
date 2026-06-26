@@ -15,7 +15,7 @@ export default function Designer() {
 
                     {/* Visual Column */}
                     <div className="lg:col-span-5 flex justify-center lg:sticky lg:top-[120px]">
-                        <div className="relative w-full max-w-[450px] aspect-[1.1/1] lg:aspect-auto lg:h-[65vh] overflow-hidden bg-[var(--cream)] border border-[var(--hairline)] shadow-sm">
+                        <div className="relative w-full max-w-[450px] aspect-[1.1/1] lg:aspect-auto lg:h-[65vh] overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] shadow-sm">
                             <img
                                 src={designerImg}
                                 alt="Sunil Mehra — The Designer"

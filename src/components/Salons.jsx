@@ -50,7 +50,7 @@ export default function Salons() {
             {/* FRAME 1: The Salons (Delhi Flagship card) */}
             <section
                 id="salons"
-                className="relative bg-[var(--cream)] min-h-screen lg:h-screen w-full flex flex-col pt-[76px] sm:pt-[84px] lg:pt-[92px] pb-12 px-6 sm:px-10 lg:pb-5 lg:px-14 py-8 lg:py-0"
+                className="relative bg-[var(--bone)] min-h-screen lg:h-screen w-full flex flex-col pt-[76px] sm:pt-[84px] lg:pt-[92px] pb-12 px-6 sm:px-10 lg:pb-5 lg:px-14 py-8 lg:py-0"
                 data-testid="salons-section"
             >
                 <div className="max-w-[1150px] mx-auto w-full flex-1 flex flex-col justify-center py-6 lg:py-0">

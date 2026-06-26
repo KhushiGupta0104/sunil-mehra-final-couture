@@ -35,7 +35,7 @@ function AnimatedCounter({ target, label }) {
 
 export default function Atelier() {
     return (
-        <div className="bg-[var(--cream)]">
+        <div className="bg-[var(--bone)]">
             <section
                 id="atelier"
                 className="relative min-h-screen w-full flex flex-col pt-[76px] sm:pt-[84px] lg:pt-[92px] pb-12 px-6 sm:px-10 lg:pb-5 lg:px-14 py-8 lg:py-0"

@@ -59,7 +59,7 @@ export default function CinematicCanvas() {
                     <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
                         
                         {/* Box 1 */}
-                        <ScrollReveal variant="fade-up" className="group relative overflow-hidden aspect-[4/5] bg-[var(--cream)] border border-[var(--hairline)] shadow-sm">
+                        <ScrollReveal variant="fade-up" className="group relative overflow-hidden aspect-[4/5] bg-[var(--bone)] border border-[var(--hairline)] shadow-sm">
                             <img
                                 src={walletImg}
                                 alt="Leather Wallet"
@@ -77,7 +77,7 @@ export default function CinematicCanvas() {
                         </ScrollReveal>
 
                         {/* Box 2 */}
-                        <ScrollReveal variant="fade-up" delay={0.1} className="group relative overflow-hidden aspect-[4/5] bg-[var(--cream)] border border-[var(--hairline)] shadow-sm">
+                        <ScrollReveal variant="fade-up" delay={0.1} className="group relative overflow-hidden aspect-[4/5] bg-[var(--bone)] border border-[var(--hairline)] shadow-sm">
                             <img
                                 src={bagImg}
                                 alt="Travel Duffle"
@@ -95,7 +95,7 @@ export default function CinematicCanvas() {
                         </ScrollReveal>
 
                         {/* Box 3 */}
-                        <ScrollReveal variant="fade-up" className="group relative overflow-hidden aspect-[4/5] bg-[var(--cream)] border border-[var(--hairline)] shadow-sm">
+                        <ScrollReveal variant="fade-up" className="group relative overflow-hidden aspect-[4/5] bg-[var(--bone)] border border-[var(--hairline)] shadow-sm">
                             <img
                                 src={winterImg}
                                 alt="Winter Suit"
@@ -113,7 +113,7 @@ export default function CinematicCanvas() {
                         </ScrollReveal>
 
                         {/* Box 4 */}
-                        <ScrollReveal variant="fade-up" delay={0.1} className="group relative overflow-hidden aspect-[4/5] bg-[var(--cream)] border border-[var(--hairline)] shadow-sm">
+                        <ScrollReveal variant="fade-up" delay={0.1} className="group relative overflow-hidden aspect-[4/5] bg-[var(--bone)] border border-[var(--hairline)] shadow-sm">
                             <img
                                 src={kurtaImg}
                                 alt="Silk Kurta"

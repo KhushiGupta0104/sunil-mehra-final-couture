@@ -41,7 +41,7 @@ export default function HorizontalRunway() {
                     {LOOKS.map((look) => (
                         <div
                             key={look.id}
-                            className="w-full aspect-[3/4] relative overflow-hidden bg-[var(--cream)] border border-[var(--hairline)] shadow-md group"
+                            className="w-full aspect-[3/4] relative overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] shadow-md group"
                         >
                             <img
                                 src={look.src}

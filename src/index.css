@@ -197,7 +197,7 @@ div[id="request-form"] {
 .cat-card {
     position: relative;
     overflow: hidden;
-    background: var(--cream);
+    background: var(--bone);
 }
 .cat-card img {
     transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), filter 1.4s ease;
@@ -211,7 +211,7 @@ div[id="request-form"] {
 .product-card {
     position: relative;
     overflow: hidden;
-    background: var(--cream);
+    background: var(--bone);
 }
 .product-card img {
     transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
@@ -388,9 +388,9 @@ div[id="request-form"] {
 .img-loading {
     background: linear-gradient(
         90deg,
-        var(--cream) 0%,
+        var(--bone) 0%,
         var(--bone) 50%,
-        var(--cream) 100%
+        var(--bone) 100%
     );
     background-size: 200% 100%;
     animation: shimmer 2s ease-in-out infinite;

@@ -54,7 +54,7 @@ export default function OccasionEdit() {
                         data-testid={`occasion-${occ.id}`}
                     >
                         {/* Video Layer */}
-                        <div className="absolute inset-0 w-full h-full bg-[var(--cream)] overflow-hidden">
+                        <div className="absolute inset-0 w-full h-full bg-[var(--bone)] overflow-hidden">
                             <video
                                 src={occ.video}
                                 autoPlay
