@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import coverImg from "@/assets/images/hero_pic_123.jpg";
+import coverImg from "@/assets/images/hero_denoised.png";
 
 export default function Hero() {
     const brandName = "SUNIL MEHRA";
