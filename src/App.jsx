@@ -19,7 +19,6 @@ import BookingWizard from "@/components/BookingWizard";
 import LookbookGrid from "@/components/LookbookGrid";
 import AtelierShowcase from "@/components/AtelierShowcase";
 import HorizontalMediaScroll from "@/components/HorizontalMediaScroll";
-import CampaignReel from "@/components/CampaignReel";
 import VerticalVideoTriptych from "@/components/VerticalVideoTriptych";
 
 // Lazy-loaded pages
@@ -116,8 +115,6 @@ const Home = () => {
             <LookbookGrid />
             <SectionDivider variant="dot" className="py-4" />
             <HorizontalMediaScroll />
-            <SectionDivider variant="diamond" className="py-4" />
-            <CampaignReel />
             <SectionDivider variant="monogram" className="py-4" />
             <AtelierShowcase />
             <Designer />

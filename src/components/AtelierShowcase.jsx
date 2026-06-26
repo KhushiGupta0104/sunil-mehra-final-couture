@@ -86,7 +86,7 @@ export default function AtelierShowcase() {
 
                     {/* Center: Main Feature Panel */}
                     <div className="lg:col-span-4 order-1 lg:order-2">
-                        <div className="relative aspect-[3/4] w-full overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] shadow-md group">
+                        <div className="relative aspect-[3/4] lg:aspect-[4/5] w-full overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] shadow-md group">
                             <AnimatePresence mode="wait">
                                 <motion.img
                                     key={activeReel.id}
@@ -98,7 +98,7 @@ export default function AtelierShowcase() {
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0 }}
                                     transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                                    className="w-full h-full object-cover object-top grayscale-[0.6] contrast-125 sepia-[0.2] brightness-95"
+                                    className="w-full h-full object-cover object-center grayscale-[0.6] contrast-125 sepia-[0.2] brightness-95"
                                 />
                             </AnimatePresence>
                         </div>
@@ -109,13 +109,13 @@ export default function AtelierShowcase() {
                         {PHOTOS.map((photo, idx) => (
                             <div
                                 key={idx}
-                                className={`group relative w-full overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] shadow-sm ${idx === 0 ? "aspect-[16/9]" : "aspect-[5/4]"}`}
+                                className={`group relative w-full overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] shadow-sm aspect-square md:aspect-[4/5]`}
                             >
                                 <img
                                     src={photo.src}
                                     alt={photo.title}
                                     loading="lazy"
-                                    className="w-full h-full object-cover object-top transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03] grayscale-[0.6] contrast-125 sepia-[0.2] brightness-95"
+                                    className="w-full h-full object-cover object-center transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03] grayscale-[0.6] contrast-125 sepia-[0.2] brightness-95"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-5 pointer-events-none">
                                     <span className="font-luxe text-[9px] uppercase tracking-[0.25em] text-[var(--champagne)] mb-1">
