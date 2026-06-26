@@ -1,4 +1,4 @@
 # Recent Context
-- **Task:** Navbar Glassmorphism
+- **Task:** Global Image Deduplication
 - **Date:** 2026-06-27
-- **Context:** The global Navbar (`Navbar.jsx`) was updated to permanently use the `.glass` class (frosted white glassmorphism with dark ink text) across all scroll states, rather than starting as transparent white text. This ensures consistent branding and high legibility across all hero sections.
+- **Context:** Conducted a comprehensive audit of all hardcoded arrays in `Featured.jsx`, `LookbookGrid.jsx`, `HorizontalRunway.jsx`, and `AtelierShowcase.jsx`. Repetitive indices (e.g. `kurta-sets[0]` and `kurta-sets[15]`) were safely reassigned to unused looks across the 78+ wardrobe items. All components now display 100% unique imagery, maximizing the visibility of the uploaded photo batch.

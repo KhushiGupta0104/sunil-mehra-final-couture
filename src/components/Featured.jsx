@@ -23,8 +23,8 @@ const IVORY_PRODUCTS = [
         id: "p3",
         name: "Classic Atelier Kurta",
         tag: null,
-        front: WARDROBE_DATA["kurta-sets"].looks[0].images[0],
-        back: WARDROBE_DATA["kurta-sets"].looks[1].images[0],
+        front: WARDROBE_DATA["kurta-sets"].looks[2].images[0],
+        back: WARDROBE_DATA["kurta-sets"].looks[3].images[0],
     },
 ];
 
@@ -40,8 +40,8 @@ const COLORED_PRODUCTS = [
         id: "p5",
         name: "Ash Grey Silk Kurta Set",
         tag: null,
-        front: WARDROBE_DATA["kurta-sets"].looks[15].images[0],
-        back: WARDROBE_DATA["kurta-sets"].looks[16].images[0],
+        front: WARDROBE_DATA["kurta-sets"].looks[6].images[0],
+        back: WARDROBE_DATA["kurta-sets"].looks[7].images[0],
     },
     {
         id: "p6",
