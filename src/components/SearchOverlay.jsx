@@ -1,168 +1,52 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-
-// Import local images for search result thumbnails
-import img3721 from "@/assets/images/Sunil Mehra  0966.jpg";
-import img0493 from "@/assets/images/Sunil Mehra  0493.jpg";
-import img0904 from "@/assets/images/Sunil Mehra_0904.jpg";
-import img9371 from "@/assets/images/Bandhagla/sunil_mehra_3591.jpg";
-import img0246 from "@/assets/images/Sunil Mehra  0246.jpg";
-import img8657 from "@/assets/images/IMG8657 copy.jpg";
-import img0039 from "@/assets/images/Sunil Mehra_6620 - Copy.jpg";
-import img2281 from "@/assets/images/Sunil Mehra 0278.jpg";
-import img0553 from "@/assets/images/Sunil Mehra  0553.jpg";
-import jacket1 from "@/assets/images/Sunil Mehra_6586 - Copy.jpg";
-import winterCover from "@/assets/images/Sunil Mehra 0932.jpg";
-
-// Accessories covers
-import bagCover from "@/assets/images/Accessories/Bags/Sunil Mehra_7074.jpg";
-import broachCover from "@/assets/images/Accessories/Broach/IMG_9595 copy 2 - Copy.jpg";
-import laceCover from "@/assets/images/Accessories/Brooks Lace up/IMG_9312 copy 2 - Copy.jpg";
-import loaferCover from "@/assets/images/Accessories/Loafers/IMG_9284 copy 2 - Copy.jpg";
-import monkCover from "@/assets/images/Accessories/Monks/IMG_9521 copy 2 - Copy.jpg";
-import walletCover from "@/assets/images/Accessories/Ostrich Leather Wallet/IMG_9738 copy 2.jpg";
-import sneakerCover from "@/assets/images/Accessories/Sneakers/IMG_9420 copy 2 - Copy.jpg";
-
-const SEARCHABLE_ITEMS = [
-    // Wardrobe categories
-    {
-        type: "wardrobe",
-        name: "Bandhagla Sets & Indo-western",
-        desc: "Tailored Royalty — structured Bandhgalas and classic Sherwanis",
-        img: img0493,
-        to: "/wardrobe/bandhagala-indo-western"
-    },
-    {
-        type: "wardrobe",
-        name: "Kurta Sets",
-        desc: "Quiet Luxury — hand-woven silk kurtas",
-        img: img0904,
-        to: "/wardrobe/kurta-sets"
-    },
-    {
-        type: "wardrobe",
-        name: "Jawahar Jacket Sets",
-        desc: "Modern Maharaja — hand-crafted Nehru jackets and sadris",
-        img: jacket1,
-        to: "/wardrobe/jawahar-jackets"
-    },
-    {
-        type: "wardrobe",
-        name: "Winter Collection",
-        desc: "Princely Silhouettes — structured coats and layers",
-        img: winterCover,
-        to: "/wardrobe/winter-collection"
-    },
-    {
-        type: "wardrobe",
-        name: "Suits",
-        desc: "Sharply Cut — premium wool luxury suits",
-        img: img8657,
-        to: "/wardrobe/suits"
-    },
-    {
-        type: "wardrobe",
-        name: "Accessories",
-        desc: "Finishing Details — bespoke luxury accessories hub",
-        img: bagCover,
-        to: "/wardrobe/accessories"
-    },
-    {
-        type: "wardrobe",
-        name: "Bags",
-        desc: "Atelier Accessories — bespoke leather travel luggage, portfolios, and document cases",
-        img: bagCover,
-        to: "/wardrobe/accessories/bags"
-    },
-    {
-        type: "wardrobe",
-        name: "Brooches",
-        desc: "Atelier Accessories — intricately detailed gold crests and pin emblems",
-        img: broachCover,
-        to: "/wardrobe/accessories/brooches"
-    },
-    {
-        type: "wardrobe",
-        name: "Lace-ups",
-        desc: "Atelier Accessories — hand-crafted formal oxfords and derbies in premium skins",
-        img: laceCover,
-        to: "/wardrobe/accessories/lace-ups"
-    },
-    {
-        type: "wardrobe",
-        name: "Loafers",
-        desc: "Atelier Accessories — suede slip-ons, tassel loafers, and heritage penny loafers",
-        img: loaferCover,
-        to: "/wardrobe/accessories/loafers"
-    },
-    {
-        type: "wardrobe",
-        name: "Monks",
-        desc: "Atelier Accessories — classic single and double strap burnished leather monk shoes",
-        img: monkCover,
-        to: "/wardrobe/accessories/monks"
-    },
-    {
-        type: "wardrobe",
-        name: "Wallets",
-        desc: "Atelier Accessories — bespoke ostrich leather billfolds and cardholders",
-        img: walletCover,
-        to: "/wardrobe/accessories/wallets"
-    },
-    {
-        type: "wardrobe",
-        name: "Sneakers",
-        desc: "Atelier Accessories — minimalist calfskin, textured suede, and premium sport runners",
-        img: sneakerCover,
-        to: "/wardrobe/accessories/sneakers"
-    },
-    // Featured pieces
-    {
-        type: "featured",
-        name: "Mirage Silk Kurta Set",
-        desc: "Couture Collection — Ivory silk blend",
-        img: img3721,
-        to: "/#featured"
-    },
-    {
-        type: "featured",
-        name: "Bone Silk Kurta Set",
-        desc: "Spring Edit — pure raw bone silk",
-        img: img0039,
-        to: "/#featured"
-    },
-    {
-        type: "featured",
-        name: "Classic Atelier Kurta",
-        desc: "Daily Atelier — luxury linen comfort",
-        img: img2281,
-        to: "/#featured"
-    },
-    {
-        type: "featured",
-        name: "Dune Bandhgala",
-        desc: "Chapter II — rich earth ochre wool",
-        img: img0493,
-        to: "/#featured"
-    },
-    {
-        type: "featured",
-        name: "Sand Linen Jodhpuri",
-        desc: "Chapter II — princely light beige linen",
-        img: img0246,
-        to: "/#featured"
-    },
-    {
-        type: "featured",
-        name: "Indigo Couture Sherwani",
-        desc: "Chapter II — deep indigo ceremonial fit",
-        img: img9371,
-        to: "/#featured"
-    }
-];
+import { WARDROBE_DATA } from "../data/wardrobeData";
 
 export default function SearchOverlay({ open, onClose }) {
+    // Dynamically build the search index from WARDROBE_DATA
+    const SEARCHABLE_ITEMS = useMemo(() => {
+        const items = [];
+        
+        Object.entries(WARDROBE_DATA).forEach(([categorySlug, categoryData]) => {
+            // 1. Add Category itself
+            items.push({
+                type: "category",
+                name: categoryData.name,
+                desc: categoryData.description || categoryData.edit,
+                img: categoryData.pieces[0]?.img || null,
+                to: `/wardrobe/${categorySlug}`
+            });
+            
+            // 2. Add Subcategories (if any)
+            if (categoryData.subcategories) {
+                categoryData.subcategories.forEach(subcat => {
+                    items.push({
+                        type: "subcategory",
+                        name: subcat.name,
+                        desc: `${categoryData.name} — ${subcat.desc || subcat.name}`,
+                        img: subcat.img || categoryData.pieces[0]?.img,
+                        to: `/wardrobe/${categorySlug}/${subcat.id}`
+                    });
+                });
+            }
+            
+            // 3. Add individual Garments/Pieces
+            categoryData.pieces.forEach((piece, index) => {
+                items.push({
+                    type: "garment",
+                    name: piece.name,
+                    desc: piece.subcat 
+                        ? `${categoryData.name} — ${piece.subcat}`
+                        : `${categoryData.name} Piece`,
+                    img: piece.img,
+                    to: `/wardrobe/${categorySlug}` // Just point to category, user can scroll/find it
+                });
+            });
+        });
+        
+        return items;
+    }, []);
     const [query, setQuery] = useState("");
     const inputRef = useRef(null);
 
@@ -191,12 +75,17 @@ export default function SearchOverlay({ open, onClose }) {
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [open, onClose]);
 
+    // Only show up to 12 items at a time to prevent UI lag on massive searches
+    const MAX_RESULTS = 12;
     const filteredItems = query.trim() === "" 
         ? [] 
         : SEARCHABLE_ITEMS.filter(item => 
             item.name.toLowerCase().includes(query.toLowerCase()) || 
             item.desc.toLowerCase().includes(query.toLowerCase())
-          );
+          ).slice(0, MAX_RESULTS);
+
+    const categories = filteredItems.filter(i => i.type === "category" || i.type === "subcategory");
+    const garments = filteredItems.filter(i => i.type === "garment");
 
     return (
         <AnimatePresence>
@@ -244,7 +133,7 @@ export default function SearchOverlay({ open, onClose }) {
                             <div className="text-white/40 text-xs sm:text-sm font-light space-y-4">
                                 <p className="font-luxe uppercase tracking-[0.2em] text-[var(--champagne)]">Suggested Searches</p>
                                 <div className="flex flex-wrap gap-3">
-                                    {["Sherwani", "Bandhgala", "Kurta Sets", "Suits", "Indigo", "Ivory"].map(term => (
+                                    {["Sherwani", "Bandhgala", "Kurta", "Suits", "Accessories", "Loafer"].map(term => (
                                         <button
                                             key={term}
                                             onClick={() => setQuery(term)}
@@ -257,13 +146,13 @@ export default function SearchOverlay({ open, onClose }) {
                             </div>
                         ) : filteredItems.length > 0 ? (
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                {/* Wardrobe Results */}
+                                {/* Categories / Collections */}
                                 <div>
                                     <h3 className="font-luxe text-xs uppercase tracking-[0.25em] text-[var(--champagne)] mb-4 pb-2 border-b border-white/10">
-                                        Wardrobe Sections
+                                        Collections
                                     </h3>
                                     <div className="space-y-4">
-                                        {filteredItems.filter(i => i.type === "wardrobe").map((item, index) => (
+                                        {categories.map((item, index) => (
                                             <Link 
                                                 key={index} 
                                                 to={item.to} 
@@ -271,7 +160,7 @@ export default function SearchOverlay({ open, onClose }) {
                                                 className="flex items-center gap-4 p-3 border border-white/5 hover:border-white/25 bg-white/5 hover:bg-white/10 transition group"
                                             >
                                                 <div className="w-16 aspect-[3/4] bg-white/10 overflow-hidden border border-white/10 shrink-0">
-                                                    <img src={item.img} alt={item.name} loading="lazy" className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
+                                                    {item.img && <img src={item.img} alt={item.name} loading="lazy" className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />}
                                                 </div>
                                                 <div>
                                                     <h4 className="font-display text-lg text-white group-hover:text-[var(--champagne)] transition">{item.name}</h4>
@@ -279,19 +168,19 @@ export default function SearchOverlay({ open, onClose }) {
                                                 </div>
                                             </Link>
                                         ))}
-                                        {filteredItems.filter(i => i.type === "wardrobe").length === 0 && (
-                                            <p className="text-xs text-white/40 italic">No matching wardrobe sections found.</p>
+                                        {categories.length === 0 && (
+                                            <p className="text-xs text-white/40 italic">No matching collections found.</p>
                                         )}
                                     </div>
                                 </div>
 
-                                {/* Collection Results */}
+                                {/* Garments / Pieces */}
                                 <div>
                                     <h3 className="font-luxe text-xs uppercase tracking-[0.25em] text-[var(--champagne)] mb-4 pb-2 border-b border-white/10">
-                                        Curated Pieces
+                                        Individual Garments
                                     </h3>
                                     <div className="space-y-4">
-                                        {filteredItems.filter(i => i.type === "featured").map((item, index) => (
+                                        {garments.map((item, index) => (
                                             <Link 
                                                 key={index} 
                                                 to={item.to} 
@@ -299,7 +188,7 @@ export default function SearchOverlay({ open, onClose }) {
                                                 className="flex items-center gap-4 p-3 border border-white/5 hover:border-white/25 bg-white/5 hover:bg-white/10 transition group"
                                             >
                                                 <div className="w-16 aspect-[3/4] bg-white/10 overflow-hidden border border-white/10 shrink-0">
-                                                    <img src={item.img} alt={item.name} loading="lazy" className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
+                                                    {item.img && <img src={item.img} alt={item.name} loading="lazy" className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />}
                                                 </div>
                                                 <div>
                                                     <h4 className="font-display text-lg text-white group-hover:text-[var(--champagne)] transition">{item.name}</h4>
@@ -307,8 +196,8 @@ export default function SearchOverlay({ open, onClose }) {
                                                 </div>
                                             </Link>
                                         ))}
-                                        {filteredItems.filter(i => i.type === "featured").length === 0 && (
-                                            <p className="text-xs text-white/40 italic">No matching featured pieces found.</p>
+                                        {garments.length === 0 && (
+                                            <p className="text-xs text-white/40 italic">No matching garments found.</p>
                                         )}
                                     </div>
                                 </div>
