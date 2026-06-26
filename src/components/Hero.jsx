@@ -22,11 +22,8 @@ export default function Hero() {
                 />
             </div>
 
-            {/* Gradient overlay — heavier at bottom for text legibility */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/50 z-[1]" />
-
-            {/* Enhanced grain */}
-            <div className="grain z-[2]" />
+            {/* Subtle gradient overlay for navbar and scroll indicator contrast */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/50 z-[1] pointer-events-none" />
 
             {/* Content overlay */}
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 pointer-events-none">
