@@ -5,17 +5,13 @@ import ScrollReveal, { StaggerReveal, StaggerItem } from "./ScrollReveal";
 
 import { WARDROBE_DATA } from "../data/wardrobeData";
 
-const ITEMS_PER_PAGE = 12;
-
 export default function WardrobeCategoryDetail() {
     const { categorySlug, subCategorySlug } = useParams();
     const category = WARDROBE_DATA[categorySlug];
     const [selectedPiece, setSelectedPiece] = useState(null);
-    const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
 
     // Reset visible count when navigating between categories
     useEffect(() => {
-        setVisibleCount(ITEMS_PER_PAGE);
         setSelectedPiece(null);
     }, [categorySlug, subCategorySlug]);
 
@@ -67,9 +63,9 @@ export default function WardrobeCategoryDetail() {
         ? category.pieces.filter(p => p.subcat === subCategorySlug)
         : category.pieces;
 
-    const displayedPieces = allPieces.slice(0, visibleCount);
-    const hasMore = visibleCount < allPieces.length;
-    const remaining = allPieces.length - visibleCount;
+    const displayedPieces = allPieces;
+    const hasMore = false;
+    const remaining = 0;
 
     // Lightbox navigation
     const handlePrev = useCallback((e) => {
@@ -135,7 +131,7 @@ export default function WardrobeCategoryDetail() {
                                     to={`/wardrobe/accessories/${subcat.id}`}
                                     className="group cursor-pointer flex flex-col w-full"
                                 >
-                                    <div className="relative overflow-hidden border border-[var(--hairline)] aspect-[3/4] bg-[var(--cream)] shadow-sm">
+                                    <div className="relative overflow-hidden border border-[var(--hairline)] aspect-[3/4] bg-[var(--bone)] shadow-sm">
                                         <img
                                             src={subcat.img}
                                             alt={subcat.name}
@@ -197,7 +193,7 @@ export default function WardrobeCategoryDetail() {
                 {/* Piece count indicator */}
                 <div className="flex items-center justify-between mb-8 pb-4 border-b border-[var(--hairline)]">
                     <span className="font-luxe text-[10px] uppercase tracking-[0.25em] text-[var(--muted)]">
-                        Showing {Math.min(visibleCount, allPieces.length)} of {allPieces.length} pieces
+                        Showing all {allPieces.length} pieces
                     </span>
                     {hasMore && (
                         <span className="font-italic-serif text-sm text-[var(--bronze)] opacity-70">
@@ -220,7 +216,7 @@ export default function WardrobeCategoryDetail() {
                                 className={`group cursor-pointer ${spanClass}`}
                             >
                                 <div
-                                    className={`relative w-full overflow-hidden bg-[var(--cream)] border border-[var(--hairline)] ${isWide ? "aspect-[16/9]" : "aspect-[3/4]"}`}
+                                    className={`relative w-full overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] ${isWide ? "aspect-[16/9]" : "aspect-[3/4]"}`}
                                     onClick={() => setSelectedPiece(piece)}
                                 >
                                     <img

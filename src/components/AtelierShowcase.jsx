@@ -23,7 +23,7 @@ export default function AtelierShowcase() {
     return (
         <section
             id="atelier-showcase"
-            className="w-full bg-[var(--cream)] py-20 lg:py-32 px-6 sm:px-10 lg:px-14 border-t border-[var(--hairline)]"
+            className="w-full bg-[var(--bone)] py-20 lg:py-32 px-6 sm:px-10 lg:px-14 border-t border-[var(--hairline)]"
         >
             <div className="max-w-[1500px] mx-auto w-full space-y-12">
                 

@@ -243,7 +243,7 @@ function ProductCard({ prod, onSelect, featured = false }) {
             className="block w-full flex flex-col group"
             data-testid={`product-${prod.id}`}
         >
-            <div className="relative overflow-hidden border border-[var(--hairline)] aspect-[3/4] bg-[var(--cream)] shadow-sm">
+            <div className="relative overflow-hidden border border-[var(--hairline)] aspect-[3/4] bg-[var(--bone)] shadow-sm">
                 <img
                     src={prod.front}
                     alt={prod.name}
