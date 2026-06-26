@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 import SearchOverlay from "@/components/SearchOverlay";
 import SectionDivider from "@/components/SectionDivider";
 import Marquee from "@/components/Marquee";
-import AppointmentForm from "@/components/AppointmentForm";
+import BookingWizard from "@/components/BookingWizard";
 
 import LookbookGrid from "@/components/LookbookGrid";
 import AtelierShowcase from "@/components/AtelierShowcase";
@@ -168,7 +168,7 @@ function App() {
             <Suspense fallback={<PageLoader />}>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/appointment" element={<PageLayout><AppointmentForm /></PageLayout>} />
+                    <Route path="/appointment" element={<PageLayout><BookingWizard /></PageLayout>} />
                     <Route path="/wardrobe" element={<WardrobePage />} />
                     <Route path="/wardrobe/:categorySlug" element={<PageLayout><WardrobeCategoryDetail /></PageLayout>} />
                     <Route path="/wardrobe/:categorySlug/:subCategorySlug" element={<PageLayout><WardrobeCategoryDetail /></PageLayout>} />

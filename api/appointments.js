@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     }
 
     try {
-        const { name, email, phone, date, interest, message } = req.body;
+        const { name, email, phone, date, interest, message, instagram_handle, liked_dresses } = req.body;
 
         // Basic validation
         if (!name || !name.trim() || !email || !email.trim()) {
@@ -57,6 +57,8 @@ export default async function handler(req, res) {
                     appointment_date: isoDate,
                     contact_email: email,
                     contact_phone: phone || '',
+                    instagram_handle: instagram_handle || '',
+                    liked_dresses: liked_dresses || [],
                     notes: `[Interest: ${interest || 'N/A'}] ${message || ''}`
                 };
 
