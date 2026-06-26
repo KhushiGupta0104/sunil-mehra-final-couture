@@ -89,7 +89,7 @@ export default function Salons() {
                                         Hours & Access
                                     </p>
                                     <p className="text-xs text-[var(--ink-soft)] mt-2 font-body tracking-wide">
-                                        Mon–Sat · 11:00 AM – 7:30 PM
+                                        Mon–Sat · 11:30 AM – 5:00 PM
                                     </p>
                                     <p className="text-xs text-[var(--bronze)] mt-1 font-italic-serif">
                                         Strictly by invitation or private appointment
