@@ -64,8 +64,8 @@ export default function WardrobeCategoryDetail() {
 
     // Displayed items
     const allPieces = isSubcategoryDetail
-        ? category.pieces.filter(p => p.subcat === subCategorySlug)
-        : category.pieces;
+        ? category.looks.filter(p => p.subcat === subCategorySlug)
+        : category.looks;
 
     const displayedPieces = allPieces.slice(0, visibleCount);
     const hasMore = visibleCount < allPieces.length;
@@ -74,14 +74,14 @@ export default function WardrobeCategoryDetail() {
     // Lightbox navigation
     const handlePrev = useCallback((e) => {
         e.stopPropagation();
-        const currentIndex = allPieces.findIndex(p => p.img === selectedPiece.img);
+        const currentIndex = allPieces.findIndex(p => p.coverImg === selectedPiece.coverImg);
         const prevIndex = (currentIndex - 1 + allPieces.length) % allPieces.length;
         setSelectedPiece(allPieces[prevIndex]);
     }, [selectedPiece, allPieces]);
 
     const handleNext = useCallback((e) => {
         e.stopPropagation();
-        const currentIndex = allPieces.findIndex(p => p.img === selectedPiece.img);
+        const currentIndex = allPieces.findIndex(p => p.coverImg === selectedPiece.coverImg);
         const nextIndex = (currentIndex + 1) % allPieces.length;
         setSelectedPiece(allPieces[nextIndex]);
     }, [selectedPiece, allPieces]);
@@ -104,7 +104,7 @@ export default function WardrobeCategoryDetail() {
 
     // Current image index for counter
     const currentIndex = selectedPiece
-        ? allPieces.findIndex(p => p.img === selectedPiece.img) + 1
+        ? allPieces.findIndex(p => p.coverImg === selectedPiece.coverImg) + 1
         : 0;
 
     // Title & breadcrumb
@@ -224,7 +224,7 @@ export default function WardrobeCategoryDetail() {
                                     onClick={() => setSelectedPiece(piece)}
                                 >
                                     <img
-                                        src={piece.img}
+                                        src={piece.coverImg}
                                         alt={piece.name}
                                         loading="lazy"
                                         decoding="async"
@@ -322,7 +322,7 @@ export default function WardrobeCategoryDetail() {
 
                             <AnimatePresence mode="wait">
                                 <motion.div
-                                    key={selectedPiece.img}
+                                    key={selectedPiece.coverImg}
                                     initial={{ opacity: 0, scale: 0.97 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0, scale: 0.97 }}
@@ -330,7 +330,7 @@ export default function WardrobeCategoryDetail() {
                                     className="max-w-full max-h-full overflow-hidden"
                                 >
                                     <img
-                                        src={selectedPiece.img}
+                                        src={selectedPiece.coverImg}
                                         alt={selectedPiece.name}
                                         className="max-w-full max-h-[70vh] sm:max-h-[75vh] object-contain mx-auto"
                                     />

@@ -379,372 +379,416 @@ export const WARDROBE_DATA = {
         name: "Bandhagla Sets & Indo-western",
         edit: "Tailored Royalty",
         description: "Sartorial precision meets regal Indian heritage. Clean, structured Bandhgalas and classic Sherwanis crafted from raw silk and wool blends.",
-        pieces: [
-            { name: "Bandhagla — Piece 01", img: Bandhagla_21 },
-            { name: "Bandhagla — Piece 02", img: Bandhagla_68 },
-            { name: "Bandhagla — Piece 03", img: Bandhagla_65 },
-            { name: "Bandhagla — Piece 04", img: Bandhagla_66 },
-            { name: "Bandhagla — Piece 05", img: Bandhagla_15 },
-            { name: "Bandhagla — Piece 06", img: Bandhagla_16 },
-            { name: "Bandhagla — Piece 07", img: Bandhagla_17 },
-            { name: "Bandhagla — Piece 08", img: Bandhagla_67 },
-            { name: "Bandhagla — Piece 09", img: Bandhagla_18 },
-            { name: "Bandhagla — Piece 10", img: Bandhagla_1 },
-            { name: "Bandhagla — Piece 11", img: Bandhagla_19 },
-            { name: "Bandhagla — Piece 12", img: Bandhagla_20 },
-            { name: "Bandhagla — Piece 13", img: Bandhagla_2 },
-            { name: "Bandhagla — Piece 14", img: Bandhagla_22 },
-            { name: "Bandhagla — Piece 15", img: Bandhagla_69 },
-            { name: "Bandhagla — Piece 16", img: Bandhagla_3 },
-            { name: "Bandhagla — Piece 17", img: Bandhagla_70 },
-            { name: "Bandhagla — Piece 18", img: Bandhagla_71 },
-            { name: "Bandhagla — Piece 19", img: Bandhagla_72 },
-            { name: "Bandhagla — Piece 20", img: Bandhagla_73 },
-            { name: "Bandhagla — Piece 21", img: Bandhagla_23 },
-            { name: "Bandhagla — Piece 22", img: Bandhagla_74 },
-            { name: "Bandhagla — Piece 23", img: Bandhagla_75 },
-            { name: "Bandhagla — Piece 24", img: Bandhagla_4 },
-            { name: "Bandhagla — Piece 25", img: Bandhagla_24 },
-            { name: "Bandhagla — Piece 26", img: Bandhagla_25 },
-            { name: "Bandhagla — Piece 27", img: Bandhagla_26 },
-            { name: "Bandhagla — Piece 28", img: Bandhagla_76 },
-            { name: "Bandhagla — Piece 29", img: Bandhagla_27 },
-            { name: "Bandhagla — Piece 30", img: Bandhagla_77 },
-            { name: "Bandhagla — Piece 31", img: Bandhagla_28 },
-            { name: "Bandhagla — Piece 32", img: Bandhagla_29 },
-            { name: "Bandhagla — Piece 33", img: Bandhagla_30 },
-            { name: "Bandhagla — Piece 34", img: Bandhagla_31 },
-            { name: "Bandhagla — Piece 35", img: Bandhagla_78 },
-            { name: "Bandhagla — Piece 36", img: Bandhagla_79 },
-            { name: "Bandhagla — Piece 37", img: Bandhagla_32 },
-            { name: "Bandhagla — Piece 38", img: Bandhagla_80 },
-            { name: "Bandhagla — Piece 39", img: Bandhagla_81 },
-            { name: "Bandhagla — Piece 40", img: Bandhagla_5 },
-            { name: "Bandhagla — Piece 41", img: Bandhagla_33 },
-            { name: "Bandhagla — Piece 42", img: Bandhagla_34 },
-            { name: "Bandhagla — Piece 43", img: Bandhagla_6 },
-            { name: "Bandhagla — Piece 44", img: Bandhagla_82 },
-            { name: "Bandhagla — Piece 45", img: Bandhagla_7 },
-            { name: "Bandhagla — Piece 46", img: Bandhagla_83 },
-            { name: "Bandhagla — Piece 47", img: Bandhagla_84 },
-            { name: "Bandhagla — Piece 48", img: Bandhagla_35 },
-            { name: "Bandhagla — Piece 49", img: Bandhagla_36 },
-            { name: "Bandhagla — Piece 50", img: Bandhagla_37 },
-            { name: "Bandhagla — Piece 51", img: Bandhagla_38 },
-            { name: "Bandhagla — Piece 52", img: Bandhagla_39 },
-            { name: "Bandhagla — Piece 53", img: Bandhagla_85 },
-            { name: "Bandhagla — Piece 54", img: Bandhagla_40 },
-            { name: "Bandhagla — Piece 55", img: Bandhagla_41 },
-            { name: "Bandhagla — Piece 56", img: Bandhagla_0 },
-            { name: "Bandhagla — Piece 57", img: Bandhagla_8 },
-            { name: "Bandhagla — Piece 58", img: Bandhagla_9 },
-            { name: "Bandhagla — Piece 59", img: Bandhagla_10 },
-            { name: "Bandhagla — Piece 60", img: Bandhagla_11 },
-            { name: "Bandhagla — Piece 61", img: Bandhagla_12 },
-            { name: "Bandhagla — Piece 62", img: Bandhagla_13 },
-            { name: "Bandhagla — Piece 63", img: Bandhagla_14 },
-            { name: "Bandhagla — Piece 64", img: Bandhagla_51 },
-            { name: "Bandhagla — Piece 65", img: Bandhagla_52 },
-            { name: "Bandhagla — Piece 66", img: Bandhagla_53 },
-            { name: "Bandhagla — Piece 67", img: Bandhagla_54 },
-            { name: "Bandhagla — Piece 68", img: Bandhagla_55 },
-            { name: "Bandhagla — Piece 69", img: Bandhagla_56 },
-            { name: "Bandhagla — Piece 70", img: Bandhagla_57 },
-            { name: "Bandhagla — Piece 71", img: Bandhagla_58 },
-            { name: "Bandhagla — Piece 72", img: Bandhagla_59 },
-            { name: "Bandhagla — Piece 73", img: Bandhagla_60 },
-            { name: "Bandhagla — Piece 74", img: Bandhagla_61 },
-            { name: "Bandhagla — Piece 75", img: Bandhagla_62 },
-            { name: "Bandhagla — Piece 76", img: Bandhagla_63 },
-            { name: "Bandhagla — Piece 77", img: Bandhagla_64 },
-            { name: "Bandhagla — Piece 78", img: Bandhagla_42 },
-            { name: "Bandhagla — Piece 79", img: Bandhagla_43 },
-            { name: "Bandhagla — Piece 80", img: Bandhagla_44 },
-            { name: "Bandhagla — Piece 81", img: Bandhagla_45 },
-            { name: "Bandhagla — Piece 82", img: Bandhagla_46 },
-            { name: "Bandhagla — Piece 83", img: Bandhagla_47 },
-            { name: "Bandhagla — Piece 84", img: Bandhagla_48 },
-            { name: "Bandhagla — Piece 85", img: Bandhagla_49 },
-            { name: "Bandhagla — Piece 86", img: Bandhagla_50 },
-            { name: "Bandhagla — Piece 87", img: Bandhagla_86 }
-        ]
-    },
+        looks: [
+            { 
+                id: "look_bandhagalaindowestern_1",
+                name: "Bespoke Focus - Look 1",
+                coverImg: Bandhagla_21,
+                gallery: [Bandhagla_21, Bandhagla_68, Bandhagla_65, Bandhagla_66, Bandhagla_15, Bandhagla_16]
+            },
+            { 
+                id: "look_bandhagalaindowestern_2",
+                name: "Bespoke Focus - Look 2",
+                coverImg: Bandhagla_17,
+                gallery: [Bandhagla_17, Bandhagla_67, Bandhagla_18, Bandhagla_1, Bandhagla_19, Bandhagla_20]
+            },
+            { 
+                id: "look_bandhagalaindowestern_3",
+                name: "Bespoke Focus - Look 3",
+                coverImg: Bandhagla_2,
+                gallery: [Bandhagla_2]
+            },
+            { 
+                id: "look_bandhagalaindowestern_4",
+                name: "Atelier Signature - Look 4",
+                coverImg: Bandhagla_22,
+                gallery: [Bandhagla_22, Bandhagla_69, Bandhagla_3, Bandhagla_70, Bandhagla_71, Bandhagla_72]
+            },
+            { 
+                id: "look_bandhagalaindowestern_5",
+                name: "Atelier Signature - Look 5",
+                coverImg: Bandhagla_73,
+                gallery: [Bandhagla_73, Bandhagla_23, Bandhagla_74, Bandhagla_75, Bandhagla_4, Bandhagla_24]
+            },
+            { 
+                id: "look_bandhagalaindowestern_6",
+                name: "Atelier Signature - Look 6",
+                coverImg: Bandhagla_25,
+                gallery: [Bandhagla_25, Bandhagla_26, Bandhagla_76, Bandhagla_27, Bandhagla_77, Bandhagla_28]
+            },
+            { 
+                id: "look_bandhagalaindowestern_7",
+                name: "Atelier Signature - Look 7",
+                coverImg: Bandhagla_29,
+                gallery: [Bandhagla_29, Bandhagla_30, Bandhagla_31, Bandhagla_78, Bandhagla_79, Bandhagla_32]
+            },
+            { 
+                id: "look_bandhagalaindowestern_8",
+                name: "Atelier Signature - Look 8",
+                coverImg: Bandhagla_80,
+                gallery: [Bandhagla_80, Bandhagla_81, Bandhagla_5, Bandhagla_33, Bandhagla_34, Bandhagla_6]
+            },
+            { 
+                id: "look_bandhagalaindowestern_9",
+                name: "Atelier Signature - Look 9",
+                coverImg: Bandhagla_82,
+                gallery: [Bandhagla_82, Bandhagla_7, Bandhagla_83, Bandhagla_84, Bandhagla_35, Bandhagla_36]
+            },
+            { 
+                id: "look_bandhagalaindowestern_10",
+                name: "Atelier Signature - Look 10",
+                coverImg: Bandhagla_37,
+                gallery: [Bandhagla_37, Bandhagla_38, Bandhagla_39, Bandhagla_85, Bandhagla_40, Bandhagla_41]
+            },
+            { 
+                id: "look_bandhagalaindowestern_11",
+                name: "Royal Campaign - Look 11",
+                coverImg: Bandhagla_0,
+                gallery: [Bandhagla_0, Bandhagla_8, Bandhagla_9, Bandhagla_10, Bandhagla_11, Bandhagla_12]
+            },
+            { 
+                id: "look_bandhagalaindowestern_12",
+                name: "Royal Campaign - Look 12",
+                coverImg: Bandhagla_13,
+                gallery: [Bandhagla_13, Bandhagla_14, Bandhagla_51, Bandhagla_52, Bandhagla_53, Bandhagla_54]
+            },
+            { 
+                id: "look_bandhagalaindowestern_13",
+                name: "Royal Campaign - Look 13",
+                coverImg: Bandhagla_55,
+                gallery: [Bandhagla_55, Bandhagla_56, Bandhagla_57, Bandhagla_58, Bandhagla_59, Bandhagla_60]
+            },
+            { 
+                id: "look_bandhagalaindowestern_14",
+                name: "Royal Campaign - Look 14",
+                coverImg: Bandhagla_61,
+                gallery: [Bandhagla_61, Bandhagla_62, Bandhagla_63, Bandhagla_64]
+            },
+            { 
+                id: "look_bandhagalaindowestern_15",
+                name: "Thar Desert Edit - Look 15",
+                coverImg: Bandhagla_42,
+                gallery: [Bandhagla_42, Bandhagla_43, Bandhagla_44, Bandhagla_45, Bandhagla_46, Bandhagla_47]
+            },
+            { 
+                id: "look_bandhagalaindowestern_16",
+                name: "Thar Desert Edit - Look 16",
+                coverImg: Bandhagla_48,
+                gallery: [Bandhagla_48, Bandhagla_49, Bandhagla_50, Bandhagla_86]
+            },
+        ]},
     "kurta-sets": {
         name: "Kurta Sets",
         edit: "Quiet Luxury",
         description: "Elevated comfort in pure hand-woven silk and light linen, cut with fluid, graceful lines.",
-        pieces: [
-            { name: "Kurta Set — Piece 01", img: Kurta_Set_1 },
-            { name: "Kurta Set — Piece 02", img: Kurta_Set_12 },
-            { name: "Kurta Set — Piece 03", img: Kurta_Set_2 },
-            { name: "Kurta Set — Piece 04", img: Kurta_Set_3 },
-            { name: "Kurta Set — Piece 05", img: Kurta_Set_13 },
-            { name: "Kurta Set — Piece 06", img: Kurta_Set_4 },
-            { name: "Kurta Set — Piece 07", img: Kurta_Set_14 },
-            { name: "Kurta Set — Piece 08", img: Kurta_Set_15 },
-            { name: "Kurta Set — Piece 09", img: Kurta_Set_16 },
-            { name: "Kurta Set — Piece 10", img: Kurta_Set_5 },
-            { name: "Kurta Set — Piece 11", img: Kurta_Set_6 },
-            { name: "Kurta Set — Piece 12", img: Kurta_Set_7 },
-            { name: "Kurta Set — Piece 13", img: Kurta_Set_17 },
-            { name: "Kurta Set — Piece 14", img: Kurta_Set_8 },
-            { name: "Kurta Set — Piece 15", img: Kurta_Set_9 },
-            { name: "Kurta Set — Piece 16", img: Kurta_Set_18 },
-            { name: "Kurta Set — Piece 17", img: Kurta_Set_19 },
-            { name: "Kurta Set — Piece 18", img: Kurta_Set_10 },
-            { name: "Kurta Set — Piece 19", img: Kurta_Set_20 },
-            { name: "Kurta Set — Piece 20", img: Kurta_Set_21 },
-            { name: "Kurta Set — Piece 21", img: Kurta_Set_11 },
-            { name: "Kurta Set — Piece 22", img: Kurta_Set_22 },
-            { name: "Kurta Set — Piece 23", img: Kurta_Set_0 }
-        ]
-    },
+        looks: [
+            { 
+                id: "look_kurtasets_1",
+                name: "Bespoke Focus - Look 1",
+                coverImg: Kurta_Set_1,
+                gallery: [Kurta_Set_1, Kurta_Set_12, Kurta_Set_2]
+            },
+            { 
+                id: "look_kurtasets_2",
+                name: "Atelier Signature - Look 2",
+                coverImg: Kurta_Set_3,
+                gallery: [Kurta_Set_3, Kurta_Set_13, Kurta_Set_4, Kurta_Set_14, Kurta_Set_15, Kurta_Set_16]
+            },
+            { 
+                id: "look_kurtasets_3",
+                name: "Atelier Signature - Look 3",
+                coverImg: Kurta_Set_5,
+                gallery: [Kurta_Set_5, Kurta_Set_6, Kurta_Set_7, Kurta_Set_17, Kurta_Set_8, Kurta_Set_9]
+            },
+            { 
+                id: "look_kurtasets_4",
+                name: "Atelier Signature - Look 4",
+                coverImg: Kurta_Set_18,
+                gallery: [Kurta_Set_18, Kurta_Set_19, Kurta_Set_10, Kurta_Set_20, Kurta_Set_21, Kurta_Set_11]
+            },
+            { 
+                id: "look_kurtasets_5",
+                name: "Atelier Signature - Look 5",
+                coverImg: Kurta_Set_22,
+                gallery: [Kurta_Set_22, Kurta_Set_0]
+            },
+        ]},
     "jawahar-jackets": {
         name: "Jawahar Jacket Sets",
         edit: "Modern Maharaja",
         description: "A timeless Indian silhouette, reimagined. Hand-crafted Nehru jackets and sadris layered for modern elegance.",
-        pieces: [
-            { name: "Jawahar Jacket — Piece 01", img: Jawahar_Jacket_4 },
-            { name: "Jawahar Jacket — Piece 02", img: Jawahar_Jacket_5 },
-            { name: "Jawahar Jacket — Piece 03", img: Jawahar_Jacket_0 },
-            { name: "Jawahar Jacket — Piece 04", img: Jawahar_Jacket_6 },
-            { name: "Jawahar Jacket — Piece 05", img: Jawahar_Jacket_7 },
-            { name: "Jawahar Jacket — Piece 06", img: Jawahar_Jacket_13 },
-            { name: "Jawahar Jacket — Piece 07", img: Jawahar_Jacket_14 },
-            { name: "Jawahar Jacket — Piece 08", img: Jawahar_Jacket_8 },
-            { name: "Jawahar Jacket — Piece 09", img: Jawahar_Jacket_15 },
-            { name: "Jawahar Jacket — Piece 10", img: Jawahar_Jacket_16 },
-            { name: "Jawahar Jacket — Piece 11", img: Jawahar_Jacket_9 },
-            { name: "Jawahar Jacket — Piece 12", img: Jawahar_Jacket_10 },
-            { name: "Jawahar Jacket — Piece 13", img: Jawahar_Jacket_11 },
-            { name: "Jawahar Jacket — Piece 14", img: Jawahar_Jacket_12 },
-            { name: "Jawahar Jacket — Piece 15", img: Jawahar_Jacket_1 },
-            { name: "Jawahar Jacket — Piece 16", img: Jawahar_Jacket_2 },
-            { name: "Jawahar Jacket — Piece 17", img: Jawahar_Jacket_3 }
-        ]
-    },
+        looks: [
+            { 
+                id: "look_jawaharjackets_1",
+                name: "Atelier Signature - Look 1",
+                coverImg: Jawahar_Jacket_4,
+                gallery: [Jawahar_Jacket_4, Jawahar_Jacket_5, Jawahar_Jacket_0, Jawahar_Jacket_6, Jawahar_Jacket_7, Jawahar_Jacket_13]
+            },
+            { 
+                id: "look_jawaharjackets_2",
+                name: "Atelier Signature - Look 2",
+                coverImg: Jawahar_Jacket_14,
+                gallery: [Jawahar_Jacket_14, Jawahar_Jacket_8, Jawahar_Jacket_15, Jawahar_Jacket_16, Jawahar_Jacket_9, Jawahar_Jacket_10]
+            },
+            { 
+                id: "look_jawaharjackets_3",
+                name: "Atelier Signature - Look 3",
+                coverImg: Jawahar_Jacket_11,
+                gallery: [Jawahar_Jacket_11, Jawahar_Jacket_12]
+            },
+            { 
+                id: "look_jawaharjackets_4",
+                name: "Royal Campaign - Look 4",
+                coverImg: Jawahar_Jacket_1,
+                gallery: [Jawahar_Jacket_1, Jawahar_Jacket_2, Jawahar_Jacket_3]
+            },
+        ]},
     "winter-collection": {
         name: "Winter Collection",
         edit: "Princely Silhouettes",
         description: "Premium tailored winter wear. Elegant structured double-breasted coats, trench layers, and rich wool suits.",
-        pieces: [
-            { name: "Winter Overcoat — Piece 01", img: Winter_Overcoat_0 },
-            { name: "Winter Overcoat — Piece 02", img: Winter_Overcoat_16 },
-            { name: "Winter Overcoat — Piece 03", img: Winter_Overcoat_17 },
-            { name: "Winter Overcoat — Piece 04", img: Winter_Overcoat_18 },
-            { name: "Winter Overcoat — Piece 05", img: Winter_Overcoat_1 },
-            { name: "Winter Overcoat — Piece 06", img: Winter_Overcoat_2 },
-            { name: "Winter Overcoat — Piece 07", img: Winter_Overcoat_3 },
-            { name: "Winter Overcoat — Piece 08", img: Winter_Overcoat_4 },
-            { name: "Winter Overcoat — Piece 09", img: Winter_Overcoat_19 },
-            { name: "Winter Overcoat — Piece 10", img: Winter_Overcoat_5 },
-            { name: "Winter Overcoat — Piece 11", img: Winter_Overcoat_6 },
-            { name: "Winter Overcoat — Piece 12", img: Winter_Overcoat_7 },
-            { name: "Winter Overcoat — Piece 13", img: Winter_Overcoat_8 },
-            { name: "Winter Overcoat — Piece 14", img: Winter_Overcoat_20 },
-            { name: "Winter Overcoat — Piece 15", img: Winter_Overcoat_9 },
-            { name: "Winter Overcoat — Piece 16", img: Winter_Overcoat_10 },
-            { name: "Winter Overcoat — Piece 17", img: Winter_Overcoat_11 },
-            { name: "Winter Overcoat — Piece 18", img: Winter_Overcoat_12 },
-            { name: "Winter Overcoat — Piece 19", img: Winter_Overcoat_13 },
-            { name: "Winter Overcoat — Piece 20", img: Winter_Overcoat_14 },
-            { name: "Winter Overcoat — Piece 21", img: Winter_Overcoat_15 }
-        ]
-    },
+        looks: [
+            { 
+                id: "look_wintercollection_1",
+                name: "Atelier Signature - Look 1",
+                coverImg: Winter_Overcoat_0,
+                gallery: [Winter_Overcoat_0, Winter_Overcoat_16, Winter_Overcoat_17, Winter_Overcoat_18, Winter_Overcoat_1, Winter_Overcoat_2]
+            },
+            { 
+                id: "look_wintercollection_2",
+                name: "Atelier Signature - Look 2",
+                coverImg: Winter_Overcoat_3,
+                gallery: [Winter_Overcoat_3, Winter_Overcoat_4, Winter_Overcoat_19, Winter_Overcoat_5, Winter_Overcoat_6, Winter_Overcoat_7]
+            },
+            { 
+                id: "look_wintercollection_3",
+                name: "Atelier Signature - Look 3",
+                coverImg: Winter_Overcoat_8,
+                gallery: [Winter_Overcoat_8, Winter_Overcoat_20, Winter_Overcoat_9, Winter_Overcoat_10, Winter_Overcoat_11, Winter_Overcoat_12]
+            },
+            { 
+                id: "look_wintercollection_4",
+                name: "Atelier Signature - Look 4",
+                coverImg: Winter_Overcoat_13,
+                gallery: [Winter_Overcoat_13, Winter_Overcoat_14, Winter_Overcoat_15]
+            },
+        ]},
     suits: {
         name: "Sartorial Suits",
         edit: "Sharply Cut",
         description: "Sharply cut for the modern gentleman. Double-breasted and single-breasted options in wool and silk blends.",
-        pieces: [
-            { name: "Sartorial Suit — Piece 01", img: Sartorial_Suit_100 },
-            { name: "Sartorial Suit — Piece 02", img: Sartorial_Suit_101 },
-            { name: "Sartorial Suit — Piece 03", img: Sartorial_Suit_161 },
-            { name: "Sartorial Suit — Piece 04", img: Sartorial_Suit_0 },
-            { name: "Sartorial Suit — Piece 05", img: Sartorial_Suit_1 },
-            { name: "Sartorial Suit — Piece 06", img: Sartorial_Suit_2 },
-            { name: "Sartorial Suit — Piece 07", img: Sartorial_Suit_3 },
-            { name: "Sartorial Suit — Piece 08", img: Sartorial_Suit_4 },
-            { name: "Sartorial Suit — Piece 09", img: Sartorial_Suit_5 },
-            { name: "Sartorial Suit — Piece 10", img: Sartorial_Suit_6 },
-            { name: "Sartorial Suit — Piece 11", img: Sartorial_Suit_7 },
-            { name: "Sartorial Suit — Piece 12", img: Sartorial_Suit_98 },
-            { name: "Sartorial Suit — Piece 13", img: Sartorial_Suit_99 },
-            { name: "Sartorial Suit — Piece 14", img: Sartorial_Suit_160 },
-            { name: "Sartorial Suit — Piece 15", img: Sartorial_Suit_8 },
-            { name: "Sartorial Suit — Piece 16", img: Sartorial_Suit_9 },
-            { name: "Sartorial Suit — Piece 17", img: Sartorial_Suit_10 },
-            { name: "Sartorial Suit — Piece 18", img: Sartorial_Suit_11 },
-            { name: "Sartorial Suit — Piece 19", img: Sartorial_Suit_162 },
-            { name: "Sartorial Suit — Piece 20", img: Sartorial_Suit_163 },
-            { name: "Sartorial Suit — Piece 21", img: Sartorial_Suit_164 },
-            { name: "Sartorial Suit — Piece 22", img: Sartorial_Suit_102 },
-            { name: "Sartorial Suit — Piece 23", img: Sartorial_Suit_12 },
-            { name: "Sartorial Suit — Piece 24", img: Sartorial_Suit_165 },
-            { name: "Sartorial Suit — Piece 25", img: Sartorial_Suit_13 },
-            { name: "Sartorial Suit — Piece 26", img: Sartorial_Suit_166 },
-            { name: "Sartorial Suit — Piece 27", img: Sartorial_Suit_14 },
-            { name: "Sartorial Suit — Piece 28", img: Sartorial_Suit_103 },
-            { name: "Sartorial Suit — Piece 29", img: Sartorial_Suit_104 },
-            { name: "Sartorial Suit — Piece 30", img: Sartorial_Suit_105 },
-            { name: "Sartorial Suit — Piece 31", img: Sartorial_Suit_106 },
-            { name: "Sartorial Suit — Piece 32", img: Sartorial_Suit_107 },
-            { name: "Sartorial Suit — Piece 33", img: Sartorial_Suit_108 },
-            { name: "Sartorial Suit — Piece 34", img: Sartorial_Suit_167 },
-            { name: "Sartorial Suit — Piece 35", img: Sartorial_Suit_15 },
-            { name: "Sartorial Suit — Piece 36", img: Sartorial_Suit_109 },
-            { name: "Sartorial Suit — Piece 37", img: Sartorial_Suit_16 },
-            { name: "Sartorial Suit — Piece 38", img: Sartorial_Suit_168 },
-            { name: "Sartorial Suit — Piece 39", img: Sartorial_Suit_169 },
-            { name: "Sartorial Suit — Piece 40", img: Sartorial_Suit_110 },
-            { name: "Sartorial Suit — Piece 41", img: Sartorial_Suit_111 },
-            { name: "Sartorial Suit — Piece 42", img: Sartorial_Suit_170 },
-            { name: "Sartorial Suit — Piece 43", img: Sartorial_Suit_112 },
-            { name: "Sartorial Suit — Piece 44", img: Sartorial_Suit_17 },
-            { name: "Sartorial Suit — Piece 45", img: Sartorial_Suit_113 },
-            { name: "Sartorial Suit — Piece 46", img: Sartorial_Suit_114 },
-            { name: "Sartorial Suit — Piece 47", img: Sartorial_Suit_18 },
-            { name: "Sartorial Suit — Piece 48", img: Sartorial_Suit_115 },
-            { name: "Sartorial Suit — Piece 49", img: Sartorial_Suit_19 },
-            { name: "Sartorial Suit — Piece 50", img: Sartorial_Suit_171 },
-            { name: "Sartorial Suit — Piece 51", img: Sartorial_Suit_20 },
-            { name: "Sartorial Suit — Piece 52", img: Sartorial_Suit_116 },
-            { name: "Sartorial Suit — Piece 53", img: Sartorial_Suit_117 },
-            { name: "Sartorial Suit — Piece 54", img: Sartorial_Suit_118 },
-            { name: "Sartorial Suit — Piece 55", img: Sartorial_Suit_119 },
-            { name: "Sartorial Suit — Piece 56", img: Sartorial_Suit_172 },
-            { name: "Sartorial Suit — Piece 57", img: Sartorial_Suit_120 },
-            { name: "Sartorial Suit — Piece 58", img: Sartorial_Suit_173 },
-            { name: "Sartorial Suit — Piece 59", img: Sartorial_Suit_121 },
-            { name: "Sartorial Suit — Piece 60", img: Sartorial_Suit_174 },
-            { name: "Sartorial Suit — Piece 61", img: Sartorial_Suit_175 },
-            { name: "Sartorial Suit — Piece 62", img: Sartorial_Suit_176 },
-            { name: "Sartorial Suit — Piece 63", img: Sartorial_Suit_177 },
-            { name: "Sartorial Suit — Piece 64", img: Sartorial_Suit_178 },
-            { name: "Sartorial Suit — Piece 65", img: Sartorial_Suit_179 },
-            { name: "Sartorial Suit — Piece 66", img: Sartorial_Suit_180 },
-            { name: "Sartorial Suit — Piece 67", img: Sartorial_Suit_122 },
-            { name: "Sartorial Suit — Piece 68", img: Sartorial_Suit_123 },
-            { name: "Sartorial Suit — Piece 69", img: Sartorial_Suit_124 },
-            { name: "Sartorial Suit — Piece 70", img: Sartorial_Suit_181 },
-            { name: "Sartorial Suit — Piece 71", img: Sartorial_Suit_182 },
-            { name: "Sartorial Suit — Piece 72", img: Sartorial_Suit_183 },
-            { name: "Sartorial Suit — Piece 73", img: Sartorial_Suit_125 },
-            { name: "Sartorial Suit — Piece 74", img: Sartorial_Suit_21 },
-            { name: "Sartorial Suit — Piece 75", img: Sartorial_Suit_126 },
-            { name: "Sartorial Suit — Piece 76", img: Sartorial_Suit_127 },
-            { name: "Sartorial Suit — Piece 77", img: Sartorial_Suit_184 },
-            { name: "Sartorial Suit — Piece 78", img: Sartorial_Suit_22 },
-            { name: "Sartorial Suit — Piece 79", img: Sartorial_Suit_23 },
-            { name: "Sartorial Suit — Piece 80", img: Sartorial_Suit_24 },
-            { name: "Sartorial Suit — Piece 81", img: Sartorial_Suit_128 },
-            { name: "Sartorial Suit — Piece 82", img: Sartorial_Suit_129 },
-            { name: "Sartorial Suit — Piece 83", img: Sartorial_Suit_185 },
-            { name: "Sartorial Suit — Piece 84", img: Sartorial_Suit_130 },
-            { name: "Sartorial Suit — Piece 85", img: Sartorial_Suit_131 },
-            { name: "Sartorial Suit — Piece 86", img: Sartorial_Suit_25 },
-            { name: "Sartorial Suit — Piece 87", img: Sartorial_Suit_132 },
-            { name: "Sartorial Suit — Piece 88", img: Sartorial_Suit_26 },
-            { name: "Sartorial Suit — Piece 89", img: Sartorial_Suit_27 },
-            { name: "Sartorial Suit — Piece 90", img: Sartorial_Suit_28 },
-            { name: "Sartorial Suit — Piece 91", img: Sartorial_Suit_186 },
-            { name: "Sartorial Suit — Piece 92", img: Sartorial_Suit_29 },
-            { name: "Sartorial Suit — Piece 93", img: Sartorial_Suit_133 },
-            { name: "Sartorial Suit — Piece 94", img: Sartorial_Suit_30 },
-            { name: "Sartorial Suit — Piece 95", img: Sartorial_Suit_134 },
-            { name: "Sartorial Suit — Piece 96", img: Sartorial_Suit_31 },
-            { name: "Sartorial Suit — Piece 97", img: Sartorial_Suit_32 },
-            { name: "Sartorial Suit — Piece 98", img: Sartorial_Suit_135 },
-            { name: "Sartorial Suit — Piece 99", img: Sartorial_Suit_33 },
-            { name: "Sartorial Suit — Piece 100", img: Sartorial_Suit_136 },
-            { name: "Sartorial Suit — Piece 101", img: Sartorial_Suit_137 },
-            { name: "Sartorial Suit — Piece 102", img: Sartorial_Suit_34 },
-            { name: "Sartorial Suit — Piece 103", img: Sartorial_Suit_138 },
-            { name: "Sartorial Suit — Piece 104", img: Sartorial_Suit_35 },
-            { name: "Sartorial Suit — Piece 105", img: Sartorial_Suit_36 },
-            { name: "Sartorial Suit — Piece 106", img: Sartorial_Suit_37 },
-            { name: "Sartorial Suit — Piece 107", img: Sartorial_Suit_38 },
-            { name: "Sartorial Suit — Piece 108", img: Sartorial_Suit_39 },
-            { name: "Sartorial Suit — Piece 109", img: Sartorial_Suit_40 },
-            { name: "Sartorial Suit — Piece 110", img: Sartorial_Suit_41 },
-            { name: "Sartorial Suit — Piece 111", img: Sartorial_Suit_64 },
-            { name: "Sartorial Suit — Piece 112", img: Sartorial_Suit_42 },
-            { name: "Sartorial Suit — Piece 113", img: Sartorial_Suit_43 },
-            { name: "Sartorial Suit — Piece 114", img: Sartorial_Suit_44 },
-            { name: "Sartorial Suit — Piece 115", img: Sartorial_Suit_139 },
-            { name: "Sartorial Suit — Piece 116", img: Sartorial_Suit_45 },
-            { name: "Sartorial Suit — Piece 117", img: Sartorial_Suit_46 },
-            { name: "Sartorial Suit — Piece 118", img: Sartorial_Suit_47 },
-            { name: "Sartorial Suit — Piece 119", img: Sartorial_Suit_48 },
-            { name: "Sartorial Suit — Piece 120", img: Sartorial_Suit_49 },
-            { name: "Sartorial Suit — Piece 121", img: Sartorial_Suit_65 },
-            { name: "Sartorial Suit — Piece 122", img: Sartorial_Suit_66 },
-            { name: "Sartorial Suit — Piece 123", img: Sartorial_Suit_50 },
-            { name: "Sartorial Suit — Piece 124", img: Sartorial_Suit_51 },
-            { name: "Sartorial Suit — Piece 125", img: Sartorial_Suit_52 },
-            { name: "Sartorial Suit — Piece 126", img: Sartorial_Suit_53 },
-            { name: "Sartorial Suit — Piece 127", img: Sartorial_Suit_54 },
-            { name: "Sartorial Suit — Piece 128", img: Sartorial_Suit_55 },
-            { name: "Sartorial Suit — Piece 129", img: Sartorial_Suit_56 },
-            { name: "Sartorial Suit — Piece 130", img: Sartorial_Suit_140 },
-            { name: "Sartorial Suit — Piece 131", img: Sartorial_Suit_61 },
-            { name: "Sartorial Suit — Piece 132", img: Sartorial_Suit_68 },
-            { name: "Sartorial Suit — Piece 133", img: Sartorial_Suit_69 },
-            { name: "Sartorial Suit — Piece 134", img: Sartorial_Suit_70 },
-            { name: "Sartorial Suit — Piece 135", img: Sartorial_Suit_71 },
-            { name: "Sartorial Suit — Piece 136", img: Sartorial_Suit_72 },
-            { name: "Sartorial Suit — Piece 137", img: Sartorial_Suit_73 },
-            { name: "Sartorial Suit — Piece 138", img: Sartorial_Suit_74 },
-            { name: "Sartorial Suit — Piece 139", img: Sartorial_Suit_75 },
-            { name: "Sartorial Suit — Piece 140", img: Sartorial_Suit_76 },
-            { name: "Sartorial Suit — Piece 141", img: Sartorial_Suit_77 },
-            { name: "Sartorial Suit — Piece 142", img: Sartorial_Suit_78 },
-            { name: "Sartorial Suit — Piece 143", img: Sartorial_Suit_79 },
-            { name: "Sartorial Suit — Piece 144", img: Sartorial_Suit_80 },
-            { name: "Sartorial Suit — Piece 145", img: Sartorial_Suit_81 },
-            { name: "Sartorial Suit — Piece 146", img: Sartorial_Suit_82 },
-            { name: "Sartorial Suit — Piece 147", img: Sartorial_Suit_83 },
-            { name: "Sartorial Suit — Piece 148", img: Sartorial_Suit_84 },
-            { name: "Sartorial Suit — Piece 149", img: Sartorial_Suit_85 },
-            { name: "Sartorial Suit — Piece 150", img: Sartorial_Suit_86 },
-            { name: "Sartorial Suit — Piece 151", img: Sartorial_Suit_87 },
-            { name: "Sartorial Suit — Piece 152", img: Sartorial_Suit_88 },
-            { name: "Sartorial Suit — Piece 153", img: Sartorial_Suit_89 },
-            { name: "Sartorial Suit — Piece 154", img: Sartorial_Suit_90 },
-            { name: "Sartorial Suit — Piece 155", img: Sartorial_Suit_91 },
-            { name: "Sartorial Suit — Piece 156", img: Sartorial_Suit_92 },
-            { name: "Sartorial Suit — Piece 157", img: Sartorial_Suit_93 },
-            { name: "Sartorial Suit — Piece 158", img: Sartorial_Suit_94 },
-            { name: "Sartorial Suit — Piece 159", img: Sartorial_Suit_95 },
-            { name: "Sartorial Suit — Piece 160", img: Sartorial_Suit_96 },
-            { name: "Sartorial Suit — Piece 161", img: Sartorial_Suit_97 },
-            { name: "Sartorial Suit — Piece 162", img: Sartorial_Suit_148 },
-            { name: "Sartorial Suit — Piece 163", img: Sartorial_Suit_149 },
-            { name: "Sartorial Suit — Piece 164", img: Sartorial_Suit_150 },
-            { name: "Sartorial Suit — Piece 165", img: Sartorial_Suit_151 },
-            { name: "Sartorial Suit — Piece 166", img: Sartorial_Suit_152 },
-            { name: "Sartorial Suit — Piece 167", img: Sartorial_Suit_153 },
-            { name: "Sartorial Suit — Piece 168", img: Sartorial_Suit_154 },
-            { name: "Sartorial Suit — Piece 169", img: Sartorial_Suit_155 },
-            { name: "Sartorial Suit — Piece 170", img: Sartorial_Suit_156 },
-            { name: "Sartorial Suit — Piece 171", img: Sartorial_Suit_157 },
-            { name: "Sartorial Suit — Piece 172", img: Sartorial_Suit_158 },
-            { name: "Sartorial Suit — Piece 173", img: Sartorial_Suit_159 },
-            { name: "Sartorial Suit — Piece 174", img: Sartorial_Suit_57 },
-            { name: "Sartorial Suit — Piece 175", img: Sartorial_Suit_58 },
-            { name: "Sartorial Suit — Piece 176", img: Sartorial_Suit_59 },
-            { name: "Sartorial Suit — Piece 177", img: Sartorial_Suit_60 },
-            { name: "Sartorial Suit — Piece 178", img: Sartorial_Suit_141 },
-            { name: "Sartorial Suit — Piece 179", img: Sartorial_Suit_142 },
-            { name: "Sartorial Suit — Piece 180", img: Sartorial_Suit_143 },
-            { name: "Sartorial Suit — Piece 181", img: Sartorial_Suit_144 },
-            { name: "Sartorial Suit — Piece 182", img: Sartorial_Suit_145 },
-            { name: "Sartorial Suit — Piece 183", img: Sartorial_Suit_146 },
-            { name: "Sartorial Suit — Piece 184", img: Sartorial_Suit_147 },
-            { name: "Sartorial Suit — Piece 185", img: Sartorial_Suit_63 },
-            { name: "Sartorial Suit — Piece 186", img: Sartorial_Suit_62 },
-            { name: "Sartorial Suit — Piece 187", img: Sartorial_Suit_67 }
-        ]
-    },
+        looks: [
+            { 
+                id: "look_suits_1",
+                name: "Bespoke Focus - Look 1",
+                coverImg: Sartorial_Suit_100,
+                gallery: [Sartorial_Suit_100, Sartorial_Suit_101, Sartorial_Suit_161, Sartorial_Suit_0, Sartorial_Suit_1, Sartorial_Suit_2]
+            },
+            { 
+                id: "look_suits_2",
+                name: "Bespoke Focus - Look 2",
+                coverImg: Sartorial_Suit_3,
+                gallery: [Sartorial_Suit_3, Sartorial_Suit_4, Sartorial_Suit_5, Sartorial_Suit_6, Sartorial_Suit_7, Sartorial_Suit_98]
+            },
+            { 
+                id: "look_suits_3",
+                name: "Bespoke Focus - Look 3",
+                coverImg: Sartorial_Suit_99,
+                gallery: [Sartorial_Suit_99, Sartorial_Suit_160, Sartorial_Suit_8, Sartorial_Suit_9, Sartorial_Suit_10, Sartorial_Suit_11]
+            },
+            { 
+                id: "look_suits_4",
+                name: "Atelier Signature - Look 4",
+                coverImg: Sartorial_Suit_162,
+                gallery: [Sartorial_Suit_162, Sartorial_Suit_163, Sartorial_Suit_164, Sartorial_Suit_102, Sartorial_Suit_12, Sartorial_Suit_165]
+            },
+            { 
+                id: "look_suits_5",
+                name: "Atelier Signature - Look 5",
+                coverImg: Sartorial_Suit_13,
+                gallery: [Sartorial_Suit_13, Sartorial_Suit_166, Sartorial_Suit_14, Sartorial_Suit_103, Sartorial_Suit_104, Sartorial_Suit_105]
+            },
+            { 
+                id: "look_suits_6",
+                name: "Atelier Signature - Look 6",
+                coverImg: Sartorial_Suit_106,
+                gallery: [Sartorial_Suit_106, Sartorial_Suit_107, Sartorial_Suit_108, Sartorial_Suit_167, Sartorial_Suit_15, Sartorial_Suit_109]
+            },
+            { 
+                id: "look_suits_7",
+                name: "Atelier Signature - Look 7",
+                coverImg: Sartorial_Suit_16,
+                gallery: [Sartorial_Suit_16, Sartorial_Suit_168, Sartorial_Suit_169, Sartorial_Suit_110, Sartorial_Suit_111, Sartorial_Suit_170]
+            },
+            { 
+                id: "look_suits_8",
+                name: "Atelier Signature - Look 8",
+                coverImg: Sartorial_Suit_112,
+                gallery: [Sartorial_Suit_112, Sartorial_Suit_17, Sartorial_Suit_113, Sartorial_Suit_114, Sartorial_Suit_18, Sartorial_Suit_115]
+            },
+            { 
+                id: "look_suits_9",
+                name: "Atelier Signature - Look 9",
+                coverImg: Sartorial_Suit_19,
+                gallery: [Sartorial_Suit_19, Sartorial_Suit_171, Sartorial_Suit_20, Sartorial_Suit_116, Sartorial_Suit_117, Sartorial_Suit_118]
+            },
+            { 
+                id: "look_suits_10",
+                name: "Atelier Signature - Look 10",
+                coverImg: Sartorial_Suit_119,
+                gallery: [Sartorial_Suit_119, Sartorial_Suit_172, Sartorial_Suit_120, Sartorial_Suit_173, Sartorial_Suit_121, Sartorial_Suit_174]
+            },
+            { 
+                id: "look_suits_11",
+                name: "Atelier Signature - Look 11",
+                coverImg: Sartorial_Suit_175,
+                gallery: [Sartorial_Suit_175, Sartorial_Suit_176, Sartorial_Suit_177, Sartorial_Suit_178, Sartorial_Suit_179, Sartorial_Suit_180]
+            },
+            { 
+                id: "look_suits_12",
+                name: "Atelier Signature - Look 12",
+                coverImg: Sartorial_Suit_122,
+                gallery: [Sartorial_Suit_122, Sartorial_Suit_123, Sartorial_Suit_124, Sartorial_Suit_181, Sartorial_Suit_182, Sartorial_Suit_183]
+            },
+            { 
+                id: "look_suits_13",
+                name: "Atelier Signature - Look 13",
+                coverImg: Sartorial_Suit_125,
+                gallery: [Sartorial_Suit_125, Sartorial_Suit_21, Sartorial_Suit_126, Sartorial_Suit_127, Sartorial_Suit_184, Sartorial_Suit_22]
+            },
+            { 
+                id: "look_suits_14",
+                name: "Atelier Signature - Look 14",
+                coverImg: Sartorial_Suit_23,
+                gallery: [Sartorial_Suit_23, Sartorial_Suit_24, Sartorial_Suit_128, Sartorial_Suit_129, Sartorial_Suit_185, Sartorial_Suit_130]
+            },
+            { 
+                id: "look_suits_15",
+                name: "Atelier Signature - Look 15",
+                coverImg: Sartorial_Suit_131,
+                gallery: [Sartorial_Suit_131, Sartorial_Suit_25, Sartorial_Suit_132, Sartorial_Suit_26, Sartorial_Suit_27, Sartorial_Suit_28]
+            },
+            { 
+                id: "look_suits_16",
+                name: "Atelier Signature - Look 16",
+                coverImg: Sartorial_Suit_186,
+                gallery: [Sartorial_Suit_186, Sartorial_Suit_29, Sartorial_Suit_133, Sartorial_Suit_30, Sartorial_Suit_134, Sartorial_Suit_31]
+            },
+            { 
+                id: "look_suits_17",
+                name: "Atelier Signature - Look 17",
+                coverImg: Sartorial_Suit_32,
+                gallery: [Sartorial_Suit_32, Sartorial_Suit_135, Sartorial_Suit_33, Sartorial_Suit_136, Sartorial_Suit_137, Sartorial_Suit_34]
+            },
+            { 
+                id: "look_suits_18",
+                name: "Atelier Signature - Look 18",
+                coverImg: Sartorial_Suit_138,
+                gallery: [Sartorial_Suit_138, Sartorial_Suit_35, Sartorial_Suit_36, Sartorial_Suit_37, Sartorial_Suit_38, Sartorial_Suit_39]
+            },
+            { 
+                id: "look_suits_19",
+                name: "Atelier Signature - Look 19",
+                coverImg: Sartorial_Suit_40,
+                gallery: [Sartorial_Suit_40, Sartorial_Suit_41, Sartorial_Suit_64, Sartorial_Suit_42, Sartorial_Suit_43, Sartorial_Suit_44]
+            },
+            { 
+                id: "look_suits_20",
+                name: "Atelier Signature - Look 20",
+                coverImg: Sartorial_Suit_139,
+                gallery: [Sartorial_Suit_139, Sartorial_Suit_45, Sartorial_Suit_46, Sartorial_Suit_47, Sartorial_Suit_48, Sartorial_Suit_49]
+            },
+            { 
+                id: "look_suits_21",
+                name: "Atelier Signature - Look 21",
+                coverImg: Sartorial_Suit_65,
+                gallery: [Sartorial_Suit_65, Sartorial_Suit_66, Sartorial_Suit_50, Sartorial_Suit_51, Sartorial_Suit_52, Sartorial_Suit_53]
+            },
+            { 
+                id: "look_suits_22",
+                name: "Atelier Signature - Look 22",
+                coverImg: Sartorial_Suit_54,
+                gallery: [Sartorial_Suit_54, Sartorial_Suit_55, Sartorial_Suit_56, Sartorial_Suit_140]
+            },
+            { 
+                id: "look_suits_23",
+                name: "Royal Campaign - Look 23",
+                coverImg: Sartorial_Suit_61,
+                gallery: [Sartorial_Suit_61, Sartorial_Suit_68, Sartorial_Suit_69, Sartorial_Suit_70, Sartorial_Suit_71, Sartorial_Suit_72]
+            },
+            { 
+                id: "look_suits_24",
+                name: "Royal Campaign - Look 24",
+                coverImg: Sartorial_Suit_73,
+                gallery: [Sartorial_Suit_73, Sartorial_Suit_74, Sartorial_Suit_75, Sartorial_Suit_76, Sartorial_Suit_77, Sartorial_Suit_78]
+            },
+            { 
+                id: "look_suits_25",
+                name: "Royal Campaign - Look 25",
+                coverImg: Sartorial_Suit_79,
+                gallery: [Sartorial_Suit_79, Sartorial_Suit_80, Sartorial_Suit_81, Sartorial_Suit_82, Sartorial_Suit_83, Sartorial_Suit_84]
+            },
+            { 
+                id: "look_suits_26",
+                name: "Royal Campaign - Look 26",
+                coverImg: Sartorial_Suit_85,
+                gallery: [Sartorial_Suit_85, Sartorial_Suit_86, Sartorial_Suit_87, Sartorial_Suit_88, Sartorial_Suit_89, Sartorial_Suit_90]
+            },
+            { 
+                id: "look_suits_27",
+                name: "Royal Campaign - Look 27",
+                coverImg: Sartorial_Suit_91,
+                gallery: [Sartorial_Suit_91, Sartorial_Suit_92, Sartorial_Suit_93, Sartorial_Suit_94, Sartorial_Suit_95, Sartorial_Suit_96]
+            },
+            { 
+                id: "look_suits_28",
+                name: "Royal Campaign - Look 28",
+                coverImg: Sartorial_Suit_97,
+                gallery: [Sartorial_Suit_97, Sartorial_Suit_148, Sartorial_Suit_149, Sartorial_Suit_150, Sartorial_Suit_151, Sartorial_Suit_152]
+            },
+            { 
+                id: "look_suits_29",
+                name: "Royal Campaign - Look 29",
+                coverImg: Sartorial_Suit_153,
+                gallery: [Sartorial_Suit_153, Sartorial_Suit_154, Sartorial_Suit_155, Sartorial_Suit_156, Sartorial_Suit_157, Sartorial_Suit_158]
+            },
+            { 
+                id: "look_suits_30",
+                name: "Royal Campaign - Look 30",
+                coverImg: Sartorial_Suit_159,
+                gallery: [Sartorial_Suit_159]
+            },
+            { 
+                id: "look_suits_31",
+                name: "Thar Desert Edit - Look 31",
+                coverImg: Sartorial_Suit_57,
+                gallery: [Sartorial_Suit_57, Sartorial_Suit_58, Sartorial_Suit_59, Sartorial_Suit_60, Sartorial_Suit_141, Sartorial_Suit_142]
+            },
+            { 
+                id: "look_suits_32",
+                name: "Thar Desert Edit - Look 32",
+                coverImg: Sartorial_Suit_143,
+                gallery: [Sartorial_Suit_143, Sartorial_Suit_144, Sartorial_Suit_145, Sartorial_Suit_146, Sartorial_Suit_147]
+            },
+            { 
+                id: "look_suits_33",
+                name: "Suits Look 33",
+                coverImg: Sartorial_Suit_63,
+                gallery: [Sartorial_Suit_63]
+            },
+            { 
+                id: "look_suits_34",
+                name: "Suits Look 34",
+                coverImg: Sartorial_Suit_62,
+                gallery: [Sartorial_Suit_62]
+            },
+            { 
+                id: "look_suits_35",
+                name: "Suits Look 35",
+                coverImg: Sartorial_Suit_67,
+                gallery: [Sartorial_Suit_67]
+            },
+        ]},
     accessories: {
         name: "Atelier Accessories",
         edit: "Finishing Details",

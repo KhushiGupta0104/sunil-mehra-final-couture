@@ -20,11 +20,11 @@ export default function BookingWizard({ onCurationChange }) {
   useEffect(() => {
     // Generate flat catalog from WARDROBE_DATA
     const flatCatalog = Object.values(WARDROBE_DATA).flatMap(categoryData => 
-        categoryData.pieces.map(piece => ({
-            id: piece.name,
-            name: piece.name,
-            image_url: piece.img,
-            category: categoryData.title
+        (categoryData.looks || []).map(look => ({
+            id: look.id,
+            name: look.name,
+            image_url: look.coverImg,
+            category: categoryData.name
         }))
     );
     setCatalog(flatCatalog);

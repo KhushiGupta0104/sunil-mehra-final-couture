@@ -14,7 +14,7 @@ export default function SearchOverlay({ open, onClose }) {
                 type: "category",
                 name: categoryData.name,
                 desc: categoryData.description || categoryData.edit,
-                img: categoryData.pieces[0]?.img || null,
+                img: categoryData.looks?.[0]?.coverImg || null,
                 to: `/wardrobe/${categorySlug}`
             });
             
@@ -25,24 +25,26 @@ export default function SearchOverlay({ open, onClose }) {
                         type: "subcategory",
                         name: subcat.name,
                         desc: `${categoryData.name} — ${subcat.desc || subcat.name}`,
-                        img: subcat.img || categoryData.pieces[0]?.img,
+                        img: subcat.img || categoryData.looks?.[0]?.coverImg,
                         to: `/wardrobe/${categorySlug}/${subcat.id}`
                     });
                 });
             }
             
             // 3. Add individual Garments/Pieces
-            categoryData.pieces.forEach((piece, index) => {
-                items.push({
-                    type: "garment",
-                    name: piece.name,
-                    desc: piece.subcat 
-                        ? `${categoryData.name} — ${piece.subcat}`
-                        : `${categoryData.name} Piece`,
-                    img: piece.img,
-                    to: `/wardrobe/${categorySlug}` // Just point to category, user can scroll/find it
+            if (categoryData.looks) {
+                categoryData.looks.forEach((look, index) => {
+                    items.push({
+                        type: "garment",
+                        name: look.name,
+                        desc: look.subcat 
+                            ? `${categoryData.name} — ${look.subcat}`
+                            : `${categoryData.name} — Look ${index + 1}`,
+                        img: look.coverImg,
+                        to: `/wardrobe/${categorySlug}`
+                    });
                 });
-            });
+            }
         });
         
         return items;
