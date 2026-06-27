@@ -89,51 +89,128 @@ export default function BookingWizard({ onCurationChange }) {
   if (step === 2) {
     const categories = Array.from(new Set(catalog.map(d => d.category)));
 
+    const scrollToCategory = (categoryId) => {
+      const element = document.getElementById(`category-${categoryId}`);
+      const scrollArea = document.getElementById('curation-scroll-area');
+      if (element && scrollArea) {
+        // Calculate position relative to scroll area
+        const topPos = element.offsetTop;
+        scrollArea.scrollTo({ top: topPos - 40, behavior: 'smooth' });
+      }
+    };
+
     return (
       <div className="fixed inset-0 z-[100] w-full h-full bg-[var(--section-dark-bg)] flex flex-col animate-in fade-in duration-700 text-[var(--bone)] overflow-hidden">
-        <div className="flex items-center justify-between p-8 md:px-16 border-b border-[rgba(250,246,239,0.1)] bg-[var(--section-dark-bg)]/90 backdrop-blur-md sticky top-0 z-20 shadow-xl">
+        {/* Header */}
+        <div className="flex items-center justify-between p-6 md:px-12 border-b border-[rgba(250,246,239,0.05)] bg-[var(--section-dark-bg)]/90 backdrop-blur-md sticky top-0 z-30">
           <div>
-            <p className="font-luxe text-[10px] tracking-[0.4em] text-[var(--champagne)] uppercase mb-1">Curation Step</p>
-            <h2 className="font-display text-3xl md:text-5xl text-[var(--bone)]">Curate Your Preferences, {name.split(' ')[0]}</h2>
+            <p className="font-luxe text-[9px] tracking-[0.4em] text-[var(--champagne)] uppercase mb-1">Step 2 of 3</p>
+            <h2 className="font-display text-2xl md:text-3xl text-[var(--bone)]">Curate Your Preferences</h2>
           </div>
-          <button
-            onClick={handleNext}
-            className="px-10 py-5 bg-[var(--champagne)] text-[var(--ink)] text-[10px] tracking-widest uppercase font-luxe hover:opacity-80 transition-all rounded-sm flex items-center gap-3 group shadow-lg"
+          <button 
+            onClick={() => setStep(1)}
+            className="text-[10px] uppercase tracking-widest font-luxe text-[var(--bone)]/50 hover:text-[var(--bone)] transition-colors"
           >
-            {likedDresses.length > 0 ? `Continue (${likedDresses.length})` : "Skip"}
-            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            Back
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-8 md:p-16 pb-32">
-          {categories.map(category => (
-            <div key={category} className="mb-20">
-              <h3 className="font-display text-4xl mb-8 border-b border-[rgba(250,246,239,0.1)] pb-4">{category}</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 max-w-[2800px] mx-auto">
-                {catalog.filter(d => d.category === category).map(dress => {
-                  const isLiked = likedDresses.includes(dress.id);
-                  return (
-                    <div 
-                      key={dress.id} 
-                      className={`relative aspect-[3/4] rounded-sm overflow-hidden cursor-pointer group transition-all duration-500 bg-[rgba(250,246,239,0.03)] ${isLiked ? 'ring-1 ring-offset-4 ring-offset-[var(--section-dark-bg)] ring-[var(--champagne)] scale-[1.02]' : 'hover:scale-[1.02]'}`}
-                      onClick={() => toggleLike(dress.id)}
-                    >
-                      <img src={dress.image_url} alt={dress.name} className={`absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ${isLiked ? 'scale-105' : 'group-hover:scale-105'}`} />
-                      <div className={`absolute inset-0 bg-gradient-to-t from-[var(--section-dark-bg)]/90 via-[var(--section-dark-bg)]/20 to-transparent transition-opacity duration-500 ${isLiked ? 'opacity-100' : 'opacity-60 group-hover:opacity-100'}`} />
-                      
-                      <div className="absolute bottom-8 left-8 right-8">
-                        <p className="font-display text-white text-3xl md:text-4xl leading-tight mb-2">{dress.name}</p>
-                      </div>
-
-                      <button className={`absolute top-8 right-8 w-14 h-14 rounded-full flex items-center justify-center backdrop-blur-xl transition-all duration-500 ${isLiked ? 'bg-[var(--champagne)] text-[var(--ink)] shadow-[0_0_40px_rgba(255,255,255,0.2)]' : 'bg-black/40 text-[var(--bone)]/50 group-hover:text-white border border-[var(--bone)]/30'}`}>
-                        <Heart size={24} className={isLiked ? 'fill-[var(--ink)] text-[var(--ink)]' : ''} />
-                      </button>
-                    </div>
-                  )
-                })}
-              </div>
+        <div className="flex-1 flex overflow-hidden">
+          {/* Sticky Sidebar Navigation (Desktop) */}
+          <div className="hidden lg:block w-72 border-r border-[rgba(250,246,239,0.05)] overflow-y-auto p-12 bg-[var(--section-dark-bg)] z-20">
+            <h3 className="font-luxe text-[10px] tracking-[0.3em] uppercase text-[var(--bone)]/40 mb-10">Collections</h3>
+            <div className="space-y-6">
+              {categories.map(category => (
+                <button 
+                  key={`nav-${category}`}
+                  onClick={() => scrollToCategory(category.replace(/\s+/g, '-'))}
+                  className="block text-left w-full font-display text-xl sm:text-2xl text-[var(--bone)]/60 hover:text-[var(--champagne)] transition-colors"
+                >
+                  {category}
+                </button>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Main Scrolling Area (Masonry Grid) */}
+          <div className="flex-1 overflow-y-auto p-6 md:p-12 pb-40 relative scroll-smooth" id="curation-scroll-area">
+            
+            {/* Mobile Category Horizontal Scroll */}
+            <div className="lg:hidden flex overflow-x-auto gap-6 pb-6 mb-6 border-b border-[rgba(250,246,239,0.05)] hide-scrollbar sticky top-0 bg-[var(--section-dark-bg)]/95 backdrop-blur-sm z-20">
+              {categories.map(category => (
+                <button 
+                  key={`mobile-nav-${category}`}
+                  onClick={() => scrollToCategory(category.replace(/\s+/g, '-'))}
+                  className="whitespace-nowrap font-display text-xl text-[var(--bone)]/60 hover:text-[var(--champagne)] transition-colors"
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+
+            <div className="max-w-[2000px] mx-auto">
+              {categories.map(category => (
+                <div key={`section-${category}`} id={`category-${category.replace(/\s+/g, '-')}`} className="mb-24 pt-8">
+                  <h3 className="font-display text-4xl lg:text-5xl mb-12 text-[var(--champagne)]">{category}</h3>
+                  
+                  {/* Masonry Layout */}
+                  <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6">
+                    {catalog.filter(d => d.category === category).map((dress, index) => {
+                      const isLiked = likedDresses.includes(dress.id);
+                      // Slight height variation for masonry feel
+                      const heightClass = index % 3 === 0 ? "aspect-[3/4]" : index % 2 === 0 ? "aspect-[4/5]" : "aspect-[2/3]";
+
+                      return (
+                        <div 
+                          key={dress.id} 
+                          className={`relative ${heightClass} w-full rounded-sm overflow-hidden cursor-pointer group transition-all duration-700 bg-[rgba(250,246,239,0.02)] mb-6 break-inside-avoid`}
+                          onClick={() => toggleLike(dress.id)}
+                        >
+                          <img src={dress.image_url} alt={dress.name} className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[1.5s] ${isLiked ? 'scale-105' : 'group-hover:scale-110'}`} />
+                          
+                          {/* Inner border and overlay for Selection state */}
+                          <div className={`absolute inset-0 border-[1.5px] transition-all duration-500 z-10 ${isLiked ? 'border-[var(--champagne)] scale-100 opacity-100' : 'border-transparent scale-105 opacity-0'}`} />
+                          <div className={`absolute inset-0 bg-black transition-opacity duration-500 ${isLiked ? 'opacity-20' : 'opacity-0 group-hover:opacity-10'}`} />
+                          
+                          <button className={`absolute top-6 right-6 w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-xl transition-all duration-500 z-20 ${isLiked ? 'bg-[var(--champagne)] text-[var(--ink)] shadow-[0_0_30px_rgba(255,255,255,0.3)] scale-110' : 'bg-black/30 text-[var(--bone)]/60 group-hover:text-white border border-[var(--bone)]/20 scale-100'}`}>
+                            <Heart size={16} className={isLiked ? 'fill-[var(--ink)] text-[var(--ink)]' : ''} />
+                          </button>
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Floating Action Bar */}
+        <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-50">
+          <div className="bg-[var(--section-dark-bg)]/80 backdrop-blur-xl border border-[rgba(250,246,239,0.1)] p-2 rounded-full shadow-2xl flex items-center gap-6 pl-8 pr-2 transition-all duration-500 hover:border-[rgba(250,246,239,0.2)]">
+            <div className="flex items-center gap-3">
+              <div className="flex -space-x-2">
+                {likedDresses.length > 0 ? (
+                  Array.from({ length: Math.min(likedDresses.length, 3) }).map((_, i) => (
+                    <div key={i} className="w-4 h-4 rounded-full border border-[var(--ink)] bg-[var(--champagne)] shadow-sm" />
+                  ))
+                ) : (
+                  <div className="w-4 h-4 rounded-full border border-[rgba(250,246,239,0.2)] bg-transparent" />
+                )}
+              </div>
+              <span className="font-luxe text-[10px] tracking-[0.2em] uppercase text-[var(--bone)] whitespace-nowrap">
+                {likedDresses.length > 0 ? `${likedDresses.length} Selected` : 'Select Styles'}
+              </span>
+            </div>
+            
+            <button
+              onClick={handleNext}
+              className={`px-8 py-4 rounded-full text-[10px] tracking-widest uppercase font-luxe transition-all duration-500 flex items-center gap-3 group ${likedDresses.length > 0 ? 'bg-[var(--champagne)] text-[var(--ink)] hover:bg-[var(--bone)]' : 'bg-[rgba(250,246,239,0.05)] text-[var(--bone)]/50 hover:bg-[rgba(250,246,239,0.1)] hover:text-[var(--bone)]'}`}
+            >
+              {likedDresses.length > 0 ? "Proceed" : "Skip"}
+              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -198,7 +275,7 @@ export default function BookingWizard({ onCurationChange }) {
 
               {/* Step 1: Details */}
               {step === 1 && (
-                <div className="animate-in fade-in slide-in-from-right-8 duration-700 relative z-10">
+                <form onSubmit={(e) => { e.preventDefault(); handleNext(); }} className="animate-in fade-in slide-in-from-right-8 duration-700 relative z-10">
                   <h3 className="font-display text-3xl sm:text-4xl text-[var(--bone)] mb-3 flex items-center gap-3">
                     Begin Your Journey
                     <Sparkles size={18} className="text-[var(--champagne)]" />
@@ -226,9 +303,11 @@ export default function BookingWizard({ onCurationChange }) {
                         <input
                           type="email"
                           required
+                          pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                          title="Please provide a valid email address."
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          className="block w-full bg-transparent border-0 border-b border-[rgba(250,246,239,0.2)] pl-8 py-3 focus:ring-0 focus:border-[var(--champagne)] text-[var(--bone)] text-sm transition-colors placeholder-[var(--bone)]/40"
+                          className="block w-full bg-transparent border-0 border-b border-[rgba(250,246,239,0.2)] pl-8 py-3 focus:ring-0 focus:border-[var(--champagne)] text-[var(--bone)] text-sm transition-colors placeholder-[var(--bone)]/40 invalid:[&:not(:placeholder-shown)]:border-red-500/50"
                           placeholder="Email Address *"
                         />
                       </div>
@@ -237,9 +316,11 @@ export default function BookingWizard({ onCurationChange }) {
                         <input
                           type="tel"
                           required
+                          pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}"
+                          title="Please provide a valid phone number."
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
-                          className="block w-full bg-transparent border-0 border-b border-[rgba(250,246,239,0.2)] pl-8 py-3 focus:ring-0 focus:border-[var(--champagne)] text-[var(--bone)] text-sm transition-colors placeholder-[var(--bone)]/40"
+                          className="block w-full bg-transparent border-0 border-b border-[rgba(250,246,239,0.2)] pl-8 py-3 focus:ring-0 focus:border-[var(--champagne)] text-[var(--bone)] text-sm transition-colors placeholder-[var(--bone)]/40 invalid:[&:not(:placeholder-shown)]:border-red-500/50"
                           placeholder="Phone Number *"
                         />
                       </div>
@@ -268,14 +349,13 @@ export default function BookingWizard({ onCurationChange }) {
                   </div>
 
                   <button
-                    onClick={handleNext}
-                    disabled={!name || !email || !phone}
-                    className="mt-10 w-full bg-[var(--champagne)] text-[var(--ink)] hover:bg-[var(--bone)] py-4 text-[11px] tracking-[0.3em] font-luxe uppercase transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    type="submit"
+                    className="mt-10 w-full bg-[var(--champagne)] text-[var(--ink)] hover:bg-[var(--bone)] py-4 text-[11px] tracking-[0.3em] font-luxe uppercase transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     Curate Wardrobe
                     <ChevronRight size={14} />
                   </button>
-                </div>
+                </form>
               )}
 
               {/* Step 3: Date & Time */}
