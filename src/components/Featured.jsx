@@ -16,15 +16,15 @@ const IVORY_PRODUCTS = [
         id: "p2",
         name: "Bone Silk Kurta Set",
         tag: "New",
-        front: WARDROBE_DATA["kurta-sets"].looks[13].coverImg,
-        back: WARDROBE_DATA["kurta-sets"].looks[14].coverImg,
+        front: WARDROBE_DATA["kurta-sets"].looks[1]?.coverImg,
+        back: WARDROBE_DATA["kurta-sets"].looks[1]?.coverImg,
     },
     {
         id: "p3",
         name: "Classic Atelier Kurta",
         tag: null,
-        front: WARDROBE_DATA["kurta-sets"].looks[0].coverImg,
-        back: WARDROBE_DATA["kurta-sets"].looks[1].coverImg,
+        front: WARDROBE_DATA["kurta-sets"].looks[2]?.coverImg,
+        back: WARDROBE_DATA["kurta-sets"].looks[2]?.coverImg,
     },
 ];
 
@@ -33,22 +33,22 @@ const COLORED_PRODUCTS = [
         id: "p4",
         name: "Slate Blue Tailored Suit",
         tag: "New",
-        front: WARDROBE_DATA.suits.looks[4].coverImg,
-        back: WARDROBE_DATA.suits.looks[5].coverImg,
+        front: WARDROBE_DATA.suits.looks[0]?.coverImg,
+        back: WARDROBE_DATA.suits.looks[0]?.coverImg,
     },
     {
         id: "p5",
         name: "Ash Grey Silk Kurta Set",
         tag: null,
-        front: WARDROBE_DATA["kurta-sets"].looks[16].coverImg,
-        back: WARDROBE_DATA["kurta-sets"].looks[17].coverImg,
+        front: WARDROBE_DATA["kurta-sets"].looks[3]?.coverImg,
+        back: WARDROBE_DATA["kurta-sets"].looks[3]?.coverImg,
     },
     {
         id: "p6",
         name: "Indigo Couture Sherwani",
         tag: "Couture",
-        front: WARDROBE_DATA["bandhagala-indo-western"].looks[2].coverImg,
-        back: WARDROBE_DATA["bandhagala-indo-western"].looks[3].coverImg,
+        front: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
+        back: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
     },
 ];
 
