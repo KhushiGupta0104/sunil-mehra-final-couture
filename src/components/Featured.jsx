@@ -16,8 +16,8 @@ const IVORY_PRODUCTS = [
         id: "p2",
         name: "Bone Silk Kurta Set",
         tag: "New",
-        front: WARDROBE_DATA["kurta-sets"].looks[2]?.gallery[2] || WARDROBE_DATA["kurta-sets"].looks[2]?.coverImg,
-        back: WARDROBE_DATA["kurta-sets"].looks[2]?.gallery[3] || WARDROBE_DATA["kurta-sets"].looks[2]?.coverImg,
+        front: WARDROBE_DATA["kurta-sets"].looks[3]?.coverImg,
+        back: WARDROBE_DATA["kurta-sets"].looks[3]?.gallery[1] || WARDROBE_DATA["kurta-sets"].looks[3]?.coverImg,
     },
     {
         id: "p3",
@@ -47,8 +47,8 @@ const COLORED_PRODUCTS = [
         id: "p6",
         name: "Indigo Couture Sherwani",
         tag: "Couture",
-        front: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
-        back: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.gallery[0] || WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
+        front: WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.coverImg,
+        back: WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.gallery[0] || WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.coverImg,
     },
 ];
 
