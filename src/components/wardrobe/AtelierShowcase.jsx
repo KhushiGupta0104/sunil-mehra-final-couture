@@ -10,31 +10,34 @@ const REELS = [
         title: "The Luxury Kurta", 
         video: WARDROBE_DATA["kurta-sets"].looks[1]?.coverImg, 
         description: "A study of line and flow, blending traditional tailoring with lightweight silks.",
+        features: ["Handspun Silk", "Tone-on-tone embroidery", "Fluid drape"],
         photos: [
-            { src: WARDROBE_DATA["kurta-sets"].looks[2]?.coverImg, title: "Structured Collar", category: "Fabric & Fit" },
-            { src: WARDROBE_DATA["kurta-sets"].looks[3]?.coverImg, title: "Handspun Weave", category: "Atelier details" }
+            { src: WARDROBE_DATA["kurta-sets"].looks[1]?.gallery[1], title: "Structured Collar", category: "Fabric & Fit" },
+            { src: WARDROBE_DATA["kurta-sets"].looks[1]?.gallery[2], title: "Handspun Weave", category: "Atelier details" }
         ]
     },
     { 
         id: 2, 
         title: "The Jawahar Edit", 
         video: WARDROBE_DATA["jawahar-jackets"].looks[0]?.coverImg, 
-        description: "Bespoke styling featuring intricate floral motifs and custom brass buttons.",
+        description: "Modern elegance achieved through precise cut and artisanal craftsmanship.",
+        features: ["Bespoke Tailoring", "Signature Cut", "Lightweight Structure"],
         photos: [
-            { src: WARDROBE_DATA["jawahar-jackets"].looks[1]?.coverImg, title: "Custom Brass Buttons", category: "Hardware" },
-            { src: WARDROBE_DATA["jawahar-jackets"].looks[2]?.coverImg, title: "Floral Motifs", category: "Embroidery" }
+            { src: WARDROBE_DATA["jawahar-jackets"].looks[0]?.gallery[1], title: "Hand-finished Details", category: "Construction" },
+            { src: WARDROBE_DATA["jawahar-jackets"].looks[0]?.gallery[2], title: "Sartorial Precision", category: "Design" }
         ]
     },
     { 
         id: 3, 
         title: "The Bandhgala & Sherwani", 
         video: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg, 
-        description: "Rich tone-on-tone embroidery crafted for grand celebrations.",
+        description: "Regal silhouettes that command presence, crafted for extraordinary moments.",
+        features: ["Zardosi Embroidery", "Velvet & Silk", "Regal Silhouette"],
         photos: [
-            { src: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg, title: "Tone-on-tone", category: "Stitch-work" },
-            { src: WARDROBE_DATA["bandhagala-indo-western"].looks[2]?.coverImg, title: "Regal Drape", category: "Silhouette" }
+            { src: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.gallery[1], title: "Heritage Motifs", category: "Embroidery" },
+            { src: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.gallery[2], title: "Classic Fit", category: "Silhouette" }
         ]
-    },
+    }
 ];
 
 export default function AtelierShowcase() {

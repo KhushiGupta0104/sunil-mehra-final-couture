@@ -2,8 +2,26 @@ import puppeteer from 'puppeteer-core';
 import fs from 'fs';
 import path from 'path';
 
+async function autoScroll(page){
+    await page.evaluate(async () => {
+        await new Promise((resolve) => {
+            var totalHeight = 0;
+            var distance = 200;
+            var timer = setInterval(() => {
+                var scrollHeight = document.body.scrollHeight;
+                window.scrollBy(0, distance);
+                totalHeight += distance;
+
+                if(totalHeight >= scrollHeight - window.innerHeight){
+                    clearInterval(timer);
+                    resolve();
+                }
+            }, 100); // Scroll down every 100ms
+        });
+    });
+}
+
 (async () => {
-    // We will save to the artifacts scratch directory
     const scratchDir = '/Users/not_bunny/.gemini/antigravity-ide/brain/59dd221a-ffe2-4c86-b550-46221ce40fc2/scratch';
     if (!fs.existsSync(scratchDir)) {
         fs.mkdirSync(scratchDir, { recursive: true });
@@ -22,9 +40,7 @@ import path from 'path';
         { name: 'home', url: 'http://localhost:5173/' },
         { name: 'wardrobe', url: 'http://localhost:5173/wardrobe' },
         { name: 'gallery', url: 'http://localhost:5173/gallery' },
-        { name: 'about', url: 'http://localhost:5173/about' },
         { name: 'salons', url: 'http://localhost:5173/salons' },
-        { name: 'booking', url: 'http://localhost:5173/book' },
         { name: 'atelier', url: 'http://localhost:5173/atelier' }
     ];
 
@@ -32,8 +48,14 @@ import path from 'path';
         console.log(`Navigating to ${route.name}...`);
         await page.goto(route.url, { waitUntil: 'networkidle2' });
         
-        // Let any animations finish
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        console.log(`Scrolling down ${route.name} to trigger animations...`);
+        await autoScroll(page);
+        
+        // Scroll back to top to ensure the screenshot starts from the top if we use fullPage
+        await page.evaluate(() => window.scrollTo(0, 0));
+        
+        // Wait for any remaining animations to finish
+        await new Promise(resolve => setTimeout(resolve, 3000));
         
         const screenshotPath = path.join(scratchDir, `screenshot_${route.name}.png`);
         await page.screenshot({ path: screenshotPath, fullPage: true });
@@ -41,5 +63,5 @@ import path from 'path';
     }
 
     await browser.close();
-    console.log('All screenshots captured successfully!');
+    console.log('All scrolling screenshots captured successfully!');
 })();
