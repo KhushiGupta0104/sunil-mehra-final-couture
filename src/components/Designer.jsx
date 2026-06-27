@@ -1,5 +1,5 @@
 import React from "react";
-import designerImg from "@/assets/images/enhanced image Sunil mehra.png";
+import designerImg from "@/assets/images/enhanced_image_sunil_mehra_compressed.jpg";
 import ScrollReveal from "./ScrollReveal";
 
 export default function Designer() {
