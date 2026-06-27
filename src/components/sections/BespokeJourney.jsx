@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import ScrollReveal from "./ScrollReveal";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const STEPS = [
     {

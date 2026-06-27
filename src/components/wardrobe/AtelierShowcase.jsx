@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ScrollReveal from "./ScrollReveal";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
-import { WARDROBE_DATA } from "../data/wardrobeData";
+import { WARDROBE_DATA } from "@/data/wardrobeData";
 
 const REELS = [
     { 

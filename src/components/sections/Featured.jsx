@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ScrollReveal, { StaggerReveal, StaggerItem } from "./ScrollReveal";
+import ScrollReveal, { StaggerReveal, StaggerItem } from "@/components/ui/ScrollReveal";
 
-import { WARDROBE_DATA } from "../data/wardrobeData";
+import { WARDROBE_DATA } from "@/data/wardrobeData";
 
 const IVORY_PRODUCTS = [
     {

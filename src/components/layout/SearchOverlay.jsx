@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { WARDROBE_DATA } from "../data/wardrobeData";
+import { WARDROBE_DATA } from "@/data/wardrobeData";
 
 export default function SearchOverlay({ open, onClose }) {
     // Dynamically build the search index from WARDROBE_DATA

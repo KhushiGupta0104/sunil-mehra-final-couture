@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import ScrollReveal from "./ScrollReveal";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function AppointmentForm() {
     const [formData, setFormData] = useState({

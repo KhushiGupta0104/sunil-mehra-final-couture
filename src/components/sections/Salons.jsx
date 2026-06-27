@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ScrollReveal from "./ScrollReveal";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Link } from "react-router-dom";
 
 export default function Salons() {

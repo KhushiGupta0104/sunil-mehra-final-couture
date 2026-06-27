@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollReveal from "./ScrollReveal";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const VIDEOS = [
     { id: 1, src: "/REEL 3 SM C2.mp4" },

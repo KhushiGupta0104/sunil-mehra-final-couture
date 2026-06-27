@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import ScrollReveal from "./ScrollReveal";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 import ed1 from "@/assets/images/KurtaSets/sunil_mehra_2539.jpg";
 import ed2 from "@/assets/images/Accessories/Bags/IMG_9621 copy 2 - Copy.jpg";

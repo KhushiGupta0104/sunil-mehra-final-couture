@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ScrollReveal, { StaggerReveal, StaggerItem } from "./ScrollReveal";
+import ScrollReveal, { StaggerReveal, StaggerItem } from "@/components/ui/ScrollReveal";
 
-import { WARDROBE_DATA } from "../data/wardrobeData";
+import { WARDROBE_DATA } from "@/data/wardrobeData";
 
 const LOOKBOOK_ITEMS = [
     { id: 1, src: WARDROBE_DATA.suits.looks[5]?.coverImg, title: "The Royal Bandhgala", caption: "Deep navy silk with handcrafted embroidery", span: "row-span-2 col-span-1" },

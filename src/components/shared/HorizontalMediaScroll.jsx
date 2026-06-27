@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollReveal, { StaggerReveal, StaggerItem } from "./ScrollReveal";
+import ScrollReveal, { StaggerReveal, StaggerItem } from "@/components/ui/ScrollReveal";
 
 // Import uploaded images
 import img1 from "@/assets/images/Sunil Mehra 0156.jpg";
@@ -8,7 +8,7 @@ import img4 from "@/assets/images/IMG9371 copy.jpg";
 import img5 from "@/assets/images/Sunil Mehra_3721.jpg";
 import img6 from "@/assets/images/Sunil Mehra_6602.jpg";
 import img7 from "@/assets/images/Sunil Mehra 0239.jpg";
-import { WARDROBE_DATA } from "../data/wardrobeData";
+import { WARDROBE_DATA } from "@/data/wardrobeData";
 
 const galleryImages = [
     { id: 1, src: img1, title: "The Sartorial Eye", desc: "Precision tailoring in motion." },

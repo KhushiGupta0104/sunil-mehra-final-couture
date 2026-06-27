@@ -1,7 +1,7 @@
 import React from "react";
-import ScrollReveal from "./ScrollReveal";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
-import { WARDROBE_DATA } from "../data/wardrobeData";
+import { WARDROBE_DATA } from "@/data/wardrobeData";
 
 const LOOKS = [
     { id: 1, src: WARDROBE_DATA["winter-collection"].looks[0]?.coverImg, title: "The Royal Charcoal Suit", category: "Look 01 / Heritage" },

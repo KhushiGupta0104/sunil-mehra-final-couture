@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import ScrollReveal from "./ScrollReveal";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 import weddingImg from "@/assets/images/Bandhagla/img9702_copy.jpg";
 import bandhaglaImg from "@/assets/images/Bandhagla/sunil_mehra_0738.jpg";

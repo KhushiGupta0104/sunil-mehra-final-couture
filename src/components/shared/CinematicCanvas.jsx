@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollReveal from "./ScrollReveal";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 import walletImg from "@/assets/images/Accessories/ostrich_wallet.jpg";
 import bagImg from "@/assets/images/Accessories/Bags/IMG_9408_copy_2_-_Copy.jpg";

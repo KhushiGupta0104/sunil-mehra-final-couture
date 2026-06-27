@@ -18,6 +18,33 @@ const PORT = process.env.PORT || 5050;
 app.use(cors());
 app.use(express.json());
 
+// Local Database Setup
+const DB_FILE = path.join(__dirname, 'appointments.json');
+
+const readDB = () => {
+    try {
+        if (!fs.existsSync(DB_FILE)) return [];
+        const data = fs.readFileSync(DB_FILE, 'utf8');
+        return JSON.parse(data);
+    } catch (e) {
+        return [];
+    }
+};
+
+const writeDB = (data) => {
+    fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2));
+};
+
+// API endpoint to fetch all appointments
+app.get('/api/appointments', (req, res) => {
+    try {
+        const db = readDB();
+        res.json(db);
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to fetch appointments' });
+    }
+});
+
 // API endpoint to receive appointment requests
 app.post('/api/appointments', async (req, res) => {
     try {
@@ -32,6 +59,23 @@ app.post('/api/appointments', async (req, res) => {
         }
 
         const timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
+
+        // 0. Save to local DB
+        const newAppointment = {
+            id: Date.now().toString(),
+            timestamp,
+            name,
+            email,
+            phone,
+            date,
+            interest,
+            message,
+            instagram_handle,
+            liked_dresses
+        };
+        const db = readDB();
+        db.push(newAppointment);
+        writeDB(db);
 
         let crmSuccess = false;
         let crmError = null;

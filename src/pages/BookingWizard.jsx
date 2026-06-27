@@ -63,9 +63,18 @@ export default function BookingWizard({ onCurationChange }) {
     };
 
     try {
-      // Mock API call to avoid missing webhook errors
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setStep(4);
+      const res = await fetch("/api/appointments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      
+      if (res.ok) {
+        setStep(4);
+      } else {
+        const data = await res.json().catch(() => ({}));
+        alert(data.error ? `Error: ${data.error}` : "Something went wrong. Please try again.");
+      }
     } catch (err) {
       console.error(err);
       alert("Failed to connect to the server. Please check your network connection.");

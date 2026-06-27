@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ScrollReveal from "./ScrollReveal";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 import faisalImg from "@/assets/images/faisal_sheikh.png";
 import shaanImg from "@/assets/images/shaan_mukherji.png";

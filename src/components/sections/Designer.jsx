@@ -1,6 +1,6 @@
 import React from "react";
 import designerImg from "@/assets/images/enhanced_image_sunil_mehra_compressed.jpg";
-import ScrollReveal from "./ScrollReveal";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function Designer() {
     return (

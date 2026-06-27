@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
-import ScrollReveal from "./ScrollReveal";
-import BespokeJourney from "./BespokeJourney";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import BespokeJourney from "@/components/sections/BespokeJourney";
 
 // Import local image
 import img6602 from "@/assets/images/Suits/suit_7.jpg";

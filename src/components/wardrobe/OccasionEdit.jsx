@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ScrollReveal from "./ScrollReveal";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function OccasionEdit() {
     const OCCASIONS = [
