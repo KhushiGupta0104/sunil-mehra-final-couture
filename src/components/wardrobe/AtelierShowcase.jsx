@@ -11,8 +11,8 @@ const REELS = [
         video: WARDROBE_DATA["kurta-sets"].looks[1]?.coverImg, 
         description: "A study of line and flow, blending traditional tailoring with lightweight silks.",
         photos: [
-            { src: WARDROBE_DATA["kurta-sets"].looks[1]?.gallery[0] || WARDROBE_DATA["kurta-sets"].looks[1]?.coverImg, title: "Structured Collar", category: "Fabric & Fit" },
-            { src: WARDROBE_DATA["kurta-sets"].looks[1]?.gallery[1] || WARDROBE_DATA["kurta-sets"].looks[1]?.coverImg, title: "Handspun Weave", category: "Atelier details" }
+            { src: WARDROBE_DATA["kurta-sets"].looks[2]?.coverImg, title: "Structured Collar", category: "Fabric & Fit" },
+            { src: WARDROBE_DATA["kurta-sets"].looks[3]?.coverImg, title: "Handspun Weave", category: "Atelier details" }
         ]
     },
     { 
@@ -21,8 +21,8 @@ const REELS = [
         video: WARDROBE_DATA["jawahar-jackets"].looks[0]?.coverImg, 
         description: "Bespoke styling featuring intricate floral motifs and custom brass buttons.",
         photos: [
-            { src: WARDROBE_DATA["jawahar-jackets"].looks[0]?.gallery[0] || WARDROBE_DATA["jawahar-jackets"].looks[0]?.coverImg, title: "Custom Brass Buttons", category: "Hardware" },
-            { src: WARDROBE_DATA["jawahar-jackets"].looks[0]?.gallery[1] || WARDROBE_DATA["jawahar-jackets"].looks[0]?.coverImg, title: "Floral Motifs", category: "Embroidery" }
+            { src: WARDROBE_DATA["jawahar-jackets"].looks[1]?.coverImg, title: "Custom Brass Buttons", category: "Hardware" },
+            { src: WARDROBE_DATA["jawahar-jackets"].looks[2]?.coverImg, title: "Floral Motifs", category: "Embroidery" }
         ]
     },
     { 
@@ -31,8 +31,8 @@ const REELS = [
         video: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg, 
         description: "Rich tone-on-tone embroidery crafted for grand celebrations.",
         photos: [
-            { src: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.gallery[0] || WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg, title: "Tone-on-tone", category: "Stitch-work" },
-            { src: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.gallery[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg, title: "Regal Drape", category: "Silhouette" }
+            { src: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg, title: "Tone-on-tone", category: "Stitch-work" },
+            { src: WARDROBE_DATA["bandhagala-indo-western"].looks[2]?.coverImg, title: "Regal Drape", category: "Silhouette" }
         ]
     },
 ];
@@ -129,31 +129,39 @@ export default function AtelierShowcase() {
                     {/* Right: Fine Details Stack */}
                     <div className="lg:col-span-4 flex flex-col gap-4 lg:gap-5 order-3 lg:order-3 mt-10 lg:mt-0 justify-center">
                         <AnimatePresence mode="wait">
-                            {activeReel.photos.map((photo, idx) => (
-                                <motion.div
-                                    key={activeReel.id + "-" + idx}
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -10 }}
-                                    transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                    className={`group relative w-full overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] shadow-sm aspect-square md:aspect-[4/5]`}
-                                >
-                                    <img
-                                        src={photo.src}
-                                        alt={photo.title}
-                                        loading="lazy"
-                                        className="w-full h-full object-cover object-center transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-5 pointer-events-none">
-                                        <span className="font-luxe text-[9px] uppercase tracking-[0.25em] text-[var(--champagne)] mb-1">
-                                            {photo.category}
-                                        </span>
-                                        <h4 className="font-display text-white text-sm uppercase tracking-wider">
-                                            {photo.title}
-                                        </h4>
-                                    </div>
-                                </motion.div>
-                            ))}
+                            <motion.div
+                                key={activeReel.id}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="w-full flex flex-col gap-4 lg:gap-5"
+                            >
+                                {activeReel.photos.map((photo, idx) => (
+                                    <motion.div
+                                        key={activeReel.id + "-" + idx}
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                        className={`group relative w-full overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] shadow-sm aspect-square md:aspect-[4/5]`}
+                                    >
+                                        <img
+                                            src={photo.src}
+                                            alt={photo.title}
+                                            loading="lazy"
+                                            className="w-full h-full object-cover object-center transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-5 pointer-events-none">
+                                            <span className="font-luxe text-[9px] uppercase tracking-[0.25em] text-[var(--champagne)] mb-1">
+                                                {photo.category}
+                                            </span>
+                                            <h4 className="font-display text-white text-sm uppercase tracking-wider">
+                                                {photo.title}
+                                            </h4>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </motion.div>
                         </AnimatePresence>
                     </div>
 

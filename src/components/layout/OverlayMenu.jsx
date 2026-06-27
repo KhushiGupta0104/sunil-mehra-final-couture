@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import coverImg from "@/assets/images/cover.jpg";
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 const MENU = [
     { label: "Couture", hover: "the atelier", to: "/atelier" },

@@ -96,7 +96,7 @@ export default function Gallery() {
                                 {/* Desktop List Item */}
                                 <div className="hidden lg:flex items-center gap-6 py-6 cursor-pointer transition-all duration-500 hover:pl-6 border-b border-[var(--hairline)]">
                                     <span className={`font-luxe text-xs uppercase tracking-widest transition-colors duration-500 w-8 ${hoveredCeleb?.id === celeb.id ? 'text-[var(--bronze)]' : 'text-[var(--muted)]'}`}>
-                                        0{idx + 1}
+                                        {String(idx + 1).padStart(2, '0')}
                                     </span>
                                     <h3 className={`font-display text-3xl xl:text-5xl tracking-tight uppercase transition-colors duration-500 ${hoveredCeleb?.id === celeb.id ? 'text-[var(--ink)]' : 'text-[var(--muted)]'}`}>
                                         {celeb.celebrity}
@@ -110,7 +110,7 @@ export default function Gallery() {
                                             {celeb.celebrity}
                                         </h3>
                                         <span className="font-luxe text-[9px] uppercase tracking-widest text-[var(--bronze)]">
-                                            0{idx + 1}
+                                            {String(idx + 1).padStart(2, '0')}
                                         </span>
                                     </div>
                                     
@@ -152,6 +152,7 @@ export default function Gallery() {
                                         <img
                                             src={hoveredCeleb.src}
                                             alt={hoveredCeleb.celebrity}
+                                            loading="lazy"
                                             className="w-full h-full object-cover grayscale contrast-125 brightness-90 sepia-[0.1]"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />

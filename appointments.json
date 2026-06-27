@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1782600700181",
+    "timestamp": "2026-06-27 22:51:40 UTC",
+    "name": "Test User",
+    "email": "test@example.com",
+    "phone": "+919999999999",
+    "date": "2026-07-15T07:30:00.000Z",
+    "interest": "",
+    "message": "",
+    "instagram_handle": "test_handle",
+    "liked_dresses": [
+      "look_bandhagalaindowestern_1"
+    ]
+  }
+]
