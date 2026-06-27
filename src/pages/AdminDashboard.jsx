@@ -28,7 +28,11 @@ export default function AdminDashboard() {
 
   const fetchAppointments = async () => {
     try {
-      const res = await fetch('/api/appointments');
+      const res = await fetch('/api/appointments', {
+        headers: {
+          'x-admin-api-key': import.meta.env.VITE_ADMIN_API_KEY
+        }
+      });
       if (!res.ok) throw new Error('Failed to fetch data');
       const data = await res.json();
       setAppointments(data.reverse()); // Newest first
@@ -113,10 +117,10 @@ export default function AdminDashboard() {
                       )}
                     </div>
 
-                    {apt.message && (
+                    {apt.notes && (
                       <div className="mt-4 p-4 bg-black/20 border-l-2 border-[var(--champagne)]/30 rounded-r-sm">
                         <p className="text-xs uppercase font-luxe tracking-widest text-[var(--bone)]/40 mb-2">Client Notes</p>
-                        <p className="text-sm font-light leading-relaxed italic text-[var(--bone)]/80">"{apt.message}"</p>
+                        <p className="text-sm font-light leading-relaxed italic text-[var(--bone)]/80">"{apt.notes}"</p>
                       </div>
                     )}
                   </div>

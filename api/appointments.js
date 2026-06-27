@@ -1,4 +1,5 @@
-// api/appointments.js
+import xss from 'xss';
+
 export default async function handler(req, res) {
     // Enable CORS
     res.setHeader('Access-Control-Allow-Credentials', true);
@@ -14,10 +15,20 @@ export default async function handler(req, res) {
         return res.status(200).end();
     }
 
+    // Handle GET for Admin Dashboard
+    if (req.method === 'GET') {
+        const apiKey = req.headers['x-admin-api-key'];
+        if (!apiKey || apiKey !== process.env.ADMIN_API_KEY) {
+            return res.status(401).json({ error: 'Unauthorized' });
+        }
+        // Serverless functions don't have a local filesystem DB. Return empty array to prevent crashing Admin UI.
+        return res.status(200).json([]);
+    }
+
     if (req.method !== 'POST') {
         return res.status(405).json({
             success: false,
-            error: 'Method Not Allowed. Only POST requests are accepted.'
+            error: 'Method Not Allowed. Only POST and GET requests are accepted.'
         });
     }
 
@@ -32,6 +43,14 @@ export default async function handler(req, res) {
             });
         }
 
+        // Sanitize inputs
+        const safeName = xss(name);
+        const safeEmail = xss(email);
+        const safePhone = phone ? xss(phone) : '';
+        const safeInterest = interest ? xss(interest) : '';
+        const safeMessage = message ? xss(message) : '';
+        const safeInstagram = instagram_handle ? xss(instagram_handle) : '';
+
         const timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
 
         let crmSuccess = false;
@@ -42,7 +61,7 @@ export default async function handler(req, res) {
         const crmWebhookSecret = process.env.CRM_WEBHOOK_SECRET;
 
         if (crmWebhookUrl && crmWebhookSecret) {
-            console.log(`[Vercel Serverless] Forwarding appointment for "${name}" to CRM...`);
+            console.log(`[Vercel Serverless] Forwarding appointment for "${safeName}" to CRM...`);
             try {
                 // Ensure appointment_date is a valid ISO string. If not provided, use current date.
                 let isoDate;
@@ -53,13 +72,13 @@ export default async function handler(req, res) {
                 }
 
                 const crmPayload = {
-                    bride_name: name,
+                    bride_name: safeName,
                     appointment_date: isoDate,
-                    contact_email: email,
-                    contact_phone: phone || '',
-                    instagram_handle: instagram_handle || '',
+                    contact_email: safeEmail,
+                    contact_phone: safePhone || '',
+                    instagram_handle: safeInstagram || '',
                     liked_dresses: liked_dresses || [],
-                    notes: `[Interest: ${interest || 'N/A'}] ${message || ''}`
+                    notes: `[Interest: ${safeInterest || 'N/A'}] ${safeMessage || ''}`
                 };
 
                 const crmResponse = await fetch(crmWebhookUrl, {
@@ -92,7 +111,7 @@ export default async function handler(req, res) {
         const sheetsWebhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL;
         
         if (sheetsWebhookUrl && sheetsWebhookUrl.trim() !== '') {
-            console.log(`[Vercel Serverless] Forwarding appointment for "${name}" to Google Sheets...`);
+            console.log(`[Vercel Serverless] Forwarding appointment for "${safeName}" to Google Sheets...`);
             try {
                 const sheetsResponse = await fetch(sheetsWebhookUrl, {
                     method: 'POST',
@@ -101,9 +120,9 @@ export default async function handler(req, res) {
                     },
                     body: JSON.stringify({
                         timestamp,
-                        name,
-                        email,
-                        message: `[Phone: ${phone || ''} | Interest: ${interest || ''}] ${message || ''}`
+                        name: safeName,
+                        email: safeEmail,
+                        message: `[Phone: ${safePhone || ''} | Interest: ${safeInterest || ''}] ${safeMessage || ''}`
                     })
                 });
 

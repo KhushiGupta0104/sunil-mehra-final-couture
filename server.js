@@ -1,5 +1,8 @@
 import express from 'express';
 import cors from 'cors';
+import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
+import xss from 'xss';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -15,8 +18,16 @@ const app = express();
 const PORT = process.env.PORT || 5050;
 
 // Middleware
+app.use(helmet());
 app.use(cors());
 app.use(express.json());
+
+// Rate Limiting
+const apiLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 10, // Limit each IP to 10 requests per window
+    message: { success: false, error: 'Too many requests, please try again later.' }
+});
 
 // Local Database Setup
 const DB_FILE = path.join(__dirname, 'appointments.json');
@@ -38,6 +49,10 @@ const writeDB = (data) => {
 // API endpoint to fetch all appointments
 app.get('/api/appointments', (req, res) => {
     try {
+        const apiKey = req.headers['x-admin-api-key'];
+        if (!apiKey || apiKey !== process.env.ADMIN_API_KEY) {
+            return res.status(401).json({ error: 'Unauthorized' });
+        }
         const db = readDB();
         res.json(db);
     } catch (error) {
@@ -46,7 +61,7 @@ app.get('/api/appointments', (req, res) => {
 });
 
 // API endpoint to receive appointment requests
-app.post('/api/appointments', async (req, res) => {
+app.post('/api/appointments', apiLimiter, async (req, res) => {
     try {
         const { name, email, phone, date, interest, message, instagram_handle, liked_dresses } = req.body;
 
@@ -58,19 +73,27 @@ app.post('/api/appointments', async (req, res) => {
             });
         }
 
+        // Sanitize inputs
+        const safeName = xss(name);
+        const safeEmail = xss(email);
+        const safePhone = phone ? xss(phone) : '';
+        const safeInterest = interest ? xss(interest) : '';
+        const safeMessage = message ? xss(message) : '';
+        const safeInstagram = instagram_handle ? xss(instagram_handle) : '';
+
         const timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
 
         // 0. Save to local DB
         const newAppointment = {
             id: Date.now().toString(),
             timestamp,
-            name,
-            email,
-            phone,
+            name: safeName,
+            email: safeEmail,
+            phone: safePhone,
             date,
-            interest,
-            message,
-            instagram_handle,
+            interest: safeInterest,
+            message: safeMessage,
+            instagram_handle: safeInstagram,
             liked_dresses
         };
         const db = readDB();
