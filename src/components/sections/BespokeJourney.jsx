@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
@@ -120,12 +121,12 @@ export default function BespokeJourney() {
 
                         <ScrollReveal variant="fade-up" delay={0.35}>
                             <div className="pt-4">
-                                <a
-                                    href="#request-form"
+                                <Link
+                                    to="/appointment"
                                     className="bg-[var(--champagne)] text-[var(--ink)] hover:bg-[var(--bone)] px-8 py-4 text-[10px] tracking-[0.3em] font-luxe uppercase transition-all duration-300 inline-block"
                                 >
                                     Book Consultation
-                                </a>
+                                </Link>
                             </div>
                         </ScrollReveal>
                     </div>

@@ -203,7 +203,7 @@ function ProductCard({ prod, onSelect, featured = false }) {
                     src={prod.back}
                     alt={prod.name}
                     loading="lazy"
-                    className="w-full h-full object-cover object-top opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
+                    className="absolute inset-0 w-full h-full object-cover object-top opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
                 />
                 {prod.tag && (
                     <span className="absolute top-5 left-5 z-10 px-3 py-1 bg-[var(--bone)] text-[9px] uppercase tracking-[0.3em] font-luxe text-[var(--ink)]">

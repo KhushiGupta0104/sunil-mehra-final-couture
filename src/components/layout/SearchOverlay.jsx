@@ -36,7 +36,7 @@ export default function SearchOverlay({ open, onClose }) {
                 categoryData.looks.forEach((look, index) => {
                     items.push({
                         type: "garment",
-                        name: look.name,
+                        name: look.name || `${categoryData.name} — Look ${index + 1}`,
                         desc: look.subcat 
                             ? `${categoryData.name} — ${look.subcat}`
                             : `${categoryData.name} — Look ${index + 1}`,

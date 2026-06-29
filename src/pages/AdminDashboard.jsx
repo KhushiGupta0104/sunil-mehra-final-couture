@@ -12,9 +12,9 @@ export default function AdminDashboard() {
   useEffect(() => {
     // Generate a map of id -> image_url for easy lookup
     const flatCatalog = Object.values(WARDROBE_DATA).flatMap(categoryData => 
-        (categoryData.looks || []).map(look => ({
-            id: look.id,
-            name: look.name,
+        (categoryData.looks || []).map((look, index) => ({
+            id: look.id || `${categoryData.id}-${index}`,
+            name: look.name || `${categoryData.name} — Look ${index + 1}`,
             image_url: look.coverImg,
             category: categoryData.name
         }))

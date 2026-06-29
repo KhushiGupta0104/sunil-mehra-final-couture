@@ -53,7 +53,7 @@ export default function AtelierShowcase() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
                     
                     {/* Left: Text & Interactive Controls */}
-                    <div className="lg:col-span-4 flex flex-col justify-center space-y-10 order-2 lg:order-1 mt-10 lg:mt-0">
+                    <div className="lg:col-span-4 flex flex-col justify-center space-y-10 order-1 lg:order-1 mt-10 lg:mt-0">
                         <ScrollReveal variant="fade-up">
                             <div>
                                 <span className="font-luxe text-[10px] uppercase tracking-[0.35em] text-[var(--bronze)] block mb-3">
@@ -110,7 +110,7 @@ export default function AtelierShowcase() {
                     </div>
 
                     {/* Center: Main Feature Panel */}
-                    <div className="lg:col-span-4 order-1 lg:order-2">
+                    <div className="lg:col-span-4 order-2 lg:order-2">
                         <div className="relative aspect-[3/4] lg:aspect-[4/5] w-full overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] shadow-md group">
                             <AnimatePresence mode="wait">
                                 <motion.img

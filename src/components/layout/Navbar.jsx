@@ -1,16 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logoImg from "@/assets/images/logo.png";
 
 export default function Navbar({ onMenuOpen, menuOpen, onSearchOpen }) {
     const [scrolled, setScrolled] = useState(false);
     const [hidden, setHidden] = useState(false);
-    const [lastScrollY, setLastScrollY] = useState(0);
+    const lastScrollYRef = useRef(0);
     const location = useLocation();
+
+    // Check if current page should have a light background / dark text header at scroll 0
+    const isLightHeaderPage = 
+        location.pathname === "/atelier" ||
+        location.pathname === "/gallery" ||
+        location.pathname === "/faq" ||
+        location.pathname === "/terms" ||
+        location.pathname === "/privacy";
 
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
+            const lastScrollY = lastScrollYRef.current;
 
             // Glassmorphism after scrolling past hero
             setScrolled(currentScrollY > 100);
@@ -26,12 +35,12 @@ export default function Navbar({ onMenuOpen, menuOpen, onSearchOpen }) {
                 setHidden(false);
             }
 
-            setLastScrollY(currentScrollY);
+            lastScrollYRef.current = currentScrollY;
         };
 
         window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [lastScrollY]);
+    }, []);
 
     // Check if a link is active
     const isActive = (path) => {
@@ -42,7 +51,7 @@ export default function Navbar({ onMenuOpen, menuOpen, onSearchOpen }) {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 flex flex-col w-full transition-all duration-700 translate-y-0 ${
-                scrolled
+                (scrolled || isLightHeaderPage)
                     ? "glass text-[var(--ink)] border-b border-[var(--hairline)] py-0"
                     : "bg-transparent text-[var(--bone)] border-b border-transparent py-2"
             } ${hidden ? "-translate-y-full" : ""}`}
@@ -58,7 +67,7 @@ export default function Navbar({ onMenuOpen, menuOpen, onSearchOpen }) {
                     <img
                         src={logoImg}
                         alt="Sunil Mehra"
-                        className={`h-6 sm:h-8 lg:h-10 w-auto object-contain transition-all duration-700 ${scrolled ? "opacity-90" : "brightness-0 invert opacity-90"}`}
+                        className={`h-6 sm:h-8 lg:h-10 w-auto object-contain transition-all duration-700 ${(scrolled || isLightHeaderPage) ? "opacity-90" : "brightness-0 invert opacity-90"}`}
                     />
                 </Link>
 

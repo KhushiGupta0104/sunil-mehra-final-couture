@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logoImg from "@/assets/images/logo.png";
 
 export default function Footer() {
+    const [subscribed, setSubscribed] = useState(false);
+
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
@@ -48,17 +50,26 @@ export default function Footer() {
                         <p className="font-body text-sm text-[var(--bone)] opacity-90 leading-relaxed mb-6 max-w-sm">
                             Subscribe for exclusive invitations to private collections and editorial features.
                         </p>
-                        <form className="w-full max-w-sm flex items-center border-b border-[var(--bone)] border-opacity-30 pb-3 group focus-within:border-opacity-100 transition-colors">
-                            <input 
-                                type="email" 
-                                placeholder="Your email address" 
-                                className="bg-transparent border-none outline-none text-sm w-full text-[var(--bone)] placeholder-[var(--bone)] placeholder-opacity-40"
-                                required
-                            />
-                            <button type="submit" className="text-[10px] uppercase tracking-[0.2em] font-luxe text-[var(--champagne)] hover:text-white transition-colors ml-4 shrink-0">
-                                Join
-                            </button>
-                        </form>
+                        {subscribed ? (
+                            <p className="font-italic-serif text-sm text-[var(--champagne)] italic animate-in fade-in duration-500 py-3">
+                                Thank you for joining our society.
+                            </p>
+                        ) : (
+                            <form 
+                                onSubmit={(e) => { e.preventDefault(); setSubscribed(true); }}
+                                className="w-full max-w-sm flex items-center border-b border-[var(--bone)] border-opacity-30 pb-3 group focus-within:border-opacity-100 transition-colors"
+                            >
+                                <input 
+                                    type="email" 
+                                    placeholder="Your email address" 
+                                    className="bg-transparent border-none outline-none text-sm w-full text-[var(--bone)] placeholder-[var(--bone)] placeholder-opacity-40"
+                                    required
+                                />
+                                <button type="submit" className="text-[10px] uppercase tracking-[0.2em] font-luxe text-[var(--champagne)] hover:text-white transition-colors ml-4 shrink-0">
+                                    Join
+                                </button>
+                            </form>
+                        )}
                     </div>
 
                     {/* Column 3: Flagship (2 cols) */}

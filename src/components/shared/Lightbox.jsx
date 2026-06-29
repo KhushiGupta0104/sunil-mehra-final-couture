@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -13,6 +13,33 @@ export default function Lightbox({
     onPrev,
     indexInfo
 }) {
+    const touchStartX = useRef(0);
+    const touchEndX = useRef(0);
+
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.targetTouches[0].clientX;
+        touchEndX.current = e.targetTouches[0].clientX; // Reset end to start on new touch
+    };
+
+    const handleTouchMove = (e) => {
+        touchEndX.current = e.targetTouches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStartX.current || !touchEndX.current) return;
+        const diffX = touchStartX.current - touchEndX.current;
+        // swipe left -> next (drag right-to-left)
+        if (diffX > 50 && onNext) {
+            onNext();
+        }
+        // swipe right -> prev (drag left-to-right)
+        if (diffX < -50 && onPrev) {
+            onPrev();
+        }
+        // reset refs
+        touchStartX.current = 0;
+        touchEndX.current = 0;
+    };
     // Handle keyboard navigation
     useEffect(() => {
         const handleKeyDown = (e) => {
@@ -45,6 +72,9 @@ export default function Lightbox({
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
                     className="fixed inset-0 z-[120] flex flex-col items-center justify-center bg-[var(--section-dark-bg)]/98 backdrop-blur-2xl"
                 >
                     {/* Grain overlay */}

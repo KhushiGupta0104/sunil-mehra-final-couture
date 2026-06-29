@@ -1,6 +1,42 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+
+function OccasionVideo({ src }) {
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    video.play().catch(err => console.log("Video play interrupted", err));
+                } else {
+                    video.pause();
+                }
+            },
+            { threshold: 0.05 }
+        );
+
+        observer.observe(video);
+        return () => {
+            observer.unobserve(video);
+        };
+    }, []);
+
+    return (
+        <video
+            ref={videoRef}
+            src={src}
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover transition-transform duration-[3s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
+        />
+    );
+}
 
 export default function OccasionEdit() {
     const OCCASIONS = [
@@ -55,14 +91,7 @@ export default function OccasionEdit() {
                     >
                         {/* Video Layer */}
                         <div className="absolute inset-0 w-full h-full bg-[var(--bone)] overflow-hidden">
-                            <video
-                                src={occ.video}
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className="w-full h-full object-cover transition-transform duration-[3s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
-                            />
+                            <OccasionVideo src={occ.video} />
                         </div>
 
                         {/* Vignette + Gradient for drama */}
@@ -76,8 +105,8 @@ export default function OccasionEdit() {
 
                         {/* Title text overlay at bottom */}
                         <div className="relative z-10 w-full text-center pb-14 sm:pb-18 flex flex-col items-center justify-center pointer-events-none">
-                            {/* Subtitle — appears on hover */}
-                            <span className="font-italic-serif text-sm text-white/0 group-hover:text-white/80 transition-all duration-700 mb-3 tracking-wide">
+                            {/* Subtitle — appears on hover on desktop, always visible on mobile */}
+                            <span className="font-italic-serif text-sm text-white/70 md:text-white/0 group-hover:text-white/80 transition-all duration-700 mb-3 tracking-wide">
                                 {occ.subtitle}
                             </span>
                             <span className="font-luxe text-xs sm:text-sm uppercase tracking-[0.35em] text-white relative pb-2 border-b border-white/40 group-hover:border-[var(--champagne)] group-hover:text-[var(--champagne)] transition-all duration-500">

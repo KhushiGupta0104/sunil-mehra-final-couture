@@ -130,6 +130,16 @@ export default function Gallery() {
                                         <p className="font-italic-serif text-sm text-[var(--ink-soft)] leading-relaxed">
                                             {celeb.caption}
                                         </p>
+                                        {celeb.tag && (
+                                            <a 
+                                                href={celeb.instagramUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-block mt-3 font-luxe text-[8px] uppercase tracking-[0.3em] text-[var(--ink-soft)] hover:text-[var(--bronze)] border-b border-[var(--hairline)] pb-1 transition-colors"
+                                            >
+                                                {celeb.tag}
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>
