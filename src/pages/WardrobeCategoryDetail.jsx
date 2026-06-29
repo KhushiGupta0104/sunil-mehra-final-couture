@@ -230,10 +230,13 @@ export default function WardrobeCategoryDetail() {
                 <StaggerReveal staggerDelay={0.08} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
                     {displayedPieces.map((piece, pieceIndex) => {
                         const images = piece.gallery && piece.gallery.length > 0 ? piece.gallery : [piece.coverImg];
+                        const originalIndex = category.looks.indexOf(piece);
+                        const pieceId = piece.id || `${category.id || categorySlug}-${originalIndex}`;
                         
                         return (
                             <StaggerItem
-                                key={piece.id || pieceIndex}
+                                id={pieceId}
+                                key={pieceId}
                                 variant="fade-up"
                                 className="flex flex-col group"
                             >

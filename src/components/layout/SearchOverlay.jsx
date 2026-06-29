@@ -34,6 +34,7 @@ export default function SearchOverlay({ open, onClose }) {
             // 3. Add individual Garments/Pieces
             if (categoryData.looks) {
                 categoryData.looks.forEach((look, index) => {
+                    const garmentId = look.id || `${categoryData.id || categorySlug}-${index}`;
                     items.push({
                         type: "garment",
                         name: look.name || `${categoryData.name} — Look ${index + 1}`,
@@ -41,7 +42,7 @@ export default function SearchOverlay({ open, onClose }) {
                             ? `${categoryData.name} — ${look.subcat}`
                             : `${categoryData.name} — Look ${index + 1}`,
                         img: look.coverImg,
-                        to: `/wardrobe/${categorySlug}`
+                        to: `/wardrobe/${categorySlug}#${garmentId}`
                     });
                 });
             }
@@ -81,10 +82,12 @@ export default function SearchOverlay({ open, onClose }) {
     const MAX_RESULTS = 12;
     const filteredItems = query.trim() === "" 
         ? [] 
-        : SEARCHABLE_ITEMS.filter(item => 
-            item.name.toLowerCase().includes(query.toLowerCase()) || 
-            item.desc.toLowerCase().includes(query.toLowerCase())
-          ).slice(0, MAX_RESULTS);
+        : SEARCHABLE_ITEMS.filter(item => {
+            const name = item.name ? String(item.name).toLowerCase() : "";
+            const desc = item.desc ? String(item.desc).toLowerCase() : "";
+            const q = query.toLowerCase();
+            return name.includes(q) || desc.includes(q);
+          }).slice(0, MAX_RESULTS);
 
     const categories = filteredItems.filter(i => i.type === "category" || i.type === "subcategory");
     const garments = filteredItems.filter(i => i.type === "garment");
