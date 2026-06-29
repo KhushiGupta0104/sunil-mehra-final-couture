@@ -32,7 +32,7 @@ const STORIES = [
         excerpt: "An ode to ethereal lightness. The new menswear line embraces fluid silhouettes and breathable cashmeres. Hand-embroidered with subtle metallic threading, this suit catches the golden hour light, making it the perfect statement for a destination occasion.",
         quote: "Elegance is the only beauty that never fades.",
         img: ed3,
-        align: "center"
+        align: "left"
     },
 ];
 

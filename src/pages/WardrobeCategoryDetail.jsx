@@ -113,7 +113,7 @@ export default function WardrobeCategoryDetail() {
     const pageDesc = isSubcategoryDetail ? subcatInfo.desc : category.description;
     const coverImage = isSubcategoryDetail
         ? subcatInfo.img
-        : (allPieces[0]?.img || null);
+        : (allPieces[0]?.coverImg || null);
 
     // ─────────────── ACCESSORIES HUB ───────────────
     if (isAccessoriesHub) {
@@ -207,7 +207,7 @@ export default function WardrobeCategoryDetail() {
                 </div>
 
                 {/* ═══ IMAGE GRID — 3 columns on desktop ═══ */}
-                <StaggerReveal staggerDelay={0.08} className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
+                <StaggerReveal staggerDelay={0.08} className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5 grid-flow-row-dense">
                     {displayedPieces.map((piece, index) => {
                         // Asymmetric layout: every 7th image spans 2 columns
                         const isWide = index % 7 === 0 && index > 0;
