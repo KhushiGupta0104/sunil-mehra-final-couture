@@ -7,24 +7,24 @@ import { WARDROBE_DATA } from "@/data/wardrobeData";
 const REELS = [
     { 
         id: 1, 
-        title: "The Artisan Cut", 
-        video: WARDROBE_DATA["kurta-sets"].looks[3]?.coverImg, 
-        description: "A study of line and flow, blending traditional tailoring with lightweight silks.",
+        title: "The Hand-Stitched Canvas", 
+        video: WARDROBE_DATA["kurta-sets"].looks[4]?.coverImg, 
+        description: "A close look at the intricate threadwork that defines our premium kurta sets.",
         features: ["Handspun Silk", "Tone-on-tone embroidery", "Fluid drape"],
         photos: [
-            { src: WARDROBE_DATA["kurta-sets"].looks[3]?.gallery?.[1], title: "Structured Collar", category: "Fabric & Fit" },
-            { src: WARDROBE_DATA["kurta-sets"].looks[3]?.gallery?.[2], title: "Handspun Weave", category: "Atelier details" }
+            { src: WARDROBE_DATA["kurta-sets"].looks[4]?.gallery?.[0] || WARDROBE_DATA["kurta-sets"].looks[4]?.coverImg, title: "Structured Collar", category: "Fabric & Fit" },
+            { src: WARDROBE_DATA["kurta-sets"].looks[4]?.gallery?.[1] || WARDROBE_DATA["kurta-sets"].looks[4]?.coverImg, title: "Handspun Weave", category: "Atelier details" }
         ]
     },
     { 
         id: 2, 
-        title: "The Jawahar Edit", 
-        video: WARDROBE_DATA["jawahar-jackets"].looks[0]?.coverImg, 
-        description: "Modern elegance achieved through precise cut and artisanal craftsmanship.",
+        title: "The Architecture of a Suit", 
+        video: WARDROBE_DATA["jawahar-jackets"].looks[1]?.coverImg, 
+        description: "Discover the layers, canvas, and structure behind our bespoke silhouettes.",
         features: ["Bespoke Tailoring", "Signature Cut", "Lightweight Structure"],
         photos: [
-            { src: WARDROBE_DATA["jawahar-jackets"].looks[0]?.gallery?.[1], title: "Hand-finished Details", category: "Construction" },
-            { src: WARDROBE_DATA["jawahar-jackets"].looks[0]?.gallery?.[2], title: "Sartorial Precision", category: "Design" }
+            { src: WARDROBE_DATA["jawahar-jackets"].looks[1]?.gallery?.[0] || WARDROBE_DATA["jawahar-jackets"].looks[1]?.coverImg, title: "Hand-finished Details", category: "Construction" },
+            { src: WARDROBE_DATA["jawahar-jackets"].looks[1]?.gallery?.[1] || WARDROBE_DATA["jawahar-jackets"].looks[1]?.coverImg, title: "Sartorial Precision", category: "Design" }
         ]
     },
     { 

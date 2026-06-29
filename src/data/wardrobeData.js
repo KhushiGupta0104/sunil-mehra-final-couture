@@ -1,1088 +1,565 @@
-import Bandhagla_0 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/066A0224.jpg";
-import Bandhagla_1 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/IMG9493 copy.jpg";
-import Bandhagla_2 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/IMG9702 copy.jpg";
-import Bandhagla_3 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/Sunil Mehra  0738.jpg";
-import Bandhagla_4 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/Sunil Mehra  1043.jpg";
-import Bandhagla_5 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/Sunil Mehra  1962.jpg";
-import Bandhagla_6 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/Sunil Mehra_3610.jpg";
-import Bandhagla_7 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/Sunil Mehra_3681.jpg";
-import Bandhagla_8 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0014.jpg";
-import Bandhagla_9 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0033.jpg";
-import Bandhagla_10 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0040.jpg";
-import Bandhagla_11 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0479.jpg";
-import Bandhagla_12 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0554.jpg";
-import Bandhagla_13 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0561.jpg";
-import Bandhagla_14 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0595.jpg";
-import Bandhagla_15 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG9394 copy.jpg";
-import Bandhagla_16 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG9413 copy.jpg";
-import Bandhagla_17 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG9432 copy.jpg";
-import Bandhagla_18 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG9488 copy.jpg";
-import Bandhagla_19 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG9671 copy.jpg";
-import Bandhagla_20 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG9689 copy.jpg";
-import Bandhagla_21 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG_7216_R3.jpg";
-import Bandhagla_22 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  0704.jpg";
-import Bandhagla_23 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  0854.jpg";
-import Bandhagla_24 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1065.jpg";
-import Bandhagla_25 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1474 - Copy.jpg";
-import Bandhagla_26 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1486.jpg";
-import Bandhagla_27 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1516.jpg";
-import Bandhagla_28 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1819.jpg";
-import Bandhagla_29 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1831.jpg";
-import Bandhagla_30 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1863.jpg";
-import Bandhagla_31 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1867.jpg";
-import Bandhagla_32 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1929.jpg";
-import Bandhagla_33 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1971.jpg";
-import Bandhagla_34 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_3591.jpg";
-import Bandhagla_35 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_3725.jpg";
-import Bandhagla_36 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_3788.jpg";
-import Bandhagla_37 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_4827.jpg";
-import Bandhagla_38 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_6452 1.jpg";
-import Bandhagla_39 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_6483.jpg";
-import Bandhagla_40 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_8980.jpg";
-import Bandhagla_41 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_8987.jpg";
-import Bandhagla_42 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-30.jpg";
-import Bandhagla_43 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-35.jpg";
-import Bandhagla_44 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-41.jpg";
-import Bandhagla_45 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-42.jpg";
-import Bandhagla_46 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-44.jpg";
-import Bandhagla_47 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-84.jpg";
-import Bandhagla_48 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-85.jpg";
-import Bandhagla_49 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-86.jpg";
-import Bandhagla_50 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-91.jpg";
-import Bandhagla_51 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0220.jpg";
-import Bandhagla_52 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0234.jpg";
-import Bandhagla_53 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0299.jpg";
-import Bandhagla_54 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0317.jpg";
-import Bandhagla_55 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0321.jpg";
-import Bandhagla_56 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0463.jpg";
-import Bandhagla_57 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0475.jpg";
-import Bandhagla_58 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0495.jpg";
-import Bandhagla_59 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0499.jpg";
-import Bandhagla_60 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0502.jpg";
-import Bandhagla_61 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0536.jpg";
-import Bandhagla_62 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0544.jpg";
-import Bandhagla_63 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0559.jpg";
-import Bandhagla_64 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0601.jpg";
-import Bandhagla_65 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/IMG9367 copy.jpg";
-import Bandhagla_66 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/IMG9371 copy.jpg";
-import Bandhagla_67 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/IMG9477 copy.jpg";
-import Bandhagla_68 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/IMG_7224_R5.jpg";
-import Bandhagla_69 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  0726.jpg";
-import Bandhagla_70 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  0764.jpg";
-import Bandhagla_71 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  0769.jpg";
-import Bandhagla_72 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  0784.jpg";
-import Bandhagla_73 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  0848.jpg";
-import Bandhagla_74 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  0905.jpg";
-import Bandhagla_75 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1030.jpg";
-import Bandhagla_76 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1496.jpg";
-import Bandhagla_77 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1815.jpg";
-import Bandhagla_78 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1881.jpg";
-import Bandhagla_79 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1914.jpg";
-import Bandhagla_80 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1934.jpg";
-import Bandhagla_81 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1951.jpg";
-import Bandhagla_82 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra_3648.jpg";
-import Bandhagla_83 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra_3720.jpg";
-import Bandhagla_84 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra_3721.jpg";
-import Bandhagla_85 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra_8955.jpg";
-import Bandhagla_86 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/tripti-33.jpg";
-import Jawahar_Jacket_0 from "../assets/images/new_content/Untitled folder/Jawahar Jacket Sets/Sunil Mehra_6593.jpg";
-import Jawahar_Jacket_1 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/066A0578.jpg";
-import Jawahar_Jacket_2 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/066A0588.jpg";
-import Jawahar_Jacket_3 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/066A0593.jpg";
-import Jawahar_Jacket_4 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_6549.jpg";
-import Jawahar_Jacket_5 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_6586 - Copy.jpg";
-import Jawahar_Jacket_6 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_6620 - Copy.jpg";
-import Jawahar_Jacket_7 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_6705 - Copy.jpg";
-import Jawahar_Jacket_8 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_9035.jpg";
-import Jawahar_Jacket_9 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_9112 - Copy.jpg";
-import Jawahar_Jacket_10 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_9133 copy - Copy.jpg";
-import Jawahar_Jacket_11 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_9205 - Copy.jpg";
-import Jawahar_Jacket_12 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_9262 - Copy.jpg";
-import Jawahar_Jacket_13 from "../assets/images/new_content/Untitled folder 3/Jawahar Jacket Sets/Sunil Mehra_9011.jpg";
-import Jawahar_Jacket_14 from "../assets/images/new_content/Untitled folder 3/Jawahar Jacket Sets/Sunil Mehra_9026.jpg";
-import Jawahar_Jacket_15 from "../assets/images/new_content/Untitled folder 3/Jawahar Jacket Sets/Sunil Mehra_9078 - Copy.jpg";
-import Jawahar_Jacket_16 from "../assets/images/new_content/Untitled folder 3/Jawahar Jacket Sets/Sunil Mehra_9105 - Copy.jpg";
-import Kurta_Set_0 from "../assets/images/new_content/Untitled folder/Kurta Sets/Sunil Mehra_9406.jpg";
-import Kurta_Set_1 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/IMG8974 copy.jpg";
-import Kurta_Set_2 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/IMG9176 copy.jpg";
-import Kurta_Set_3 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  0711.jpg";
-import Kurta_Set_4 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  0740.jpg";
-import Kurta_Set_5 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  1147.jpg";
-import Kurta_Set_6 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  1177.jpg";
-import Kurta_Set_7 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  1217.jpg";
-import Kurta_Set_8 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  1318.jpg";
-import Kurta_Set_9 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  1338.jpg";
-import Kurta_Set_10 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra_8350.jpg";
-import Kurta_Set_11 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra_9295.jpg";
-import Kurta_Set_12 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/IMG9136 copy.jpg";
-import Kurta_Set_13 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra  0725.jpg";
-import Kurta_Set_14 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra  0935.jpg";
-import Kurta_Set_15 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra  0943.jpg";
-import Kurta_Set_16 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra  0964.jpg";
-import Kurta_Set_17 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra  1298.jpg";
-import Kurta_Set_18 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra_2539.jpg";
-import Kurta_Set_19 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra_8328.jpg";
-import Kurta_Set_20 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra_8371.jpg";
-import Kurta_Set_21 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra_9283.jpg";
-import Kurta_Set_22 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra_9334.jpg";
-import Sartorial_Suit_0 from "../assets/images/new_content/Untitled folder/Suits/IMG8597 copy.jpg";
-import Sartorial_Suit_1 from "../assets/images/new_content/Untitled folder/Suits/IMG8641 copy.jpg";
-import Sartorial_Suit_2 from "../assets/images/new_content/Untitled folder/Suits/IMG8653 copy.jpg";
-import Sartorial_Suit_3 from "../assets/images/new_content/Untitled folder/Suits/IMG8657 copy.jpg";
-import Sartorial_Suit_4 from "../assets/images/new_content/Untitled folder/Suits/IMG8895 copy.jpg";
-import Sartorial_Suit_5 from "../assets/images/new_content/Untitled folder/Suits/IMG8912 copy.jpg";
-import Sartorial_Suit_6 from "../assets/images/new_content/Untitled folder/Suits/IMG8942 copy.jpg";
-import Sartorial_Suit_7 from "../assets/images/new_content/Untitled folder/Suits/IMG9542 copy.jpg";
-import Sartorial_Suit_8 from "../assets/images/new_content/Untitled folder/Suits/IMG9645 copy.jpg";
-import Sartorial_Suit_9 from "../assets/images/new_content/Untitled folder/Suits/IMG9714 copy.jpg";
-import Sartorial_Suit_10 from "../assets/images/new_content/Untitled folder/Suits/IMG9717 copy.jpg";
-import Sartorial_Suit_11 from "../assets/images/new_content/Untitled folder/Suits/IMG9721 copy.jpg";
-import Sartorial_Suit_12 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0063 - Copy.jpg";
-import Sartorial_Suit_13 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0086.jpg";
-import Sartorial_Suit_14 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0186 - Copy.jpg";
-import Sartorial_Suit_15 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0313.jpg";
-import Sartorial_Suit_16 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0345.jpg";
-import Sartorial_Suit_17 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0483.jpg";
-import Sartorial_Suit_18 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0523.jpg";
-import Sartorial_Suit_19 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0582.jpg";
-import Sartorial_Suit_20 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0600.jpg";
-import Sartorial_Suit_21 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1384.jpg";
-import Sartorial_Suit_22 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1502.jpg";
-import Sartorial_Suit_23 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1512.jpg";
-import Sartorial_Suit_24 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1530.jpg";
-import Sartorial_Suit_25 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1612.jpg";
-import Sartorial_Suit_26 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1622.jpg";
-import Sartorial_Suit_27 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1624.jpg";
-import Sartorial_Suit_28 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1635.jpg";
-import Sartorial_Suit_29 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1667.jpg";
-import Sartorial_Suit_30 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1688.jpg";
-import Sartorial_Suit_31 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1693.jpg";
-import Sartorial_Suit_32 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1701.jpg";
-import Sartorial_Suit_33 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1760.jpg";
-import Sartorial_Suit_34 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1863.jpg";
-import Sartorial_Suit_35 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1881.jpg";
-import Sartorial_Suit_36 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_0039.jpg";
-import Sartorial_Suit_37 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_0045.jpg";
-import Sartorial_Suit_38 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_0531.jpg";
-import Sartorial_Suit_39 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_0577.jpg";
-import Sartorial_Suit_40 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_0904.jpg";
-import Sartorial_Suit_41 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_2224.jpg";
-import Sartorial_Suit_42 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_5155.jpg";
-import Sartorial_Suit_43 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6262.jpg";
-import Sartorial_Suit_44 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6315.jpg";
-import Sartorial_Suit_45 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6398 1.jpg";
-import Sartorial_Suit_46 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6413.jpg";
-import Sartorial_Suit_47 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6450.jpg";
-import Sartorial_Suit_48 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6750.jpg";
-import Sartorial_Suit_49 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6910.jpg";
-import Sartorial_Suit_50 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_7057.jpg";
-import Sartorial_Suit_51 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_8150.jpg";
-import Sartorial_Suit_52 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_8202.jpg";
-import Sartorial_Suit_53 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_8261.jpg";
-import Sartorial_Suit_54 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_8565.jpg";
-import Sartorial_Suit_55 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_8580.jpg";
-import Sartorial_Suit_56 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_9688.jpg";
-import Sartorial_Suit_57 from "../assets/images/new_content/Untitled folder/Suits/tripti-55.jpg";
-import Sartorial_Suit_58 from "../assets/images/new_content/Untitled folder/Suits/tripti-57.jpg";
-import Sartorial_Suit_59 from "../assets/images/new_content/Untitled folder/Suits/tripti-69.jpg";
-import Sartorial_Suit_60 from "../assets/images/new_content/Untitled folder/Suits/tripti-82.jpg";
-import Sartorial_Suit_61 from "../assets/images/new_content/Untitled folder 3/Suits/066A0210 - Copy.jpg";
-import Sartorial_Suit_62 from "../assets/images/new_content/Untitled folder 3/Suits/24358bda-972a-42e5-a853-c60544fab579.png";
-import Sartorial_Suit_63 from "../assets/images/new_content/Untitled folder 3/Suits/95f9791b-79cd-4586-bff2-5fafd68c38a8.png";
-import Sartorial_Suit_64 from "../assets/images/new_content/Untitled folder 3/Suits/Sunil Mehra_2263.jpg";
-import Sartorial_Suit_65 from "../assets/images/new_content/Untitled folder 3/Suits/Sunil Mehra_6973.jpg";
-import Sartorial_Suit_66 from "../assets/images/new_content/Untitled folder 3/Suits/Sunil Mehra_7023.jpg";
-import Sartorial_Suit_67 from "../assets/images/new_content/Untitled folder 3/Suits/e03c7ae0-bc27-4d8f-95f1-26066b99e04c.png";
-import Sartorial_Suit_68 from "../assets/images/new_content/Untitled folder 4/Suits/066A0100 - Copy.jpg";
-import Sartorial_Suit_69 from "../assets/images/new_content/Untitled folder 4/Suits/066A0107 - Copy.jpg";
-import Sartorial_Suit_70 from "../assets/images/new_content/Untitled folder 4/Suits/066A0114 - Copy.jpg";
-import Sartorial_Suit_71 from "../assets/images/new_content/Untitled folder 4/Suits/066A0162 - Copy.jpg";
-import Sartorial_Suit_72 from "../assets/images/new_content/Untitled folder 4/Suits/066A0183 - Copy.jpg";
-import Sartorial_Suit_73 from "../assets/images/new_content/Untitled folder 4/Suits/066A0215 - Copy.jpg";
-import Sartorial_Suit_74 from "../assets/images/new_content/Untitled folder 4/Suits/066A0264 - Copy.jpg";
-import Sartorial_Suit_75 from "../assets/images/new_content/Untitled folder 4/Suits/066A0270 - Copy.jpg";
-import Sartorial_Suit_76 from "../assets/images/new_content/Untitled folder 4/Suits/066A0275 - Copy.jpg";
-import Sartorial_Suit_77 from "../assets/images/new_content/Untitled folder 4/Suits/066A0334 - Copy.jpg";
-import Sartorial_Suit_78 from "../assets/images/new_content/Untitled folder 4/Suits/066A0347 - Copy.jpg";
-import Sartorial_Suit_79 from "../assets/images/new_content/Untitled folder 4/Suits/066A0358.jpg";
-import Sartorial_Suit_80 from "../assets/images/new_content/Untitled folder 4/Suits/066A0363.jpg";
-import Sartorial_Suit_81 from "../assets/images/new_content/Untitled folder 4/Suits/066A0366.jpg";
-import Sartorial_Suit_82 from "../assets/images/new_content/Untitled folder 4/Suits/066A0376.jpg";
-import Sartorial_Suit_83 from "../assets/images/new_content/Untitled folder 4/Suits/066A0392.jpg";
-import Sartorial_Suit_84 from "../assets/images/new_content/Untitled folder 4/Suits/066A0404.jpg";
-import Sartorial_Suit_85 from "../assets/images/new_content/Untitled folder 4/Suits/066A0408 - Copy.jpg";
-import Sartorial_Suit_86 from "../assets/images/new_content/Untitled folder 4/Suits/066A0419 - Copy.jpg";
-import Sartorial_Suit_87 from "../assets/images/new_content/Untitled folder 4/Suits/066A0430.jpg";
-import Sartorial_Suit_88 from "../assets/images/new_content/Untitled folder 4/Suits/066A0439.jpg";
-import Sartorial_Suit_89 from "../assets/images/new_content/Untitled folder 4/Suits/066A0440.jpg";
-import Sartorial_Suit_90 from "../assets/images/new_content/Untitled folder 4/Suits/066A0506.jpg";
-import Sartorial_Suit_91 from "../assets/images/new_content/Untitled folder 4/Suits/066A0516.jpg";
-import Sartorial_Suit_92 from "../assets/images/new_content/Untitled folder 4/Suits/066A0520.jpg";
-import Sartorial_Suit_93 from "../assets/images/new_content/Untitled folder 4/Suits/066A9951.jpg";
-import Sartorial_Suit_94 from "../assets/images/new_content/Untitled folder 4/Suits/066A9967.jpg";
-import Sartorial_Suit_95 from "../assets/images/new_content/Untitled folder 4/Suits/066A9987.jpg";
-import Sartorial_Suit_96 from "../assets/images/new_content/Untitled folder 4/Suits/066A9991.jpg";
-import Sartorial_Suit_97 from "../assets/images/new_content/Untitled folder 4/Suits/066A9999.jpg";
-import Sartorial_Suit_98 from "../assets/images/new_content/Untitled folder 4/Suits/IMG9560 copy.jpg";
-import Sartorial_Suit_99 from "../assets/images/new_content/Untitled folder 4/Suits/IMG9632 copy.jpg";
-import Sartorial_Suit_100 from "../assets/images/new_content/Untitled folder 4/Suits/IMG_7019_R.jpg";
-import Sartorial_Suit_101 from "../assets/images/new_content/Untitled folder 4/Suits/IMG_7026_R.jpg";
-import Sartorial_Suit_102 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0041 - Copy.jpg";
-import Sartorial_Suit_103 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0206.jpg";
-import Sartorial_Suit_104 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0213 - Copy.jpg";
-import Sartorial_Suit_105 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0224.jpg";
-import Sartorial_Suit_106 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0234.jpg";
-import Sartorial_Suit_107 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0266.jpg";
-import Sartorial_Suit_108 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0287.jpg";
-import Sartorial_Suit_109 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0320.jpg";
-import Sartorial_Suit_110 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0403.jpg";
-import Sartorial_Suit_111 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0408.jpg";
-import Sartorial_Suit_112 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0471.jpg";
-import Sartorial_Suit_113 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0488.jpg";
-import Sartorial_Suit_114 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0518.jpg";
-import Sartorial_Suit_115 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0553.jpg";
-import Sartorial_Suit_116 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0646.jpg";
-import Sartorial_Suit_117 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0662.jpg";
-import Sartorial_Suit_118 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0852.jpg";
-import Sartorial_Suit_119 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0867.jpg";
-import Sartorial_Suit_120 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0878.jpg";
-import Sartorial_Suit_121 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0910.jpg";
-import Sartorial_Suit_122 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1165.jpg";
-import Sartorial_Suit_123 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1185.jpg";
-import Sartorial_Suit_124 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1188.jpg";
-import Sartorial_Suit_125 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1364.jpg";
-import Sartorial_Suit_126 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1389.jpg";
-import Sartorial_Suit_127 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1402.jpg";
-import Sartorial_Suit_128 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1534.jpg";
-import Sartorial_Suit_129 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1539 - Copy.jpg";
-import Sartorial_Suit_130 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1604.jpg";
-import Sartorial_Suit_131 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1605.jpg";
-import Sartorial_Suit_132 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1619.jpg";
-import Sartorial_Suit_133 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1685.jpg";
-import Sartorial_Suit_134 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1691.jpg";
-import Sartorial_Suit_135 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1737.jpg";
-import Sartorial_Suit_136 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1761.jpg";
-import Sartorial_Suit_137 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1769.jpg";
-import Sartorial_Suit_138 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1867.jpg";
-import Sartorial_Suit_139 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra_6337.jpg";
-import Sartorial_Suit_140 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra_9777.jpg";
-import Sartorial_Suit_141 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-45.jpg";
-import Sartorial_Suit_142 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-48.jpg";
-import Sartorial_Suit_143 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-51.jpg";
-import Sartorial_Suit_144 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-54.jpg";
-import Sartorial_Suit_145 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-68.jpg";
-import Sartorial_Suit_146 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-73.jpg";
-import Sartorial_Suit_147 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-83.jpg";
-import Sartorial_Suit_148 from "../assets/images/new_content/Untitled folder 5/Suits/066A0051 - Copy.jpg";
-import Sartorial_Suit_149 from "../assets/images/new_content/Untitled folder 5/Suits/066A0054 - Copy.jpg";
-import Sartorial_Suit_150 from "../assets/images/new_content/Untitled folder 5/Suits/066A0061 - Copy.jpg";
-import Sartorial_Suit_151 from "../assets/images/new_content/Untitled folder 5/Suits/066A0122 - Copy.jpg";
-import Sartorial_Suit_152 from "../assets/images/new_content/Untitled folder 5/Suits/066A0124 - Copy.jpg";
-import Sartorial_Suit_153 from "../assets/images/new_content/Untitled folder 5/Suits/066A0153 - Copy.jpg";
-import Sartorial_Suit_154 from "../assets/images/new_content/Untitled folder 5/Suits/066A0169 - Copy.jpg";
-import Sartorial_Suit_155 from "../assets/images/new_content/Untitled folder 5/Suits/066A0185 - Copy.jpg";
-import Sartorial_Suit_156 from "../assets/images/new_content/Untitled folder 5/Suits/066A0194 - Copy.jpg";
-import Sartorial_Suit_157 from "../assets/images/new_content/Untitled folder 5/Suits/066A0243 - Copy.jpg";
-import Sartorial_Suit_158 from "../assets/images/new_content/Untitled folder 5/Suits/066A0245 - Copy.jpg";
-import Sartorial_Suit_159 from "../assets/images/new_content/Untitled folder 5/Suits/066A9957.jpg";
-import Sartorial_Suit_160 from "../assets/images/new_content/Untitled folder 5/Suits/IMG9638 copy.jpg";
-import Sartorial_Suit_161 from "../assets/images/new_content/Untitled folder 5/Suits/IMG_7039_R.jpg";
-import Sartorial_Suit_162 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0008.jpg";
-import Sartorial_Suit_163 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0025.jpg";
-import Sartorial_Suit_164 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0035.jpg";
-import Sartorial_Suit_165 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0072.jpg";
-import Sartorial_Suit_166 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0174.jpg";
-import Sartorial_Suit_167 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0290.jpg";
-import Sartorial_Suit_168 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0357.jpg";
-import Sartorial_Suit_169 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0361.jpg";
-import Sartorial_Suit_170 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0428.jpg";
-import Sartorial_Suit_171 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0591.jpg";
-import Sartorial_Suit_172 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0871.jpg";
-import Sartorial_Suit_173 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0891.jpg";
-import Sartorial_Suit_174 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0918.jpg";
-import Sartorial_Suit_175 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0978.jpg";
-import Sartorial_Suit_176 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0981.jpg";
-import Sartorial_Suit_177 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0996.jpg";
-import Sartorial_Suit_178 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1080.jpg";
-import Sartorial_Suit_179 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1090.jpg";
-import Sartorial_Suit_180 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1122.jpg";
-import Sartorial_Suit_181 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1256.jpg";
-import Sartorial_Suit_182 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1283.jpg";
-import Sartorial_Suit_183 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1287.jpg";
-import Sartorial_Suit_184 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1416.jpg";
-import Sartorial_Suit_185 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1560.jpg";
-import Sartorial_Suit_186 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1645.jpg";
-import Winter_Overcoat_0 from "../assets/images/new_content/Untitled folder/Winter Collection/Sunil Mehra 0156.jpg";
-import Winter_Overcoat_1 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0278.jpg";
-import Winter_Overcoat_2 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0363.jpg";
-import Winter_Overcoat_3 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0428.jpg";
-import Winter_Overcoat_4 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0459.jpg";
-import Winter_Overcoat_5 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0628.jpg";
-import Winter_Overcoat_6 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0651.jpg";
-import Winter_Overcoat_7 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0701.jpg";
-import Winter_Overcoat_8 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0740.jpg";
-import Winter_Overcoat_9 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0817.jpg";
-import Winter_Overcoat_10 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0862.jpg";
-import Winter_Overcoat_11 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0886.jpg";
-import Winter_Overcoat_12 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0932.jpg";
-import Winter_Overcoat_13 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0940.jpg";
-import Winter_Overcoat_14 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0951.jpg";
-import Winter_Overcoat_15 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0985.jpg";
-import Winter_Overcoat_16 from "../assets/images/new_content/Untitled folder 3/Winter Collection/Sunil Mehra 0192.jpg";
-import Winter_Overcoat_17 from "../assets/images/new_content/Untitled folder 3/Winter Collection/Sunil Mehra 0239.jpg";
-import Winter_Overcoat_18 from "../assets/images/new_content/Untitled folder 3/Winter Collection/Sunil Mehra 0243.jpg";
-import Winter_Overcoat_19 from "../assets/images/new_content/Untitled folder 3/Winter Collection/Sunil Mehra 0493.jpg";
-import Winter_Overcoat_20 from "../assets/images/new_content/Untitled folder 3/Winter Collection/Sunil Mehra 0799.jpg";
-import Bag_0 from "../assets/images/new_content/Untitled folder/Accessories/Bags/Sunil Mehra_6602 - Copy.jpg";
-import Bag_1 from "../assets/images/new_content/Untitled folder/Accessories/Bags/Sunil Mehra_8295.jpg";
-import Bag_2 from "../assets/images/new_content/Untitled folder 3/Accessories/Bags/IMG_9405 copy 2 - Copy.jpg";
-import Bag_3 from "../assets/images/new_content/Untitled folder 3/Accessories/Bags/IMG_9408 copy 2 - Copy.jpg";
-import Bag_4 from "../assets/images/new_content/Untitled folder 3/Accessories/Bags/IMG_9621 copy 2 - Copy.jpg";
-import Bag_5 from "../assets/images/new_content/Untitled folder 3/Accessories/Bags/IMG_9626 copy 2 - Copy.jpg";
-import Bag_6 from "../assets/images/new_content/Untitled folder 3/Accessories/Bags/Sunil Mehra_7053 - Copy.jpg";
-import Bag_7 from "../assets/images/new_content/Untitled folder 3/Accessories/Bags/Sunil Mehra_7074.jpg";
-import Bag_8 from "../assets/images/new_content/Untitled folder 4/Accessories/Bags/Ostrich Leather Wallet/IMG_9738 copy 2.jpg";
-import Bag_9 from "../assets/images/new_content/Untitled folder 4/Accessories/Bags/Ostrich Leather Wallet/IMG_9749 copy 2 - Copy.jpg";
-import Bag_10 from "../assets/images/new_content/Untitled folder 4/Accessories/Bags/Ostrich Leather Wallet/IMG_9750 copy 2 - Copy.jpg";
-import Bag_11 from "../assets/images/new_content/Untitled folder 4/Accessories/Bags/Ostrich Leather Wallet/IMG_9751 copy 2 - Copy.jpg";
-import Broach_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Broach/IMG_9595 copy 2 - Copy.jpg";
-import Broach_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Broach/IMG_9600 copy 2 - Copy.jpg";
-import Broach_2 from "../assets/images/new_content/Untitled folder 3/Accessories/Broach/IMG_9601 copy 2 - Copy.jpg";
-import Broach_3 from "../assets/images/new_content/Untitled folder 3/Accessories/Broach/IMG_9611 copy 2 - Copy.jpg";
-import Lace_up_0 from "../assets/images/new_content/Untitled folder 2/Accessories/Brooks Lace up/IMG_9312 copy 2 - Copy.jpg";
-import Lace_up_1 from "../assets/images/new_content/Untitled folder 2/Accessories/Brooks Lace up/IMG_9337 copy 2 - Copy.jpg";
-import Lace_up_2 from "../assets/images/new_content/Untitled folder 2/Accessories/Brooks Lace up/IMG_9709 copy 2 - Copy.jpg";
-import Loafer_0 from "../assets/images/new_content/Untitled folder 2/Accessories/Loafers/IMG_9284 copy 2 - Copy.jpg";
-import Loafer_1 from "../assets/images/new_content/Untitled folder 2/Accessories/Loafers/IMG_9361 copy 2 - Copy.jpg";
-import Loafer_2 from "../assets/images/new_content/Untitled folder 3/Accessories/Loafers/IMG_9353 copy 2 - Copy.jpg";
-import Loafer_3 from "../assets/images/new_content/Untitled folder 3/Accessories/Loafers/IMG_9385 copy 2 - Copy.jpg";
-import Loafer_4 from "../assets/images/new_content/Untitled folder 3/Accessories/Loafers/IMG_9686 copy 2 - Copy.jpg";
-import Loafer_5 from "../assets/images/new_content/Untitled folder 4/Accessories/Loafers/IMG_9719 copy 2 - Copy.jpg";
-import Monk_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Monks/IMG_9521 copy 2 - Copy.jpg";
-import Monk_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Monks/IMG_9541-Enhanced-NR copy 2 - Copy.jpg";
-import Monk_2 from "../assets/images/new_content/Untitled folder 3/Accessories/Monks/IMG_9728 copy 2 - Copy.jpg";
-import Monk_3 from "../assets/images/new_content/Untitled folder 3/Accessories/Monks/IMG_9734 copy 2 - Copy.jpg";
-import Wallet_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Ostrich Leather Wallet/IMG_9738 copy 2.jpg";
-import Wallet_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Ostrich Leather Wallet/IMG_9749 copy 2 - Copy.jpg";
-import Wallet_2 from "../assets/images/new_content/Untitled folder 3/Accessories/Ostrich Leather Wallet/IMG_9750 copy 2 - Copy.jpg";
-import Wallet_3 from "../assets/images/new_content/Untitled folder 3/Accessories/Ostrich Leather Wallet/IMG_9751 copy 2 - Copy.jpg";
-import Sneaker_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9420 copy 2 - Copy.jpg";
-import Sneaker_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9448 copy 2 - Copy.jpg";
-import Sneaker_2 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9469 copy - Copy.jpg";
-import Sneaker_3 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9491 copy 2 - Copy.jpg";
-import Sneaker_4 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9692 copy 2 - Copy.jpg";
-import Sneaker_5 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9698 copy 2 - Copy.jpg";
-import Sneaker_6 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9726 copy 2 - Copy.jpg";
+import Img_0_0 from "../assets/images/new_content/Untitled folder 2/Accessories/Brooks Lace up/IMG_9312 copy 2 - Copy.jpg";
+import Img_0_1 from "../assets/images/new_content/Untitled folder 2/Accessories/Brooks Lace up/IMG_9337 copy 2 - Copy.jpg";
+import Img_1_0 from "../assets/images/new_content/Untitled folder 2/Accessories/Brooks Lace up/IMG_9709 copy 2 - Copy.jpg";
+import Img_2_0 from "../assets/images/new_content/Untitled folder 2/Accessories/Loafers/IMG_9284 copy 2 - Copy.jpg";
+import Img_2_1 from "../assets/images/new_content/Untitled folder 2/Accessories/Loafers/IMG_9361 copy 2 - Copy.jpg";
+import Img_3_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0014.jpg";
+import Img_3_1 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0033.jpg";
+import Img_3_2 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0040.jpg";
+import Img_4_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0479.jpg";
+import Img_4_1 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0554.jpg";
+import Img_4_2 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0561.jpg";
+import Img_4_3 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/066A0595.jpg";
+import Img_5_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG9394 copy.jpg";
+import Img_5_1 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG9413 copy.jpg";
+import Img_5_2 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG9432 copy.jpg";
+import Img_5_3 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG9488 copy.jpg";
+import Img_6_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG9671 copy.jpg";
+import Img_6_1 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG9689 copy.jpg";
+import Img_7_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/IMG_7216_R3.jpg";
+import Img_8_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  0704.jpg";
+import Img_9_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  0854.jpg";
+import Img_10_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1065.jpg";
+import Img_11_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1474 - Copy.jpg";
+import Img_11_1 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1486.jpg";
+import Img_11_2 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1516.jpg";
+import Img_12_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1819.jpg";
+import Img_12_1 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1831.jpg";
+import Img_12_2 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1863.jpg";
+import Img_12_3 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1867.jpg";
+import Img_12_4 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1929.jpg";
+import Img_12_5 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra  1971.jpg";
+import Img_13_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_3591.jpg";
+import Img_14_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_3725.jpg";
+import Img_14_1 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_3788.jpg";
+import Img_15_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_4827.jpg";
+import Img_16_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_6452 1.jpg";
+import Img_16_1 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_6483.jpg";
+import Img_17_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_8980.jpg";
+import Img_17_1 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/Sunil Mehra_8987.jpg";
+import Img_18_0 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-30.jpg";
+import Img_18_1 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-35.jpg";
+import Img_18_2 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-41.jpg";
+import Img_18_3 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-42.jpg";
+import Img_18_4 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-44.jpg";
+import Img_18_5 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-84.jpg";
+import Img_18_6 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-85.jpg";
+import Img_18_7 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-86.jpg";
+import Img_18_8 from "../assets/images/new_content/Untitled folder 2/Bandhagla Sets & Indo-western/tripti-91.jpg";
+import Img_19_0 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/066A0578.jpg";
+import Img_19_1 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/066A0588.jpg";
+import Img_19_2 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/066A0593.jpg";
+import Img_20_0 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_6549.jpg";
+import Img_20_1 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_6586 - Copy.jpg";
+import Img_20_2 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_6620 - Copy.jpg";
+import Img_20_3 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_6705 - Copy.jpg";
+import Img_21_0 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_9035.jpg";
+import Img_21_1 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_9112 - Copy.jpg";
+import Img_21_2 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_9133 copy - Copy.jpg";
+import Img_21_3 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_9205 - Copy.jpg";
+import Img_21_4 from "../assets/images/new_content/Untitled folder 2/Jawahar Jacket Sets/Sunil Mehra_9262 - Copy.jpg";
+import Img_22_0 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/IMG8974 copy.jpg";
+import Img_23_0 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/IMG9176 copy.jpg";
+import Img_24_0 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  0711.jpg";
+import Img_24_1 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  0740.jpg";
+import Img_25_0 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  1147.jpg";
+import Img_25_1 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  1177.jpg";
+import Img_25_2 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  1217.jpg";
+import Img_26_0 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  1318.jpg";
+import Img_26_1 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra  1338.jpg";
+import Img_27_0 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra_8350.jpg";
+import Img_28_0 from "../assets/images/new_content/Untitled folder 2/Kurta Sets/Sunil Mehra_9295.jpg";
+import Img_29_0 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0278.jpg";
+import Img_29_1 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0363.jpg";
+import Img_29_2 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0428.jpg";
+import Img_29_3 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0459.jpg";
+import Img_30_0 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0628.jpg";
+import Img_30_1 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0651.jpg";
+import Img_30_2 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0701.jpg";
+import Img_30_3 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0740.jpg";
+import Img_30_4 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0817.jpg";
+import Img_30_5 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0862.jpg";
+import Img_30_6 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0886.jpg";
+import Img_30_7 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0932.jpg";
+import Img_30_8 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0940.jpg";
+import Img_30_9 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0951.jpg";
+import Img_30_10 from "../assets/images/new_content/Untitled folder 2/Winter Collection/Sunil Mehra 0985.jpg";
+import Img_31_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Bags/IMG_9405 copy 2 - Copy.jpg";
+import Img_31_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Bags/IMG_9408 copy 2 - Copy.jpg";
+import Img_32_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Bags/IMG_9621 copy 2 - Copy.jpg";
+import Img_32_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Bags/IMG_9626 copy 2 - Copy.jpg";
+import Img_33_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Bags/Sunil Mehra_7053 - Copy.jpg";
+import Img_33_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Bags/Sunil Mehra_7074.jpg";
+import Img_34_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Broach/IMG_9595 copy 2 - Copy.jpg";
+import Img_34_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Broach/IMG_9600 copy 2 - Copy.jpg";
+import Img_34_2 from "../assets/images/new_content/Untitled folder 3/Accessories/Broach/IMG_9601 copy 2 - Copy.jpg";
+import Img_34_3 from "../assets/images/new_content/Untitled folder 3/Accessories/Broach/IMG_9611 copy 2 - Copy.jpg";
+import Img_35_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Loafers/IMG_9353 copy 2 - Copy.jpg";
+import Img_35_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Loafers/IMG_9385 copy 2 - Copy.jpg";
+import Img_36_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Loafers/IMG_9686 copy 2 - Copy.jpg";
+import Img_37_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Monks/IMG_9521 copy 2 - Copy.jpg";
+import Img_37_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Monks/IMG_9541-Enhanced-NR copy 2 - Copy.jpg";
+import Img_38_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Monks/IMG_9728 copy 2 - Copy.jpg";
+import Img_38_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Monks/IMG_9734 copy 2 - Copy.jpg";
+import Img_39_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Ostrich Leather Wallet/IMG_9738 copy 2.jpg";
+import Img_39_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Ostrich Leather Wallet/IMG_9749 copy 2 - Copy.jpg";
+import Img_39_2 from "../assets/images/new_content/Untitled folder 3/Accessories/Ostrich Leather Wallet/IMG_9750 copy 2 - Copy.jpg";
+import Img_39_3 from "../assets/images/new_content/Untitled folder 3/Accessories/Ostrich Leather Wallet/IMG_9751 copy 2 - Copy.jpg";
+import Img_40_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9420 copy 2 - Copy.jpg";
+import Img_40_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9448 copy 2 - Copy.jpg";
+import Img_40_2 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9469 copy - Copy.jpg";
+import Img_40_3 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9491 copy 2 - Copy.jpg";
+import Img_41_0 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9692 copy 2 - Copy.jpg";
+import Img_41_1 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9698 copy 2 - Copy.jpg";
+import Img_41_2 from "../assets/images/new_content/Untitled folder 3/Accessories/Sneakers/IMG_9726 copy 2 - Copy.jpg";
+import Img_42_0 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0220.jpg";
+import Img_42_1 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0234.jpg";
+import Img_42_2 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0299.jpg";
+import Img_42_3 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0317.jpg";
+import Img_42_4 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0321.jpg";
+import Img_43_0 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0463.jpg";
+import Img_43_1 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0475.jpg";
+import Img_43_2 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0495.jpg";
+import Img_43_3 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0499.jpg";
+import Img_43_4 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0502.jpg";
+import Img_43_5 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0536.jpg";
+import Img_43_6 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0544.jpg";
+import Img_43_7 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0559.jpg";
+import Img_43_8 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/066A0601.jpg";
+import Img_44_0 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/IMG9367 copy.jpg";
+import Img_44_1 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/IMG9371 copy.jpg";
+import Img_45_0 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/IMG9477 copy.jpg";
+import Img_46_0 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/IMG_7224_R5.jpg";
+import Img_47_0 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  0726.jpg";
+import Img_47_1 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  0764.jpg";
+import Img_47_2 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  0769.jpg";
+import Img_47_3 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  0784.jpg";
+import Img_47_4 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  0848.jpg";
+import Img_47_5 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  0905.jpg";
+import Img_48_0 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1030.jpg";
+import Img_49_0 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1496.jpg";
+import Img_50_0 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1815.jpg";
+import Img_50_1 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1881.jpg";
+import Img_50_2 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1914.jpg";
+import Img_50_3 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1934.jpg";
+import Img_50_4 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra  1951.jpg";
+import Img_51_0 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra_3648.jpg";
+import Img_51_1 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra_3720.jpg";
+import Img_51_2 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra_3721.jpg";
+import Img_52_0 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/Sunil Mehra_8955.jpg";
+import Img_53_0 from "../assets/images/new_content/Untitled folder 3/Bandhagla Sets & Indo-western/tripti-33.jpg";
+import Img_54_0 from "../assets/images/new_content/Untitled folder 3/Jawahar Jacket Sets/Sunil Mehra_9011.jpg";
+import Img_54_1 from "../assets/images/new_content/Untitled folder 3/Jawahar Jacket Sets/Sunil Mehra_9026.jpg";
+import Img_54_2 from "../assets/images/new_content/Untitled folder 3/Jawahar Jacket Sets/Sunil Mehra_9078 - Copy.jpg";
+import Img_54_3 from "../assets/images/new_content/Untitled folder 3/Jawahar Jacket Sets/Sunil Mehra_9105 - Copy.jpg";
+import Img_55_0 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/IMG9136 copy.jpg";
+import Img_56_0 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra  0725.jpg";
+import Img_57_0 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra  0935.jpg";
+import Img_57_1 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra  0943.jpg";
+import Img_57_2 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra  0964.jpg";
+import Img_58_0 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra  1298.jpg";
+import Img_59_0 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra_2539.jpg";
+import Img_60_0 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra_8328.jpg";
+import Img_60_1 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra_8371.jpg";
+import Img_61_0 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra_9283.jpg";
+import Img_61_1 from "../assets/images/new_content/Untitled folder 3/Kurta Sets/Sunil Mehra_9334.jpg";
+import Img_62_0 from "../assets/images/new_content/Untitled folder 3/Suits/066A0210 - Copy.jpg";
+import Img_63_0 from "../assets/images/new_content/Untitled folder 3/Suits/24358bda-972a-42e5-a853-c60544fab579.png";
+import Img_64_0 from "../assets/images/new_content/Untitled folder 3/Suits/95f9791b-79cd-4586-bff2-5fafd68c38a8.png";
+import Img_65_0 from "../assets/images/new_content/Untitled folder 3/Suits/Sunil Mehra_2263.jpg";
+import Img_66_0 from "../assets/images/new_content/Untitled folder 3/Suits/Sunil Mehra_6973.jpg";
+import Img_66_1 from "../assets/images/new_content/Untitled folder 3/Suits/Sunil Mehra_7023.jpg";
+import Img_67_0 from "../assets/images/new_content/Untitled folder 3/Suits/e03c7ae0-bc27-4d8f-95f1-26066b99e04c.png";
+import Img_68_0 from "../assets/images/new_content/Untitled folder 3/Winter Collection/Sunil Mehra 0192.jpg";
+import Img_68_1 from "../assets/images/new_content/Untitled folder 3/Winter Collection/Sunil Mehra 0239.jpg";
+import Img_68_2 from "../assets/images/new_content/Untitled folder 3/Winter Collection/Sunil Mehra 0243.jpg";
+import Img_69_0 from "../assets/images/new_content/Untitled folder 3/Winter Collection/Sunil Mehra 0493.jpg";
+import Img_70_0 from "../assets/images/new_content/Untitled folder 3/Winter Collection/Sunil Mehra 0799.jpg";
+import Img_71_0 from "../assets/images/new_content/Untitled folder 4/Accessories/Bags/Ostrich Leather Wallet/IMG_9738 copy 2.jpg";
+import Img_71_1 from "../assets/images/new_content/Untitled folder 4/Accessories/Bags/Ostrich Leather Wallet/IMG_9749 copy 2 - Copy.jpg";
+import Img_71_2 from "../assets/images/new_content/Untitled folder 4/Accessories/Bags/Ostrich Leather Wallet/IMG_9750 copy 2 - Copy.jpg";
+import Img_71_3 from "../assets/images/new_content/Untitled folder 4/Accessories/Bags/Ostrich Leather Wallet/IMG_9751 copy 2 - Copy.jpg";
+import Img_72_0 from "../assets/images/new_content/Untitled folder 4/Accessories/Loafers/IMG_9719 copy 2 - Copy.jpg";
+import Img_73_0 from "../assets/images/new_content/Untitled folder 4/Suits/066A0100 - Copy.jpg";
+import Img_73_1 from "../assets/images/new_content/Untitled folder 4/Suits/066A0107 - Copy.jpg";
+import Img_73_2 from "../assets/images/new_content/Untitled folder 4/Suits/066A0114 - Copy.jpg";
+import Img_73_3 from "../assets/images/new_content/Untitled folder 4/Suits/066A0162 - Copy.jpg";
+import Img_73_4 from "../assets/images/new_content/Untitled folder 4/Suits/066A0183 - Copy.jpg";
+import Img_73_5 from "../assets/images/new_content/Untitled folder 4/Suits/066A0215 - Copy.jpg";
+import Img_73_6 from "../assets/images/new_content/Untitled folder 4/Suits/066A0264 - Copy.jpg";
+import Img_73_7 from "../assets/images/new_content/Untitled folder 4/Suits/066A0270 - Copy.jpg";
+import Img_73_8 from "../assets/images/new_content/Untitled folder 4/Suits/066A0275 - Copy.jpg";
+import Img_73_9 from "../assets/images/new_content/Untitled folder 4/Suits/066A0334 - Copy.jpg";
+import Img_73_10 from "../assets/images/new_content/Untitled folder 4/Suits/066A0347 - Copy.jpg";
+import Img_73_11 from "../assets/images/new_content/Untitled folder 4/Suits/066A0358.jpg";
+import Img_73_12 from "../assets/images/new_content/Untitled folder 4/Suits/066A0363.jpg";
+import Img_73_13 from "../assets/images/new_content/Untitled folder 4/Suits/066A0366.jpg";
+import Img_73_14 from "../assets/images/new_content/Untitled folder 4/Suits/066A0376.jpg";
+import Img_73_15 from "../assets/images/new_content/Untitled folder 4/Suits/066A0392.jpg";
+import Img_73_16 from "../assets/images/new_content/Untitled folder 4/Suits/066A0404.jpg";
+import Img_73_17 from "../assets/images/new_content/Untitled folder 4/Suits/066A0408 - Copy.jpg";
+import Img_73_18 from "../assets/images/new_content/Untitled folder 4/Suits/066A0419 - Copy.jpg";
+import Img_73_19 from "../assets/images/new_content/Untitled folder 4/Suits/066A0430.jpg";
+import Img_73_20 from "../assets/images/new_content/Untitled folder 4/Suits/066A0439.jpg";
+import Img_73_21 from "../assets/images/new_content/Untitled folder 4/Suits/066A0440.jpg";
+import Img_73_22 from "../assets/images/new_content/Untitled folder 4/Suits/066A0506.jpg";
+import Img_73_23 from "../assets/images/new_content/Untitled folder 4/Suits/066A0516.jpg";
+import Img_73_24 from "../assets/images/new_content/Untitled folder 4/Suits/066A0520.jpg";
+import Img_74_0 from "../assets/images/new_content/Untitled folder 4/Suits/066A9951.jpg";
+import Img_74_1 from "../assets/images/new_content/Untitled folder 4/Suits/066A9967.jpg";
+import Img_74_2 from "../assets/images/new_content/Untitled folder 4/Suits/066A9987.jpg";
+import Img_74_3 from "../assets/images/new_content/Untitled folder 4/Suits/066A9991.jpg";
+import Img_74_4 from "../assets/images/new_content/Untitled folder 4/Suits/066A9999.jpg";
+import Img_75_0 from "../assets/images/new_content/Untitled folder 4/Suits/IMG9560 copy.jpg";
+import Img_75_1 from "../assets/images/new_content/Untitled folder 4/Suits/IMG9632 copy.jpg";
+import Img_76_0 from "../assets/images/new_content/Untitled folder 4/Suits/IMG_7019_R.jpg";
+import Img_76_1 from "../assets/images/new_content/Untitled folder 4/Suits/IMG_7026_R.jpg";
+import Img_77_0 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0041 - Copy.jpg";
+import Img_78_0 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0206.jpg";
+import Img_78_1 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0213 - Copy.jpg";
+import Img_78_2 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0224.jpg";
+import Img_78_3 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0234.jpg";
+import Img_78_4 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0266.jpg";
+import Img_78_5 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0287.jpg";
+import Img_78_6 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0320.jpg";
+import Img_78_7 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0403.jpg";
+import Img_78_8 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0408.jpg";
+import Img_78_9 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0471.jpg";
+import Img_78_10 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0488.jpg";
+import Img_78_11 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0518.jpg";
+import Img_78_12 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0553.jpg";
+import Img_78_13 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0646.jpg";
+import Img_78_14 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0662.jpg";
+import Img_79_0 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0852.jpg";
+import Img_79_1 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0867.jpg";
+import Img_79_2 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0878.jpg";
+import Img_79_3 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  0910.jpg";
+import Img_80_0 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1165.jpg";
+import Img_80_1 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1185.jpg";
+import Img_80_2 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1188.jpg";
+import Img_81_0 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1364.jpg";
+import Img_81_1 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1389.jpg";
+import Img_81_2 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1402.jpg";
+import Img_82_0 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1534.jpg";
+import Img_82_1 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1539 - Copy.jpg";
+import Img_82_2 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1604.jpg";
+import Img_82_3 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1605.jpg";
+import Img_82_4 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1619.jpg";
+import Img_82_5 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1685.jpg";
+import Img_82_6 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1691.jpg";
+import Img_82_7 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1737.jpg";
+import Img_82_8 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1761.jpg";
+import Img_82_9 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1769.jpg";
+import Img_82_10 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra  1867.jpg";
+import Img_83_0 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra_6337.jpg";
+import Img_84_0 from "../assets/images/new_content/Untitled folder 4/Suits/Sunil Mehra_9777.jpg";
+import Img_85_0 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-45.jpg";
+import Img_85_1 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-48.jpg";
+import Img_85_2 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-51.jpg";
+import Img_85_3 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-54.jpg";
+import Img_85_4 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-68.jpg";
+import Img_85_5 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-73.jpg";
+import Img_85_6 from "../assets/images/new_content/Untitled folder 4/Suits/tripti-83.jpg";
+import Img_86_0 from "../assets/images/new_content/Untitled folder 5/Suits/066A0051 - Copy.jpg";
+import Img_86_1 from "../assets/images/new_content/Untitled folder 5/Suits/066A0054 - Copy.jpg";
+import Img_86_2 from "../assets/images/new_content/Untitled folder 5/Suits/066A0061 - Copy.jpg";
+import Img_86_3 from "../assets/images/new_content/Untitled folder 5/Suits/066A0122 - Copy.jpg";
+import Img_86_4 from "../assets/images/new_content/Untitled folder 5/Suits/066A0124 - Copy.jpg";
+import Img_86_5 from "../assets/images/new_content/Untitled folder 5/Suits/066A0153 - Copy.jpg";
+import Img_86_6 from "../assets/images/new_content/Untitled folder 5/Suits/066A0169 - Copy.jpg";
+import Img_86_7 from "../assets/images/new_content/Untitled folder 5/Suits/066A0185 - Copy.jpg";
+import Img_86_8 from "../assets/images/new_content/Untitled folder 5/Suits/066A0194 - Copy.jpg";
+import Img_86_9 from "../assets/images/new_content/Untitled folder 5/Suits/066A0243 - Copy.jpg";
+import Img_86_10 from "../assets/images/new_content/Untitled folder 5/Suits/066A0245 - Copy.jpg";
+import Img_87_0 from "../assets/images/new_content/Untitled folder 5/Suits/066A9957.jpg";
+import Img_88_0 from "../assets/images/new_content/Untitled folder 5/Suits/IMG9638 copy.jpg";
+import Img_89_0 from "../assets/images/new_content/Untitled folder 5/Suits/IMG_7039_R.jpg";
+import Img_90_0 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0008.jpg";
+import Img_90_1 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0025.jpg";
+import Img_90_2 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0035.jpg";
+import Img_90_3 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0072.jpg";
+import Img_91_0 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0174.jpg";
+import Img_92_0 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0290.jpg";
+import Img_92_1 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0357.jpg";
+import Img_92_2 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0361.jpg";
+import Img_92_3 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0428.jpg";
+import Img_93_0 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0591.jpg";
+import Img_94_0 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0871.jpg";
+import Img_94_1 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0891.jpg";
+import Img_94_2 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0918.jpg";
+import Img_94_3 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0978.jpg";
+import Img_94_4 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0981.jpg";
+import Img_94_5 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  0996.jpg";
+import Img_94_6 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1080.jpg";
+import Img_94_7 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1090.jpg";
+import Img_94_8 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1122.jpg";
+import Img_95_0 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1256.jpg";
+import Img_95_1 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1283.jpg";
+import Img_95_2 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1287.jpg";
+import Img_96_0 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1416.jpg";
+import Img_97_0 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1560.jpg";
+import Img_97_1 from "../assets/images/new_content/Untitled folder 5/Suits/Sunil Mehra  1645.jpg";
+import Img_98_0 from "../assets/images/new_content/Untitled folder/Accessories/Bags/Sunil Mehra_6602 - Copy.jpg";
+import Img_99_0 from "../assets/images/new_content/Untitled folder/Accessories/Bags/Sunil Mehra_8295.jpg";
+import Img_100_0 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/066A0224.jpg";
+import Img_101_0 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/IMG9493 copy.jpg";
+import Img_102_0 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/IMG9702 copy.jpg";
+import Img_103_0 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/Sunil Mehra  0738.jpg";
+import Img_104_0 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/Sunil Mehra  1043.jpg";
+import Img_105_0 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/Sunil Mehra  1962.jpg";
+import Img_106_0 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/Sunil Mehra_3610.jpg";
+import Img_106_1 from "../assets/images/new_content/Untitled folder/Bandhagla Sets & Indo-western/Sunil Mehra_3681.jpg";
+import Img_107_0 from "../assets/images/new_content/Untitled folder/Jawahar Jacket Sets/Sunil Mehra_6593.jpg";
+import Img_108_0 from "../assets/images/new_content/Untitled folder/Kurta Sets/Sunil Mehra_9406.jpg";
+import Img_109_0 from "../assets/images/new_content/Untitled folder/Suits/IMG8597 copy.jpg";
+import Img_109_1 from "../assets/images/new_content/Untitled folder/Suits/IMG8641 copy.jpg";
+import Img_109_2 from "../assets/images/new_content/Untitled folder/Suits/IMG8653 copy.jpg";
+import Img_109_3 from "../assets/images/new_content/Untitled folder/Suits/IMG8657 copy.jpg";
+import Img_110_0 from "../assets/images/new_content/Untitled folder/Suits/IMG8895 copy.jpg";
+import Img_110_1 from "../assets/images/new_content/Untitled folder/Suits/IMG8912 copy.jpg";
+import Img_110_2 from "../assets/images/new_content/Untitled folder/Suits/IMG8942 copy.jpg";
+import Img_111_0 from "../assets/images/new_content/Untitled folder/Suits/IMG9542 copy.jpg";
+import Img_112_0 from "../assets/images/new_content/Untitled folder/Suits/IMG9645 copy.jpg";
+import Img_112_1 from "../assets/images/new_content/Untitled folder/Suits/IMG9714 copy.jpg";
+import Img_112_2 from "../assets/images/new_content/Untitled folder/Suits/IMG9717 copy.jpg";
+import Img_112_3 from "../assets/images/new_content/Untitled folder/Suits/IMG9721 copy.jpg";
+import Img_113_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0063 - Copy.jpg";
+import Img_113_1 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0086.jpg";
+import Img_113_2 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0186 - Copy.jpg";
+import Img_114_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0313.jpg";
+import Img_114_1 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0345.jpg";
+import Img_115_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0483.jpg";
+import Img_115_1 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0523.jpg";
+import Img_115_2 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0582.jpg";
+import Img_115_3 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  0600.jpg";
+import Img_116_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1384.jpg";
+import Img_117_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1502.jpg";
+import Img_117_1 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1512.jpg";
+import Img_117_2 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1530.jpg";
+import Img_117_3 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1612.jpg";
+import Img_117_4 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1622.jpg";
+import Img_117_5 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1624.jpg";
+import Img_117_6 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1635.jpg";
+import Img_117_7 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1667.jpg";
+import Img_117_8 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1688.jpg";
+import Img_117_9 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1693.jpg";
+import Img_117_10 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1701.jpg";
+import Img_117_11 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1760.jpg";
+import Img_118_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1863.jpg";
+import Img_118_1 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra  1881.jpg";
+import Img_119_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_0039.jpg";
+import Img_119_1 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_0045.jpg";
+import Img_120_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_0531.jpg";
+import Img_120_1 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_0577.jpg";
+import Img_121_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_0904.jpg";
+import Img_122_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_2224.jpg";
+import Img_123_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_5155.jpg";
+import Img_124_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6262.jpg";
+import Img_124_1 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6315.jpg";
+import Img_124_2 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6398 1.jpg";
+import Img_124_3 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6413.jpg";
+import Img_124_4 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6450.jpg";
+import Img_125_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6750.jpg";
+import Img_126_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_6910.jpg";
+import Img_127_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_7057.jpg";
+import Img_128_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_8150.jpg";
+import Img_128_1 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_8202.jpg";
+import Img_128_2 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_8261.jpg";
+import Img_129_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_8565.jpg";
+import Img_129_1 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_8580.jpg";
+import Img_130_0 from "../assets/images/new_content/Untitled folder/Suits/Sunil Mehra_9688.jpg";
+import Img_131_0 from "../assets/images/new_content/Untitled folder/Suits/tripti-55.jpg";
+import Img_131_1 from "../assets/images/new_content/Untitled folder/Suits/tripti-57.jpg";
+import Img_131_2 from "../assets/images/new_content/Untitled folder/Suits/tripti-69.jpg";
+import Img_131_3 from "../assets/images/new_content/Untitled folder/Suits/tripti-82.jpg";
+import Img_132_0 from "../assets/images/new_content/Untitled folder/Winter Collection/Sunil Mehra 0156.jpg";
 
 export const WARDROBE_DATA = {
-    "bandhagala-indo-western": {
-        name: "Bandhagla Sets & Indo-western",
-        edit: "Tailored Royalty",
-        description: "Sartorial precision meets regal Indian heritage. Clean, structured Bandhgalas and classic Sherwanis crafted from raw silk and wool blends.",
-        looks: [
-            { 
-                id: "look_bandhagalaindowestern_1",
-                name: "066A - Look 1",
-                coverImg: Bandhagla_8,
-                gallery: [Bandhagla_8, Bandhagla_9, Bandhagla_10]
-            },
-            { 
-                id: "look_bandhagalaindowestern_2",
-                name: "066A - Look 2",
-                coverImg: Bandhagla_51,
-                gallery: [Bandhagla_51, Bandhagla_0, Bandhagla_52]
-            },
-            { 
-                id: "look_bandhagalaindowestern_3",
-                name: "066A - Look 3",
-                coverImg: Bandhagla_53,
-                gallery: [Bandhagla_53, Bandhagla_54, Bandhagla_55]
-            },
-            { 
-                id: "look_bandhagalaindowestern_4",
-                name: "066A - Look 4",
-                coverImg: Bandhagla_56,
-                gallery: [Bandhagla_56, Bandhagla_57, Bandhagla_11, Bandhagla_58, Bandhagla_59, Bandhagla_60, Bandhagla_61, Bandhagla_62]
-            },
-            { 
-                id: "look_bandhagalaindowestern_5",
-                name: "066A - Look 5",
-                coverImg: Bandhagla_12,
-                gallery: [Bandhagla_12, Bandhagla_63, Bandhagla_13, Bandhagla_14, Bandhagla_64]
-            },
-            { 
-                id: "look_bandhagalaindowestern_6",
-                name: "IMG - Look 6",
-                coverImg: Bandhagla_21,
-                gallery: [Bandhagla_21, Bandhagla_68]
-            },
-            { 
-                id: "look_bandhagalaindowestern_7",
-                name: "IMG - Look 7",
-                coverImg: Bandhagla_65,
-                gallery: [Bandhagla_65, Bandhagla_66, Bandhagla_15, Bandhagla_16, Bandhagla_17, Bandhagla_67, Bandhagla_18, Bandhagla_1]
-            },
-            { 
-                id: "look_bandhagalaindowestern_8",
-                name: "IMG - Look 8",
-                coverImg: Bandhagla_19,
-                gallery: [Bandhagla_19, Bandhagla_20, Bandhagla_2]
-            },
-            { 
-                id: "look_bandhagalaindowestern_9",
-                name: "Sunil Mehra - Look 9",
-                coverImg: Bandhagla_22,
-                gallery: [Bandhagla_22, Bandhagla_69, Bandhagla_3, Bandhagla_70, Bandhagla_71, Bandhagla_72]
-            },
-            { 
-                id: "look_bandhagalaindowestern_10",
-                name: "Sunil Mehra - Look 10",
-                coverImg: Bandhagla_73,
-                gallery: [Bandhagla_73, Bandhagla_23]
-            },
-            { 
-                id: "look_bandhagalaindowestern_11",
-                name: "Sunil Mehra - Look 11",
-                coverImg: Bandhagla_74,
-                gallery: [Bandhagla_74]
-            },
-            { 
-                id: "look_bandhagalaindowestern_12",
-                name: "Sunil Mehra - Look 12",
-                coverImg: Bandhagla_75,
-                gallery: [Bandhagla_75, Bandhagla_4, Bandhagla_24]
-            },
-            { 
-                id: "look_bandhagalaindowestern_13",
-                name: "Sunil Mehra - Look 13",
-                coverImg: Bandhagla_25,
-                gallery: [Bandhagla_25, Bandhagla_26, Bandhagla_76, Bandhagla_27]
-            },
-            { 
-                id: "look_bandhagalaindowestern_14",
-                name: "Sunil Mehra - Look 14",
-                coverImg: Bandhagla_77,
-                gallery: [Bandhagla_77, Bandhagla_28, Bandhagla_29, Bandhagla_30, Bandhagla_31, Bandhagla_78, Bandhagla_79, Bandhagla_32]
-            },
-            { 
-                id: "look_bandhagalaindowestern_15",
-                name: "Sunil Mehra - Look 15",
-                coverImg: Bandhagla_80,
-                gallery: [Bandhagla_80, Bandhagla_81, Bandhagla_5, Bandhagla_33]
-            },
-            { 
-                id: "look_bandhagalaindowestern_16",
-                name: "Sunil Mehra - Look 16",
-                coverImg: Bandhagla_34,
-                gallery: [Bandhagla_34, Bandhagla_6, Bandhagla_82, Bandhagla_7, Bandhagla_83, Bandhagla_84, Bandhagla_35]
-            },
-            { 
-                id: "look_bandhagalaindowestern_17",
-                name: "Sunil Mehra - Look 17",
-                coverImg: Bandhagla_36,
-                gallery: [Bandhagla_36]
-            },
-            { 
-                id: "look_bandhagalaindowestern_18",
-                name: "Sunil Mehra - Look 18",
-                coverImg: Bandhagla_37,
-                gallery: [Bandhagla_37]
-            },
-            { 
-                id: "look_bandhagalaindowestern_19",
-                name: "Sunil Mehra - Look 19",
-                coverImg: Bandhagla_38,
-                gallery: [Bandhagla_38, Bandhagla_39]
-            },
-            { 
-                id: "look_bandhagalaindowestern_20",
-                name: "Sunil Mehra - Look 20",
-                coverImg: Bandhagla_85,
-                gallery: [Bandhagla_85, Bandhagla_40, Bandhagla_41]
-            },
-            { 
-                id: "look_bandhagalaindowestern_21",
-                name: "Tripti - Look 21",
-                coverImg: Bandhagla_42,
-                gallery: [Bandhagla_42, Bandhagla_86, Bandhagla_43, Bandhagla_44, Bandhagla_45, Bandhagla_46, Bandhagla_47, Bandhagla_48]
-            },
-            { 
-                id: "look_bandhagalaindowestern_22",
-                name: "Tripti - Look 22",
-                coverImg: Bandhagla_49,
-                gallery: [Bandhagla_49, Bandhagla_50]
-            },
-        ]
-    },
-    "jawahar-jackets": {
-        name: "Jawahar Jackets",
-        edit: "The Layered Statement",
-        description: "The quintessential layer of sophistication. From understated linens for daytime engagements to richly embroidered silks for evening affairs.",
-        looks: [
-            { 
-                id: "look_jawaharjackets_1",
-                name: "Sunil Mehra - Look 1",
-                coverImg: Jawahar_Jacket_4,
-                gallery: [Jawahar_Jacket_4, Jawahar_Jacket_5, Jawahar_Jacket_0, Jawahar_Jacket_6]
-            },
-            { 
-                id: "look_jawaharjackets_2",
-                name: "Sunil Mehra - Look 2",
-                coverImg: Jawahar_Jacket_7,
-                gallery: [Jawahar_Jacket_7]
-            },
-            { 
-                id: "look_jawaharjackets_3",
-                name: "Sunil Mehra - Look 3",
-                coverImg: Jawahar_Jacket_13,
-                gallery: [Jawahar_Jacket_13, Jawahar_Jacket_14, Jawahar_Jacket_8, Jawahar_Jacket_15, Jawahar_Jacket_16, Jawahar_Jacket_9, Jawahar_Jacket_10]
-            },
-            { 
-                id: "look_jawaharjackets_4",
-                name: "Sunil Mehra - Look 4",
-                coverImg: Jawahar_Jacket_11,
-                gallery: [Jawahar_Jacket_11]
-            },
-            { 
-                id: "look_jawaharjackets_5",
-                name: "Sunil Mehra - Look 5",
-                coverImg: Jawahar_Jacket_12,
-                gallery: [Jawahar_Jacket_12]
-            },
-            { 
-                id: "look_jawaharjackets_6",
-                name: "066A - Look 6",
-                coverImg: Jawahar_Jacket_1,
-                gallery: [Jawahar_Jacket_1, Jawahar_Jacket_2, Jawahar_Jacket_3]
-            },
-        ]
-    },
-    "kurta-sets": {
-        name: "Kurta Sets",
-        edit: "Flowing Heritage",
-        description: "Effortless elegance for every celebration. Minimalist silhouettes paired with intricate detailing, designed for comfort without compromising on grandeur.",
-        looks: [
-            { 
-                id: "look_kurtasets_1",
-                name: "Sunil Mehra - Look 1",
-                coverImg: Kurta_Set_3,
-                gallery: [Kurta_Set_3, Kurta_Set_13, Kurta_Set_4]
-            },
-            { 
-                id: "look_kurtasets_2",
-                name: "Sunil Mehra - Look 2",
-                coverImg: Kurta_Set_14,
-                gallery: [Kurta_Set_14, Kurta_Set_15, Kurta_Set_16]
-            },
-            { 
-                id: "look_kurtasets_3",
-                name: "Sunil Mehra - Look 3",
-                coverImg: Kurta_Set_5,
-                gallery: [Kurta_Set_5, Kurta_Set_6, Kurta_Set_7]
-            },
-            { 
-                id: "look_kurtasets_4",
-                name: "Sunil Mehra - Look 4",
-                coverImg: Kurta_Set_17,
-                gallery: [Kurta_Set_17, Kurta_Set_8, Kurta_Set_9]
-            },
-            { 
-                id: "look_kurtasets_5",
-                name: "Sunil Mehra - Look 5",
-                coverImg: Kurta_Set_18,
-                gallery: [Kurta_Set_18]
-            },
-            { 
-                id: "look_kurtasets_6",
-                name: "Sunil Mehra - Look 6",
-                coverImg: Kurta_Set_19,
-                gallery: [Kurta_Set_19, Kurta_Set_10, Kurta_Set_20]
-            },
-            { 
-                id: "look_kurtasets_7",
-                name: "Sunil Mehra - Look 7",
-                coverImg: Kurta_Set_21,
-                gallery: [Kurta_Set_21, Kurta_Set_11, Kurta_Set_22]
-            },
-            { 
-                id: "look_kurtasets_8",
-                name: "Sunil Mehra - Look 8",
-                coverImg: Kurta_Set_0,
-                gallery: [Kurta_Set_0]
-            },
-            { 
-                id: "look_kurtasets_9",
-                name: "IMG - Look 9",
-                coverImg: Kurta_Set_1,
-                gallery: [Kurta_Set_1]
-            },
-            { 
-                id: "look_kurtasets_10",
-                name: "IMG - Look 10",
-                coverImg: Kurta_Set_12,
-                gallery: [Kurta_Set_12, Kurta_Set_2]
-            },
-        ]
-    },
-    "suits": {
-        name: "Suits",
-        edit: "The Modern Cut",
-        description: "Impeccably tailored suits for the contemporary gentleman. Featuring sharp lines, premium Italian wools, and a flawless fit for the boardroom to the ballroom.",
-        looks: [
-            { 
-                id: "look_suits_1",
-                name: "IMG - Look 1",
-                coverImg: Sartorial_Suit_100,
-                gallery: [Sartorial_Suit_100, Sartorial_Suit_101, Sartorial_Suit_161]
-            },
-            { 
-                id: "look_suits_2",
-                name: "IMG - Look 2",
-                coverImg: Sartorial_Suit_0,
-                gallery: [Sartorial_Suit_0, Sartorial_Suit_1, Sartorial_Suit_2, Sartorial_Suit_3]
-            },
-            { 
-                id: "look_suits_3",
-                name: "IMG - Look 3",
-                coverImg: Sartorial_Suit_4,
-                gallery: [Sartorial_Suit_4, Sartorial_Suit_5, Sartorial_Suit_6]
-            },
-            { 
-                id: "look_suits_4",
-                name: "IMG - Look 4",
-                coverImg: Sartorial_Suit_7,
-                gallery: [Sartorial_Suit_7, Sartorial_Suit_98]
-            },
-            { 
-                id: "look_suits_5",
-                name: "IMG - Look 5",
-                coverImg: Sartorial_Suit_99,
-                gallery: [Sartorial_Suit_99, Sartorial_Suit_160, Sartorial_Suit_8]
-            },
-            { 
-                id: "look_suits_6",
-                name: "IMG - Look 6",
-                coverImg: Sartorial_Suit_9,
-                gallery: [Sartorial_Suit_9, Sartorial_Suit_10, Sartorial_Suit_11]
-            },
-            { 
-                id: "look_suits_7",
-                name: "Sunil Mehra - Look 7",
-                coverImg: Sartorial_Suit_162,
-                gallery: [Sartorial_Suit_162, Sartorial_Suit_163, Sartorial_Suit_164, Sartorial_Suit_36, Sartorial_Suit_102, Sartorial_Suit_37, Sartorial_Suit_12, Sartorial_Suit_165]
-            },
-            { 
-                id: "look_suits_8",
-                name: "Sunil Mehra - Look 8",
-                coverImg: Sartorial_Suit_13,
-                gallery: [Sartorial_Suit_13]
-            },
-            { 
-                id: "look_suits_9",
-                name: "Sunil Mehra - Look 9",
-                coverImg: Sartorial_Suit_166,
-                gallery: [Sartorial_Suit_166, Sartorial_Suit_14, Sartorial_Suit_103, Sartorial_Suit_104, Sartorial_Suit_105, Sartorial_Suit_106, Sartorial_Suit_107, Sartorial_Suit_108]
-            },
-            { 
-                id: "look_suits_10",
-                name: "Sunil Mehra - Look 10",
-                coverImg: Sartorial_Suit_167,
-                gallery: [Sartorial_Suit_167, Sartorial_Suit_15, Sartorial_Suit_109, Sartorial_Suit_16, Sartorial_Suit_168, Sartorial_Suit_169, Sartorial_Suit_110, Sartorial_Suit_111]
-            },
-            { 
-                id: "look_suits_11",
-                name: "Sunil Mehra - Look 11",
-                coverImg: Sartorial_Suit_170,
-                gallery: [Sartorial_Suit_170, Sartorial_Suit_112, Sartorial_Suit_17, Sartorial_Suit_113, Sartorial_Suit_114, Sartorial_Suit_18, Sartorial_Suit_38, Sartorial_Suit_115]
-            },
-            { 
-                id: "look_suits_12",
-                name: "Sunil Mehra - Look 12",
-                coverImg: Sartorial_Suit_39,
-                gallery: [Sartorial_Suit_39, Sartorial_Suit_19, Sartorial_Suit_171, Sartorial_Suit_20, Sartorial_Suit_116, Sartorial_Suit_117]
-            },
-            { 
-                id: "look_suits_13",
-                name: "Sunil Mehra - Look 13",
-                coverImg: Sartorial_Suit_118,
-                gallery: [Sartorial_Suit_118, Sartorial_Suit_119, Sartorial_Suit_172, Sartorial_Suit_120, Sartorial_Suit_173, Sartorial_Suit_40, Sartorial_Suit_121, Sartorial_Suit_174]
-            },
-            { 
-                id: "look_suits_14",
-                name: "Sunil Mehra - Look 14",
-                coverImg: Sartorial_Suit_175,
-                gallery: [Sartorial_Suit_175, Sartorial_Suit_176, Sartorial_Suit_177]
-            },
-            { 
-                id: "look_suits_15",
-                name: "Sunil Mehra - Look 15",
-                coverImg: Sartorial_Suit_178,
-                gallery: [Sartorial_Suit_178, Sartorial_Suit_179, Sartorial_Suit_180, Sartorial_Suit_122, Sartorial_Suit_123, Sartorial_Suit_124]
-            },
-            { 
-                id: "look_suits_16",
-                name: "Sunil Mehra - Look 16",
-                coverImg: Sartorial_Suit_181,
-                gallery: [Sartorial_Suit_181, Sartorial_Suit_182, Sartorial_Suit_183]
-            },
-            { 
-                id: "look_suits_17",
-                name: "Sunil Mehra - Look 17",
-                coverImg: Sartorial_Suit_125,
-                gallery: [Sartorial_Suit_125, Sartorial_Suit_21, Sartorial_Suit_126, Sartorial_Suit_127, Sartorial_Suit_184]
-            },
-            { 
-                id: "look_suits_18",
-                name: "Sunil Mehra - Look 18",
-                coverImg: Sartorial_Suit_22,
-                gallery: [Sartorial_Suit_22, Sartorial_Suit_23, Sartorial_Suit_24, Sartorial_Suit_128, Sartorial_Suit_129, Sartorial_Suit_185, Sartorial_Suit_130, Sartorial_Suit_131]
-            },
-            { 
-                id: "look_suits_19",
-                name: "Sunil Mehra - Look 19",
-                coverImg: Sartorial_Suit_25,
-                gallery: [Sartorial_Suit_25, Sartorial_Suit_132, Sartorial_Suit_26, Sartorial_Suit_27, Sartorial_Suit_28, Sartorial_Suit_186, Sartorial_Suit_29, Sartorial_Suit_133]
-            },
-            { 
-                id: "look_suits_20",
-                name: "Sunil Mehra - Look 20",
-                coverImg: Sartorial_Suit_30,
-                gallery: [Sartorial_Suit_30, Sartorial_Suit_134, Sartorial_Suit_31, Sartorial_Suit_32, Sartorial_Suit_135, Sartorial_Suit_33, Sartorial_Suit_136, Sartorial_Suit_137]
-            },
-            { 
-                id: "look_suits_21",
-                name: "Sunil Mehra - Look 21",
-                coverImg: Sartorial_Suit_34,
-                gallery: [Sartorial_Suit_34, Sartorial_Suit_138, Sartorial_Suit_35]
-            },
-            { 
-                id: "look_suits_22",
-                name: "Sunil Mehra - Look 22",
-                coverImg: Sartorial_Suit_41,
-                gallery: [Sartorial_Suit_41, Sartorial_Suit_64]
-            },
-            { 
-                id: "look_suits_23",
-                name: "Sunil Mehra - Look 23",
-                coverImg: Sartorial_Suit_42,
-                gallery: [Sartorial_Suit_42]
-            },
-            { 
-                id: "look_suits_24",
-                name: "Sunil Mehra - Look 24",
-                coverImg: Sartorial_Suit_43,
-                gallery: [Sartorial_Suit_43]
-            },
-            { 
-                id: "look_suits_25",
-                name: "Sunil Mehra - Look 25",
-                coverImg: Sartorial_Suit_44,
-                gallery: [Sartorial_Suit_44, Sartorial_Suit_139]
-            },
-            { 
-                id: "look_suits_26",
-                name: "Sunil Mehra - Look 26",
-                coverImg: Sartorial_Suit_45,
-                gallery: [Sartorial_Suit_45, Sartorial_Suit_46, Sartorial_Suit_47]
-            },
-            { 
-                id: "look_suits_27",
-                name: "Sunil Mehra - Look 27",
-                coverImg: Sartorial_Suit_48,
-                gallery: [Sartorial_Suit_48]
-            },
-            { 
-                id: "look_suits_28",
-                name: "Sunil Mehra - Look 28",
-                coverImg: Sartorial_Suit_49,
-                gallery: [Sartorial_Suit_49]
-            },
-            { 
-                id: "look_suits_29",
-                name: "Sunil Mehra - Look 29",
-                coverImg: Sartorial_Suit_65,
-                gallery: [Sartorial_Suit_65, Sartorial_Suit_66, Sartorial_Suit_50]
-            },
-            { 
-                id: "look_suits_30",
-                name: "Sunil Mehra - Look 30",
-                coverImg: Sartorial_Suit_51,
-                gallery: [Sartorial_Suit_51]
-            },
-            { 
-                id: "look_suits_31",
-                name: "Sunil Mehra - Look 31",
-                coverImg: Sartorial_Suit_52,
-                gallery: [Sartorial_Suit_52]
-            },
-            { 
-                id: "look_suits_32",
-                name: "Sunil Mehra - Look 32",
-                coverImg: Sartorial_Suit_53,
-                gallery: [Sartorial_Suit_53]
-            },
-            { 
-                id: "look_suits_33",
-                name: "Sunil Mehra - Look 33",
-                coverImg: Sartorial_Suit_54,
-                gallery: [Sartorial_Suit_54, Sartorial_Suit_55]
-            },
-            { 
-                id: "look_suits_34",
-                name: "Sunil Mehra - Look 34",
-                coverImg: Sartorial_Suit_56,
-                gallery: [Sartorial_Suit_56]
-            },
-            { 
-                id: "look_suits_35",
-                name: "Sunil Mehra - Look 35",
-                coverImg: Sartorial_Suit_140,
-                gallery: [Sartorial_Suit_140]
-            },
-            { 
-                id: "look_suits_36",
-                name: "Tripti - Look 36",
-                coverImg: Sartorial_Suit_141,
-                gallery: [Sartorial_Suit_141, Sartorial_Suit_142, Sartorial_Suit_143, Sartorial_Suit_144, Sartorial_Suit_57, Sartorial_Suit_58, Sartorial_Suit_145, Sartorial_Suit_59]
-            },
-            { 
-                id: "look_suits_37",
-                name: "Tripti - Look 37",
-                coverImg: Sartorial_Suit_146,
-                gallery: [Sartorial_Suit_146, Sartorial_Suit_60, Sartorial_Suit_147]
-            },
-            { 
-                id: "look_suits_38",
-                name: "066A - Look 38",
-                coverImg: Sartorial_Suit_148,
-                gallery: [Sartorial_Suit_148, Sartorial_Suit_149, Sartorial_Suit_150, Sartorial_Suit_68, Sartorial_Suit_69, Sartorial_Suit_70, Sartorial_Suit_151, Sartorial_Suit_152]
-            },
-            { 
-                id: "look_suits_39",
-                name: "066A - Look 39",
-                coverImg: Sartorial_Suit_153,
-                gallery: [Sartorial_Suit_153, Sartorial_Suit_71, Sartorial_Suit_154, Sartorial_Suit_72, Sartorial_Suit_155, Sartorial_Suit_156, Sartorial_Suit_61, Sartorial_Suit_73]
-            },
-            { 
-                id: "look_suits_40",
-                name: "066A - Look 40",
-                coverImg: Sartorial_Suit_157,
-                gallery: [Sartorial_Suit_157, Sartorial_Suit_158, Sartorial_Suit_74, Sartorial_Suit_75, Sartorial_Suit_76]
-            },
-            { 
-                id: "look_suits_41",
-                name: "066A - Look 41",
-                coverImg: Sartorial_Suit_77,
-                gallery: [Sartorial_Suit_77, Sartorial_Suit_78, Sartorial_Suit_79, Sartorial_Suit_80, Sartorial_Suit_81, Sartorial_Suit_82, Sartorial_Suit_83, Sartorial_Suit_84]
-            },
-            { 
-                id: "look_suits_42",
-                name: "066A - Look 42",
-                coverImg: Sartorial_Suit_85,
-                gallery: [Sartorial_Suit_85, Sartorial_Suit_86, Sartorial_Suit_87, Sartorial_Suit_88, Sartorial_Suit_89]
-            },
-            { 
-                id: "look_suits_43",
-                name: "066A - Look 43",
-                coverImg: Sartorial_Suit_90,
-                gallery: [Sartorial_Suit_90, Sartorial_Suit_91, Sartorial_Suit_92]
-            },
-            { 
-                id: "look_suits_44",
-                name: "066A - Look 44",
-                coverImg: Sartorial_Suit_93,
-                gallery: [Sartorial_Suit_93, Sartorial_Suit_159, Sartorial_Suit_94, Sartorial_Suit_95, Sartorial_Suit_96, Sartorial_Suit_97]
-            },
-            { 
-                id: "look_suits_45",
-                name: "24358bda-972a-42e5-a853-c60544fab - Look 45",
-                coverImg: Sartorial_Suit_62,
-                gallery: [Sartorial_Suit_62]
-            },
-            { 
-                id: "look_suits_46",
-                name: "95f9791b-79cd- - Look 46",
-                coverImg: Sartorial_Suit_63,
-                gallery: [Sartorial_Suit_63]
-            },
-            { 
-                id: "look_suits_47",
-                name: "Misc - Look 47",
-                coverImg: Sartorial_Suit_67,
-                gallery: [Sartorial_Suit_67]
-            },
-        ]
-    },
     "winter-collection": {
+        id: "winter-collection",
         name: "Winter Collection",
-        edit: "Warmth & Elegance",
-        description: "Layered luxury for the colder months. Hand-spun pashminas, structured overcoats, and rich velvets that command attention.",
+        edit: "The Alpine Edit",
+        description: "Luxurious warmth meets tailored precision.",
         looks: [
-            { 
-                id: "look_wintercollection_1",
-                name: "Sunil Mehra - Look 1",
-                coverImg: Winter_Overcoat_0,
-                gallery: [Winter_Overcoat_0, Winter_Overcoat_16, Winter_Overcoat_17, Winter_Overcoat_18, Winter_Overcoat_1]
-            },
-            { 
-                id: "look_wintercollection_2",
-                name: "Sunil Mehra - Look 2",
-                coverImg: Winter_Overcoat_2,
-                gallery: [Winter_Overcoat_2]
-            },
-            { 
-                id: "look_wintercollection_3",
-                name: "Sunil Mehra - Look 3",
-                coverImg: Winter_Overcoat_3,
-                gallery: [Winter_Overcoat_3, Winter_Overcoat_4, Winter_Overcoat_19]
-            },
-            { 
-                id: "look_wintercollection_4",
-                name: "Sunil Mehra - Look 4",
-                coverImg: Winter_Overcoat_5,
-                gallery: [Winter_Overcoat_5, Winter_Overcoat_6, Winter_Overcoat_7, Winter_Overcoat_8]
-            },
-            { 
-                id: "look_wintercollection_5",
-                name: "Sunil Mehra - Look 5",
-                coverImg: Winter_Overcoat_20,
-                gallery: [Winter_Overcoat_20, Winter_Overcoat_9, Winter_Overcoat_10, Winter_Overcoat_11, Winter_Overcoat_12, Winter_Overcoat_13, Winter_Overcoat_14, Winter_Overcoat_15]
-            },
+            { coverImg: Img_29_0, gallery: [Img_29_1, Img_29_2, Img_29_3], subcat: null },
+            { coverImg: Img_30_0, gallery: [Img_30_1, Img_30_2, Img_30_3, Img_30_4, Img_30_5, Img_30_6, Img_30_7, Img_30_8, Img_30_9, Img_30_10], subcat: null },
+            { coverImg: Img_68_0, gallery: [Img_68_1, Img_68_2], subcat: null },
+            { coverImg: Img_69_0, gallery: [], subcat: null },
+            { coverImg: Img_70_0, gallery: [], subcat: null },
+            { coverImg: Img_132_0, gallery: [], subcat: null },
         ]
     },
     "accessories": {
+        id: "accessories",
         name: "Accessories",
-        edit: "The Final Touch",
-        description: "Curated essentials to complete the look. From hand-welted leather shoes to silk pocket squares, every detail matters.",
+        edit: "Atelier Details",
+        description: "The defining touches of the Sunil Mehra gentleman.",
         subcategories: [
-            { id: "bags", name: "Bags" },
-            { id: "broach", name: "Broach" },
-            { id: "brooks-lace-up", name: "Brooks Lace up" },
-            { id: "loafers", name: "Loafers" },
-            { id: "monks", name: "Monks" },
-            { id: "ostrich-leather-wallet", name: "Ostrich Leather Wallet" },
-            { id: "sneakers", name: "Sneakers" },
+            { id: "loafers", name: "Loafers", desc: "Refined footwear." },
+            { id: "bags", name: "Bags", desc: "Signature leather goods." },
+            { id: "monks", name: "Monks", desc: "Classic monk straps." },
+            { id: "sneakers", name: "Sneakers", desc: "Elevated casuals." }
         ],
         looks: [
-            { 
-                id: "look_accessories_1",
-                name: "Bags - Look 1",
-                subcat: "bags",
-                coverImg: Bag_0,
-                gallery: [Bag_0]
-            },
-            { 
-                id: "look_accessories_2",
-                name: "Bags - Look 2",
-                subcat: "bags",
-                coverImg: Bag_6,
-                gallery: [Bag_6, Bag_7]
-            },
-            { 
-                id: "look_accessories_3",
-                name: "Bags - Look 3",
-                subcat: "bags",
-                coverImg: Bag_1,
-                gallery: [Bag_1]
-            },
-            { 
-                id: "look_accessories_4",
-                name: "Bags - Look 4",
-                subcat: "bags",
-                coverImg: Bag_2,
-                gallery: [Bag_2, Bag_3]
-            },
-            { 
-                id: "look_accessories_5",
-                name: "Bags - Look 5",
-                subcat: "bags",
-                coverImg: Bag_4,
-                gallery: [Bag_4, Bag_5]
-            },
-            { 
-                id: "look_accessories_6",
-                name: "Bags - Look 6",
-                subcat: "bags",
-                coverImg: Bag_8,
-                gallery: [Bag_8, Bag_9, Bag_10, Bag_11]
-            },
-            { 
-                id: "look_accessories_7",
-                name: "Broach - Look 7",
-                subcat: "broach",
-                coverImg: Broach_0,
-                gallery: [Broach_0, Broach_1, Broach_2, Broach_3]
-            },
-            { 
-                id: "look_accessories_8",
-                name: "Brooks Lace up - Look 8",
-                subcat: "brooks-lace-up",
-                coverImg: Lace_up_0,
-                gallery: [Lace_up_0, Lace_up_1]
-            },
-            { 
-                id: "look_accessories_9",
-                name: "Brooks Lace up - Look 9",
-                subcat: "brooks-lace-up",
-                coverImg: Lace_up_2,
-                gallery: [Lace_up_2]
-            },
-            { 
-                id: "look_accessories_10",
-                name: "Loafers - Look 10",
-                subcat: "loafers",
-                coverImg: Loafer_0,
-                gallery: [Loafer_0]
-            },
-            { 
-                id: "look_accessories_11",
-                name: "Loafers - Look 11",
-                subcat: "loafers",
-                coverImg: Loafer_2,
-                gallery: [Loafer_2, Loafer_1, Loafer_3]
-            },
-            { 
-                id: "look_accessories_12",
-                name: "Loafers - Look 12",
-                subcat: "loafers",
-                coverImg: Loafer_4,
-                gallery: [Loafer_4, Loafer_5]
-            },
-            { 
-                id: "look_accessories_13",
-                name: "Monks - Look 13",
-                subcat: "monks",
-                coverImg: Monk_0,
-                gallery: [Monk_0, Monk_1]
-            },
-            { 
-                id: "look_accessories_14",
-                name: "Monks - Look 14",
-                subcat: "monks",
-                coverImg: Monk_2,
-                gallery: [Monk_2, Monk_3]
-            },
-            { 
-                id: "look_accessories_15",
-                name: "Ostrich Leather Wallet - Look 15",
-                subcat: "ostrich-leather-wallet",
-                coverImg: Wallet_0,
-                gallery: [Wallet_0, Wallet_1, Wallet_2, Wallet_3]
-            },
-            { 
-                id: "look_accessories_16",
-                name: "Sneakers - Look 16",
-                subcat: "sneakers",
-                coverImg: Sneaker_0,
-                gallery: [Sneaker_0, Sneaker_1, Sneaker_2, Sneaker_3]
-            },
-            { 
-                id: "look_accessories_17",
-                name: "Sneakers - Look 17",
-                subcat: "sneakers",
-                coverImg: Sneaker_4,
-                gallery: [Sneaker_4, Sneaker_5, Sneaker_6]
-            },
+            { coverImg: Img_0_0, gallery: [Img_0_1], subcat: null },
+            { coverImg: Img_1_0, gallery: [], subcat: null },
+            { coverImg: Img_2_0, gallery: [Img_2_1], subcat: null },
+            { coverImg: Img_31_0, gallery: [Img_31_1], subcat: null },
+            { coverImg: Img_32_0, gallery: [Img_32_1], subcat: null },
+            { coverImg: Img_33_0, gallery: [Img_33_1], subcat: null },
+            { coverImg: Img_34_0, gallery: [Img_34_1, Img_34_2, Img_34_3], subcat: null },
+            { coverImg: Img_35_0, gallery: [Img_35_1], subcat: null },
+            { coverImg: Img_36_0, gallery: [], subcat: null },
+            { coverImg: Img_37_0, gallery: [Img_37_1], subcat: null },
+            { coverImg: Img_38_0, gallery: [Img_38_1], subcat: null },
+            { coverImg: Img_39_0, gallery: [Img_39_1, Img_39_2, Img_39_3], subcat: null },
+            { coverImg: Img_40_0, gallery: [Img_40_1, Img_40_2, Img_40_3], subcat: null },
+            { coverImg: Img_41_0, gallery: [Img_41_1, Img_41_2], subcat: null },
+            { coverImg: Img_71_0, gallery: [Img_71_1, Img_71_2, Img_71_3], subcat: null },
+            { coverImg: Img_72_0, gallery: [], subcat: null },
+            { coverImg: Img_98_0, gallery: [], subcat: null },
+            { coverImg: Img_99_0, gallery: [], subcat: null },
+        ]
+    },
+    "bandhagala-indo-western": {
+        id: "bandhagala-indo-western",
+        name: "Bandhgala & Indo-Western",
+        edit: "Heritage Modernity",
+        description: "Iconic silhouettes bridging traditional opulence with sharp contemporary tailoring.",
+        looks: [
+            { coverImg: Img_3_0, gallery: [Img_3_1, Img_3_2], subcat: null },
+            { coverImg: Img_4_0, gallery: [Img_4_1, Img_4_2, Img_4_3], subcat: null },
+            { coverImg: Img_5_0, gallery: [Img_5_1, Img_5_2, Img_5_3], subcat: null },
+            { coverImg: Img_6_0, gallery: [Img_6_1], subcat: null },
+            { coverImg: Img_7_0, gallery: [], subcat: null },
+            { coverImg: Img_8_0, gallery: [], subcat: null },
+            { coverImg: Img_9_0, gallery: [], subcat: null },
+            { coverImg: Img_10_0, gallery: [], subcat: null },
+            { coverImg: Img_11_0, gallery: [Img_11_1, Img_11_2], subcat: null },
+            { coverImg: Img_12_0, gallery: [Img_12_1, Img_12_2, Img_12_3, Img_12_4, Img_12_5], subcat: null },
+            { coverImg: Img_13_0, gallery: [], subcat: null },
+            { coverImg: Img_14_0, gallery: [Img_14_1], subcat: null },
+            { coverImg: Img_15_0, gallery: [], subcat: null },
+            { coverImg: Img_16_0, gallery: [Img_16_1], subcat: null },
+            { coverImg: Img_17_0, gallery: [Img_17_1], subcat: null },
+            { coverImg: Img_18_0, gallery: [Img_18_1, Img_18_2, Img_18_3, Img_18_4, Img_18_5, Img_18_6, Img_18_7, Img_18_8], subcat: null },
+            { coverImg: Img_42_0, gallery: [Img_42_1, Img_42_2, Img_42_3, Img_42_4], subcat: null },
+            { coverImg: Img_43_0, gallery: [Img_43_1, Img_43_2, Img_43_3, Img_43_4, Img_43_5, Img_43_6, Img_43_7, Img_43_8], subcat: null },
+            { coverImg: Img_44_0, gallery: [Img_44_1], subcat: null },
+            { coverImg: Img_45_0, gallery: [], subcat: null },
+            { coverImg: Img_46_0, gallery: [], subcat: null },
+            { coverImg: Img_47_0, gallery: [Img_47_1, Img_47_2, Img_47_3, Img_47_4, Img_47_5], subcat: null },
+            { coverImg: Img_48_0, gallery: [], subcat: null },
+            { coverImg: Img_49_0, gallery: [], subcat: null },
+            { coverImg: Img_50_0, gallery: [Img_50_1, Img_50_2, Img_50_3, Img_50_4], subcat: null },
+            { coverImg: Img_51_0, gallery: [Img_51_1, Img_51_2], subcat: null },
+            { coverImg: Img_52_0, gallery: [], subcat: null },
+            { coverImg: Img_53_0, gallery: [], subcat: null },
+            { coverImg: Img_100_0, gallery: [], subcat: null },
+            { coverImg: Img_101_0, gallery: [], subcat: null },
+            { coverImg: Img_102_0, gallery: [], subcat: null },
+            { coverImg: Img_103_0, gallery: [], subcat: null },
+            { coverImg: Img_104_0, gallery: [], subcat: null },
+            { coverImg: Img_105_0, gallery: [], subcat: null },
+            { coverImg: Img_106_0, gallery: [Img_106_1], subcat: null },
+        ]
+    },
+    "jawahar-jackets": {
+        id: "jawahar-jackets",
+        name: "Jawahar Jackets",
+        edit: "The Signature Vest",
+        description: "Versatile, handcrafted layers for elevated ethnic style.",
+        looks: [
+            { coverImg: Img_19_0, gallery: [Img_19_1, Img_19_2], subcat: null },
+            { coverImg: Img_20_0, gallery: [Img_20_1, Img_20_2, Img_20_3], subcat: null },
+            { coverImg: Img_21_0, gallery: [Img_21_1, Img_21_2, Img_21_3, Img_21_4], subcat: null },
+            { coverImg: Img_54_0, gallery: [Img_54_1, Img_54_2, Img_54_3], subcat: null },
+            { coverImg: Img_107_0, gallery: [], subcat: null },
+        ]
+    },
+    "suits": {
+        id: "suits",
+        name: "Bespoke Suits",
+        edit: "Sartorial Excellence",
+        description: "Masterfully constructed formalwear.",
+        looks: [
+            { coverImg: Img_62_0, gallery: [], subcat: null },
+            { coverImg: Img_63_0, gallery: [], subcat: null },
+            { coverImg: Img_64_0, gallery: [], subcat: null },
+            { coverImg: Img_65_0, gallery: [], subcat: null },
+            { coverImg: Img_66_0, gallery: [Img_66_1], subcat: null },
+            { coverImg: Img_67_0, gallery: [], subcat: null },
+            { coverImg: Img_73_0, gallery: [Img_73_1, Img_73_2, Img_73_3, Img_73_4, Img_73_5, Img_73_6, Img_73_7, Img_73_8, Img_73_9, Img_73_10, Img_73_11, Img_73_12, Img_73_13, Img_73_14, Img_73_15, Img_73_16, Img_73_17, Img_73_18, Img_73_19, Img_73_20, Img_73_21, Img_73_22, Img_73_23, Img_73_24], subcat: null },
+            { coverImg: Img_74_0, gallery: [Img_74_1, Img_74_2, Img_74_3, Img_74_4], subcat: null },
+            { coverImg: Img_75_0, gallery: [Img_75_1], subcat: null },
+            { coverImg: Img_76_0, gallery: [Img_76_1], subcat: null },
+            { coverImg: Img_77_0, gallery: [], subcat: null },
+            { coverImg: Img_78_0, gallery: [Img_78_1, Img_78_2, Img_78_3, Img_78_4, Img_78_5, Img_78_6, Img_78_7, Img_78_8, Img_78_9, Img_78_10, Img_78_11, Img_78_12, Img_78_13, Img_78_14], subcat: null },
+            { coverImg: Img_79_0, gallery: [Img_79_1, Img_79_2, Img_79_3], subcat: null },
+            { coverImg: Img_80_0, gallery: [Img_80_1, Img_80_2], subcat: null },
+            { coverImg: Img_81_0, gallery: [Img_81_1, Img_81_2], subcat: null },
+            { coverImg: Img_82_0, gallery: [Img_82_1, Img_82_2, Img_82_3, Img_82_4, Img_82_5, Img_82_6, Img_82_7, Img_82_8, Img_82_9, Img_82_10], subcat: null },
+            { coverImg: Img_83_0, gallery: [], subcat: null },
+            { coverImg: Img_84_0, gallery: [], subcat: null },
+            { coverImg: Img_85_0, gallery: [Img_85_1, Img_85_2, Img_85_3, Img_85_4, Img_85_5, Img_85_6], subcat: null },
+            { coverImg: Img_86_0, gallery: [Img_86_1, Img_86_2, Img_86_3, Img_86_4, Img_86_5, Img_86_6, Img_86_7, Img_86_8, Img_86_9, Img_86_10], subcat: null },
+            { coverImg: Img_87_0, gallery: [], subcat: null },
+            { coverImg: Img_88_0, gallery: [], subcat: null },
+            { coverImg: Img_89_0, gallery: [], subcat: null },
+            { coverImg: Img_90_0, gallery: [Img_90_1, Img_90_2, Img_90_3], subcat: null },
+            { coverImg: Img_91_0, gallery: [], subcat: null },
+            { coverImg: Img_92_0, gallery: [Img_92_1, Img_92_2, Img_92_3], subcat: null },
+            { coverImg: Img_93_0, gallery: [], subcat: null },
+            { coverImg: Img_94_0, gallery: [Img_94_1, Img_94_2, Img_94_3, Img_94_4, Img_94_5, Img_94_6, Img_94_7, Img_94_8], subcat: null },
+            { coverImg: Img_95_0, gallery: [Img_95_1, Img_95_2], subcat: null },
+            { coverImg: Img_96_0, gallery: [], subcat: null },
+            { coverImg: Img_97_0, gallery: [Img_97_1], subcat: null },
+            { coverImg: Img_109_0, gallery: [Img_109_1, Img_109_2, Img_109_3], subcat: null },
+            { coverImg: Img_110_0, gallery: [Img_110_1, Img_110_2], subcat: null },
+            { coverImg: Img_111_0, gallery: [], subcat: null },
+            { coverImg: Img_112_0, gallery: [Img_112_1, Img_112_2, Img_112_3], subcat: null },
+            { coverImg: Img_113_0, gallery: [Img_113_1, Img_113_2], subcat: null },
+            { coverImg: Img_114_0, gallery: [Img_114_1], subcat: null },
+            { coverImg: Img_115_0, gallery: [Img_115_1, Img_115_2, Img_115_3], subcat: null },
+            { coverImg: Img_116_0, gallery: [], subcat: null },
+            { coverImg: Img_117_0, gallery: [Img_117_1, Img_117_2, Img_117_3, Img_117_4, Img_117_5, Img_117_6, Img_117_7, Img_117_8, Img_117_9, Img_117_10, Img_117_11], subcat: null },
+            { coverImg: Img_118_0, gallery: [Img_118_1], subcat: null },
+            { coverImg: Img_119_0, gallery: [Img_119_1], subcat: null },
+            { coverImg: Img_120_0, gallery: [Img_120_1], subcat: null },
+            { coverImg: Img_121_0, gallery: [], subcat: null },
+            { coverImg: Img_122_0, gallery: [], subcat: null },
+            { coverImg: Img_123_0, gallery: [], subcat: null },
+            { coverImg: Img_124_0, gallery: [Img_124_1, Img_124_2, Img_124_3, Img_124_4], subcat: null },
+            { coverImg: Img_125_0, gallery: [], subcat: null },
+            { coverImg: Img_126_0, gallery: [], subcat: null },
+            { coverImg: Img_127_0, gallery: [], subcat: null },
+            { coverImg: Img_128_0, gallery: [Img_128_1, Img_128_2], subcat: null },
+            { coverImg: Img_129_0, gallery: [Img_129_1], subcat: null },
+            { coverImg: Img_130_0, gallery: [], subcat: null },
+            { coverImg: Img_131_0, gallery: [Img_131_1, Img_131_2, Img_131_3], subcat: null },
+        ]
+    },
+    "kurta-sets": {
+        id: "kurta-sets",
+        name: "Kurta Sets",
+        edit: "Timeless Occasion",
+        description: "Effortless elegance crafted from premium fabrics.",
+        looks: [
+            { coverImg: Img_22_0, gallery: [], subcat: null },
+            { coverImg: Img_23_0, gallery: [], subcat: null },
+            { coverImg: Img_24_0, gallery: [Img_24_1], subcat: null },
+            { coverImg: Img_25_0, gallery: [Img_25_1, Img_25_2], subcat: null },
+            { coverImg: Img_26_0, gallery: [Img_26_1], subcat: null },
+            { coverImg: Img_27_0, gallery: [], subcat: null },
+            { coverImg: Img_28_0, gallery: [], subcat: null },
+            { coverImg: Img_55_0, gallery: [], subcat: null },
+            { coverImg: Img_56_0, gallery: [], subcat: null },
+            { coverImg: Img_57_0, gallery: [Img_57_1, Img_57_2], subcat: null },
+            { coverImg: Img_58_0, gallery: [], subcat: null },
+            { coverImg: Img_59_0, gallery: [], subcat: null },
+            { coverImg: Img_60_0, gallery: [Img_60_1], subcat: null },
+            { coverImg: Img_61_0, gallery: [Img_61_1], subcat: null },
+            { coverImg: Img_108_0, gallery: [], subcat: null },
         ]
     },
 };

@@ -6,31 +6,31 @@ import { WARDROBE_DATA } from "@/data/wardrobeData";
 const galleryImages = [
     { 
         id: 1, 
-        src: WARDROBE_DATA["suits"]?.looks?.[1]?.coverImg, 
+        src: WARDROBE_DATA["suits"]?.looks?.[6]?.coverImg, 
         title: "The Sartorial Eye", 
         desc: "Precision tailoring in motion." 
     },
     { 
         id: 2, 
-        src: WARDROBE_DATA["bandhagala-indo-western"]?.looks?.[2]?.coverImg, 
+        src: WARDROBE_DATA["bandhagala-indo-western"]?.looks?.[6]?.coverImg, 
         title: "Modern Heritage", 
         desc: "Classic lines, contemporary fabric." 
     },
     { 
         id: 3, 
-        src: WARDROBE_DATA["jawahar-jackets"]?.looks?.[1]?.coverImg, 
+        src: WARDROBE_DATA["jawahar-jackets"]?.looks?.[0]?.coverImg, 
         title: "Bespoke Details", 
         desc: "Every stitch tells a story." 
     },
     { 
         id: 4, 
-        src: WARDROBE_DATA["kurta-sets"]?.looks?.[4]?.coverImg, 
+        src: WARDROBE_DATA["kurta-sets"]?.looks?.[3]?.coverImg, 
         title: "Evening Silhouette", 
         desc: "Elegance for the golden hour." 
     },
     { 
         id: 5, 
-        src: WARDROBE_DATA["winter-collection"]?.looks?.[3]?.coverImg, 
+        src: WARDROBE_DATA["winter-collection"]?.looks?.[1]?.coverImg, 
         title: "The Artisan Touch", 
         desc: "Hand-finished perfection." 
     },

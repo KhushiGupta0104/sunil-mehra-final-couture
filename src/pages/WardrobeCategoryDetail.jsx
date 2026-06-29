@@ -320,7 +320,7 @@ export default function WardrobeCategoryDetail() {
                     indexInfo={selectedPiece ? `${allImages.findIndex(img => img.src === (selectedPiece.src || selectedPiece.coverImg)) + 1} / ${allImages.length}` : ""}
                     onNext={handleNext}
                     onPrev={handlePrev}
-                    subtitle={selectedPiece?.name}
+                    subtitle={pageEdit}
                 />
 
                 {/* Bottom CTA */}

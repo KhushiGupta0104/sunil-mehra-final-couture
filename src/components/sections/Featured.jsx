@@ -9,23 +9,26 @@ const IVORY_PRODUCTS = [
     {
         id: "p1",
         name: "The Artisan Kurta Set",
+        desc: "A masterful blend of traditional hand-embroidery and modern tailoring, crafted for the discerning eye.",
         tag: "Couture",
-        front: WARDROBE_DATA["kurta-sets"].looks[2]?.coverImg,
-        back: WARDROBE_DATA["kurta-sets"].looks[2]?.gallery?.[1] || WARDROBE_DATA["kurta-sets"].looks[2]?.coverImg,
+        front: WARDROBE_DATA["kurta-sets"].looks[0]?.coverImg,
+        back: WARDROBE_DATA["kurta-sets"].looks[0]?.gallery?.[0] || WARDROBE_DATA["kurta-sets"].looks[0]?.coverImg,
     },
     {
         id: "p2",
         name: "Emerald Embroidered Sherwani",
+        desc: "Rich, vivid silk elevated by intricate botanical motifs in an exquisite display of craftsmanship.",
         tag: "New",
-        front: WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.coverImg,
-        back: WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.gallery?.[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.coverImg,
+        front: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
+        back: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.gallery?.[0] || WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
     },
     {
         id: "p3",
         name: "Classic Atelier Bandhgala",
+        desc: "Timeless silhouette meeting bespoke precision, finished with our signature detailing.",
         tag: null,
-        front: WARDROBE_DATA["bandhagala-indo-western"].looks[4]?.coverImg,
-        back: WARDROBE_DATA["bandhagala-indo-western"].looks[4]?.gallery?.[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[4]?.coverImg,
+        front: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg,
+        back: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.gallery?.[0] || WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg,
     },
 ];
 
@@ -33,23 +36,26 @@ const COLORED_PRODUCTS = [
     {
         id: "p4",
         name: "The Sartorial Tailored Suit",
+        desc: "Sharply cut to perfection, this ensemble balances classic menswear with a modern, confident drape.",
         tag: "New",
         front: WARDROBE_DATA.suits.looks[0]?.coverImg,
-        back: WARDROBE_DATA.suits.looks[0]?.gallery?.[1] || WARDROBE_DATA.suits.looks[0]?.coverImg,
+        back: WARDROBE_DATA.suits.looks[0]?.gallery?.[0] || WARDROBE_DATA.suits.looks[0]?.coverImg,
     },
     {
         id: "p5",
         name: "Midnight Blue Velvet Suit",
+        desc: "Luxurious velvet infused with subtle vibrancy, designed for commanding presence at any evening affair.",
         tag: null,
-        front: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
-        back: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.gallery?.[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
+        front: WARDROBE_DATA["bandhagala-indo-western"].looks[2]?.coverImg,
+        back: WARDROBE_DATA["bandhagala-indo-western"].looks[2]?.gallery?.[0] || WARDROBE_DATA["bandhagala-indo-western"].looks[2]?.coverImg,
     },
     {
         id: "p6",
         name: "Heritage Couture Sherwani",
+        desc: "Regal elegance redefined through meticulous hand-woven textures and an uncompromising fit.",
         tag: "Couture",
-        front: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg,
-        back: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.gallery?.[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg,
+        front: WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.coverImg,
+        back: WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.gallery?.[0] || WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.coverImg,
     },
 ];
 
@@ -169,7 +175,7 @@ export default function Featured() {
                 imageSrc={selectedProd?.front}
                 imageAlt={selectedProd?.name}
                 title={selectedProd ? `FEATURED / PIECES — ${selectedProd.name.toUpperCase()}` : ""}
-                subtitle="Hand-finished tailoring from the House of Sunil Mehra."
+                subtitle={selectedProd?.desc}
                 onNext={handleNext}
                 onPrev={handlePrev}
             />
