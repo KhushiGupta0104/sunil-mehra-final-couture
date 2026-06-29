@@ -4,8 +4,7 @@ import { motion, useInView } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import BespokeJourney from "@/components/sections/BespokeJourney";
 
-// Import local image
-import img6602 from "@/assets/images/Suits/suit_7.jpg";
+import { WARDROBE_DATA } from "@/data/wardrobeData";
 
 function AnimatedCounter({ target, label }) {
     const ref = useRef(null);
@@ -46,8 +45,8 @@ export default function Atelier() {
                     <ScrollReveal variant="fade-right">
                         <div className="relative aspect-[4/5] lg:aspect-auto lg:h-[65vh] overflow-hidden border border-[var(--hairline-strong)]">
                             <img
-                                src={img6602}
-                                alt="The Atelier"
+                                src={WARDROBE_DATA.suits.looks[3]?.coverImg}
+                                alt="Atelier Details"
                                 className="w-full h-full object-cover object-top"
                             />
                             <div className="absolute top-6 left-6 right-6 flex items-center justify-between text-[var(--bone)]">

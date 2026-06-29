@@ -7,13 +7,13 @@ import { WARDROBE_DATA } from "@/data/wardrobeData";
 const REELS = [
     { 
         id: 1, 
-        title: "The Luxury Kurta", 
-        video: WARDROBE_DATA["kurta-sets"].looks[1]?.coverImg, 
+        title: "The Artisan Cut", 
+        video: WARDROBE_DATA["kurta-sets"].looks[3]?.coverImg, 
         description: "A study of line and flow, blending traditional tailoring with lightweight silks.",
         features: ["Handspun Silk", "Tone-on-tone embroidery", "Fluid drape"],
         photos: [
-            { src: WARDROBE_DATA["kurta-sets"].looks[1]?.gallery?.[1], title: "Structured Collar", category: "Fabric & Fit" },
-            { src: WARDROBE_DATA["kurta-sets"].looks[1]?.gallery?.[2], title: "Handspun Weave", category: "Atelier details" }
+            { src: WARDROBE_DATA["kurta-sets"].looks[3]?.gallery?.[1], title: "Structured Collar", category: "Fabric & Fit" },
+            { src: WARDROBE_DATA["kurta-sets"].looks[3]?.gallery?.[2], title: "Handspun Weave", category: "Atelier details" }
         ]
     },
     { 
@@ -29,13 +29,13 @@ const REELS = [
     },
     { 
         id: 3, 
-        title: "The Bandhgala & Sherwani", 
-        video: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg, 
+        title: "The Heritage Achkan", 
+        video: WARDROBE_DATA["bandhagala-indo-western"].looks[7]?.coverImg, 
         description: "Regal silhouettes that command presence, crafted for extraordinary moments.",
         features: ["Zardosi Embroidery", "Velvet & Silk", "Regal Silhouette"],
         photos: [
-            { src: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.gallery?.[1], title: "Heritage Motifs", category: "Embroidery" },
-            { src: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.gallery?.[2], title: "Classic Fit", category: "Silhouette" }
+            { src: WARDROBE_DATA["bandhagala-indo-western"].looks[7]?.gallery?.[1], title: "Heritage Motifs", category: "Embroidery" },
+            { src: WARDROBE_DATA["bandhagala-indo-western"].looks[7]?.gallery?.[2], title: "Classic Fit", category: "Silhouette" }
         ]
     }
 ];
@@ -123,7 +123,7 @@ export default function AtelierShowcase() {
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0 }}
                                     transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                                    className="w-full h-full object-cover object-center"
+                                    className="w-full h-full object-cover object-top"
                                 />
                             </AnimatePresence>
                         </div>
@@ -152,7 +152,7 @@ export default function AtelierShowcase() {
                                             src={photo.src}
                                             alt={photo.title}
                                             loading="lazy"
-                                            className="w-full h-full object-cover object-center transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
+                                            className="w-full h-full object-cover object-top transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-5 pointer-events-none">
                                             <span className="font-luxe text-[9px] uppercase tracking-[0.25em] text-[var(--champagne)] mb-1">

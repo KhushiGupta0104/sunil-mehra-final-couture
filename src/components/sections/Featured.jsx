@@ -8,21 +8,21 @@ import { WARDROBE_DATA } from "@/data/wardrobeData";
 const IVORY_PRODUCTS = [
     {
         id: "p1",
-        name: "Mirage Silk Kurta Set",
+        name: "The Artisan Kurta Set",
         tag: "Couture",
         front: WARDROBE_DATA["kurta-sets"].looks[2]?.coverImg,
         back: WARDROBE_DATA["kurta-sets"].looks[2]?.gallery?.[1] || WARDROBE_DATA["kurta-sets"].looks[2]?.coverImg,
     },
     {
         id: "p2",
-        name: "Bone Silk Kurta Set",
+        name: "Emerald Embroidered Sherwani",
         tag: "New",
         front: WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.coverImg,
         back: WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.gallery?.[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.coverImg,
     },
     {
         id: "p3",
-        name: "Classic Atelier Kurta",
+        name: "Classic Atelier Bandhgala",
         tag: null,
         front: WARDROBE_DATA["bandhagala-indo-western"].looks[4]?.coverImg,
         back: WARDROBE_DATA["bandhagala-indo-western"].looks[4]?.gallery?.[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[4]?.coverImg,
@@ -32,21 +32,21 @@ const IVORY_PRODUCTS = [
 const COLORED_PRODUCTS = [
     {
         id: "p4",
-        name: "Slate Blue Tailored Suit",
+        name: "The Sartorial Tailored Suit",
         tag: "New",
         front: WARDROBE_DATA.suits.looks[0]?.coverImg,
         back: WARDROBE_DATA.suits.looks[0]?.gallery?.[1] || WARDROBE_DATA.suits.looks[0]?.coverImg,
     },
     {
         id: "p5",
-        name: "Charcoal Velvet Bandhgala",
+        name: "Midnight Blue Velvet Suit",
         tag: null,
         front: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
         back: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.gallery?.[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
     },
     {
         id: "p6",
-        name: "Indigo Couture Sherwani",
+        name: "Heritage Couture Sherwani",
         tag: "Couture",
         front: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg,
         back: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.gallery?.[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg,
@@ -180,10 +180,10 @@ export default function Featured() {
 /** Individual product card with hover effects */
 function ProductCard({ prod, onSelect, featured = false }) {
     return (
-        <a
-            href="#"
+        <button
+            type="button"
             onClick={(e) => { e.preventDefault(); onSelect(prod); }}
-            className="block w-full flex flex-col group"
+            className="block w-full flex flex-col group text-left"
             data-testid={`product-${prod.id}`}
         >
             <div className="relative overflow-hidden border border-[var(--hairline)] aspect-[3/4] bg-[var(--bone)] shadow-sm">
@@ -191,27 +191,21 @@ function ProductCard({ prod, onSelect, featured = false }) {
                     src={prod.front}
                     alt={prod.name}
                     loading="lazy"
-                    className="img-front absolute inset-0 w-full h-full object-cover object-top transition-all duration-[1.4s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
+                    className="w-full h-full object-cover object-top transition-transform duration-[2.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                 />
                 <img
                     src={prod.back}
                     alt={prod.name}
                     loading="lazy"
-                    className="img-back absolute inset-0 w-full h-full object-cover object-top opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                    className="w-full h-full object-cover object-top opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
                 />
                 {prod.tag && (
                     <span className="absolute top-5 left-5 z-10 px-3 py-1 bg-[var(--bone)] text-[9px] uppercase tracking-[0.3em] font-luxe text-[var(--ink)]">
                         {prod.tag}
                     </span>
                 )}
-                {/* Subtle overlay with expand icon on hover */}
-                <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="w-10 h-10 rounded-full bg-[var(--bone)]/80 backdrop-blur-sm flex items-center justify-center border border-[var(--hairline)]">
-                        <svg className="w-4 h-4 text-[var(--ink)]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9m11.25-5.25v4.5m0-4.5h-4.5m4.5 0L15 9m-11.25 11.25v-4.5m0 4.5h4.5m-4.5 0L9 15m11.25 5.25v-4.5m0 4.5h-4.5m4.5 0L15 15" />
-                        </svg>
-                    </div>
-                </div>
+                {/* Subtle overlay on hover */}
+                <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             </div>
             <div className="mt-4 flex items-start justify-between gap-4 w-full">
                 <h4 className="font-luxe text-xs uppercase tracking-[0.1em] text-[var(--ink)] group-hover:text-[var(--bronze)] transition duration-300">
@@ -219,6 +213,6 @@ function ProductCard({ prod, onSelect, featured = false }) {
                 </h4>
 
             </div>
-        </a>
+        </button>
     );
 }

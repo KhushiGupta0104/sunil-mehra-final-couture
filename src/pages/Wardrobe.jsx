@@ -3,56 +3,50 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ScrollReveal, { StaggerReveal, StaggerItem } from "@/components/ui/ScrollReveal";
 
-// Import cover images
-import bandhaglaCover from "@/assets/images/Bandhagla/sunil_mehra_0738.jpg";
-import kurtaCover from "@/assets/images/KurtaSets/sunil_mehra_0711.jpg";
-import jacketCover from "@/assets/images/Sunil Mehra_6586 - Copy.jpg";
-import img8657 from "@/assets/images/IMG8657 copy.jpg";
-import winterCover from "@/assets/images/Sunil Mehra 0932.jpg";
-import accessoryCover from "@/assets/images/Accessories/Bags/Sunil Mehra_7074.jpg";
+import { WARDROBE_DATA } from "@/data/wardrobeData";
 
 const CATEGORIES = [
     {
         no: "01",
         name: "Bandhagla & Indo-Western",
         slug: "bandhagala-indo-western",
-        img: bandhaglaCover,
-        pieces: 87,
+        img: WARDROBE_DATA["bandhagala-indo-western"].looks[8]?.coverImg,
+        pieces: WARDROBE_DATA["bandhagala-indo-western"].looks.length,
     },
     {
         no: "02",
         name: "Sartorial Suits",
         slug: "suits",
-        img: img8657,
-        pieces: 187,
+        img: WARDROBE_DATA.suits.looks[2]?.coverImg,
+        pieces: WARDROBE_DATA.suits.looks.length,
     },
     {
         no: "03",
         name: "Kurta Sets",
         slug: "kurta-sets",
-        img: kurtaCover,
-        pieces: 23,
+        img: WARDROBE_DATA["kurta-sets"].looks[5]?.coverImg,
+        pieces: WARDROBE_DATA["kurta-sets"].looks.length,
     },
     {
         no: "04",
         name: "Jawahar Jacket Sets",
         slug: "jawahar-jackets",
-        img: jacketCover,
-        pieces: 17,
+        img: WARDROBE_DATA["jawahar-jackets"].looks[2]?.coverImg,
+        pieces: WARDROBE_DATA["jawahar-jackets"].looks.length,
     },
     {
         no: "05",
         name: "Winter Collection",
         slug: "winter-collection",
-        img: winterCover,
-        pieces: 21,
+        img: WARDROBE_DATA["winter-collection"].looks[2]?.coverImg,
+        pieces: WARDROBE_DATA["winter-collection"].looks.length,
     },
     {
         no: "06",
         name: "Accessories",
         slug: "accessories",
-        img: accessoryCover,
-        pieces: 40,
+        img: WARDROBE_DATA.accessories.looks[1]?.coverImg,
+        pieces: WARDROBE_DATA.accessories.looks.length,
     },
 ];
 
@@ -102,7 +96,7 @@ export default function Wardrobe() {
                     <img 
                         src={bandhaglaCover} 
                         alt="The Wardrobe" 
-                        className="w-full h-full object-cover object-center opacity-60"
+                        className="w-full h-full object-cover object-top opacity-60"
                         style={{ filter: "brightness(0.6) contrast(1.1)" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-[var(--ink)]/50 via-[var(--ink)]/30 to-[var(--ink)]/80 mix-blend-multiply" />

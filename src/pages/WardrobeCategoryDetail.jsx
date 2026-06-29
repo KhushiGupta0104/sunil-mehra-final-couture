@@ -257,15 +257,8 @@ export default function WardrobeCategoryDetail() {
                                         ))}
                                     </div>
 
-                                    {/* Hover overlay & Expand icon (disabled pointer events so we can click/slide underneath) */}
+                                    {/* Hover overlay (disabled pointer events so we can click/slide underneath) */}
                                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 pointer-events-none" />
-                                    <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                                        <div className="w-8 h-8 rounded-full bg-[var(--bone)]/90 backdrop-blur-sm flex items-center justify-center border border-[var(--hairline)] shadow-sm">
-                                            <svg className="w-3.5 h-3.5 text-[var(--ink)]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9m11.25-5.25v4.5m0-4.5h-4.5m4.5 0L15 9m-11.25 11.25v-4.5m0 4.5h4.5m-4.5 0L9 15m11.25 5.25v-4.5m0 4.5h-4.5m4.5 0L15 15" />
-                                            </svg>
-                                        </div>
-                                    </div>
                                     
                                     {/* Indicator for multiple images */}
                                     {images.length > 1 && (

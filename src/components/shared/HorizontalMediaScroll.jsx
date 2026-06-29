@@ -6,7 +6,7 @@ import { WARDROBE_DATA } from "@/data/wardrobeData";
 const galleryImages = [
     { 
         id: 1, 
-        src: WARDROBE_DATA["suits"]?.looks?.[0]?.coverImg, 
+        src: WARDROBE_DATA["suits"]?.looks?.[1]?.coverImg, 
         title: "The Sartorial Eye", 
         desc: "Precision tailoring in motion." 
     },
@@ -24,7 +24,7 @@ const galleryImages = [
     },
     { 
         id: 4, 
-        src: WARDROBE_DATA["kurta-sets"]?.looks?.[0]?.coverImg, 
+        src: WARDROBE_DATA["kurta-sets"]?.looks?.[4]?.coverImg, 
         title: "Evening Silhouette", 
         desc: "Elegance for the golden hour." 
     },

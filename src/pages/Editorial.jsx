@@ -2,9 +2,7 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-import ed1 from "@/assets/images/KurtaSets/sunil_mehra_2539.jpg";
-import ed2 from "@/assets/images/Accessories/Bags/IMG_9621 copy 2 - Copy.jpg";
-import ed3 from "@/assets/images/Bandhagla/img9367_copy.jpg";
+import { WARDROBE_DATA } from "@/data/wardrobeData";
 
 const STORIES = [
     {
@@ -13,7 +11,7 @@ const STORIES = [
         title: "Mirage & Majesty",
         excerpt: "Shot against the stark, dramatic landscapes of the Thar desert, the Mirage Suit emerges as a mirage of pristine tailoring. The stark white fabric contrasts sharply with the rugged, ancient stone, embodying the duality of the modern maharaja: rooted in history, yet decidedly contemporary.",
         quote: "There is an unspoken power in wearing white against the wild.",
-        img: ed1,
+        img: WARDROBE_DATA["kurta-sets"].looks[6]?.coverImg,
         align: "left"
     },
     {
@@ -21,8 +19,8 @@ const STORIES = [
         season: "Atelier Accessories",
         title: "The Woven Journey",
         excerpt: "Our signature leather duffle is not merely constructed; it is woven by hand. The intricate bottega-style weave requires over forty hours of continuous craftsmanship, resulting in a travel companion that ages beautifully, acquiring a patina unique to your journeys.",
-        quote: "True luxury is the luxury of time.",
-        img: ed2,
+        quote: "Details are not the details. They make the design.",
+        img: WARDROBE_DATA["accessories"].looks[2]?.coverImg,
         align: "right"
     },
     {
@@ -31,7 +29,7 @@ const STORIES = [
         title: "The White Sands",
         excerpt: "An ode to ethereal lightness. The new menswear line embraces fluid silhouettes and breathable cashmeres. Hand-embroidered with subtle metallic threading, this suit catches the golden hour light, making it the perfect statement for a destination occasion.",
         quote: "Elegance is the only beauty that never fades.",
-        img: ed3,
+        img: WARDROBE_DATA["bandhagala-indo-western"].looks[9]?.coverImg,
         align: "left"
     },
 ];
@@ -51,7 +49,7 @@ function EditorialBlock({ story, index }) {
                             alt={story.title}
                             loading="lazy"
                             decoding="async"
-                            className={`w-full object-cover transition-transform duration-1000 group-hover:scale-105 ${story.align === 'center' ? 'h-[70vh] md:h-[80vh]' : 'h-[60vh] md:h-[80vh]'}`}
+                            className={`w-full object-cover object-top transition-transform duration-1000 group-hover:scale-105 ${story.align === 'center' ? 'h-[70vh] md:h-[80vh]' : 'h-[60vh] md:h-[80vh]'}`}
                             style={{ objectPosition: 'top', willChange: "transform" }}
                         />
                         <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500" />
