@@ -1,23 +1,45 @@
 import React from "react";
 import ScrollReveal, { StaggerReveal, StaggerItem } from "@/components/ui/ScrollReveal";
 
-// Import uploaded images
-import img1 from "@/assets/images/Sunil Mehra 0156.jpg";
-import img2 from "@/assets/images/Sunil Mehra  0553.jpg";
-import img4 from "@/assets/images/IMG9371 copy.jpg";
-import img5 from "@/assets/images/Sunil Mehra_3721.jpg";
-import img6 from "@/assets/images/Sunil Mehra_6602.jpg";
-import img7 from "@/assets/images/Sunil Mehra 0239.jpg";
 import { WARDROBE_DATA } from "@/data/wardrobeData";
 
 const galleryImages = [
-    { id: 1, src: img1, title: "The Sartorial Eye", desc: "Precision tailoring in motion." },
-    { id: 2, src: img2, title: "Modern Heritage", desc: "Classic lines, contemporary fabric." },
-    { id: 3, src: WARDROBE_DATA["winter-collection"].looks[2]?.coverImg || WARDROBE_DATA.suits.looks[18]?.coverImg, title: "Bespoke Details", desc: "Every stitch tells a story." },
-    { id: 4, src: img4, title: "Evening Silhouette", desc: "Elegance for the golden hour." },
-    { id: 5, src: img5, title: "The Artisan Touch", desc: "Hand-finished perfection." },
-    { id: 6, src: img6, title: "Quiet Luxury", desc: "Subtle mastery of form." },
-    { id: 7, src: img7, title: "Signature Presence", desc: "The mark of a gentleman." },
+    { 
+        id: 1, 
+        src: WARDROBE_DATA["suits"]?.looks?.[0]?.coverImg, 
+        title: "The Sartorial Eye", 
+        desc: "Precision tailoring in motion." 
+    },
+    { 
+        id: 2, 
+        src: WARDROBE_DATA["bandhagala-indo-western"]?.looks?.[2]?.coverImg, 
+        title: "Modern Heritage", 
+        desc: "Classic lines, contemporary fabric." 
+    },
+    { 
+        id: 3, 
+        src: WARDROBE_DATA["jawahar-jackets"]?.looks?.[1]?.coverImg, 
+        title: "Bespoke Details", 
+        desc: "Every stitch tells a story." 
+    },
+    { 
+        id: 4, 
+        src: WARDROBE_DATA["kurta-sets"]?.looks?.[0]?.coverImg, 
+        title: "Evening Silhouette", 
+        desc: "Elegance for the golden hour." 
+    },
+    { 
+        id: 5, 
+        src: WARDROBE_DATA["winter-collection"]?.looks?.[3]?.coverImg, 
+        title: "The Artisan Touch", 
+        desc: "Hand-finished perfection." 
+    },
+    { 
+        id: 6, 
+        src: WARDROBE_DATA["accessories"]?.looks?.[0]?.coverImg, 
+        title: "Quiet Luxury", 
+        desc: "Subtle mastery of form." 
+    }
 ];
 
 export default function HorizontalMediaScroll() {
