@@ -50,6 +50,9 @@ const CATEGORIES = [
     },
 ];
 
+// Hero cover image derived from wardrobe data
+const bandhaglaCover = WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg;
+
 function CategoryCard({ c }) {
     return (
         <Link
