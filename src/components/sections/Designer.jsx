@@ -29,7 +29,7 @@ export default function Designer() {
                                         src={designerImg}
                                         alt="Sunil Mehra — The Designer"
                                         loading="lazy"
-                                        className="w-full h-full object-cover object-center transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
+                                        className="w-full h-full object-cover object-top transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
                                     />
                                     {/* Overlay gradient for depth */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80" />

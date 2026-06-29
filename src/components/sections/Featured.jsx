@@ -11,21 +11,21 @@ const IVORY_PRODUCTS = [
         name: "Mirage Silk Kurta Set",
         tag: "Couture",
         front: WARDROBE_DATA["kurta-sets"].looks[2]?.coverImg,
-        back: WARDROBE_DATA["kurta-sets"].looks[2]?.gallery[1] || WARDROBE_DATA["kurta-sets"].looks[2]?.coverImg,
+        back: WARDROBE_DATA["kurta-sets"].looks[2]?.gallery?.[1] || WARDROBE_DATA["kurta-sets"].looks[2]?.coverImg,
     },
     {
         id: "p2",
         name: "Bone Silk Kurta Set",
         tag: "New",
         front: WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.coverImg,
-        back: WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.gallery[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.coverImg,
+        back: WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.gallery?.[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[3]?.coverImg,
     },
     {
         id: "p3",
         name: "Classic Atelier Kurta",
         tag: null,
         front: WARDROBE_DATA["bandhagala-indo-western"].looks[4]?.coverImg,
-        back: WARDROBE_DATA["bandhagala-indo-western"].looks[4]?.gallery[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[4]?.coverImg,
+        back: WARDROBE_DATA["bandhagala-indo-western"].looks[4]?.gallery?.[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[4]?.coverImg,
     },
 ];
 
@@ -35,21 +35,21 @@ const COLORED_PRODUCTS = [
         name: "Slate Blue Tailored Suit",
         tag: "New",
         front: WARDROBE_DATA.suits.looks[0]?.coverImg,
-        back: WARDROBE_DATA.suits.looks[0]?.gallery[1] || WARDROBE_DATA.suits.looks[0]?.coverImg,
+        back: WARDROBE_DATA.suits.looks[0]?.gallery?.[1] || WARDROBE_DATA.suits.looks[0]?.coverImg,
     },
     {
         id: "p5",
         name: "Charcoal Velvet Bandhgala",
         tag: null,
         front: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
-        back: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.gallery[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
+        back: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.gallery?.[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
     },
     {
         id: "p6",
         name: "Indigo Couture Sherwani",
         tag: "Couture",
         front: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg,
-        back: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.gallery[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg,
+        back: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.gallery?.[1] || WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg,
     },
 ];
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal, { StaggerReveal, StaggerItem } from "@/components/ui/ScrollReveal";
@@ -72,20 +72,39 @@ export default function WardrobeCategoryDetail() {
     const hasMore = visibleCount < allPieces.length;
     const remaining = allPieces.length - visibleCount;
 
+    // Flatten all images for Lightbox
+    const allImages = useMemo(() => {
+        return allPieces.flatMap(piece => {
+            const gallery = piece.gallery && piece.gallery.length > 0 ? piece.gallery : [piece.coverImg];
+            return gallery.map(imgSrc => ({
+                ...piece,
+                src: imgSrc
+            }));
+        });
+    }, [allPieces]);
+
     // Lightbox navigation
     const handlePrev = useCallback((e) => {
-        e.stopPropagation();
-        const currentIndex = allPieces.findIndex(p => p.coverImg === selectedPiece.coverImg);
-        const prevIndex = (currentIndex - 1 + allPieces.length) % allPieces.length;
-        setSelectedPiece(allPieces[prevIndex]);
-    }, [selectedPiece, allPieces]);
+        if (e) e.stopPropagation();
+        if (!selectedPiece) return;
+        const currentSrc = selectedPiece.src || selectedPiece.coverImg;
+        const currentIndex = allImages.findIndex(img => img.src === currentSrc);
+        if (currentIndex > -1) {
+            const prevIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+            setSelectedPiece(allImages[prevIndex]);
+        }
+    }, [selectedPiece, allImages]);
 
     const handleNext = useCallback((e) => {
-        e.stopPropagation();
-        const currentIndex = allPieces.findIndex(p => p.coverImg === selectedPiece.coverImg);
-        const nextIndex = (currentIndex + 1) % allPieces.length;
-        setSelectedPiece(allPieces[nextIndex]);
-    }, [selectedPiece, allPieces]);
+        if (e) e.stopPropagation();
+        if (!selectedPiece) return;
+        const currentSrc = selectedPiece.src || selectedPiece.coverImg;
+        const currentIndex = allImages.findIndex(img => img.src === currentSrc);
+        if (currentIndex > -1) {
+            const nextIndex = (currentIndex + 1) % allImages.length;
+            setSelectedPiece(allImages[nextIndex]);
+        }
+    }, [selectedPiece, allImages]);
 
     const closeLightbox = useCallback(() => setSelectedPiece(null), []);
 
@@ -207,41 +226,66 @@ export default function WardrobeCategoryDetail() {
                     )}
                 </div>
 
-                {/* ═══ IMAGE GRID — 3 columns on desktop ═══ */}
-                <StaggerReveal staggerDelay={0.08} className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5 grid-flow-row-dense">
-                    {displayedPieces.map((piece, index) => {
-                        // Asymmetric layout: every 7th image spans 2 columns
-                        const isWide = index % 7 === 0 && index > 0;
-                        const spanClass = isWide ? "col-span-2 lg:col-span-2" : "col-span-1";
-
+                {/* ═══ IMAGE GRID — 1 Tile per Shoot (Carousel) ═══ */}
+                <StaggerReveal staggerDelay={0.08} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+                    {displayedPieces.map((piece, pieceIndex) => {
+                        const images = piece.gallery && piece.gallery.length > 0 ? piece.gallery : [piece.coverImg];
+                        
                         return (
                             <StaggerItem
-                                key={index}
+                                key={piece.id || pieceIndex}
                                 variant="fade-up"
-                                className={`group cursor-pointer ${spanClass}`}
+                                className="flex flex-col group"
                             >
-                                <div
-                                    className={`relative w-full overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] ${isWide ? "aspect-[16/9]" : "aspect-[3/4]"}`}
-                                    onClick={() => setSelectedPiece(piece)}
-                                >
-                                    <img
-                                        src={piece.coverImg}
-                                        alt={piece.name}
-                                        loading="lazy"
-                                        decoding="async"
-                                        className="w-full h-full object-cover object-top transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
-                                    />
-                                    {/* Hover overlay */}
-                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-500 pointer-events-none" />
+                                <div className="relative w-full aspect-[3/4] overflow-hidden bg-[var(--bone)] border border-[var(--hairline)] mb-5">
+                                    {/* Horizontal Scroll Container */}
+                                    <div className="flex h-full w-full overflow-x-auto snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden" style={{ scrollbarWidth: 'none' }}>
+                                        {images.map((imgSrc, imgIndex) => (
+                                            <div 
+                                                key={imgIndex}
+                                                className="relative flex-shrink-0 w-full h-full snap-center cursor-pointer"
+                                                onClick={() => setSelectedPiece({ ...piece, src: imgSrc })}
+                                            >
+                                                <img
+                                                    src={imgSrc}
+                                                    alt={`${piece.name} - ${imgIndex + 1}`}
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    className="w-full h-full object-cover object-top transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
 
-                                    {/* Expand icon on hover */}
-                                    <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div className="w-8 h-8 rounded-full bg-[var(--bone)]/90 backdrop-blur-sm flex items-center justify-center border border-[var(--hairline)]">
+                                    {/* Hover overlay & Expand icon (disabled pointer events so we can click/slide underneath) */}
+                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 pointer-events-none" />
+                                    <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <div className="w-8 h-8 rounded-full bg-[var(--bone)]/90 backdrop-blur-sm flex items-center justify-center border border-[var(--hairline)] shadow-sm">
                                             <svg className="w-3.5 h-3.5 text-[var(--ink)]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9m11.25-5.25v4.5m0-4.5h-4.5m4.5 0L15 9m-11.25 11.25v-4.5m0 4.5h4.5m-4.5 0L9 15m11.25 5.25v-4.5m0 4.5h-4.5m4.5 0L15 15" />
                                             </svg>
                                         </div>
                                     </div>
+                                    
+                                    {/* Indicator for multiple images */}
+                                    {images.length > 1 && (
+                                        <div className="absolute top-4 right-4 bg-black/30 backdrop-blur-md px-3 py-1.5 rounded-full pointer-events-none">
+                                            <span className="font-luxe text-[9px] uppercase tracking-[0.2em] text-white">
+                                                {images.length} Images
+                                            </span>
+                                        </div>
+                                    )}
+                                </div>
+
+                                <div className="flex justify-between items-center px-1">
+                                    <h3 className="font-luxe text-sm uppercase tracking-[0.2em] text-[var(--ink)]">
+                                        {piece.name}
+                                    </h3>
+                                    {images.length > 1 && (
+                                        <span className="font-italic-serif text-xs text-[var(--muted)] opacity-80">
+                                            Slide →
+                                        </span>
+                                    )}
                                 </div>
                             </StaggerItem>
                         );
@@ -277,10 +321,10 @@ export default function WardrobeCategoryDetail() {
                 <Lightbox 
                     isOpen={!!selectedPiece}
                     onClose={closeLightbox}
-                    imageSrc={selectedPiece?.coverImg}
+                    imageSrc={selectedPiece?.src || selectedPiece?.coverImg}
                     imageAlt={selectedPiece?.name}
                     title={pageTitle}
-                    indexInfo={`${currentIndex} / ${allPieces.length}`}
+                    indexInfo={selectedPiece ? `${allImages.findIndex(img => img.src === (selectedPiece.src || selectedPiece.coverImg)) + 1} / ${allImages.length}` : ""}
                     onNext={handleNext}
                     onPrev={handlePrev}
                     subtitle={selectedPiece?.name}

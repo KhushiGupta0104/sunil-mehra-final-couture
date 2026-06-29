@@ -66,7 +66,7 @@ export default function HorizontalMediaScroll() {
                             <img 
                                 src={item.src} 
                                 alt={item.title} 
-                                className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
+                                className="w-full h-full object-cover object-top transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
                             />
                         </div>
                         <div className="mt-6 flex flex-col">

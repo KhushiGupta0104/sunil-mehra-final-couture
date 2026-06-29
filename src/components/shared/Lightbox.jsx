@@ -84,14 +84,14 @@ export default function Lightbox({
                         </button>
                     </div>
 
-                    {/* Navigation Click Areas (Left/Right 20% of screen) */}
+                    {/* Navigation Click Areas (Left/Right 15% of screen) */}
                     {onPrev && (
                         <button 
                             onClick={onPrev}
                             className="absolute left-0 top-0 w-[15vw] h-full z-10 flex items-center justify-start pl-4 md:pl-10 group cursor-pointer"
                         >
-                            <div className="w-12 h-12 rounded-full border border-[var(--bone)]/20 flex items-center justify-center text-[var(--bone)]/50 group-hover:text-[var(--champagne)] group-hover:border-[var(--champagne)] transition-all duration-500 bg-black/20 backdrop-blur-sm transform group-hover:-translate-x-1">
-                                <ChevronLeft size={20} strokeWidth={1} />
+                            <div className="flex items-center justify-center text-[var(--bone)]/30 group-hover:text-[var(--champagne)] transition-all duration-500 transform group-hover:-translate-x-2">
+                                <ChevronLeft size={40} strokeWidth={1} />
                             </div>
                         </button>
                     )}
@@ -101,14 +101,14 @@ export default function Lightbox({
                             onClick={onNext}
                             className="absolute right-0 top-0 w-[15vw] h-full z-10 flex items-center justify-end pr-4 md:pr-10 group cursor-pointer"
                         >
-                            <div className="w-12 h-12 rounded-full border border-[var(--bone)]/20 flex items-center justify-center text-[var(--bone)]/50 group-hover:text-[var(--champagne)] group-hover:border-[var(--champagne)] transition-all duration-500 bg-black/20 backdrop-blur-sm transform group-hover:translate-x-1">
-                                <ChevronRight size={20} strokeWidth={1} />
+                            <div className="flex items-center justify-center text-[var(--bone)]/30 group-hover:text-[var(--champagne)] transition-all duration-500 transform group-hover:translate-x-2">
+                                <ChevronRight size={40} strokeWidth={1} />
                             </div>
                         </button>
                     )}
 
                     {/* Image Container */}
-                    <div className="relative w-full h-full flex flex-col items-center justify-center px-4 md:px-24 py-20 z-0">
+                    <div className="relative w-full h-full flex flex-col items-center justify-center px-4 md:px-24 pt-20 pb-10 z-0">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={imageSrc}
@@ -116,12 +116,12 @@ export default function Lightbox({
                                 animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                                 exit={{ opacity: 0, scale: 0.98, filter: "blur(4px)" }}
                                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                                className="relative max-w-full max-h-[85vh] flex items-center justify-center"
+                                className="relative max-w-full flex-shrink flex items-center justify-center"
                             >
                                 <img
                                     src={imageSrc}
                                     alt={imageAlt || "View image"}
-                                    className="max-w-full max-h-[85vh] object-contain drop-shadow-2xl select-none"
+                                    className="max-w-full max-h-[75vh] object-contain drop-shadow-2xl select-none"
                                 />
                             </motion.div>
                         </AnimatePresence>
@@ -132,7 +132,7 @@ export default function Lightbox({
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.4 }}
-                                className="absolute bottom-10 left-0 w-full text-center px-6 pointer-events-none"
+                                className="mt-8 text-center px-6 pointer-events-none shrink-0"
                             >
                                 <p className="font-display text-[var(--bone)] text-lg md:text-xl font-light tracking-wide drop-shadow-md">
                                     {subtitle}

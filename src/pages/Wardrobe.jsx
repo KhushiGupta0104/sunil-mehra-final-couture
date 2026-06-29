@@ -102,7 +102,7 @@ export default function Wardrobe() {
                     <img 
                         src={bandhaglaCover} 
                         alt="The Wardrobe" 
-                        className="w-full h-full object-cover object-top opacity-60"
+                        className="w-full h-full object-cover object-center opacity-60"
                         style={{ filter: "brightness(0.6) contrast(1.1)" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-[var(--ink)]/50 via-[var(--ink)]/30 to-[var(--ink)]/80 mix-blend-multiply" />

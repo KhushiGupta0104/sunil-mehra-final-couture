@@ -98,7 +98,7 @@ export default function Gallery() {
                                     <span className={`font-luxe text-xs uppercase tracking-widest transition-colors duration-500 w-8 ${hoveredCeleb?.id === celeb.id ? 'text-[var(--bronze)]' : 'text-[var(--muted)]'}`}>
                                         {String(idx + 1).padStart(2, '0')}
                                     </span>
-                                    <h3 className={`font-display text-3xl xl:text-5xl tracking-tight uppercase transition-colors duration-500 ${hoveredCeleb?.id === celeb.id ? 'text-[var(--ink)]' : 'text-[var(--muted)]'}`}>
+                                    <h3 className={`font-display text-3xl xl:text-5xl tracking-tight uppercase leading-[1.1] transition-colors duration-500 ${hoveredCeleb?.id === celeb.id ? 'text-[var(--ink)]' : 'text-[var(--muted)]'}`}>
                                         {celeb.celebrity}
                                     </h3>
                                 </div>
@@ -106,7 +106,7 @@ export default function Gallery() {
                                 {/* Mobile Accordion/Card Item */}
                                 <div className="lg:hidden flex flex-col gap-4">
                                     <div className="flex items-center justify-between">
-                                        <h3 className="font-display text-3xl sm:text-4xl uppercase text-[var(--ink)]">
+                                        <h3 className="font-display text-3xl sm:text-4xl uppercase leading-[1.1] text-[var(--ink)]">
                                             {celeb.celebrity}
                                         </h3>
                                         <span className="font-luxe text-[9px] uppercase tracking-widest text-[var(--bronze)]">
@@ -119,7 +119,7 @@ export default function Gallery() {
                                             src={celeb.src} 
                                             alt={celeb.celebrity}
                                             loading="lazy"
-                                            className="w-full h-full object-cover grayscale contrast-125 brightness-90 sepia-[0.1]"
+                                            className="w-full h-full object-cover object-top grayscale contrast-125 brightness-90 sepia-[0.1]"
                                         />
                                     </div>
                                     
@@ -153,7 +153,7 @@ export default function Gallery() {
                                             src={hoveredCeleb.src}
                                             alt={hoveredCeleb.celebrity}
                                             loading="lazy"
-                                            className="w-full h-full object-cover grayscale contrast-125 brightness-90 sepia-[0.1]"
+                                            className="w-full h-full object-cover object-top grayscale contrast-125 brightness-90 sepia-[0.1]"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
                                         

@@ -382,467 +382,707 @@ export const WARDROBE_DATA = {
         looks: [
             { 
                 id: "look_bandhagalaindowestern_1",
-                name: "Bespoke Focus - Look 1",
-                coverImg: Bandhagla_21,
-                gallery: [Bandhagla_21, Bandhagla_68, Bandhagla_65, Bandhagla_66, Bandhagla_15, Bandhagla_16]
+                name: "066A - Look 1",
+                coverImg: Bandhagla_8,
+                gallery: [Bandhagla_8, Bandhagla_9, Bandhagla_10]
             },
             { 
                 id: "look_bandhagalaindowestern_2",
-                name: "Bespoke Focus - Look 2",
-                coverImg: Bandhagla_17,
-                gallery: [Bandhagla_17, Bandhagla_67, Bandhagla_18, Bandhagla_1, Bandhagla_19, Bandhagla_20]
+                name: "066A - Look 2",
+                coverImg: Bandhagla_51,
+                gallery: [Bandhagla_51, Bandhagla_0, Bandhagla_52]
             },
             { 
                 id: "look_bandhagalaindowestern_3",
-                name: "Bespoke Focus - Look 3",
-                coverImg: Bandhagla_2,
-                gallery: [Bandhagla_2]
+                name: "066A - Look 3",
+                coverImg: Bandhagla_53,
+                gallery: [Bandhagla_53, Bandhagla_54, Bandhagla_55]
             },
             { 
                 id: "look_bandhagalaindowestern_4",
-                name: "Atelier Signature - Look 4",
+                name: "066A - Look 4",
+                coverImg: Bandhagla_56,
+                gallery: [Bandhagla_56, Bandhagla_57, Bandhagla_11, Bandhagla_58, Bandhagla_59, Bandhagla_60, Bandhagla_61, Bandhagla_62]
+            },
+            { 
+                id: "look_bandhagalaindowestern_5",
+                name: "066A - Look 5",
+                coverImg: Bandhagla_12,
+                gallery: [Bandhagla_12, Bandhagla_63, Bandhagla_13, Bandhagla_14, Bandhagla_64]
+            },
+            { 
+                id: "look_bandhagalaindowestern_6",
+                name: "IMG - Look 6",
+                coverImg: Bandhagla_21,
+                gallery: [Bandhagla_21, Bandhagla_68]
+            },
+            { 
+                id: "look_bandhagalaindowestern_7",
+                name: "IMG - Look 7",
+                coverImg: Bandhagla_65,
+                gallery: [Bandhagla_65, Bandhagla_66, Bandhagla_15, Bandhagla_16, Bandhagla_17, Bandhagla_67, Bandhagla_18, Bandhagla_1]
+            },
+            { 
+                id: "look_bandhagalaindowestern_8",
+                name: "IMG - Look 8",
+                coverImg: Bandhagla_19,
+                gallery: [Bandhagla_19, Bandhagla_20, Bandhagla_2]
+            },
+            { 
+                id: "look_bandhagalaindowestern_9",
+                name: "Sunil Mehra - Look 9",
                 coverImg: Bandhagla_22,
                 gallery: [Bandhagla_22, Bandhagla_69, Bandhagla_3, Bandhagla_70, Bandhagla_71, Bandhagla_72]
             },
             { 
-                id: "look_bandhagalaindowestern_5",
-                name: "Atelier Signature - Look 5",
-                coverImg: Bandhagla_73,
-                gallery: [Bandhagla_73, Bandhagla_23, Bandhagla_74, Bandhagla_75, Bandhagla_4, Bandhagla_24]
-            },
-            { 
-                id: "look_bandhagalaindowestern_6",
-                name: "Atelier Signature - Look 6",
-                coverImg: Bandhagla_25,
-                gallery: [Bandhagla_25, Bandhagla_26, Bandhagla_76, Bandhagla_27, Bandhagla_77, Bandhagla_28]
-            },
-            { 
-                id: "look_bandhagalaindowestern_7",
-                name: "Atelier Signature - Look 7",
-                coverImg: Bandhagla_29,
-                gallery: [Bandhagla_29, Bandhagla_30, Bandhagla_31, Bandhagla_78, Bandhagla_79, Bandhagla_32]
-            },
-            { 
-                id: "look_bandhagalaindowestern_8",
-                name: "Atelier Signature - Look 8",
-                coverImg: Bandhagla_80,
-                gallery: [Bandhagla_80, Bandhagla_81, Bandhagla_5, Bandhagla_33, Bandhagla_34, Bandhagla_6]
-            },
-            { 
-                id: "look_bandhagalaindowestern_9",
-                name: "Atelier Signature - Look 9",
-                coverImg: Bandhagla_82,
-                gallery: [Bandhagla_82, Bandhagla_7, Bandhagla_83, Bandhagla_84, Bandhagla_35, Bandhagla_36]
-            },
-            { 
                 id: "look_bandhagalaindowestern_10",
-                name: "Atelier Signature - Look 10",
-                coverImg: Bandhagla_37,
-                gallery: [Bandhagla_37, Bandhagla_38, Bandhagla_39, Bandhagla_85, Bandhagla_40, Bandhagla_41]
+                name: "Sunil Mehra - Look 10",
+                coverImg: Bandhagla_73,
+                gallery: [Bandhagla_73, Bandhagla_23]
             },
             { 
                 id: "look_bandhagalaindowestern_11",
-                name: "Royal Campaign - Look 11",
-                coverImg: Bandhagla_0,
-                gallery: [Bandhagla_0, Bandhagla_8, Bandhagla_9, Bandhagla_10, Bandhagla_11, Bandhagla_12]
+                name: "Sunil Mehra - Look 11",
+                coverImg: Bandhagla_74,
+                gallery: [Bandhagla_74]
             },
             { 
                 id: "look_bandhagalaindowestern_12",
-                name: "Royal Campaign - Look 12",
-                coverImg: Bandhagla_13,
-                gallery: [Bandhagla_13, Bandhagla_14, Bandhagla_51, Bandhagla_52, Bandhagla_53, Bandhagla_54]
+                name: "Sunil Mehra - Look 12",
+                coverImg: Bandhagla_75,
+                gallery: [Bandhagla_75, Bandhagla_4, Bandhagla_24]
             },
             { 
                 id: "look_bandhagalaindowestern_13",
-                name: "Royal Campaign - Look 13",
-                coverImg: Bandhagla_55,
-                gallery: [Bandhagla_55, Bandhagla_56, Bandhagla_57, Bandhagla_58, Bandhagla_59, Bandhagla_60]
+                name: "Sunil Mehra - Look 13",
+                coverImg: Bandhagla_25,
+                gallery: [Bandhagla_25, Bandhagla_26, Bandhagla_76, Bandhagla_27]
             },
             { 
                 id: "look_bandhagalaindowestern_14",
-                name: "Royal Campaign - Look 14",
-                coverImg: Bandhagla_61,
-                gallery: [Bandhagla_61, Bandhagla_62, Bandhagla_63, Bandhagla_64]
+                name: "Sunil Mehra - Look 14",
+                coverImg: Bandhagla_77,
+                gallery: [Bandhagla_77, Bandhagla_28, Bandhagla_29, Bandhagla_30, Bandhagla_31, Bandhagla_78, Bandhagla_79, Bandhagla_32]
             },
             { 
                 id: "look_bandhagalaindowestern_15",
-                name: "Thar Desert Edit - Look 15",
-                coverImg: Bandhagla_42,
-                gallery: [Bandhagla_42, Bandhagla_43, Bandhagla_44, Bandhagla_45, Bandhagla_46, Bandhagla_47]
+                name: "Sunil Mehra - Look 15",
+                coverImg: Bandhagla_80,
+                gallery: [Bandhagla_80, Bandhagla_81, Bandhagla_5, Bandhagla_33]
             },
             { 
                 id: "look_bandhagalaindowestern_16",
-                name: "Thar Desert Edit - Look 16",
-                coverImg: Bandhagla_48,
-                gallery: [Bandhagla_48, Bandhagla_49, Bandhagla_50, Bandhagla_86]
-            },
-        ]},
-    "kurta-sets": {
-        name: "Kurta Sets",
-        edit: "Quiet Luxury",
-        description: "Elevated comfort in pure hand-woven silk and light linen, cut with fluid, graceful lines.",
-        looks: [
-            { 
-                id: "look_kurtasets_1",
-                name: "Bespoke Focus - Look 1",
-                coverImg: Kurta_Set_1,
-                gallery: [Kurta_Set_1, Kurta_Set_12, Kurta_Set_2]
+                name: "Sunil Mehra - Look 16",
+                coverImg: Bandhagla_34,
+                gallery: [Bandhagla_34, Bandhagla_6, Bandhagla_82, Bandhagla_7, Bandhagla_83, Bandhagla_84, Bandhagla_35]
             },
             { 
-                id: "look_kurtasets_2",
-                name: "Atelier Signature - Look 2",
-                coverImg: Kurta_Set_3,
-                gallery: [Kurta_Set_3, Kurta_Set_13, Kurta_Set_4, Kurta_Set_14, Kurta_Set_15, Kurta_Set_16]
+                id: "look_bandhagalaindowestern_17",
+                name: "Sunil Mehra - Look 17",
+                coverImg: Bandhagla_36,
+                gallery: [Bandhagla_36]
             },
             { 
-                id: "look_kurtasets_3",
-                name: "Atelier Signature - Look 3",
-                coverImg: Kurta_Set_5,
-                gallery: [Kurta_Set_5, Kurta_Set_6, Kurta_Set_7, Kurta_Set_17, Kurta_Set_8, Kurta_Set_9]
+                id: "look_bandhagalaindowestern_18",
+                name: "Sunil Mehra - Look 18",
+                coverImg: Bandhagla_37,
+                gallery: [Bandhagla_37]
             },
             { 
-                id: "look_kurtasets_4",
-                name: "Atelier Signature - Look 4",
-                coverImg: Kurta_Set_18,
-                gallery: [Kurta_Set_18, Kurta_Set_19, Kurta_Set_10, Kurta_Set_20, Kurta_Set_21, Kurta_Set_11]
+                id: "look_bandhagalaindowestern_19",
+                name: "Sunil Mehra - Look 19",
+                coverImg: Bandhagla_38,
+                gallery: [Bandhagla_38, Bandhagla_39]
             },
             { 
-                id: "look_kurtasets_5",
-                name: "Atelier Signature - Look 5",
-                coverImg: Kurta_Set_22,
-                gallery: [Kurta_Set_22, Kurta_Set_0]
+                id: "look_bandhagalaindowestern_20",
+                name: "Sunil Mehra - Look 20",
+                coverImg: Bandhagla_85,
+                gallery: [Bandhagla_85, Bandhagla_40, Bandhagla_41]
             },
-        ]},
+            { 
+                id: "look_bandhagalaindowestern_21",
+                name: "Tripti - Look 21",
+                coverImg: Bandhagla_42,
+                gallery: [Bandhagla_42, Bandhagla_86, Bandhagla_43, Bandhagla_44, Bandhagla_45, Bandhagla_46, Bandhagla_47, Bandhagla_48]
+            },
+            { 
+                id: "look_bandhagalaindowestern_22",
+                name: "Tripti - Look 22",
+                coverImg: Bandhagla_49,
+                gallery: [Bandhagla_49, Bandhagla_50]
+            },
+        ]
+    },
     "jawahar-jackets": {
-        name: "Jawahar Jacket Sets",
-        edit: "Modern Maharaja",
-        description: "A timeless Indian silhouette, reimagined. Hand-crafted Nehru jackets and sadris layered for modern elegance.",
+        name: "Jawahar Jackets",
+        edit: "The Layered Statement",
+        description: "The quintessential layer of sophistication. From understated linens for daytime engagements to richly embroidered silks for evening affairs.",
         looks: [
             { 
                 id: "look_jawaharjackets_1",
-                name: "Atelier Signature - Look 1",
+                name: "Sunil Mehra - Look 1",
                 coverImg: Jawahar_Jacket_4,
-                gallery: [Jawahar_Jacket_4, Jawahar_Jacket_5, Jawahar_Jacket_0, Jawahar_Jacket_6, Jawahar_Jacket_7, Jawahar_Jacket_13]
+                gallery: [Jawahar_Jacket_4, Jawahar_Jacket_5, Jawahar_Jacket_0, Jawahar_Jacket_6]
             },
             { 
                 id: "look_jawaharjackets_2",
-                name: "Atelier Signature - Look 2",
-                coverImg: Jawahar_Jacket_14,
-                gallery: [Jawahar_Jacket_14, Jawahar_Jacket_8, Jawahar_Jacket_15, Jawahar_Jacket_16, Jawahar_Jacket_9, Jawahar_Jacket_10]
+                name: "Sunil Mehra - Look 2",
+                coverImg: Jawahar_Jacket_7,
+                gallery: [Jawahar_Jacket_7]
             },
             { 
                 id: "look_jawaharjackets_3",
-                name: "Atelier Signature - Look 3",
-                coverImg: Jawahar_Jacket_11,
-                gallery: [Jawahar_Jacket_11, Jawahar_Jacket_12]
+                name: "Sunil Mehra - Look 3",
+                coverImg: Jawahar_Jacket_13,
+                gallery: [Jawahar_Jacket_13, Jawahar_Jacket_14, Jawahar_Jacket_8, Jawahar_Jacket_15, Jawahar_Jacket_16, Jawahar_Jacket_9, Jawahar_Jacket_10]
             },
             { 
                 id: "look_jawaharjackets_4",
-                name: "Royal Campaign - Look 4",
+                name: "Sunil Mehra - Look 4",
+                coverImg: Jawahar_Jacket_11,
+                gallery: [Jawahar_Jacket_11]
+            },
+            { 
+                id: "look_jawaharjackets_5",
+                name: "Sunil Mehra - Look 5",
+                coverImg: Jawahar_Jacket_12,
+                gallery: [Jawahar_Jacket_12]
+            },
+            { 
+                id: "look_jawaharjackets_6",
+                name: "066A - Look 6",
                 coverImg: Jawahar_Jacket_1,
                 gallery: [Jawahar_Jacket_1, Jawahar_Jacket_2, Jawahar_Jacket_3]
             },
-        ]},
-    "winter-collection": {
-        name: "Winter Collection",
-        edit: "Princely Silhouettes",
-        description: "Premium tailored winter wear. Elegant structured double-breasted coats, trench layers, and rich wool suits.",
+        ]
+    },
+    "kurta-sets": {
+        name: "Kurta Sets",
+        edit: "Flowing Heritage",
+        description: "Effortless elegance for every celebration. Minimalist silhouettes paired with intricate detailing, designed for comfort without compromising on grandeur.",
         looks: [
             { 
-                id: "look_wintercollection_1",
-                name: "Atelier Signature - Look 1",
-                coverImg: Winter_Overcoat_0,
-                gallery: [Winter_Overcoat_0, Winter_Overcoat_16, Winter_Overcoat_17, Winter_Overcoat_18, Winter_Overcoat_1, Winter_Overcoat_2]
+                id: "look_kurtasets_1",
+                name: "Sunil Mehra - Look 1",
+                coverImg: Kurta_Set_3,
+                gallery: [Kurta_Set_3, Kurta_Set_13, Kurta_Set_4]
             },
             { 
-                id: "look_wintercollection_2",
-                name: "Atelier Signature - Look 2",
-                coverImg: Winter_Overcoat_3,
-                gallery: [Winter_Overcoat_3, Winter_Overcoat_4, Winter_Overcoat_19, Winter_Overcoat_5, Winter_Overcoat_6, Winter_Overcoat_7]
+                id: "look_kurtasets_2",
+                name: "Sunil Mehra - Look 2",
+                coverImg: Kurta_Set_14,
+                gallery: [Kurta_Set_14, Kurta_Set_15, Kurta_Set_16]
             },
             { 
-                id: "look_wintercollection_3",
-                name: "Atelier Signature - Look 3",
-                coverImg: Winter_Overcoat_8,
-                gallery: [Winter_Overcoat_8, Winter_Overcoat_20, Winter_Overcoat_9, Winter_Overcoat_10, Winter_Overcoat_11, Winter_Overcoat_12]
+                id: "look_kurtasets_3",
+                name: "Sunil Mehra - Look 3",
+                coverImg: Kurta_Set_5,
+                gallery: [Kurta_Set_5, Kurta_Set_6, Kurta_Set_7]
             },
             { 
-                id: "look_wintercollection_4",
-                name: "Atelier Signature - Look 4",
-                coverImg: Winter_Overcoat_13,
-                gallery: [Winter_Overcoat_13, Winter_Overcoat_14, Winter_Overcoat_15]
+                id: "look_kurtasets_4",
+                name: "Sunil Mehra - Look 4",
+                coverImg: Kurta_Set_17,
+                gallery: [Kurta_Set_17, Kurta_Set_8, Kurta_Set_9]
             },
-        ]},
-    suits: {
-        name: "Sartorial Suits",
-        edit: "Sharply Cut",
-        description: "Sharply cut for the modern gentleman. Double-breasted and single-breasted options in wool and silk blends.",
+            { 
+                id: "look_kurtasets_5",
+                name: "Sunil Mehra - Look 5",
+                coverImg: Kurta_Set_18,
+                gallery: [Kurta_Set_18]
+            },
+            { 
+                id: "look_kurtasets_6",
+                name: "Sunil Mehra - Look 6",
+                coverImg: Kurta_Set_19,
+                gallery: [Kurta_Set_19, Kurta_Set_10, Kurta_Set_20]
+            },
+            { 
+                id: "look_kurtasets_7",
+                name: "Sunil Mehra - Look 7",
+                coverImg: Kurta_Set_21,
+                gallery: [Kurta_Set_21, Kurta_Set_11, Kurta_Set_22]
+            },
+            { 
+                id: "look_kurtasets_8",
+                name: "Sunil Mehra - Look 8",
+                coverImg: Kurta_Set_0,
+                gallery: [Kurta_Set_0]
+            },
+            { 
+                id: "look_kurtasets_9",
+                name: "IMG - Look 9",
+                coverImg: Kurta_Set_1,
+                gallery: [Kurta_Set_1]
+            },
+            { 
+                id: "look_kurtasets_10",
+                name: "IMG - Look 10",
+                coverImg: Kurta_Set_12,
+                gallery: [Kurta_Set_12, Kurta_Set_2]
+            },
+        ]
+    },
+    "suits": {
+        name: "Suits",
+        edit: "The Modern Cut",
+        description: "Impeccably tailored suits for the contemporary gentleman. Featuring sharp lines, premium Italian wools, and a flawless fit for the boardroom to the ballroom.",
         looks: [
             { 
                 id: "look_suits_1",
-                name: "Bespoke Focus - Look 1",
+                name: "IMG - Look 1",
                 coverImg: Sartorial_Suit_100,
-                gallery: [Sartorial_Suit_100, Sartorial_Suit_101, Sartorial_Suit_161, Sartorial_Suit_0, Sartorial_Suit_1, Sartorial_Suit_2]
+                gallery: [Sartorial_Suit_100, Sartorial_Suit_101, Sartorial_Suit_161]
             },
             { 
                 id: "look_suits_2",
-                name: "Bespoke Focus - Look 2",
-                coverImg: Sartorial_Suit_3,
-                gallery: [Sartorial_Suit_3, Sartorial_Suit_4, Sartorial_Suit_5, Sartorial_Suit_6, Sartorial_Suit_7, Sartorial_Suit_98]
+                name: "IMG - Look 2",
+                coverImg: Sartorial_Suit_0,
+                gallery: [Sartorial_Suit_0, Sartorial_Suit_1, Sartorial_Suit_2, Sartorial_Suit_3]
             },
             { 
                 id: "look_suits_3",
-                name: "Bespoke Focus - Look 3",
-                coverImg: Sartorial_Suit_99,
-                gallery: [Sartorial_Suit_99, Sartorial_Suit_160, Sartorial_Suit_8, Sartorial_Suit_9, Sartorial_Suit_10, Sartorial_Suit_11]
+                name: "IMG - Look 3",
+                coverImg: Sartorial_Suit_4,
+                gallery: [Sartorial_Suit_4, Sartorial_Suit_5, Sartorial_Suit_6]
             },
             { 
                 id: "look_suits_4",
-                name: "Atelier Signature - Look 4",
-                coverImg: Sartorial_Suit_162,
-                gallery: [Sartorial_Suit_162, Sartorial_Suit_163, Sartorial_Suit_164, Sartorial_Suit_102, Sartorial_Suit_12, Sartorial_Suit_165]
+                name: "IMG - Look 4",
+                coverImg: Sartorial_Suit_7,
+                gallery: [Sartorial_Suit_7, Sartorial_Suit_98]
             },
             { 
                 id: "look_suits_5",
-                name: "Atelier Signature - Look 5",
-                coverImg: Sartorial_Suit_13,
-                gallery: [Sartorial_Suit_13, Sartorial_Suit_166, Sartorial_Suit_14, Sartorial_Suit_103, Sartorial_Suit_104, Sartorial_Suit_105]
+                name: "IMG - Look 5",
+                coverImg: Sartorial_Suit_99,
+                gallery: [Sartorial_Suit_99, Sartorial_Suit_160, Sartorial_Suit_8]
             },
             { 
                 id: "look_suits_6",
-                name: "Atelier Signature - Look 6",
-                coverImg: Sartorial_Suit_106,
-                gallery: [Sartorial_Suit_106, Sartorial_Suit_107, Sartorial_Suit_108, Sartorial_Suit_167, Sartorial_Suit_15, Sartorial_Suit_109]
+                name: "IMG - Look 6",
+                coverImg: Sartorial_Suit_9,
+                gallery: [Sartorial_Suit_9, Sartorial_Suit_10, Sartorial_Suit_11]
             },
             { 
                 id: "look_suits_7",
-                name: "Atelier Signature - Look 7",
-                coverImg: Sartorial_Suit_16,
-                gallery: [Sartorial_Suit_16, Sartorial_Suit_168, Sartorial_Suit_169, Sartorial_Suit_110, Sartorial_Suit_111, Sartorial_Suit_170]
+                name: "Sunil Mehra - Look 7",
+                coverImg: Sartorial_Suit_162,
+                gallery: [Sartorial_Suit_162, Sartorial_Suit_163, Sartorial_Suit_164, Sartorial_Suit_36, Sartorial_Suit_102, Sartorial_Suit_37, Sartorial_Suit_12, Sartorial_Suit_165]
             },
             { 
                 id: "look_suits_8",
-                name: "Atelier Signature - Look 8",
-                coverImg: Sartorial_Suit_112,
-                gallery: [Sartorial_Suit_112, Sartorial_Suit_17, Sartorial_Suit_113, Sartorial_Suit_114, Sartorial_Suit_18, Sartorial_Suit_115]
+                name: "Sunil Mehra - Look 8",
+                coverImg: Sartorial_Suit_13,
+                gallery: [Sartorial_Suit_13]
             },
             { 
                 id: "look_suits_9",
-                name: "Atelier Signature - Look 9",
-                coverImg: Sartorial_Suit_19,
-                gallery: [Sartorial_Suit_19, Sartorial_Suit_171, Sartorial_Suit_20, Sartorial_Suit_116, Sartorial_Suit_117, Sartorial_Suit_118]
+                name: "Sunil Mehra - Look 9",
+                coverImg: Sartorial_Suit_166,
+                gallery: [Sartorial_Suit_166, Sartorial_Suit_14, Sartorial_Suit_103, Sartorial_Suit_104, Sartorial_Suit_105, Sartorial_Suit_106, Sartorial_Suit_107, Sartorial_Suit_108]
             },
             { 
                 id: "look_suits_10",
-                name: "Atelier Signature - Look 10",
-                coverImg: Sartorial_Suit_119,
-                gallery: [Sartorial_Suit_119, Sartorial_Suit_172, Sartorial_Suit_120, Sartorial_Suit_173, Sartorial_Suit_121, Sartorial_Suit_174]
+                name: "Sunil Mehra - Look 10",
+                coverImg: Sartorial_Suit_167,
+                gallery: [Sartorial_Suit_167, Sartorial_Suit_15, Sartorial_Suit_109, Sartorial_Suit_16, Sartorial_Suit_168, Sartorial_Suit_169, Sartorial_Suit_110, Sartorial_Suit_111]
             },
             { 
                 id: "look_suits_11",
-                name: "Atelier Signature - Look 11",
-                coverImg: Sartorial_Suit_175,
-                gallery: [Sartorial_Suit_175, Sartorial_Suit_176, Sartorial_Suit_177, Sartorial_Suit_178, Sartorial_Suit_179, Sartorial_Suit_180]
+                name: "Sunil Mehra - Look 11",
+                coverImg: Sartorial_Suit_170,
+                gallery: [Sartorial_Suit_170, Sartorial_Suit_112, Sartorial_Suit_17, Sartorial_Suit_113, Sartorial_Suit_114, Sartorial_Suit_18, Sartorial_Suit_38, Sartorial_Suit_115]
             },
             { 
                 id: "look_suits_12",
-                name: "Atelier Signature - Look 12",
-                coverImg: Sartorial_Suit_122,
-                gallery: [Sartorial_Suit_122, Sartorial_Suit_123, Sartorial_Suit_124, Sartorial_Suit_181, Sartorial_Suit_182, Sartorial_Suit_183]
+                name: "Sunil Mehra - Look 12",
+                coverImg: Sartorial_Suit_39,
+                gallery: [Sartorial_Suit_39, Sartorial_Suit_19, Sartorial_Suit_171, Sartorial_Suit_20, Sartorial_Suit_116, Sartorial_Suit_117]
             },
             { 
                 id: "look_suits_13",
-                name: "Atelier Signature - Look 13",
-                coverImg: Sartorial_Suit_125,
-                gallery: [Sartorial_Suit_125, Sartorial_Suit_21, Sartorial_Suit_126, Sartorial_Suit_127, Sartorial_Suit_184, Sartorial_Suit_22]
+                name: "Sunil Mehra - Look 13",
+                coverImg: Sartorial_Suit_118,
+                gallery: [Sartorial_Suit_118, Sartorial_Suit_119, Sartorial_Suit_172, Sartorial_Suit_120, Sartorial_Suit_173, Sartorial_Suit_40, Sartorial_Suit_121, Sartorial_Suit_174]
             },
             { 
                 id: "look_suits_14",
-                name: "Atelier Signature - Look 14",
-                coverImg: Sartorial_Suit_23,
-                gallery: [Sartorial_Suit_23, Sartorial_Suit_24, Sartorial_Suit_128, Sartorial_Suit_129, Sartorial_Suit_185, Sartorial_Suit_130]
+                name: "Sunil Mehra - Look 14",
+                coverImg: Sartorial_Suit_175,
+                gallery: [Sartorial_Suit_175, Sartorial_Suit_176, Sartorial_Suit_177]
             },
             { 
                 id: "look_suits_15",
-                name: "Atelier Signature - Look 15",
-                coverImg: Sartorial_Suit_131,
-                gallery: [Sartorial_Suit_131, Sartorial_Suit_25, Sartorial_Suit_132, Sartorial_Suit_26, Sartorial_Suit_27, Sartorial_Suit_28]
+                name: "Sunil Mehra - Look 15",
+                coverImg: Sartorial_Suit_178,
+                gallery: [Sartorial_Suit_178, Sartorial_Suit_179, Sartorial_Suit_180, Sartorial_Suit_122, Sartorial_Suit_123, Sartorial_Suit_124]
             },
             { 
                 id: "look_suits_16",
-                name: "Atelier Signature - Look 16",
-                coverImg: Sartorial_Suit_186,
-                gallery: [Sartorial_Suit_186, Sartorial_Suit_29, Sartorial_Suit_133, Sartorial_Suit_30, Sartorial_Suit_134, Sartorial_Suit_31]
+                name: "Sunil Mehra - Look 16",
+                coverImg: Sartorial_Suit_181,
+                gallery: [Sartorial_Suit_181, Sartorial_Suit_182, Sartorial_Suit_183]
             },
             { 
                 id: "look_suits_17",
-                name: "Atelier Signature - Look 17",
-                coverImg: Sartorial_Suit_32,
-                gallery: [Sartorial_Suit_32, Sartorial_Suit_135, Sartorial_Suit_33, Sartorial_Suit_136, Sartorial_Suit_137, Sartorial_Suit_34]
+                name: "Sunil Mehra - Look 17",
+                coverImg: Sartorial_Suit_125,
+                gallery: [Sartorial_Suit_125, Sartorial_Suit_21, Sartorial_Suit_126, Sartorial_Suit_127, Sartorial_Suit_184]
             },
             { 
                 id: "look_suits_18",
-                name: "Atelier Signature - Look 18",
-                coverImg: Sartorial_Suit_138,
-                gallery: [Sartorial_Suit_138, Sartorial_Suit_35, Sartorial_Suit_36, Sartorial_Suit_37, Sartorial_Suit_38, Sartorial_Suit_39]
+                name: "Sunil Mehra - Look 18",
+                coverImg: Sartorial_Suit_22,
+                gallery: [Sartorial_Suit_22, Sartorial_Suit_23, Sartorial_Suit_24, Sartorial_Suit_128, Sartorial_Suit_129, Sartorial_Suit_185, Sartorial_Suit_130, Sartorial_Suit_131]
             },
             { 
                 id: "look_suits_19",
-                name: "Atelier Signature - Look 19",
-                coverImg: Sartorial_Suit_40,
-                gallery: [Sartorial_Suit_40, Sartorial_Suit_41, Sartorial_Suit_64, Sartorial_Suit_42, Sartorial_Suit_43, Sartorial_Suit_44]
+                name: "Sunil Mehra - Look 19",
+                coverImg: Sartorial_Suit_25,
+                gallery: [Sartorial_Suit_25, Sartorial_Suit_132, Sartorial_Suit_26, Sartorial_Suit_27, Sartorial_Suit_28, Sartorial_Suit_186, Sartorial_Suit_29, Sartorial_Suit_133]
             },
             { 
                 id: "look_suits_20",
-                name: "Atelier Signature - Look 20",
-                coverImg: Sartorial_Suit_139,
-                gallery: [Sartorial_Suit_139, Sartorial_Suit_45, Sartorial_Suit_46, Sartorial_Suit_47, Sartorial_Suit_48, Sartorial_Suit_49]
+                name: "Sunil Mehra - Look 20",
+                coverImg: Sartorial_Suit_30,
+                gallery: [Sartorial_Suit_30, Sartorial_Suit_134, Sartorial_Suit_31, Sartorial_Suit_32, Sartorial_Suit_135, Sartorial_Suit_33, Sartorial_Suit_136, Sartorial_Suit_137]
             },
             { 
                 id: "look_suits_21",
-                name: "Atelier Signature - Look 21",
-                coverImg: Sartorial_Suit_65,
-                gallery: [Sartorial_Suit_65, Sartorial_Suit_66, Sartorial_Suit_50, Sartorial_Suit_51, Sartorial_Suit_52, Sartorial_Suit_53]
+                name: "Sunil Mehra - Look 21",
+                coverImg: Sartorial_Suit_34,
+                gallery: [Sartorial_Suit_34, Sartorial_Suit_138, Sartorial_Suit_35]
             },
             { 
                 id: "look_suits_22",
-                name: "Atelier Signature - Look 22",
-                coverImg: Sartorial_Suit_54,
-                gallery: [Sartorial_Suit_54, Sartorial_Suit_55, Sartorial_Suit_56, Sartorial_Suit_140]
+                name: "Sunil Mehra - Look 22",
+                coverImg: Sartorial_Suit_41,
+                gallery: [Sartorial_Suit_41, Sartorial_Suit_64]
             },
             { 
                 id: "look_suits_23",
-                name: "Royal Campaign - Look 23",
-                coverImg: Sartorial_Suit_61,
-                gallery: [Sartorial_Suit_61, Sartorial_Suit_68, Sartorial_Suit_69, Sartorial_Suit_70, Sartorial_Suit_71, Sartorial_Suit_72]
+                name: "Sunil Mehra - Look 23",
+                coverImg: Sartorial_Suit_42,
+                gallery: [Sartorial_Suit_42]
             },
             { 
                 id: "look_suits_24",
-                name: "Royal Campaign - Look 24",
-                coverImg: Sartorial_Suit_73,
-                gallery: [Sartorial_Suit_73, Sartorial_Suit_74, Sartorial_Suit_75, Sartorial_Suit_76, Sartorial_Suit_77, Sartorial_Suit_78]
+                name: "Sunil Mehra - Look 24",
+                coverImg: Sartorial_Suit_43,
+                gallery: [Sartorial_Suit_43]
             },
             { 
                 id: "look_suits_25",
-                name: "Royal Campaign - Look 25",
-                coverImg: Sartorial_Suit_79,
-                gallery: [Sartorial_Suit_79, Sartorial_Suit_80, Sartorial_Suit_81, Sartorial_Suit_82, Sartorial_Suit_83, Sartorial_Suit_84]
+                name: "Sunil Mehra - Look 25",
+                coverImg: Sartorial_Suit_44,
+                gallery: [Sartorial_Suit_44, Sartorial_Suit_139]
             },
             { 
                 id: "look_suits_26",
-                name: "Royal Campaign - Look 26",
-                coverImg: Sartorial_Suit_85,
-                gallery: [Sartorial_Suit_85, Sartorial_Suit_86, Sartorial_Suit_87, Sartorial_Suit_88, Sartorial_Suit_89, Sartorial_Suit_90]
+                name: "Sunil Mehra - Look 26",
+                coverImg: Sartorial_Suit_45,
+                gallery: [Sartorial_Suit_45, Sartorial_Suit_46, Sartorial_Suit_47]
             },
             { 
                 id: "look_suits_27",
-                name: "Royal Campaign - Look 27",
-                coverImg: Sartorial_Suit_91,
-                gallery: [Sartorial_Suit_91, Sartorial_Suit_92, Sartorial_Suit_93, Sartorial_Suit_94, Sartorial_Suit_95, Sartorial_Suit_96]
+                name: "Sunil Mehra - Look 27",
+                coverImg: Sartorial_Suit_48,
+                gallery: [Sartorial_Suit_48]
             },
             { 
                 id: "look_suits_28",
-                name: "Royal Campaign - Look 28",
-                coverImg: Sartorial_Suit_97,
-                gallery: [Sartorial_Suit_97, Sartorial_Suit_148, Sartorial_Suit_149, Sartorial_Suit_150, Sartorial_Suit_151, Sartorial_Suit_152]
+                name: "Sunil Mehra - Look 28",
+                coverImg: Sartorial_Suit_49,
+                gallery: [Sartorial_Suit_49]
             },
             { 
                 id: "look_suits_29",
-                name: "Royal Campaign - Look 29",
-                coverImg: Sartorial_Suit_153,
-                gallery: [Sartorial_Suit_153, Sartorial_Suit_154, Sartorial_Suit_155, Sartorial_Suit_156, Sartorial_Suit_157, Sartorial_Suit_158]
+                name: "Sunil Mehra - Look 29",
+                coverImg: Sartorial_Suit_65,
+                gallery: [Sartorial_Suit_65, Sartorial_Suit_66, Sartorial_Suit_50]
             },
             { 
                 id: "look_suits_30",
-                name: "Royal Campaign - Look 30",
-                coverImg: Sartorial_Suit_159,
-                gallery: [Sartorial_Suit_159]
+                name: "Sunil Mehra - Look 30",
+                coverImg: Sartorial_Suit_51,
+                gallery: [Sartorial_Suit_51]
             },
             { 
                 id: "look_suits_31",
-                name: "Thar Desert Edit - Look 31",
-                coverImg: Sartorial_Suit_57,
-                gallery: [Sartorial_Suit_57, Sartorial_Suit_58, Sartorial_Suit_59, Sartorial_Suit_60, Sartorial_Suit_141, Sartorial_Suit_142]
+                name: "Sunil Mehra - Look 31",
+                coverImg: Sartorial_Suit_52,
+                gallery: [Sartorial_Suit_52]
             },
             { 
                 id: "look_suits_32",
-                name: "Thar Desert Edit - Look 32",
-                coverImg: Sartorial_Suit_143,
-                gallery: [Sartorial_Suit_143, Sartorial_Suit_144, Sartorial_Suit_145, Sartorial_Suit_146, Sartorial_Suit_147]
+                name: "Sunil Mehra - Look 32",
+                coverImg: Sartorial_Suit_53,
+                gallery: [Sartorial_Suit_53]
             },
             { 
                 id: "look_suits_33",
-                name: "Suits Look 33",
-                coverImg: Sartorial_Suit_63,
-                gallery: [Sartorial_Suit_63]
+                name: "Sunil Mehra - Look 33",
+                coverImg: Sartorial_Suit_54,
+                gallery: [Sartorial_Suit_54, Sartorial_Suit_55]
             },
             { 
                 id: "look_suits_34",
-                name: "Suits Look 34",
+                name: "Sunil Mehra - Look 34",
+                coverImg: Sartorial_Suit_56,
+                gallery: [Sartorial_Suit_56]
+            },
+            { 
+                id: "look_suits_35",
+                name: "Sunil Mehra - Look 35",
+                coverImg: Sartorial_Suit_140,
+                gallery: [Sartorial_Suit_140]
+            },
+            { 
+                id: "look_suits_36",
+                name: "Tripti - Look 36",
+                coverImg: Sartorial_Suit_141,
+                gallery: [Sartorial_Suit_141, Sartorial_Suit_142, Sartorial_Suit_143, Sartorial_Suit_144, Sartorial_Suit_57, Sartorial_Suit_58, Sartorial_Suit_145, Sartorial_Suit_59]
+            },
+            { 
+                id: "look_suits_37",
+                name: "Tripti - Look 37",
+                coverImg: Sartorial_Suit_146,
+                gallery: [Sartorial_Suit_146, Sartorial_Suit_60, Sartorial_Suit_147]
+            },
+            { 
+                id: "look_suits_38",
+                name: "066A - Look 38",
+                coverImg: Sartorial_Suit_148,
+                gallery: [Sartorial_Suit_148, Sartorial_Suit_149, Sartorial_Suit_150, Sartorial_Suit_68, Sartorial_Suit_69, Sartorial_Suit_70, Sartorial_Suit_151, Sartorial_Suit_152]
+            },
+            { 
+                id: "look_suits_39",
+                name: "066A - Look 39",
+                coverImg: Sartorial_Suit_153,
+                gallery: [Sartorial_Suit_153, Sartorial_Suit_71, Sartorial_Suit_154, Sartorial_Suit_72, Sartorial_Suit_155, Sartorial_Suit_156, Sartorial_Suit_61, Sartorial_Suit_73]
+            },
+            { 
+                id: "look_suits_40",
+                name: "066A - Look 40",
+                coverImg: Sartorial_Suit_157,
+                gallery: [Sartorial_Suit_157, Sartorial_Suit_158, Sartorial_Suit_74, Sartorial_Suit_75, Sartorial_Suit_76]
+            },
+            { 
+                id: "look_suits_41",
+                name: "066A - Look 41",
+                coverImg: Sartorial_Suit_77,
+                gallery: [Sartorial_Suit_77, Sartorial_Suit_78, Sartorial_Suit_79, Sartorial_Suit_80, Sartorial_Suit_81, Sartorial_Suit_82, Sartorial_Suit_83, Sartorial_Suit_84]
+            },
+            { 
+                id: "look_suits_42",
+                name: "066A - Look 42",
+                coverImg: Sartorial_Suit_85,
+                gallery: [Sartorial_Suit_85, Sartorial_Suit_86, Sartorial_Suit_87, Sartorial_Suit_88, Sartorial_Suit_89]
+            },
+            { 
+                id: "look_suits_43",
+                name: "066A - Look 43",
+                coverImg: Sartorial_Suit_90,
+                gallery: [Sartorial_Suit_90, Sartorial_Suit_91, Sartorial_Suit_92]
+            },
+            { 
+                id: "look_suits_44",
+                name: "066A - Look 44",
+                coverImg: Sartorial_Suit_93,
+                gallery: [Sartorial_Suit_93, Sartorial_Suit_159, Sartorial_Suit_94, Sartorial_Suit_95, Sartorial_Suit_96, Sartorial_Suit_97]
+            },
+            { 
+                id: "look_suits_45",
+                name: "24358bda-972a-42e5-a853-c60544fab - Look 45",
                 coverImg: Sartorial_Suit_62,
                 gallery: [Sartorial_Suit_62]
             },
             { 
-                id: "look_suits_35",
-                name: "Suits Look 35",
+                id: "look_suits_46",
+                name: "95f9791b-79cd- - Look 46",
+                coverImg: Sartorial_Suit_63,
+                gallery: [Sartorial_Suit_63]
+            },
+            { 
+                id: "look_suits_47",
+                name: "Misc - Look 47",
                 coverImg: Sartorial_Suit_67,
                 gallery: [Sartorial_Suit_67]
             },
-        ]},
-    accessories: {
-        name: "Atelier Accessories",
-        edit: "Finishing Details",
-        description: "Bespoke leather bags, ostrich skin wallets, hand-crafted footwear, and detailed brooches to complete the silhouette.",
+        ]
+    },
+    "winter-collection": {
+        name: "Winter Collection",
+        edit: "Warmth & Elegance",
+        description: "Layered luxury for the colder months. Hand-spun pashminas, structured overcoats, and rich velvets that command attention.",
+        looks: [
+            { 
+                id: "look_wintercollection_1",
+                name: "Sunil Mehra - Look 1",
+                coverImg: Winter_Overcoat_0,
+                gallery: [Winter_Overcoat_0, Winter_Overcoat_16, Winter_Overcoat_17, Winter_Overcoat_18, Winter_Overcoat_1]
+            },
+            { 
+                id: "look_wintercollection_2",
+                name: "Sunil Mehra - Look 2",
+                coverImg: Winter_Overcoat_2,
+                gallery: [Winter_Overcoat_2]
+            },
+            { 
+                id: "look_wintercollection_3",
+                name: "Sunil Mehra - Look 3",
+                coverImg: Winter_Overcoat_3,
+                gallery: [Winter_Overcoat_3, Winter_Overcoat_4, Winter_Overcoat_19]
+            },
+            { 
+                id: "look_wintercollection_4",
+                name: "Sunil Mehra - Look 4",
+                coverImg: Winter_Overcoat_5,
+                gallery: [Winter_Overcoat_5, Winter_Overcoat_6, Winter_Overcoat_7, Winter_Overcoat_8]
+            },
+            { 
+                id: "look_wintercollection_5",
+                name: "Sunil Mehra - Look 5",
+                coverImg: Winter_Overcoat_20,
+                gallery: [Winter_Overcoat_20, Winter_Overcoat_9, Winter_Overcoat_10, Winter_Overcoat_11, Winter_Overcoat_12, Winter_Overcoat_13, Winter_Overcoat_14, Winter_Overcoat_15]
+            },
+        ]
+    },
+    "accessories": {
+        name: "Accessories",
+        edit: "The Final Touch",
+        description: "Curated essentials to complete the look. From hand-welted leather shoes to silk pocket squares, every detail matters.",
         subcategories: [
-            { id: "bags", name: "Bags", count: 12, img: Bag_0, desc: "Bespoke leather travel luggage, portfolios, and daily document cases." },
-            { id: "brooches", name: "Brooches", count: 4, img: Broach_0, desc: "Intricately detailed gold crests, silver pins, and maison emblems." },
-            { id: "lace-ups", name: "Lace-ups", count: 3, img: Lace_up_0, desc: "Hand-crafted formal oxfords and derbies built from premium skins." },
-            { id: "loafers", name: "Loafers", count: 6, img: Loafer_0, desc: "Sophisticated suede slip-ons, tassel loafers, and heritage penny cuts." },
-            { id: "monks", name: "Monks", count: 4, img: Monk_0, desc: "Classic single and double strap burnished leather monk shoes." },
-            { id: "wallets", name: "Wallets", count: 4, img: Wallet_0, desc: "Bespoke ostrich leather billfolds, cardholders, and travel organizers." },
-            { id: "sneakers", name: "Sneakers", count: 7, img: Sneaker_0, desc: "Minimalist calfskin, textured suede, and premium sport runners." }
+            { id: "bags", name: "Bags" },
+            { id: "broach", name: "Broach" },
+            { id: "brooks-lace-up", name: "Brooks Lace up" },
+            { id: "loafers", name: "Loafers" },
+            { id: "monks", name: "Monks" },
+            { id: "ostrich-leather-wallet", name: "Ostrich Leather Wallet" },
+            { id: "sneakers", name: "Sneakers" },
         ],
         looks: [
-            { name: "Bag — Piece 01", coverImg: Bag_0, subcat: "bags" },
-            { name: "Bag — Piece 02", coverImg: Bag_1, subcat: "bags" },
-            { name: "Bag — Piece 03", coverImg: Bag_2, subcat: "bags" },
-            { name: "Bag — Piece 04", coverImg: Bag_3, subcat: "bags" },
-            { name: "Bag — Piece 05", coverImg: Bag_4, subcat: "bags" },
-            { name: "Bag — Piece 06", coverImg: Bag_5, subcat: "bags" },
-            { name: "Bag — Piece 07", coverImg: Bag_6, subcat: "bags" },
-            { name: "Bag — Piece 08", coverImg: Bag_7, subcat: "bags" },
-            { name: "Bag — Piece 09", coverImg: Bag_8, subcat: "bags" },
-            { name: "Bag — Piece 10", coverImg: Bag_9, subcat: "bags" },
-            { name: "Bag — Piece 11", coverImg: Bag_10, subcat: "bags" },
-            { name: "Bag — Piece 12", coverImg: Bag_11, subcat: "bags" },
-            { name: "Broach — Piece 01", coverImg: Broach_0, subcat: "brooches" },
-            { name: "Broach — Piece 02", coverImg: Broach_1, subcat: "brooches" },
-            { name: "Broach — Piece 03", coverImg: Broach_2, subcat: "brooches" },
-            { name: "Broach — Piece 04", coverImg: Broach_3, subcat: "brooches" },
-            { name: "Lace up — Piece 01", coverImg: Lace_up_0, subcat: "lace-ups" },
-            { name: "Lace up — Piece 02", coverImg: Lace_up_1, subcat: "lace-ups" },
-            { name: "Lace up — Piece 03", coverImg: Lace_up_2, subcat: "lace-ups" },
-            { name: "Loafer — Piece 01", coverImg: Loafer_0, subcat: "loafers" },
-            { name: "Loafer — Piece 02", coverImg: Loafer_1, subcat: "loafers" },
-            { name: "Loafer — Piece 03", coverImg: Loafer_2, subcat: "loafers" },
-            { name: "Loafer — Piece 04", coverImg: Loafer_3, subcat: "loafers" },
-            { name: "Loafer — Piece 05", coverImg: Loafer_4, subcat: "loafers" },
-            { name: "Loafer — Piece 06", coverImg: Loafer_5, subcat: "loafers" },
-            { name: "Monk — Piece 01", coverImg: Monk_0, subcat: "monks" },
-            { name: "Monk — Piece 02", coverImg: Monk_1, subcat: "monks" },
-            { name: "Monk — Piece 03", coverImg: Monk_2, subcat: "monks" },
-            { name: "Monk — Piece 04", coverImg: Monk_3, subcat: "monks" },
-            { name: "Wallet — Piece 01", coverImg: Wallet_0, subcat: "wallets" },
-            { name: "Wallet — Piece 02", coverImg: Wallet_1, subcat: "wallets" },
-            { name: "Wallet — Piece 03", coverImg: Wallet_2, subcat: "wallets" },
-            { name: "Wallet — Piece 04", coverImg: Wallet_3, subcat: "wallets" },
-            { name: "Sneaker — Piece 01", coverImg: Sneaker_0, subcat: "sneakers" },
-            { name: "Sneaker — Piece 02", coverImg: Sneaker_1, subcat: "sneakers" },
-            { name: "Sneaker — Piece 03", coverImg: Sneaker_2, subcat: "sneakers" },
-            { name: "Sneaker — Piece 04", coverImg: Sneaker_3, subcat: "sneakers" },
-            { name: "Sneaker — Piece 05", coverImg: Sneaker_4, subcat: "sneakers" },
-            { name: "Sneaker — Piece 06", coverImg: Sneaker_5, subcat: "sneakers" },
-            { name: "Sneaker — Piece 07", coverImg: Sneaker_6, subcat: "sneakers" }
+            { 
+                id: "look_accessories_1",
+                name: "Bags - Look 1",
+                subcat: "bags",
+                coverImg: Bag_0,
+                gallery: [Bag_0]
+            },
+            { 
+                id: "look_accessories_2",
+                name: "Bags - Look 2",
+                subcat: "bags",
+                coverImg: Bag_6,
+                gallery: [Bag_6, Bag_7]
+            },
+            { 
+                id: "look_accessories_3",
+                name: "Bags - Look 3",
+                subcat: "bags",
+                coverImg: Bag_1,
+                gallery: [Bag_1]
+            },
+            { 
+                id: "look_accessories_4",
+                name: "Bags - Look 4",
+                subcat: "bags",
+                coverImg: Bag_2,
+                gallery: [Bag_2, Bag_3]
+            },
+            { 
+                id: "look_accessories_5",
+                name: "Bags - Look 5",
+                subcat: "bags",
+                coverImg: Bag_4,
+                gallery: [Bag_4, Bag_5]
+            },
+            { 
+                id: "look_accessories_6",
+                name: "Bags - Look 6",
+                subcat: "bags",
+                coverImg: Bag_8,
+                gallery: [Bag_8, Bag_9, Bag_10, Bag_11]
+            },
+            { 
+                id: "look_accessories_7",
+                name: "Broach - Look 7",
+                subcat: "broach",
+                coverImg: Broach_0,
+                gallery: [Broach_0, Broach_1, Broach_2, Broach_3]
+            },
+            { 
+                id: "look_accessories_8",
+                name: "Brooks Lace up - Look 8",
+                subcat: "brooks-lace-up",
+                coverImg: Lace_up_0,
+                gallery: [Lace_up_0, Lace_up_1]
+            },
+            { 
+                id: "look_accessories_9",
+                name: "Brooks Lace up - Look 9",
+                subcat: "brooks-lace-up",
+                coverImg: Lace_up_2,
+                gallery: [Lace_up_2]
+            },
+            { 
+                id: "look_accessories_10",
+                name: "Loafers - Look 10",
+                subcat: "loafers",
+                coverImg: Loafer_0,
+                gallery: [Loafer_0]
+            },
+            { 
+                id: "look_accessories_11",
+                name: "Loafers - Look 11",
+                subcat: "loafers",
+                coverImg: Loafer_2,
+                gallery: [Loafer_2, Loafer_1, Loafer_3]
+            },
+            { 
+                id: "look_accessories_12",
+                name: "Loafers - Look 12",
+                subcat: "loafers",
+                coverImg: Loafer_4,
+                gallery: [Loafer_4, Loafer_5]
+            },
+            { 
+                id: "look_accessories_13",
+                name: "Monks - Look 13",
+                subcat: "monks",
+                coverImg: Monk_0,
+                gallery: [Monk_0, Monk_1]
+            },
+            { 
+                id: "look_accessories_14",
+                name: "Monks - Look 14",
+                subcat: "monks",
+                coverImg: Monk_2,
+                gallery: [Monk_2, Monk_3]
+            },
+            { 
+                id: "look_accessories_15",
+                name: "Ostrich Leather Wallet - Look 15",
+                subcat: "ostrich-leather-wallet",
+                coverImg: Wallet_0,
+                gallery: [Wallet_0, Wallet_1, Wallet_2, Wallet_3]
+            },
+            { 
+                id: "look_accessories_16",
+                name: "Sneakers - Look 16",
+                subcat: "sneakers",
+                coverImg: Sneaker_0,
+                gallery: [Sneaker_0, Sneaker_1, Sneaker_2, Sneaker_3]
+            },
+            { 
+                id: "look_accessories_17",
+                name: "Sneakers - Look 17",
+                subcat: "sneakers",
+                coverImg: Sneaker_4,
+                gallery: [Sneaker_4, Sneaker_5, Sneaker_6]
+            },
         ]
-    }
+    },
 };

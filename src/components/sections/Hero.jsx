@@ -16,7 +16,7 @@ export default function Hero() {
                 <img
                     src={coverImg}
                     alt="Sunil Mehra"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover object-top"
                     style={{ objectPosition: "center 30%" }}
                     data-testid="hero-image"
                 />
