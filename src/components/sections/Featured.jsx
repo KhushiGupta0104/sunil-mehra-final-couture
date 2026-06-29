@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal, { StaggerReveal, StaggerItem } from "@/components/ui/ScrollReveal";
+import Lightbox from "@/components/shared/Lightbox";
 
 import { WARDROBE_DATA } from "@/data/wardrobeData";
 
@@ -161,75 +162,17 @@ export default function Featured() {
 
             </div>
 
-            {/* Lightbox Modal */}
-            <AnimatePresence>
-                {selectedProd && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={() => setSelectedProd(null)}
-                        className="fixed inset-0 z-[100] flex flex-col justify-between bg-black/95 backdrop-blur-md p-6 sm:p-10"
-                    >
-                        {/* Lightbox Top */}
-                        <div className="flex justify-between items-center w-full shrink-0">
-                            <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--champagne)]">
-                                FEATURED / PIECES — {selectedProd.name.toUpperCase()}
-                            </span>
-                            <button
-                                onClick={() => setSelectedProd(null)}
-                                className="font-luxe text-[10px] uppercase tracking-[0.3em] text-white hover:text-[var(--champagne)] border border-white/20 hover:border-[var(--champagne)] px-6 py-3 transition duration-300"
-                            >
-                                Close <span aria-hidden>×</span>
-                            </button>
-                        </div>
-
-                        {/* Lightbox Middle */}
-                        <div className="relative flex items-center justify-center grow my-6 max-h-[75vh]">
-                            <button
-                                onClick={handlePrev}
-                                className="absolute left-0 sm:left-4 z-10 w-12 h-12 flex items-center justify-center text-white hover:text-[var(--champagne)] bg-black/50 hover:bg-black/80 rounded-full border border-white/10 transition duration-300"
-                                aria-label="Previous image"
-                            >
-                                ❮
-                            </button>
-
-                            <motion.div
-                                key={selectedProd.id}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.95 }}
-                                transition={{ duration: 0.4, ease: "easeOut" }}
-                                className="max-w-full max-h-full aspect-[3/4] overflow-hidden"
-                            >
-                                <img
-                                    src={selectedProd.front}
-                                    alt={selectedProd.name}
-                                    className="max-w-full max-h-[65vh] sm:max-h-[70vh] object-contain mx-auto shadow-2xl border border-white/10"
-                                />
-                            </motion.div>
-
-                            <button
-                                onClick={handleNext}
-                                className="absolute right-0 sm:right-4 z-10 w-12 h-12 flex items-center justify-center text-white hover:text-[var(--champagne)] bg-black/50 hover:bg-black/80 rounded-full border border-white/10 transition duration-300"
-                                aria-label="Next image"
-                            >
-                                ❯
-                            </button>
-                        </div>
-
-                        {/* Lightbox Bottom */}
-                        <div className="text-center shrink-0 max-w-xl mx-auto flex flex-col items-center">
-                            <span className="font-luxe text-[9px] uppercase tracking-[0.2em] text-[var(--champagne)]">
-                                {selectedProd.name}
-                            </span>
-                            <p className="font-display text-white text-sm mt-2">
-                                Hand-finished tailoring from the House of Sunil Mehra.
-                            </p>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            {/* Premium Lightbox Modal */}
+            <Lightbox 
+                isOpen={!!selectedProd}
+                onClose={() => setSelectedProd(null)}
+                imageSrc={selectedProd?.front}
+                imageAlt={selectedProd?.name}
+                title={selectedProd ? `FEATURED / PIECES — ${selectedProd.name.toUpperCase()}` : ""}
+                subtitle="Hand-finished tailoring from the House of Sunil Mehra."
+                onNext={handleNext}
+                onPrev={handlePrev}
+            />
         </section>
     );
 }

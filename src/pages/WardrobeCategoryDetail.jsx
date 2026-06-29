@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal, { StaggerReveal, StaggerItem } from "@/components/ui/ScrollReveal";
+import Lightbox from "@/components/shared/Lightbox";
 
 import { WARDROBE_DATA } from "@/data/wardrobeData";
 
@@ -272,95 +273,23 @@ export default function WardrobeCategoryDetail() {
                         <span className="w-10 h-px bg-[var(--hairline)]" />
                     </div>
                 )}
+                {/* Premium Shared Lightbox */}
+                <Lightbox 
+                    isOpen={!!selectedPiece}
+                    onClose={closeLightbox}
+                    imageSrc={selectedPiece?.coverImg}
+                    imageAlt={selectedPiece?.name}
+                    title={pageTitle}
+                    indexInfo={`${currentIndex} / ${allPieces.length}`}
+                    onNext={handleNext}
+                    onPrev={handlePrev}
+                    subtitle={selectedPiece?.name}
+                />
 
                 {/* Bottom CTA */}
                 <BottomCTA />
             </div>
 
-            {/* ═══ LIGHTBOX ═══ */}
-            <AnimatePresence>
-                {selectedPiece && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        onClick={closeLightbox}
-                        className="fixed inset-0 z-[100] flex flex-col bg-black/95 backdrop-blur-lg p-4 sm:p-8"
-                    >
-                        {/* Top bar */}
-                        <div className="flex justify-between items-center w-full shrink-0">
-                            <div className="flex items-center gap-3">
-                                <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--champagne)]">
-                                    {pageTitle}
-                                </span>
-                                <span className="w-px h-3 bg-white/20" />
-                                <span className="font-luxe text-[9px] uppercase tracking-[0.2em] text-white/50">
-                                    {currentIndex} / {allPieces.length}
-                                </span>
-                            </div>
-                            <button
-                                onClick={closeLightbox}
-                                className="font-luxe text-[10px] uppercase tracking-[0.3em] text-white/70 hover:text-white border border-white/15 hover:border-white/40 px-5 py-2.5 transition duration-300"
-                            >
-                                Close <span aria-hidden>×</span>
-                            </button>
-                        </div>
-
-                        {/* Image */}
-                        <div className="relative flex items-center justify-center grow my-4 max-h-[80vh]">
-                            {/* Prev */}
-                            <button
-                                onClick={handlePrev}
-                                className="absolute left-0 sm:left-2 z-10 w-11 h-11 flex items-center justify-center text-white/60 hover:text-white bg-white/5 hover:bg-white/15 rounded-full border border-white/10 hover:border-white/30 transition duration-300"
-                                aria-label="Previous image"
-                            >
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                                </svg>
-                            </button>
-
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={selectedPiece.coverImg}
-                                    initial={{ opacity: 0, scale: 0.97 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.97 }}
-                                    transition={{ duration: 0.25, ease: "easeOut" }}
-                                    className="max-w-full max-h-full overflow-hidden"
-                                >
-                                    <img
-                                        src={selectedPiece.coverImg}
-                                        alt={selectedPiece.name}
-                                        className="max-w-full max-h-[70vh] sm:max-h-[75vh] object-contain mx-auto"
-                                    />
-                                </motion.div>
-                            </AnimatePresence>
-
-                            {/* Next */}
-                            <button
-                                onClick={handleNext}
-                                className="absolute right-0 sm:right-2 z-10 w-11 h-11 flex items-center justify-center text-white/60 hover:text-white bg-white/5 hover:bg-white/15 rounded-full border border-white/10 hover:border-white/30 transition duration-300"
-                                aria-label="Next image"
-                            >
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </button>
-                        </div>
-
-                        {/* Bottom info */}
-                        <div className="text-center shrink-0 flex flex-col items-center gap-1">
-                            <span className="font-luxe text-[9px] uppercase tracking-[0.2em] text-[var(--champagne)]">
-                                {selectedPiece.name}
-                            </span>
-                            <span className="font-luxe text-[8px] uppercase tracking-[0.15em] text-white/30">
-                                ← → to navigate · Esc to close
-                            </span>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
         </div>
     );
 }
