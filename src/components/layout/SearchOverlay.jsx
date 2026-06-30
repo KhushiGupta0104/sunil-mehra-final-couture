@@ -21,11 +21,12 @@ export default function SearchOverlay({ open, onClose }) {
             // 2. Add Subcategories (if any)
             if (categoryData.subcategories) {
                 categoryData.subcategories.forEach(subcat => {
+                    const subcatImg = categoryData.looks?.find(l => l.subcat === subcat.id)?.coverImg || subcat.img || categoryData.looks?.[0]?.coverImg;
                     items.push({
                         type: "subcategory",
                         name: subcat.name,
                         desc: `${categoryData.name} — ${subcat.desc || subcat.name}`,
-                        img: subcat.img || categoryData.looks?.[0]?.coverImg,
+                        img: subcatImg,
                         to: `/wardrobe/${categorySlug}/${subcat.id}`
                     });
                 });

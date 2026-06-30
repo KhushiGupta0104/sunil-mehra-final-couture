@@ -136,11 +136,22 @@ export default function WardrobeCategoryDetail() {
         : (allPieces[0]?.coverImg || null);
 
     // ─────────────── ACCESSORIES HUB ───────────────
+    // ─────────────── ACCESSORIES HUB ───────────────
     if (isAccessoriesHub) {
+        const subcatDescriptions = {
+            "bags": "Bespoke leather travel luggage, portfolios, and daily document cases.",
+            "broach": "Intricately detailed gold crests, silver pins, and maison emblems.",
+            "brooks-lace-up": "Hand-crafted formal oxfords and derbies built from premium skins.",
+            "loafers": "Sophisticated suede slip-ons, tassel loafers, and penny cuts.",
+            "monks": "Classic single and double strap burnished leather monk shoes.",
+            "ostrich-leather-wallet": "Bespoke ostrich leather billfolds, cardholders, and travel organizers.",
+            "sneakers": "Minimalist calfskin, textured suede, and premium sport runners."
+        };
+
         return (
             <div className="relative bg-[var(--bone)] text-[var(--ink)] min-h-screen w-full flex flex-col" data-testid="wardrobe-accessories-hub">
                 {/* Hero */}
-                <HeroHeader title={category.name} edit={category.edit} description={category.description} image={allPieces[0]?.img} />
+                <HeroHeader title={category.name} edit={category.edit} description={category.description} image={allPieces[0]?.coverImg || allPieces[0]?.img} />
 
                 <div className="max-w-[1500px] mx-auto w-full px-6 sm:px-10 lg:px-14 py-16 lg:py-24">
 
@@ -149,41 +160,54 @@ export default function WardrobeCategoryDetail() {
 
                     {/* Subcategories Grid */}
                     <StaggerReveal staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-14 sm:gap-x-8">
-                        {category.subcategories.map((subcat) => (
-                            <StaggerItem key={subcat.id} variant="fade-up">
-                                <Link
-                                    to={`/wardrobe/accessories/${subcat.id}`}
-                                    className="group cursor-pointer flex flex-col w-full"
-                                >
-                                    <div className="relative overflow-hidden border border-[var(--hairline)] aspect-[3/4] bg-[var(--bone)] shadow-sm">
-                                        <img
-                                            src={subcat.img}
-                                            alt={subcat.name}
-                                            loading="lazy"
-                                            className="w-full h-full object-cover object-top transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
-                                        />
-                                        <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                            <span className="bg-[var(--bone)] text-[var(--ink)] text-[9px] uppercase tracking-[0.25em] font-luxe px-5 py-2.5 border border-[var(--hairline)]">
-                                                Explore
-                                            </span>
+                        {category.subcategories.map((subcat) => {
+                            const subcatLooks = category.looks.filter(l => l.subcat === subcat.id);
+                            const count = subcatLooks.length;
+                            const img = subcatLooks[0]?.coverImg || "";
+                            const desc = subcatDescriptions[subcat.id] || subcat.desc || "Curated accessory essentials.";
+
+                            return (
+                                <StaggerItem key={subcat.id} variant="fade-up">
+                                    <Link
+                                        to={`/wardrobe/accessories/${subcat.id}`}
+                                        className="group cursor-pointer flex flex-col w-full"
+                                    >
+                                        <div className="relative overflow-hidden border border-[var(--hairline)] aspect-[3/4] bg-[var(--bone)] shadow-sm">
+                                            {img ? (
+                                                <img
+                                                    src={img}
+                                                    alt={subcat.name}
+                                                    loading="lazy"
+                                                    className="w-full h-full object-cover object-top transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
+                                                />
+                                            ) : (
+                                                <div className="w-full h-full bg-[var(--bone-dark)] flex items-center justify-center text-[10px] tracking-[0.2em] uppercase opacity-40">
+                                                    No Image
+                                                </div>
+                                            )}
+                                            <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                                <span className="bg-[var(--bone)] text-[var(--ink)] text-[9px] uppercase tracking-[0.25em] font-luxe px-5 py-2.5 border border-[var(--hairline)]">
+                                                    Explore
+                                                </span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="mt-5 flex flex-col w-full">
-                                        <div className="flex justify-between items-baseline w-full">
-                                            <h3 className="font-luxe text-sm uppercase tracking-[0.15em] text-[var(--ink)] group-hover:text-[var(--bronze)] transition duration-300">
-                                                {subcat.name}
-                                            </h3>
-                                            <span className="font-display text-[10px] tracking-[0.1em] text-[var(--bronze)] font-semibold uppercase">
-                                                {subcat.count} {subcat.count === 1 ? 'Item' : 'Items'}
-                                            </span>
+                                        <div className="mt-5 flex flex-col w-full">
+                                            <div className="flex justify-between items-baseline w-full">
+                                                <h3 className="font-luxe text-sm uppercase tracking-[0.15em] text-[var(--ink)] group-hover:text-[var(--bronze)] transition duration-300">
+                                                    {subcat.name}
+                                                </h3>
+                                                <span className="font-display text-[10px] tracking-[0.1em] text-[var(--bronze)] font-semibold uppercase">
+                                                    {count} {count === 1 ? 'Item' : 'Items'}
+                                                </span>
+                                            </div>
+                                            <p className="text-[11px] sm:text-xs text-[var(--ink-soft)] leading-relaxed font-light font-body mt-2">
+                                                {desc}
+                                            </p>
                                         </div>
-                                        <p className="text-[11px] sm:text-xs text-[var(--ink-soft)] leading-relaxed font-light font-body mt-2">
-                                            {subcat.desc}
-                                        </p>
-                                    </div>
-                                </Link>
-                            </StaggerItem>
-                        ))}
+                                    </Link>
+                                </StaggerItem>
+                            );
+                        })}
                     </StaggerReveal>
 
                     {/* Bottom CTA */}
