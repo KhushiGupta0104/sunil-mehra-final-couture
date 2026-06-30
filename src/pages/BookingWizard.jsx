@@ -21,7 +21,7 @@ export default function BookingWizard({ onCurationChange }) {
     // Generate flat catalog from WARDROBE_DATA
     const flatCatalog = Object.values(WARDROBE_DATA).flatMap(categoryData => 
         (categoryData.looks || []).map((look, index) => ({
-            id: look.id || `${categoryData.id}-${index}`,
+            id: look.id || `${categoryData.name ? categoryData.name.replace(/\s+/g, '-').toLowerCase() : 'category'}-${index}`,
             name: look.name || `${categoryData.name} — Look ${index + 1}`,
             image_url: look.coverImg,
             category: categoryData.name
@@ -52,6 +52,24 @@ export default function BookingWizard({ onCurationChange }) {
     setLoading(true);
 
     const appointmentDate = new Date(`${date}T${time}`).toISOString();
+    
+    // Map likedDresses IDs to their details for CRM sync
+    const likedDressesDetails = likedDresses.map(id => {
+      const item = catalog.find(c => c.id === id);
+      if (!item) return null;
+      let absoluteImageUrl = item.image_url;
+      if (absoluteImageUrl && !absoluteImageUrl.startsWith('http')) {
+        const path = absoluteImageUrl.startsWith('/') ? absoluteImageUrl : `/${absoluteImageUrl}`;
+        absoluteImageUrl = `${window.location.origin}${path}`;
+      }
+      return {
+        id: item.id,
+        name: item.name,
+        category: item.category,
+        image_url: absoluteImageUrl
+      };
+    }).filter(Boolean);
+
     const payload = {
       name,
       email,
@@ -60,6 +78,7 @@ export default function BookingWizard({ onCurationChange }) {
       notes,
       date: appointmentDate,
       liked_dresses: likedDresses,
+      liked_dresses_details: likedDressesDetails
     };
 
     try {
@@ -87,7 +106,21 @@ export default function BookingWizard({ onCurationChange }) {
 
   // FULL SCREEN CURATION VIEW
   if (step === 2) {
-    const categories = Array.from(new Set(catalog.map(d => d.category)));
+    const categoryOrder = [
+      "Bandhagla Sets & Indo-western",
+      "Jawahar Jackets",
+      "Kurta Sets",
+      "Winter Collection",
+      "Suits",
+      "Accessories"
+    ];
+    const categories = Array.from(new Set(catalog.map(d => d.category))).sort((a, b) => {
+      const idxA = categoryOrder.indexOf(a);
+      const idxB = categoryOrder.indexOf(b);
+      const valA = idxA === -1 ? 998 : idxA;
+      const valB = idxB === -1 ? 998 : idxB;
+      return valA - valB;
+    });
 
     const scrollToCategory = (categoryId) => {
       const element = document.getElementById(`category-${categoryId}`);

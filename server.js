@@ -63,7 +63,7 @@ app.get('/api/appointments', (req, res) => {
 // API endpoint to receive appointment requests
 app.post('/api/appointments', apiLimiter, async (req, res) => {
     try {
-        const { name, email, phone, date, interest, message, instagram_handle, liked_dresses } = req.body;
+        const { name, email, phone, date, interest, message, instagram_handle, liked_dresses, liked_dresses_details } = req.body;
 
         // Basic validation
         if (!name || !name.trim() || !email || !email.trim()) {
@@ -125,6 +125,7 @@ app.post('/api/appointments', apiLimiter, async (req, res) => {
                     contact_phone: phone || '',
                     instagram_handle: instagram_handle || '',
                     liked_dresses: liked_dresses || [],
+                    liked_dresses_details: liked_dresses_details || [],
                     notes: `[Interest: ${interest || 'N/A'}] ${message || ''}`
                 };
 
