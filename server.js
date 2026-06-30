@@ -169,7 +169,12 @@ app.post('/api/appointments', apiLimiter, async (req, res) => {
                         timestamp,
                         name,
                         email,
-                        message: `[Phone: ${phone || ''} | Interest: ${interest || ''}] ${message || ''}`
+                        phone,
+                        date,
+                        instagram_handle,
+                        interest,
+                        liked_dresses,
+                        message
                     })
                 });
 

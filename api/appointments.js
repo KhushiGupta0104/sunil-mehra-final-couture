@@ -122,7 +122,12 @@ export default async function handler(req, res) {
                         timestamp,
                         name: safeName,
                         email: safeEmail,
-                        message: `[Phone: ${safePhone || ''} | Interest: ${safeInterest || ''}] ${safeMessage || ''}`
+                        phone: safePhone,
+                        date,
+                        instagram_handle: safeInstagram,
+                        interest: safeInterest,
+                        liked_dresses,
+                        message: safeMessage
                     })
                 });
 
