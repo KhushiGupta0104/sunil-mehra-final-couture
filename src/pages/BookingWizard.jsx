@@ -315,7 +315,7 @@ export default function BookingWizard({ onCurationChange }) {
                         <input
                           type="tel"
                           required
-                          pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}"
+                          pattern="[0-9+\s().-]{10,20}"
                           title="Please provide a valid phone number."
                           value={phone}
                           onChange={(e) => setPhone(e.target.value.replace(/[^0-9+\s().-]/g, ''))}

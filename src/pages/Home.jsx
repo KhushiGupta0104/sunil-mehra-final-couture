@@ -1,7 +1,6 @@
 import React from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import Hero from "@/components/sections/Hero";
-import Marquee from "@/components/ui/Marquee";
 import Featured from "@/components/sections/Featured";
 import SectionDivider from "@/components/ui/SectionDivider";
 import LookbookGrid from "@/components/wardrobe/LookbookGrid";
@@ -16,7 +15,6 @@ const Home = () => {
     return (
         <PageLayout>
             <Hero />
-            <Marquee />
             <Featured />
             <SectionDivider variant="diamond" className="py-4" />
             <LookbookGrid />

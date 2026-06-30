@@ -72,39 +72,40 @@ export default function WardrobeCategoryDetail() {
     const hasMore = visibleCount < allPieces.length;
     const remaining = allPieces.length - visibleCount;
 
-    // Flatten all images for Lightbox
-    const allImages = useMemo(() => {
-        return allPieces.flatMap(piece => {
-            const gallery = piece.gallery && piece.gallery.length > 0 ? piece.gallery : [piece.coverImg];
-            return gallery.map(imgSrc => ({
-                ...piece,
-                src: imgSrc
-            }));
-        });
-    }, [allPieces]);
+    // Get images for the currently selected outfit
+    const activeOutfitImages = useMemo(() => {
+        if (!selectedPiece) return [];
+        const piece = allPieces.find(p => p.id === selectedPiece.id);
+        if (!piece) return [];
+        const gallery = piece.gallery && piece.gallery.length > 0 ? piece.gallery : [piece.coverImg];
+        return gallery.map(imgSrc => ({
+            ...piece,
+            src: imgSrc
+        }));
+    }, [selectedPiece, allPieces]);
 
     // Lightbox navigation
     const handlePrev = useCallback((e) => {
         if (e) e.stopPropagation();
-        if (!selectedPiece) return;
+        if (!selectedPiece || activeOutfitImages.length === 0) return;
         const currentSrc = selectedPiece.src || selectedPiece.coverImg;
-        const currentIndex = allImages.findIndex(img => img.src === currentSrc);
+        const currentIndex = activeOutfitImages.findIndex(img => img.src === currentSrc);
         if (currentIndex > -1) {
-            const prevIndex = (currentIndex - 1 + allImages.length) % allImages.length;
-            setSelectedPiece(allImages[prevIndex]);
+            const prevIndex = (currentIndex - 1 + activeOutfitImages.length) % activeOutfitImages.length;
+            setSelectedPiece(activeOutfitImages[prevIndex]);
         }
-    }, [selectedPiece, allImages]);
+    }, [selectedPiece, activeOutfitImages]);
 
     const handleNext = useCallback((e) => {
         if (e) e.stopPropagation();
-        if (!selectedPiece) return;
+        if (!selectedPiece || activeOutfitImages.length === 0) return;
         const currentSrc = selectedPiece.src || selectedPiece.coverImg;
-        const currentIndex = allImages.findIndex(img => img.src === currentSrc);
+        const currentIndex = activeOutfitImages.findIndex(img => img.src === currentSrc);
         if (currentIndex > -1) {
-            const nextIndex = (currentIndex + 1) % allImages.length;
-            setSelectedPiece(allImages[nextIndex]);
+            const nextIndex = (currentIndex + 1) % activeOutfitImages.length;
+            setSelectedPiece(activeOutfitImages[nextIndex]);
         }
-    }, [selectedPiece, allImages]);
+    }, [selectedPiece, activeOutfitImages]);
 
     const closeLightbox = useCallback(() => setSelectedPiece(null), []);
 
@@ -344,7 +345,7 @@ export default function WardrobeCategoryDetail() {
                     imageSrc={selectedPiece?.src || selectedPiece?.coverImg}
                     imageAlt={selectedPiece?.name}
                     title={pageTitle}
-                    indexInfo={selectedPiece ? `${allImages.findIndex(img => img.src === (selectedPiece.src || selectedPiece.coverImg)) + 1} / ${allImages.length}` : ""}
+                    indexInfo={selectedPiece ? `${activeOutfitImages.findIndex(img => img.src === (selectedPiece.src || selectedPiece.coverImg)) + 1} / ${activeOutfitImages.length}` : ""}
                     onNext={handleNext}
                     onPrev={handlePrev}
                     subtitle={pageEdit}

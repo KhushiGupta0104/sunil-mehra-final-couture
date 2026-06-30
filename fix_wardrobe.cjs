@@ -104,7 +104,7 @@ for (const [catId, prefixesObj] of Object.entries(grouped)) {
             } else {
                 const prev = currentCluster[currentCluster.length - 1];
                 const gap = imgs[i].num - prev.num;
-                if (gap > 50) {
+                if (gap > 15) {
                     clusters.push(currentCluster);
                     currentCluster = [imgs[i]];
                 } else {

@@ -119,7 +119,7 @@ export default function Gallery() {
                                             src={celeb.src} 
                                             alt={celeb.celebrity}
                                             loading="lazy"
-                                            className="w-full h-full object-cover object-top grayscale contrast-125 brightness-90 sepia-[0.1]"
+                                            className="w-full h-full object-cover object-top"
                                         />
                                     </div>
                                     
@@ -163,7 +163,7 @@ export default function Gallery() {
                                             src={hoveredCeleb.src}
                                             alt={hoveredCeleb.celebrity}
                                             loading="lazy"
-                                            className="w-full h-full object-cover object-top grayscale contrast-125 brightness-90 sepia-[0.1]"
+                                            className="w-full h-full object-cover object-top"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
                                         

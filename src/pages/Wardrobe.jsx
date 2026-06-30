@@ -130,13 +130,13 @@ export default function Wardrobe() {
                 data-testid="wardrobe-section"
             >
                 <div className="max-w-[1500px] mx-auto w-full">
-                    {/* Clean 2-column grid on desktop, 1 on mobile */}
-                    <StaggerReveal staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20 lg:gap-x-24 lg:gap-y-32">
+                    {/* Clean 3-column grid on desktop, 2 on tablet, 1 on mobile */}
+                    <StaggerReveal staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 lg:gap-x-12 lg:gap-y-20">
                         {CATEGORIES.map((c, index) => (
                             <StaggerItem 
                                 key={c.no} 
                                 variant="fade-up" 
-                                className={`lg:col-span-1 ${index % 2 !== 0 ? 'md:mt-32' : ''}`} // Staggered layout on desktop
+                                className="lg:col-span-1"
                             >
                                 <CategoryCard c={c} />
                             </StaggerItem>

@@ -19,8 +19,8 @@ const IVORY_PRODUCTS = [
         name: "Emerald Embroidered Sherwani",
         desc: "Rich, vivid silk elevated by intricate botanical motifs in an exquisite display of craftsmanship.",
         tag: "New",
-        front: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
-        back: WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.gallery?.[0] || WARDROBE_DATA["bandhagala-indo-western"].looks[0]?.coverImg,
+        front: WARDROBE_DATA["bandhagala-indo-western"].looks[8]?.coverImg,
+        back: WARDROBE_DATA["bandhagala-indo-western"].looks[8]?.gallery?.[0] || WARDROBE_DATA["bandhagala-indo-western"].looks[8]?.coverImg,
     },
     {
         id: "p3",
