@@ -173,24 +173,25 @@ div[id="request-form"] {
     z-index: 2;
 }
 
-/* ============ KEN BURNS ============ */
 @keyframes kenburns {
-    0%   { transform: scale(1); }
-    50%  { transform: scale(1.08); }
-    100% { transform: scale(1); }
+    0%   { transform: scale(1) translate3d(0,0,0); }
+    50%  { transform: scale(1.08) translate3d(0,0,0); }
+    100% { transform: scale(1) translate3d(0,0,0); }
 }
 .ken-burns {
     animation: kenburns 25s ease-in-out infinite;
     will-change: transform;
+    backface-visibility: hidden;
 }
 
 @keyframes kenburns-slow {
-    0%   { transform: scale(1.02); }
-    100% { transform: scale(1.12); }
+    0%   { transform: scale(1.02) translate3d(0,0,0); }
+    100% { transform: scale(1.12) translate3d(0,0,0); }
 }
 .ken-burns-slow {
     animation: kenburns-slow 30s ease-in-out infinite alternate;
     will-change: transform;
+    backface-visibility: hidden;
 }
 
 /* ============ CATEGORY HOVER ============ */
@@ -202,9 +203,11 @@ div[id="request-form"] {
 .cat-card img {
     transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), filter 1.4s ease;
     will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 .cat-card:hover img {
-    transform: scale(1.06);
+    transform: scale(1.06) translateZ(0);
     filter: brightness(0.92);
 }
 
@@ -215,13 +218,16 @@ div[id="request-form"] {
 }
 .product-card img {
     transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 .product-card:hover .img-front {
-    transform: scale(1.06);
+    transform: scale(1.06) translateZ(0);
     opacity: 0;
 }
 .product-card:hover .img-back {
-    transform: scale(1.06);
+    transform: scale(1.06) translateZ(0);
     opacity: 1;
 }
 .product-card .img-front {
