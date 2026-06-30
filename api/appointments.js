@@ -106,58 +106,19 @@ export default async function handler(req, res) {
             console.warn('[Vercel Serverless] CRM_WEBHOOK_URL or CRM_WEBHOOK_SECRET is not configured. Skipping CRM integration.');
         }
 
-        // 2. Forward to Google Sheets Webhook
-        let sheetsSuccess = false;
-        const sheetsWebhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL;
-        
-        if (sheetsWebhookUrl && sheetsWebhookUrl.trim() !== '') {
-            console.log(`[Vercel Serverless] Forwarding appointment for "${safeName}" to Google Sheets...`);
-            try {
-                const sheetsResponse = await fetch(sheetsWebhookUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        timestamp,
-                        name: safeName,
-                        email: safeEmail,
-                        phone: safePhone,
-                        date,
-                        instagram_handle: safeInstagram,
-                        interest: safeInterest,
-                        liked_dresses,
-                        message: safeMessage
-                    })
-                });
-
-                if (sheetsResponse.ok) {
-                    console.log('[Vercel Serverless] Successfully forwarded request to Google Sheets.');
-                    sheetsSuccess = true;
-                } else {
-                    const text = await sheetsResponse.text();
-                    console.error(`[Vercel Serverless] Google Sheets Webhook returned status ${sheetsResponse.status}: ${text}`);
-                }
-            } catch (err) {
-                console.error('[Vercel Serverless] Google Sheets Webhook fetch failed:', err);
-            }
-        } else {
-            console.warn('[Vercel Serverless] GOOGLE_SHEET_WEBHOOK_URL is not configured.');
-        }
-
-        // If neither webhook is configured, log an error
-        if (!crmWebhookUrl && !sheetsWebhookUrl) {
+        // If CRM webhook is not configured, log an error
+        if (!crmWebhookUrl) {
             return res.status(500).json({
                 success: false,
-                error: 'Server configuration error: No webhooks are configured.'
+                error: 'Server configuration error: CRM webhook is not configured.'
             });
         }
 
-        // If configured webhooks failed, return error
-        if (!crmSuccess && !sheetsSuccess) {
+        // If CRM webhook failed, return error
+        if (!crmSuccess) {
              return res.status(502).json({
                 success: false,
-                error: crmError || 'Failed to log request. Webhooks returned an error or are not configured.'
+                error: crmError || 'Failed to log request. CRM webhook returned an error.'
             });
         }
 

@@ -153,59 +153,20 @@ app.post('/api/appointments', apiLimiter, async (req, res) => {
             console.warn('[Backend] CRM_WEBHOOK_URL or CRM_WEBHOOK_SECRET is not configured. Skipping CRM integration.');
         }
 
-        // 2. Forward to Google Sheets Webhook
-        let sheetsSuccess = false;
-        const sheetsWebhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL;
-        
-        if (sheetsWebhookUrl && sheetsWebhookUrl.trim() !== '') {
-            console.log(`[Backend] Forwarding appointment for "${name}" to Google Sheets...`);
-            try {
-                const sheetsResponse = await fetch(sheetsWebhookUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        timestamp,
-                        name,
-                        email,
-                        phone,
-                        date,
-                        instagram_handle,
-                        interest,
-                        liked_dresses,
-                        message
-                    })
-                });
-
-                if (sheetsResponse.ok) {
-                    console.log('[Backend] Successfully logged to Google Sheets.');
-                    sheetsSuccess = true;
-                } else {
-                    const text = await sheetsResponse.text();
-                    console.error(`[Backend] Google Sheets Webhook returned error (${sheetsResponse.status}): ${text}`);
-                }
-            } catch (fetchErr) {
-                console.error('[Backend] Network error forwarding to Google Sheets:', fetchErr.message);
-            }
-        } else {
-            console.warn('[Backend] GOOGLE_SHEET_WEBHOOK_URL is not configured.');
-        }
-
-        // If neither webhook is configured, return mock success
-        if (!crmWebhookUrl && !sheetsWebhookUrl) {
-            console.warn('[Backend Warning] No webhooks configured. Logging locally only.');
+        // If CRM webhook is not configured, return mock success
+        if (!crmWebhookUrl) {
+            console.warn('[Backend Warning] CRM webhook not configured. Logging locally only.');
             return res.status(200).json({
                 success: true,
-                message: 'Your appointment request was simulated successfully. (Webhooks not configured)'
+                message: 'Your appointment request was simulated successfully. (CRM webhook not configured)'
             });
         }
 
-        // If configured webhooks failed, return error
-        if (!crmSuccess && !sheetsSuccess) {
+        // If CRM webhook failed, return error
+        if (!crmSuccess) {
              return res.status(502).json({
                 success: false,
-                error: crmError || 'Failed to log request. Webhooks returned an error or are not configured.'
+                error: crmError || 'Failed to log request. CRM webhook returned an error.'
             });
         }
 
