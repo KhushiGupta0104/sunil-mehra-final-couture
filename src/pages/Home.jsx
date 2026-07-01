@@ -17,12 +17,12 @@ const Home = () => {
             <Hero />
             <Featured />
             <SectionDivider variant="diamond" className="py-4" />
+            <VerticalVideoTriptych />
             <LookbookGrid />
             <SectionDivider variant="dot" className="py-4" />
             <HorizontalMediaScroll />
             <SectionDivider variant="monogram" className="py-4" />
             <AtelierShowcase />
-            <VerticalVideoTriptych />
             <Designer />
             <SectionDivider variant="dot" className="py-4" />
             <Manifesto />
