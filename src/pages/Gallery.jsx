@@ -8,9 +8,7 @@ import shantanuImg from "@/assets/images/shantanu_maheshwari.png";
 import ammyImg from "@/assets/images/ammy_virk.png";
 import shreyasImg from "@/assets/images/shreyas_talpade.png";
 import darshanImg1 from "@/assets/images/WhatsApp Image 2026-07-01 at 13.57.32.jpeg";
-import darshanImg2 from "@/assets/images/WhatsApp Image 2026-07-01 at 13.57.33.jpeg";
 import manojImg1 from "@/assets/images/WhatsApp Image 2026-07-01 at 13.57.33 (1).jpeg";
-import manojImg2 from "@/assets/images/WhatsApp Image 2026-07-01 at 13.57.34.jpeg";
 
 const CELEBRITIES = [
     {
@@ -69,28 +67,10 @@ const CELEBRITIES = [
     },
     {
         id: 7,
-        src: darshanImg2,
-        celebrity: "Darshan Kumar (Look II)",
-        tag: "@darshankumaar",
-        caption: "Luxurious brown velvet tuxedo with shawl collar and patterned vest.",
-        occasion: "Actor",
-        instagramUrl: "https://www.instagram.com/darshankumaar/",
-    },
-    {
-        id: 8,
         src: manojImg1,
         celebrity: "Manoj Bajpayee",
         tag: "@bajpayee.manoj",
         caption: "Ivory formal suit with detailed lapel embroidery.",
-        occasion: "Actor",
-        instagramUrl: "https://www.instagram.com/bajpayee.manoj/",
-    },
-    {
-        id: 9,
-        src: manojImg2,
-        celebrity: "Manoj Bajpayee (Look II)",
-        tag: "@bajpayee.manoj",
-        caption: "Striking black pinstripe double-breasted suit.",
         occasion: "Actor",
         instagramUrl: "https://www.instagram.com/bajpayee.manoj/",
     },
