@@ -44,7 +44,7 @@ export default function CinematicWideReel() {
                 <ScrollReveal variant="fade-up" className="relative w-full aspect-[21/9] bg-black border border-white/10 shadow-2xl group overflow-hidden">
                     <video
                         ref={videoRef}
-                        src="/Video 14.mov"
+                        src="/Video 14.mp4"
                         autoPlay
                         loop
                         muted

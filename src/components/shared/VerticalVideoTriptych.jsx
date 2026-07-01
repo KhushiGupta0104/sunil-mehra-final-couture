@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from "react";
 const VIDEOS = [
     { id: 1, src: "/SM 3.mp4" },
     { id: 2, src: "/Video 9 .mp4" },
-    { id: 3, src: "/Video 14.mov" },
+    { id: 3, src: "/Video 14.mp4" },
 ];
 
 function TriptychVideo({ src }) {
