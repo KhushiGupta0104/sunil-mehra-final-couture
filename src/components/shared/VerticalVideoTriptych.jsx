@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from "react";
 
 const VIDEOS = [
-    { id: 1, src: "/SM 3.mov" },
-    { id: 2, src: "/Video 9 .mov" },
+    { id: 1, src: "/SM 3.mp4" },
+    { id: 2, src: "/Video 9 .mp4" },
     { id: 3, src: "/cover.mp4" },
 ];
 
