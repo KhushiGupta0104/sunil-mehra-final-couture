@@ -130,7 +130,7 @@ export default function WardrobeCategoryDetail() {
 
     // Title & breadcrumb
     const pageTitle = isSubcategoryDetail ? subcatInfo.name : category.name;
-    const pageEdit = isSubcategoryDetail ? "Atelier Accessories" : category.edit;
+    const pageEdit = isSubcategoryDetail ? "Studio Accessories" : category.edit;
     const pageDesc = isSubcategoryDetail ? subcatInfo.desc : category.description;
     const coverImage = isSubcategoryDetail
         ? subcatInfo.img
@@ -428,7 +428,7 @@ function BottomCTA() {
                 Tailored for your presence.
             </h3>
             <p className="text-xs sm:text-sm text-[var(--ink-soft)] leading-relaxed font-light font-body max-w-md mx-auto">
-                Experience our signature fits and consult fabric swatches directly with our tailoring concierges at our Sundar Nagar Salon.
+                Experience our signature fits and consult fabric swatches directly with our tailoring concierges at our GK 1 Flagship Store.
             </p>
             <div className="pt-3">
                 <Link

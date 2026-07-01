@@ -32,7 +32,7 @@ export default function HorizontalRunway() {
                             </h2>
                         </div>
                         <p className="font-italic-serif text-sm text-[var(--muted)] max-w-sm">
-                            Scroll to explore the key silhouettes from this season's atelier presentation.
+                            Scroll to explore the key silhouettes from this season's studio presentation.
                         </p>
                     </div>
                 </ScrollReveal>

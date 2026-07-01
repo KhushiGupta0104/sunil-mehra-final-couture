@@ -10,7 +10,7 @@ export default function Navbar({ onMenuOpen, menuOpen, onSearchOpen }) {
 
     // Check if current page should have a light background / dark text header at scroll 0
     const isLightHeaderPage = 
-        location.pathname === "/atelier" ||
+        location.pathname === "/studio" ||
         location.pathname === "/gallery" ||
         location.pathname === "/faq" ||
         location.pathname === "/terms" ||
@@ -129,8 +129,8 @@ export default function Navbar({ onMenuOpen, menuOpen, onSearchOpen }) {
                     <Link to="/#designer" className="hidden lg:inline-block hover:opacity-60 transition">
                         About Us
                     </Link>
-                    <Link to="/#salons" className="hidden lg:inline-block hover:opacity-60 transition">
-                        Salons
+                    <Link to="/#store" className="hidden lg:inline-block hover:opacity-60 transition">
+                        Store
                     </Link>
                     <Link to="/appointment" className="hover:opacity-60 transition font-medium text-[var(--bronze)]">
                         Book Appointment

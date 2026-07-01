@@ -106,7 +106,7 @@ export default function SearchOverlay({ open, onClose }) {
                     {/* Header Controls */}
                     <div className="flex justify-between items-center w-full max-w-[1200px] mx-auto mb-10 sm:mb-16">
                         <span className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[var(--champagne)]">
-                            Search — Sunil Mehra Atelier
+                            Search — Sunil Mehra Studio
                         </span>
                         <button
                             onClick={onClose}

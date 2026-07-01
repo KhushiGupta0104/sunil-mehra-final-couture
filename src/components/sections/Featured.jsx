@@ -24,7 +24,7 @@ const IVORY_PRODUCTS = [
     },
     {
         id: "p3",
-        name: "Classic Atelier Bandhgala",
+        name: "Classic Studio Bandhgala",
         desc: "Timeless silhouette meeting bespoke precision, finished with our signature detailing.",
         tag: null,
         front: WARDROBE_DATA["bandhagala-indo-western"].looks[1]?.coverImg,

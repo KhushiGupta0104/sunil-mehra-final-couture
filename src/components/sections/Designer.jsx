@@ -62,7 +62,7 @@ export default function Designer() {
                         <div className="space-y-4 relative before:absolute before:left-0 before:top-2 before:bottom-2 before:w-px before:bg-[var(--bronze)] before:opacity-30 pl-6 sm:pl-8">
                             <ScrollReveal variant="fade-up" delay={0.2}>
                                 <p className="text-xs sm:text-sm text-[var(--ink)] leading-relaxed max-w-lg font-body">
-                                    For over four decades, the Mehra family has been synonymous with timeless Indian couture. Building upon the celebrated legacy of Study by Janak, Sunil Mehra established his bespoke menswear atelier with a singular vision: to create garments that embody elegance, individuality, and meaning.
+                                    For over four decades, the Mehra family has been synonymous with timeless Indian couture. Building upon the celebrated legacy of Study by Janak, Sunil Mehra established his bespoke menswear studio with a singular vision: to create garments that embody elegance, individuality, and meaning.
                                 </p>
                             </ScrollReveal>
 

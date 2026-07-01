@@ -13,7 +13,7 @@ const REELS = [
         features: ["Handspun Silk", "Tone-on-tone embroidery", "Fluid drape"],
         photos: [
             { src: WARDROBE_DATA["kurta-sets"].looks[4]?.gallery?.[0] || WARDROBE_DATA["kurta-sets"].looks[4]?.coverImg, title: "Structured Collar", category: "Fabric & Fit" },
-            { src: WARDROBE_DATA["kurta-sets"].looks[4]?.gallery?.[1] || WARDROBE_DATA["kurta-sets"].looks[4]?.coverImg, title: "Handspun Weave", category: "Atelier details" }
+            { src: WARDROBE_DATA["kurta-sets"].looks[4]?.gallery?.[1] || WARDROBE_DATA["kurta-sets"].looks[4]?.coverImg, title: "Handspun Weave", category: "Studio details" }
         ]
     },
     { 
@@ -60,7 +60,7 @@ export default function AtelierShowcase() {
                                     Maison Features
                                 </span>
                                 <h2 className="font-display text-3xl lg:text-4xl xl:text-5xl uppercase tracking-[0.05em] text-[var(--ink)] leading-tight">
-                                    The <span className="font-italic-serif italic">Atelier</span><br /> Showcase.
+                                    The <span className="font-italic-serif italic">Studio</span><br /> Showcase.
                                 </h2>
                                 <p className="font-italic-serif text-sm text-[var(--muted)] mt-4 leading-relaxed max-w-xs">
                                     An interactive display featuring fluid silks, master tailoring, and detailed stitch-work.

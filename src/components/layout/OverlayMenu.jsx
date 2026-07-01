@@ -6,19 +6,19 @@ import coverImg from "@/assets/images/cover.jpg";
 const MotionLink = motion.create(Link);
 
 const MENU = [
-    { label: "Couture", hover: "the atelier", to: "/atelier" },
+    { label: "Couture", hover: "the studio", to: "/studio" },
     { label: "The Wardrobe", hover: "six chapters", to: "/wardrobe" },
     { label: "Gallery", hover: "celebrity style", to: "/gallery" },
     { label: "About Us", hover: "about sunil mehra", to: "/#designer" },
     { label: "Lookbook", hover: "stories in cloth", to: "/editorial" },
-    { label: "Salons", hover: "by invitation", to: "/#salons" },
+    { label: "Store", hover: "by invitation", to: "/#store" },
     { label: "Appointment", hover: "private fitting", to: "/appointment" },
 ];
 
 const META = [
-    { label: "Delhi · Flagship", sub: "14 Sundar Nagar Market" },
+    { label: "Delhi · Flagship", sub: "M-66 GK 1, M block market, New Delhi-110048" },
     { label: "Hours & Access", sub: "Mon–Sat, 11 AM – 7:30 PM" },
-    { label: "Concierge & Fittings", sub: "+91 11 4150 1484" },
+    { label: "Concierge & Fittings", sub: "+91 98731 73456" },
 ];
 
 export default function OverlayMenu({ open, onClose }) {
@@ -103,7 +103,7 @@ export default function OverlayMenu({ open, onClose }) {
                     >
                         <img
                             src={coverImg}
-                            alt="Atelier — Sunil Mehra"
+                            alt="Studio — Sunil Mehra"
                             className="absolute inset-0 w-full h-full object-cover ken-burns-slow"
                             style={{ objectPosition: "center" }}
                         />

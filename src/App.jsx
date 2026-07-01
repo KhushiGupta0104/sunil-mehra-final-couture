@@ -8,7 +8,7 @@ import PageLoader from "@/components/ui/PageLoader";
 // Lazy-loaded pages
 const Home = lazy(() => import("@/pages/Home"));
 const Wardrobe = lazy(() => import("@/pages/Wardrobe"));
-const Atelier = lazy(() => import("@/pages/Atelier"));
+const Studio = lazy(() => import("@/pages/Studio"));
 const Gallery = lazy(() => import("@/pages/Gallery"));
 const Editorial = lazy(() => import("@/pages/Editorial"));
 const WardrobeCategoryDetail = lazy(() => import("@/pages/WardrobeCategoryDetail"));
@@ -50,7 +50,7 @@ function App() {
                     <Route path="/wardrobe" element={<PageLayout><Wardrobe /></PageLayout>} />
                     <Route path="/wardrobe/:categorySlug" element={<PageLayout><WardrobeCategoryDetail /></PageLayout>} />
                     <Route path="/wardrobe/:categorySlug/:subCategorySlug" element={<PageLayout><WardrobeCategoryDetail /></PageLayout>} />
-                    <Route path="/atelier" element={<PageLayout><Atelier /></PageLayout>} />
+                    <Route path="/studio" element={<PageLayout><Studio /></PageLayout>} />
                     <Route path="/gallery" element={<PageLayout><Gallery /></PageLayout>} />
                     <Route path="/editorial" element={<PageLayout><Editorial /></PageLayout>} />
                     <Route path="/terms" element={<PageLayout><Terms /></PageLayout>} />

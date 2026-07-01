@@ -33,7 +33,13 @@ const FAQ_DATA = [
     },
     {
         question: "Can outfits be customized?",
-        answer: "Yes. Select creations may be customized in terms of fit, detailing, and design elements, subject to consultation."
+        answer: (
+            <>
+                Yes. At Sunil Mehra, customization is at the heart of our design philosophy. Outfits can be personalized in terms of fit, fabric, colour, detailing, embroidery, and design elements, subject to consultation.
+                <br /><br />
+                Please note that customization requests may affect the final price of the outfit. The price may increase or decrease depending on the extent of the modifications, the level of craftsmanship involved, and the materials selected. Our team will provide a detailed quotation for your approval before the customization process begins.
+            </>
+        )
     },
     {
         question: "How should I care for my outfit?",

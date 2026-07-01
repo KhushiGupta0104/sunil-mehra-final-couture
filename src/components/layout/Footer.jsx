@@ -75,11 +75,12 @@ export default function Footer() {
                     {/* Column 3: Flagship (2 cols) */}
                     <div className="lg:col-span-2 flex flex-col items-start">
                         <p className="font-luxe text-[10px] uppercase tracking-[0.25em] text-[var(--bone)] opacity-50 mb-4">
-                            Flagship Salon
+                            Flagship Store
                         </p>
                         <p className="font-body text-sm text-[var(--bone)] opacity-90 leading-relaxed">
-                            14 Sundar Nagar Market,<br />
-                            New Delhi, 110003,<br />
+                            M-66 GK 1,<br />
+                            M block market,<br />
+                            New Delhi-110048,<br />
                             India
                         </p>
                     </div>
@@ -90,8 +91,8 @@ export default function Footer() {
                             Correspondence
                         </p>
                         <p className="font-body text-sm text-[var(--bone)] opacity-90 leading-relaxed">
-                            T: +91 11 4150 1484<br />
-                            E: <a href="mailto:atelier@sunilmehra.com" className="hover:text-[var(--champagne)] transition-colors underline underline-offset-4 decoration-[var(--bone)] decoration-opacity-30 hover:decoration-opacity-100">atelier@sunilmehra.com</a>
+                            T: +91 98731 73456<br />
+                            E: <a href="mailto:sunilmehragk1@gmail.com" className="hover:text-[var(--champagne)] transition-colors underline underline-offset-4 decoration-[var(--bone)] decoration-opacity-30 hover:decoration-opacity-100">sunilmehragk1@gmail.com</a>
                         </p>
                         <div className="mt-6 flex gap-4 font-luxe uppercase tracking-[0.25em] text-[10px]">
                             <a href="https://www.instagram.com/sunilmehraart/" target="_blank" rel="noopener noreferrer" className="text-[var(--champagne)] hover:text-white transition-colors">

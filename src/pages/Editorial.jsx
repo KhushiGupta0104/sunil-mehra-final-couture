@@ -16,7 +16,7 @@ const STORIES = [
     },
     {
         no: "02",
-        season: "Atelier Accessories",
+        season: "Studio Accessories",
         title: "The Woven Journey",
         excerpt: "Our signature leather duffle is not merely constructed; it is woven by hand. The intricate bottega-style weave requires over forty hours of continuous craftsmanship, resulting in a travel companion that ages beautifully, acquiring a patina unique to your journeys.",
         quote: "Details are not the details. They make the design.",

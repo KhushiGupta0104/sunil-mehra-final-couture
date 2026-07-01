@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from "react";
 
 const VIDEOS = [
-    { id: 1, src: "/REEL 3 SM C2.mp4" },
-    { id: 2, src: "/REEL 7 SM C2.mp4" },
-    { id: 3, src: "/REEL 10 SM C2.mp4" },
+    { id: 1, src: "/SM 3.mov" },
+    { id: 2, src: "/Video 9 .mov" },
+    { id: 3, src: "/cover.mp4" },
 ];
 
 function TriptychVideo({ src }) {

@@ -14,7 +14,7 @@ const CATEGORIES = [
     { id: "wedding", name: "Wedding & Ceremonial", slug: "bandhagala-indo-western", img: weddingImg, count: "01", tagline: "For the grand celebration" },
     { id: "bandhagla", name: "Bandhgala", slug: "bandhagala-indo-western", img: bandhaglaImg, count: "02", tagline: "The royal silhouette" },
     { id: "indo-western", name: "Indo-Western", slug: "bandhagala-indo-western", img: indoWesternImg, count: "03", tagline: "Blending heritage and modernity" },
-    { id: "nehru-jackets", name: "Nehru Jackets", slug: "jawahar-jackets", img: nehruImg, count: "04", tagline: "Atelier tailored accents" },
+    { id: "nehru-jackets", name: "Nehru Jackets", slug: "jawahar-jackets", img: nehruImg, count: "04", tagline: "Studio tailored accents" },
     { id: "suits", name: "Suits", slug: "suits", img: suitImg, count: "05", tagline: "Sharp, bespoke cuts" },
     { id: "kurtas", name: "Kurtas & Ethnic", slug: "kurta-sets", img: kurtaImg, count: "06", tagline: "Quiet luxury in pure silk" },
 ];

@@ -32,13 +32,13 @@ function AnimatedCounter({ target, label }) {
     );
 }
 
-export default function Atelier() {
+export default function Studio() {
     return (
         <div className="bg-[var(--bone)]">
             <section
-                id="atelier"
+                id="studio"
                 className="relative min-h-screen w-full flex flex-col pt-[76px] sm:pt-[84px] lg:pt-[92px] pb-12 px-6 sm:px-10 lg:pb-5 lg:px-14 py-8 lg:py-0"
-                data-testid="atelier-section"
+                data-testid="studio-section"
             >
             <div className="max-w-[1500px] mx-auto w-full flex-1 flex flex-col justify-center py-6 lg:py-0">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -46,18 +46,18 @@ export default function Atelier() {
                         <div className="relative aspect-[4/5] lg:aspect-auto lg:h-[65vh] overflow-hidden border border-[var(--hairline-strong)]">
                             <img
                                 src={WARDROBE_DATA.suits.looks[3]?.coverImg}
-                                alt="Atelier Details"
+                                alt="Studio Details"
                                 className="w-full h-full object-cover object-top"
                             />
                             <div className="absolute top-6 left-6 right-6 flex items-center justify-between text-[var(--bone)]">
-                                <p className="eyebrow !text-[var(--champagne)]">The Atelier</p>
+                                <p className="eyebrow !text-[var(--champagne)]">The Studio</p>
                                 <p className="font-luxe text-[11px] tracking-[0.32em] uppercase">
                                     Delhi Flagship
                                 </p>
                             </div>
                         </div>
                     </ScrollReveal>
-
+ 
                     <div>
                         <ScrollReveal variant="fade-up">
                             <p className="eyebrow mb-6">A single hand</p>
@@ -66,7 +66,7 @@ export default function Atelier() {
                                 <span className="font-italic-serif italic">from start to finish.</span>
                             </h2>
                         </ScrollReveal>
-
+ 
                         <ScrollReveal variant="fade-up" delay={0.15}>
                             <div className="grid grid-cols-3 gap-6 border-y border-[var(--hairline-strong)] py-7 mb-5">
                                 <AnimatedCounter target="08" label="weeks" />
@@ -74,26 +74,26 @@ export default function Atelier() {
                                 <AnimatedCounter target="28" label="measurements" />
                             </div>
                         </ScrollReveal>
-
+ 
                         <ScrollReveal variant="fade-up" delay={0.25}>
                             <p className="text-[var(--ink-soft)] leading-relaxed mb-5 max-w-lg">
                                 Begin your private appointment with our Master Tailor in
                                 Delhi — by invitation, always. We sketch
                                 in your story; the karigar gives it form.
                             </p>
-
+ 
                             <div className="flex flex-wrap items-center gap-8">
                                 <Link
                                     to="/appointment"
                                     className="hairline-link"
-                                    data-testid="atelier-book"
+                                    data-testid="studio-book"
                                 >
                                     Book Appointment <span aria-hidden>→</span>
                                 </Link>
                                 <Link
                                     to="/#manifesto"
                                     className="text-[11px] uppercase tracking-[0.32em] font-luxe text-[var(--ink-soft)] hover:text-[var(--ink)] transition"
-                                    data-testid="atelier-house"
+                                    data-testid="studio-house"
                                 >
                                     The House
                                 </Link>

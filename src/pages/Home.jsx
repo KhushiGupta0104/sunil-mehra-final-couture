@@ -9,7 +9,7 @@ import AtelierShowcase from "@/components/wardrobe/AtelierShowcase";
 import Designer from "@/components/sections/Designer";
 import Manifesto from "@/components/sections/Manifesto";
 import VerticalVideoTriptych from "@/components/shared/VerticalVideoTriptych";
-import Salons from "@/components/sections/Salons";
+import StoreSection from "@/components/sections/Salons";
 
 const Home = () => {
     return (
@@ -22,11 +22,11 @@ const Home = () => {
             <HorizontalMediaScroll />
             <SectionDivider variant="monogram" className="py-4" />
             <AtelierShowcase />
+            <VerticalVideoTriptych />
             <Designer />
             <SectionDivider variant="dot" className="py-4" />
             <Manifesto />
-            <VerticalVideoTriptych />
-            <Salons />
+            <StoreSection />
         </PageLayout>
     );
 };

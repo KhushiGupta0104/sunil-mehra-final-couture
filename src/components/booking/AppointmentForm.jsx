@@ -69,7 +69,7 @@ export default function AppointmentForm() {
                         <div>
                             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-[var(--bone)] leading-[1.1]">
                                 Step into the <br />
-                                <span className="font-italic-serif italic text-[var(--champagne)]">Atelier.</span>
+                                <span className="font-italic-serif italic text-[var(--champagne)]">Studio.</span>
                             </h2>
                         </div>
                         <div>
@@ -80,13 +80,13 @@ export default function AppointmentForm() {
                         <div>
                             <div className="flex items-center gap-8 pt-4">
                                 <div className="space-y-1">
-                                    <p className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[rgba(250,246,239,0.4)]">Flagship Salon</p>
-                                    <p className="text-xs text-[var(--bone)]">14 Sundar Nagar Market,<br/>New Delhi 110003</p>
+                                    <p className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[rgba(250,246,239,0.4)]">Flagship Store</p>
+                                    <p className="text-xs text-[var(--bone)]">M-66 GK 1, M block market,<br/>New Delhi 110048</p>
                                 </div>
                                 <div className="w-px h-10 bg-[rgba(250,246,239,0.1)]"></div>
                                 <div className="space-y-1">
                                     <p className="font-luxe text-[9px] uppercase tracking-[0.3em] text-[rgba(250,246,239,0.4)]">Contact</p>
-                                    <p className="text-xs text-[var(--bone)]">+91 11 4150 1484<br/>atelier@sunilmehra.com</p>
+                                    <p className="text-xs text-[var(--bone)]">+91 98731 73456<br/>sunilmehragk1@gmail.com</p>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ export default function AppointmentForm() {
                                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 13l4 4L19 7"></path></svg>
                                     </div>
                                     <h3 className="font-display text-3xl text-[var(--bone)]">Request Received</h3>
-                                    <p className="text-sm text-[rgba(250,246,239,0.6)] font-light max-w-xs">Our atelier concierges will contact you shortly to confirm your private appointment.</p>
+                                    <p className="text-sm text-[rgba(250,246,239,0.6)] font-light max-w-xs">Our studio concierges will contact you shortly to confirm your private appointment.</p>
                                 </motion.div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
