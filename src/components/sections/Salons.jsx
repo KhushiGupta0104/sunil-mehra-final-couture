@@ -97,7 +97,7 @@ export default function Salons() {
                                         Hours & Access
                                     </p>
                                     <p className="text-xs text-[var(--ink-soft)] mt-2 font-body tracking-wide">
-                                        Mon–Sat · 11:00 AM – 7:30 PM (Tuesdays Closed)
+                                        Mon–Sun · 11:00 AM – 7:30 PM (Tuesdays Closed)
                                     </p>
                                     <p className="text-xs text-[var(--bronze)] mt-1 font-italic-serif">
                                         By invitation or appointment

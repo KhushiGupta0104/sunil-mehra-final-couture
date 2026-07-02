@@ -17,7 +17,7 @@ const MENU = [
 
 const META = [
     { label: "Delhi · Flagship", sub: "M-66 GK 1, M block market, New Delhi-110048" },
-    { label: "Hours & Access", sub: "Mon–Sat, 11 AM – 7:30 PM (Tuesdays Closed)" },
+    { label: "Hours & Access", sub: "Mon–Sun, 11 AM – 7:30 PM (Tuesdays Closed)" },
     { label: "Concierge & Fittings", sub: "+91 98731 73456" },
 ];
 
