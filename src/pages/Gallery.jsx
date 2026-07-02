@@ -94,7 +94,7 @@ export default function Gallery() {
                     <div>
                         <span className="eyebrow block mb-4">Friends of the House</span>
                         <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-light tracking-tight text-[var(--ink)]">
-                            The <span className="font-italic-serif italic">Society.</span>
+                            Faces of <span className="font-italic-serif italic">SM.</span>
                         </h2>
                     </div>
                     <p className="font-italic-serif text-sm text-[var(--ink-soft)] max-w-xs md:text-right">

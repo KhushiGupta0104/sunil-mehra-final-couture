@@ -87,7 +87,7 @@ export default function Salons() {
                                         href="https://maps.app.goo.gl/kubpUDgiKZ1HwBo77" 
                                         target="_blank" 
                                         rel="noopener noreferrer"
-                                        className="inline-block mt-4 text-[9px] tracking-[0.25em] font-luxe uppercase text-[var(--bronze)] hover:text-[var(--ink)] transition-colors border-b border-[var(--bronze)] pb-0.5"
+                                        className="inline-block mt-4 text-xs sm:text-[13px] tracking-[0.25em] font-luxe uppercase text-[var(--bronze)] hover:text-[var(--ink)] transition-colors border-b border-[var(--bronze)] pb-0.5"
                                     >
                                         View on Map · Directions
                                     </a>
@@ -97,10 +97,10 @@ export default function Salons() {
                                         Hours & Access
                                     </p>
                                     <p className="text-xs text-[var(--ink-soft)] mt-2 font-body tracking-wide">
-                                        Mon–Sat · 11:00 AM – 7:30 PM
+                                        Mon–Sat · 11:00 AM – 7:30 PM (Tuesdays Closed)
                                     </p>
                                     <p className="text-xs text-[var(--bronze)] mt-1 font-italic-serif">
-                                        Strictly by invitation or private appointment
+                                        By invitation or appointment
                                     </p>
                                 </div>
                             </div>

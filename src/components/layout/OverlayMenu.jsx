@@ -8,7 +8,7 @@ const MotionLink = motion.create(Link);
 const MENU = [
     { label: "Couture", hover: "the studio", to: "/studio" },
     { label: "The Wardrobe", hover: "six chapters", to: "/wardrobe" },
-    { label: "Gallery", hover: "celebrity style", to: "/gallery" },
+    { label: "Faces of SM", hover: "celebrity style", to: "/gallery" },
     { label: "About Us", hover: "about sunil mehra", to: "/#designer" },
     { label: "Lookbook", hover: "stories in cloth", to: "/editorial" },
     { label: "Store", hover: "by invitation", to: "/#store" },
@@ -17,7 +17,7 @@ const MENU = [
 
 const META = [
     { label: "Delhi · Flagship", sub: "M-66 GK 1, M block market, New Delhi-110048" },
-    { label: "Hours & Access", sub: "Mon–Sat, 11 AM – 7:30 PM" },
+    { label: "Hours & Access", sub: "Mon–Sat, 11 AM – 7:30 PM (Tuesdays Closed)" },
     { label: "Concierge & Fittings", sub: "+91 98731 73456" },
 ];
 

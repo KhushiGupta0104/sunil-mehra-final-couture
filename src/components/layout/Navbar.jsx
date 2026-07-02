@@ -121,7 +121,7 @@ export default function Navbar({ onMenuOpen, menuOpen, onSearchOpen }) {
                             isActive("/gallery") ? "text-[var(--bronze)]" : ""
                         }`}
                     >
-                        Gallery
+                        Faces of SM
                         {isActive("/gallery") && (
                             <span className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[var(--bronze)]" />
                         )}
