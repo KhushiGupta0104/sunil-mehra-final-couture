@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from "react";
 
 const VIDEOS = [
-    { id: 1, src: "/SM 3.mp4", startTime: 0 },
-    { id: 2, src: "/REEL 3 SM C2.mp4", startTime: 0 },
+    { id: 1, src: "/SM 3.mp4", startTime: 0, endTime: 14 },
+    { id: 2, src: "/REEL 3 SM C2.mp4", startTime: 0, endTime: 26 },
     { id: 3, src: "/Video 14.mp4", startTime: 0, endTime: 26 }, // We can adjust these start times as needed
 ];
 

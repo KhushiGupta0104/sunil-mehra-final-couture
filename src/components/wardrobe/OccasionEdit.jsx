@@ -2,12 +2,21 @@ import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-function OccasionVideo({ src }) {
+function OccasionVideo({ src, endTime }) {
     const videoRef = useRef(null);
 
     useEffect(() => {
         const video = videoRef.current;
         if (!video) return;
+
+        const handleTimeUpdate = () => {
+            if (endTime !== undefined && video.currentTime >= endTime) {
+                video.currentTime = 0;
+                video.play().catch(err => console.log("Video loop play interrupted", err));
+            }
+        };
+
+        video.addEventListener("timeupdate", handleTimeUpdate);
 
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -23,8 +32,9 @@ function OccasionVideo({ src }) {
         observer.observe(video);
         return () => {
             observer.unobserve(video);
+            video.removeEventListener("timeupdate", handleTimeUpdate);
         };
-    }, []);
+    }, [src, endTime]);
 
     return (
         <video
@@ -46,6 +56,7 @@ export default function OccasionEdit() {
             subtitle: "Where joy wears its finest",
             video: "/REEL 3 SM C2.mp4",
             link: "/wardrobe/kurta-sets",
+            endTime: 26,
         },
         {
             id: "sangeet",
@@ -91,7 +102,7 @@ export default function OccasionEdit() {
                     >
                         {/* Video Layer */}
                         <div className="absolute inset-0 w-full h-full bg-[var(--bone)] overflow-hidden">
-                            <OccasionVideo src={occ.video} />
+                            <OccasionVideo src={occ.video} endTime={occ.endTime} />
                         </div>
 
                         {/* Vignette + Gradient for drama */}
