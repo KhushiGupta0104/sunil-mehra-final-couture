@@ -1,9 +1,26 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function CinematicWideReel() {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(true);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        const handleTimeUpdate = () => {
+            if (video.currentTime >= 26) {
+                video.currentTime = 0;
+                video.play().catch(err => console.log("Video loop play interrupted", err));
+            }
+        };
+
+        video.addEventListener("timeupdate", handleTimeUpdate);
+        return () => {
+            video.removeEventListener("timeupdate", handleTimeUpdate);
+        };
+    }, []);
 
     const togglePlay = () => {
         if (videoRef.current) {

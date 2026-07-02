@@ -3,10 +3,10 @@ import React, { useRef, useEffect } from "react";
 const VIDEOS = [
     { id: 1, src: "/SM 3.mp4", startTime: 0 },
     { id: 2, src: "/REEL 3 SM C2.mp4", startTime: 0 },
-    { id: 3, src: "/Video 14.mp4", startTime: 0 }, // We can adjust these start times as needed
+    { id: 3, src: "/Video 14.mp4", startTime: 0, endTime: 26 }, // We can adjust these start times as needed
 ];
 
-function TriptychVideo({ src, startTime = 0 }) {
+function TriptychVideo({ src, startTime = 0, endTime }) {
     const videoRef = useRef(null);
 
     useEffect(() => {
@@ -29,8 +29,9 @@ function TriptychVideo({ src, startTime = 0 }) {
         }
 
         const handleTimeUpdate = () => {
-            // Loop back to startTime instead of 0
-            if (video.currentTime >= video.duration - 0.2) {
+            // Loop back to startTime instead of 0 or when it exceeds endTime
+            const limit = endTime !== undefined ? endTime : video.duration - 0.2;
+            if (video.currentTime >= limit) {
                 video.currentTime = startTime;
                 video.play().catch(err => console.log("Video loop play interrupted", err));
             }
@@ -58,7 +59,7 @@ function TriptychVideo({ src, startTime = 0 }) {
             video.removeEventListener("loadedmetadata", setInitialTime);
             video.removeEventListener("timeupdate", handleTimeUpdate);
         };
-    }, [src, startTime]);
+    }, [src, startTime, endTime]);
 
     return (
         <video
@@ -82,7 +83,7 @@ export default function VerticalVideoTriptych() {
                             index !== 2 ? 'border-b md:border-b-0 md:border-r border-white/20' : ''
                         }`}
                     >
-                        <TriptychVideo src={video.src} startTime={video.startTime} />
+                        <TriptychVideo src={video.src} startTime={video.startTime} endTime={video.endTime} />
                         {/* Subtle overlay gradient at bottom */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
                     </div>
