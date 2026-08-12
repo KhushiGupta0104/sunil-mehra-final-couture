@@ -50,11 +50,33 @@ div[id="request-form"] {
     color: var(--bone);
 }
 
+/* ============ CUSTOM FONTS ============ */
+@font-face {
+    font-family: "Netsera";
+    src: url("/fonts/Netsera-Regular.woff2") format("woff2"),
+         url("/fonts/Netsera-Regular.woff") format("woff"),
+         url("/fonts/Netsera-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Netsera";
+    src: url("/fonts/Netsera-Italic.woff2") format("woff2"),
+         url("/fonts/Netsera-Italic.woff") format("woff"),
+         url("/fonts/Netsera-Italic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ============ FONT UTILITIES ============ */
 .font-display {
-    font-family: "Mr De Haviland", cursive !important;
+    font-family: "Netsera", "Bodoni Moda", "Playfair Display", "Italiana", serif !important;
     font-weight: 400 !important;
-    letter-spacing: 0 !important;
-    text-transform: none !important;
+    letter-spacing: 0.02em !important;
+    text-transform: none !important; /* Allow markup to control casing */
 }
 .font-luxe {
     font-family: "Jost", "Tenor Sans", sans-serif;
@@ -83,7 +105,7 @@ div[id="request-form"] {
     padding: 0 0.1em;
 }
 
-/* Prevent double-scaling on nested accents inside already calligraphic headers */
+/* Prevent double-scaling on nested accents inside already styled headers */
 .h-display .font-italic-serif,
 .font-display .font-italic-serif,
 h1 .font-italic-serif,
@@ -91,12 +113,12 @@ h2 .font-italic-serif,
 h3 .font-italic-serif,
 h4 .font-italic-serif {
     font-family: inherit !important;
-    font-style: inherit !important;
-    font-size: 1em !important;
+    font-style: italic !important;
+    font-size: 1.05em !important;
     line-height: inherit !important;
     vertical-align: baseline !important;
     display: inline !important;
-    padding: 0 !important;
+    padding: 0 0.05em !important;
 }
 
 /* ============ EYEBROW ============ */
@@ -377,24 +399,24 @@ h4 .font-italic-serif {
 
 /* ============ SECTION TYPE ============ */
 .h-display {
-    font-family: "Mr De Haviland", cursive !important;
+    font-family: "Netsera", "Bodoni Moda", "Playfair Display", "Italiana", serif !important;
     font-weight: 400 !important;
-    line-height: 0.95 !important;
-    letter-spacing: 0 !important;
-    font-size: clamp(3.2rem, 7vw + 1rem, 6.5rem) !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.005em !important;
+    font-size: clamp(2.1rem, 4.5vw + 0.8rem, 4.2rem) !important;
     text-transform: none !important;
 }
 
-/* Ensure standard h1, h2, h3 and occasion-edit custom headings use Mr De Haviland for editorial script styling */
+/* Ensure standard h1, h2, h3 and occasion-edit custom headings use Netsera for editorial script styling */
 h1.font-italic-serif,
 h2.font-italic-serif,
 h3.font-italic-serif {
-    font-family: "Mr De Haviland", cursive !important;
-    font-style: normal !important;
+    font-family: "Netsera", "Cormorant Garamond", serif !important;
+    font-style: italic !important;
     text-transform: none !important;
-    font-size: clamp(2.8rem, 5.5vw + 1rem, 5.8rem) !important;
-    letter-spacing: 0 !important;
-    line-height: 0.95 !important;
+    font-size: clamp(2.1rem, 4.5vw + 0.8rem, 4.2rem) !important;
+    letter-spacing: 0.01em !important;
+    line-height: 1.25 !important;
 }
 .h-luxe {
     font-family: "Jost", "Tenor Sans", sans-serif;
