@@ -93,7 +93,7 @@ export default function Gallery() {
                 <ScrollReveal variant="fade-up" className="mb-16 lg:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6 shrink-0">
                     <div>
                         <span className="eyebrow block mb-4">Friends of the House</span>
-                        <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-light tracking-tight text-[var(--ink)]">
+                        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-[var(--ink)]">
                             Faces of <span className="font-italic-serif italic">SM.</span>
                         </h2>
                     </div>
@@ -114,19 +114,19 @@ export default function Gallery() {
                                 onMouseEnter={() => setHoveredCeleb(celeb)}
                             >
                                 {/* Desktop List Item */}
-                                <div className="hidden lg:flex items-center gap-6 py-6 cursor-pointer transition-all duration-500 hover:pl-6 border-b border-[var(--hairline)]">
+                                <div className="hidden lg:flex items-center gap-6 py-5 cursor-pointer transition-all duration-500 hover:pl-6 border-b border-[var(--hairline)]">
                                     <span className={`font-luxe text-xs uppercase tracking-widest transition-colors duration-500 w-8 ${hoveredCeleb?.id === celeb.id ? 'text-[var(--bronze)]' : 'text-[var(--muted)]'}`}>
                                         {String(idx + 1).padStart(2, '0')}
                                     </span>
-                                    <h3 className={`font-display text-3xl xl:text-5xl tracking-tight uppercase leading-[1.1] transition-colors duration-500 ${hoveredCeleb?.id === celeb.id ? 'text-[var(--ink)]' : 'text-[var(--muted)]'}`}>
+                                    <h3 className={`font-display text-2xl xl:text-3xl tracking-tight uppercase leading-[1.1] transition-colors duration-500 ${hoveredCeleb?.id === celeb.id ? 'text-[var(--ink)]' : 'text-[var(--muted)]'}`}>
                                         {celeb.celebrity}
                                     </h3>
                                 </div>
 
                                 {/* Mobile Accordion/Card Item */}
-                                <div className="lg:hidden flex flex-col gap-4">
+                                <div className="lg:hidden flex flex-col gap-4 max-w-[340px] mx-auto w-full">
                                     <div className="flex items-center justify-between">
-                                        <h3 className="font-display text-3xl sm:text-4xl uppercase leading-[1.1] text-[var(--ink)]">
+                                        <h3 className="font-display text-xl sm:text-2xl uppercase leading-[1.1] text-[var(--ink)]">
                                             {celeb.celebrity}
                                         </h3>
                                         <span className="font-luxe text-[9px] uppercase tracking-widest text-[var(--bronze)]">
@@ -134,7 +134,7 @@ export default function Gallery() {
                                         </span>
                                     </div>
                                     
-                                    <div className="relative w-full aspect-[4/5] overflow-hidden bg-[var(--ink)]">
+                                    <div className="relative w-full aspect-[4/5] overflow-hidden bg-[var(--ink)] border border-[var(--hairline)]">
                                         <img 
                                             src={celeb.src} 
                                             alt={celeb.celebrity}
@@ -168,7 +168,7 @@ export default function Gallery() {
 
                     {/* Right: The Static Image Container (Desktop Only) */}
                     <div className="hidden lg:block lg:col-span-5 lg:col-start-8 relative lg:sticky lg:top-[20vh]">
-                        <div className="relative w-full max-w-[450px] ml-auto aspect-[3/4] overflow-hidden bg-[var(--ink)] border border-[var(--hairline)] shadow-xl">
+                        <div className="relative w-full max-w-[380px] ml-auto aspect-[3/4] overflow-hidden bg-[var(--ink)] border border-[var(--hairline)] shadow-xl">
                             <AnimatePresence mode="wait">
                                 {hoveredCeleb && (
                                     <motion.div
