@@ -60,7 +60,7 @@ function CategoryCard({ c }) {
             className="group block w-full relative"
             data-testid={`wardrobe-card-${c.slug}`}
         >
-            <div className="relative w-full overflow-hidden aspect-[3/4] bg-[var(--bone)]">
+            <div className="relative w-full overflow-hidden aspect-[4/5] bg-[var(--bone)]">
                 <img
                     src={c.img}
                     alt={c.name}
@@ -70,7 +70,7 @@ function CategoryCard({ c }) {
             </div>
             
             {/* Decoupled Text Below Image */}
-            <div className="mt-5 flex justify-between items-start">
+            <div className="mt-3 flex justify-between items-start">
                 <div>
                     <h3 className="font-luxe text-xs uppercase tracking-[0.2em] text-[var(--ink)] mb-1">
                         {c.name}
@@ -92,7 +92,7 @@ export default function Wardrobe() {
         <div className="bg-[var(--bone)] text-[var(--ink)] min-h-screen">
             {/* ═══ CINEMATIC HERO HEADER ═══ */}
             <section
-                className="relative h-[60vh] sm:h-[70vh] lg:h-[80vh] w-full flex items-center justify-center overflow-hidden"
+                className="relative h-[40vh] sm:h-[45vh] lg:h-[50vh] w-full flex items-center justify-center overflow-hidden"
                 data-testid="wardrobe-hero"
             >
                 <div className="absolute inset-0 w-full h-full">
@@ -126,12 +126,12 @@ export default function Wardrobe() {
             {/* ═══ MINIMALIST GRID ═══ */}
             <section
                 id="wardrobe"
-                className="pt-20 sm:pt-32 pb-24 sm:pb-32 lg:pb-40 px-6 sm:px-10 lg:px-14"
+                className="pt-10 sm:pt-14 pb-16 sm:pb-24 px-6 sm:px-10 lg:px-14"
                 data-testid="wardrobe-section"
             >
-                <div className="max-w-[1500px] mx-auto w-full">
+                <div className="max-w-[1100px] mx-auto w-full">
                     {/* Clean 3-column grid on desktop, 2 on tablet, 1 on mobile */}
-                    <StaggerReveal staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 lg:gap-x-12 lg:gap-y-20">
+                    <StaggerReveal staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 lg:gap-x-8 lg:gap-y-12">
                         {CATEGORIES.map((c, index) => (
                             <StaggerItem 
                                 key={c.no} 

@@ -69,7 +69,7 @@ export default function OccasionEdit() {
             id: "wedding",
             title: "Wedding",
             subtitle: "Where tradition meets splendor",
-            video: "/REEL 10 SM C2.mp4",
+            video: "/Video 9 .mp4",
             link: "/wardrobe/bandhagala-indo-western",
         },
     ];

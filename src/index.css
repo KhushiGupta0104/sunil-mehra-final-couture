@@ -69,6 +69,26 @@ div[id="request-form"] {
     font-style: italic;
 }
 
+/* Elegant calligraphic signature font for heading accents */
+.h-display .font-italic-serif,
+.font-display .font-italic-serif,
+h1 .font-italic-serif,
+h2 .font-italic-serif,
+h3 .font-italic-serif,
+h4 .font-italic-serif,
+.font-script {
+    font-family: "Mr De Haviland", cursive !important;
+    font-style: normal !important;
+    text-transform: none !important;
+    font-size: 1.55em !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    line-height: 0.7 !important;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 0.1em;
+}
+
 /* ============ EYEBROW ============ */
 .eyebrow {
     font-family: "Jost", "Manrope", sans-serif;
