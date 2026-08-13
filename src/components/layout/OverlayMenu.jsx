@@ -40,8 +40,8 @@ export default function OverlayMenu({ open, onClose }) {
                     data-testid="overlay-menu"
                 >
                     {/* LEFT — links */}
-                    <div className="relative flex flex-col h-full px-6 sm:px-10 lg:px-16 py-8 sm:py-10 lg:py-12 overflow-y-auto scrollbar-none">
-                        <div className="flex items-center justify-between shrink-0 mb-6">
+                    <div className="relative flex flex-col h-full justify-between px-6 sm:px-10 lg:px-16 py-6 sm:py-8 lg:py-10 overflow-y-auto scrollbar-none">
+                        <div className="flex items-center justify-between shrink-0 mb-4 sm:mb-6">
                             <span className="eyebrow !text-[var(--champagne)]">Index — Maison</span>
                             <span
                                 className="hairline-link cursor-pointer !text-[var(--bone)] !border-[var(--bone)]"
@@ -53,7 +53,7 @@ export default function OverlayMenu({ open, onClose }) {
                             </span>
                         </div>
 
-                        <nav className="my-auto flex flex-col gap-1 sm:gap-2 py-6 shrink-0">
+                        <nav className="flex flex-col gap-1 sm:gap-1.5 lg:gap-2 py-4 sm:py-6 justify-center flex-grow shrink-0 min-h-[320px] sm:min-h-[400px]">
                             {MENU.map((m, i) => (
                                 <MotionLink
                                     key={m.label}
@@ -66,7 +66,7 @@ export default function OverlayMenu({ open, onClose }) {
                                         delay: 0.35 + i * 0.06,
                                         ease: [0.16, 1, 0.3, 1],
                                     }}
-                                    className="menu-link h-display text-[6.5vw] sm:text-[5vw] lg:text-[3.2vw] py-1"
+                                    className="menu-link h-display text-[26px] sm:text-[32px] lg:text-[4vh] xl:text-[4.2vh] py-0.5 sm:py-1"
                                     data-testid={`menu-link-${m.label.toLowerCase().replace(/\s+/g, "-")}`}
                                 >
                                     <span className="menu-text">{m.label}</span>
@@ -79,7 +79,7 @@ export default function OverlayMenu({ open, onClose }) {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.9, duration: 0.8 }}
-                            className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 border-t border-[var(--hairline)] pt-6 shrink-0"
+                            className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 border-t border-[var(--hairline)] pt-4 sm:pt-6 shrink-0"
                         >
                             {META.map((m) => (
                                 <div key={m.label} className="text-xs">

@@ -104,7 +104,11 @@ for (const [catId, prefixesObj] of Object.entries(grouped)) {
             } else {
                 const prev = currentCluster[currentCluster.length - 1];
                 const gap = imgs[i].num - prev.num;
-                if (gap > 15) {
+                let threshold = 15;
+                if (prefix === 'IMG') {
+                    threshold = 20;
+                }
+                if (gap > threshold) {
                     clusters.push(currentCluster);
                     currentCluster = [imgs[i]];
                 } else {
@@ -115,21 +119,18 @@ for (const [catId, prefixesObj] of Object.entries(grouped)) {
         if (currentCluster.length > 0) clusters.push(currentCluster);
         
         for (const cluster of clusters) {
-            for (let i = 0; i < cluster.length; i += 8) {
-                const chunk = cluster.slice(i, i + 8);
-                const subcat = chunk[0].subcat;
-                const subcatId = subcat ? subcat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') : null;
-                const lookName = subcat ? `${subcat} - Look ${lookIndex}` : `${prefix.replace(/_/g, ' ')} - Look ${lookIndex}`;
-                
-                newDataString += `            { \n`;
-                newDataString += `                id: "look_${catId.replace(/-/g, '')}_${lookIndex}",\n`;
-                newDataString += `                name: "${lookName}",\n`;
-                if (subcatId) newDataString += `                subcat: "${subcatId}",\n`;
-                newDataString += `                coverImg: ${chunk[0].varName},\n`;
-                newDataString += `                gallery: [${chunk.map(img => img.varName).join(', ')}]\n`;
-                newDataString += `            },\n`;
-                lookIndex++;
-            }
+            const subcat = cluster[0].subcat;
+            const subcatId = subcat ? subcat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') : null;
+            const lookName = subcat ? `${subcat} - Look ${lookIndex}` : `${prefix.replace(/_/g, ' ')} - Look ${lookIndex}`;
+            
+            newDataString += `            { \n`;
+            newDataString += `                id: "look_${catId.replace(/-/g, '')}_${lookIndex}",\n`;
+            newDataString += `                name: "${lookName}",\n`;
+            if (subcatId) newDataString += `                subcat: "${subcatId}",\n`;
+            newDataString += `                coverImg: ${cluster[0].varName},\n`;
+            newDataString += `                gallery: [${cluster.map(img => img.varName).join(', ')}]\n`;
+            newDataString += `            },\n`;
+            lookIndex++;
         }
     }
     newDataString += `        ]\n`;

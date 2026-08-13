@@ -69,7 +69,7 @@ for (const [catId, prefixes] of Object.entries(grouped)) {
                 const prev = currentCluster[currentCluster.length - 1];
                 const gap = imgs[i].num - prev.num;
                 // Gap logic: if gap > 50, start new look
-                if (gap > 50) {
+                if (gap > 20) {
                     clusters.push(currentCluster);
                     currentCluster = [imgs[i]];
                 } else {

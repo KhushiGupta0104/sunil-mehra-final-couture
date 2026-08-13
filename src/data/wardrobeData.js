@@ -648,191 +648,173 @@ export const WARDROBE_DATA = {
                 id: "look_bandhagalaindowestern_12",
                 name: "IMG - Look 12",
                 coverImg: Img_5_0,
-                gallery: [Img_5_0]
+                gallery: [Img_5_0, Img_5_1, Img_5_2]
             },
             { 
                 id: "look_bandhagalaindowestern_13",
                 name: "IMG - Look 13",
-                coverImg: Img_5_1,
-                gallery: [Img_5_1]
-            },
-            { 
-                id: "look_bandhagalaindowestern_14",
-                name: "IMG - Look 14",
-                coverImg: Img_5_2,
-                gallery: [Img_5_2]
-            },
-            { 
-                id: "look_bandhagalaindowestern_15",
-                name: "IMG - Look 15",
                 coverImg: Img_45_0,
                 gallery: [Img_45_0, Img_5_3, Img_101_0]
             },
             { 
-                id: "look_bandhagalaindowestern_16",
-                name: "IMG - Look 16",
+                id: "look_bandhagalaindowestern_14",
+                name: "IMG - Look 14",
                 coverImg: Img_6_0,
-                gallery: [Img_6_0]
+                gallery: [Img_6_0, Img_6_1, Img_102_0]
             },
             { 
-                id: "look_bandhagalaindowestern_17",
-                name: "IMG - Look 17",
-                coverImg: Img_6_1,
-                gallery: [Img_6_1, Img_102_0]
-            },
-            { 
-                id: "look_bandhagalaindowestern_18",
-                name: "Sunil Mehra - Look 18",
+                id: "look_bandhagalaindowestern_15",
+                name: "Sunil Mehra - Look 15",
                 coverImg: Img_8_0,
                 gallery: [Img_8_0]
             },
             { 
-                id: "look_bandhagalaindowestern_19",
-                name: "Sunil Mehra - Look 19",
+                id: "look_bandhagalaindowestern_16",
+                name: "Sunil Mehra - Look 16",
                 coverImg: Img_47_0,
                 gallery: [Img_47_0, Img_103_0]
             },
             { 
-                id: "look_bandhagalaindowestern_20",
-                name: "Sunil Mehra - Look 20",
+                id: "look_bandhagalaindowestern_17",
+                name: "Sunil Mehra - Look 17",
                 coverImg: Img_47_1,
                 gallery: [Img_47_1, Img_47_2, Img_47_3]
             },
             { 
-                id: "look_bandhagalaindowestern_21",
-                name: "Sunil Mehra - Look 21",
+                id: "look_bandhagalaindowestern_18",
+                name: "Sunil Mehra - Look 18",
                 coverImg: Img_47_4,
                 gallery: [Img_47_4, Img_9_0]
             },
             { 
-                id: "look_bandhagalaindowestern_22",
-                name: "Sunil Mehra - Look 22",
+                id: "look_bandhagalaindowestern_19",
+                name: "Sunil Mehra - Look 19",
                 coverImg: Img_47_5,
                 gallery: [Img_47_5]
             },
             { 
-                id: "look_bandhagalaindowestern_23",
-                name: "Sunil Mehra - Look 23",
+                id: "look_bandhagalaindowestern_20",
+                name: "Sunil Mehra - Look 20",
                 coverImg: Img_48_0,
                 gallery: [Img_48_0, Img_104_0]
             },
             { 
-                id: "look_bandhagalaindowestern_24",
-                name: "Sunil Mehra - Look 24",
+                id: "look_bandhagalaindowestern_21",
+                name: "Sunil Mehra - Look 21",
                 coverImg: Img_10_0,
                 gallery: [Img_10_0]
             },
             { 
-                id: "look_bandhagalaindowestern_25",
-                name: "Sunil Mehra - Look 25",
+                id: "look_bandhagalaindowestern_22",
+                name: "Sunil Mehra - Look 22",
                 coverImg: Img_11_0,
                 gallery: [Img_11_0, Img_11_1, Img_49_0]
             },
             { 
-                id: "look_bandhagalaindowestern_26",
-                name: "Sunil Mehra - Look 26",
+                id: "look_bandhagalaindowestern_23",
+                name: "Sunil Mehra - Look 23",
                 coverImg: Img_11_2,
                 gallery: [Img_11_2]
             },
             { 
-                id: "look_bandhagalaindowestern_27",
-                name: "Sunil Mehra - Look 27",
+                id: "look_bandhagalaindowestern_24",
+                name: "Sunil Mehra - Look 24",
                 coverImg: Img_50_0,
                 gallery: [Img_50_0, Img_12_0, Img_12_1]
             },
             { 
-                id: "look_bandhagalaindowestern_28",
-                name: "Sunil Mehra - Look 28",
+                id: "look_bandhagalaindowestern_25",
+                name: "Sunil Mehra - Look 25",
                 coverImg: Img_12_2,
                 gallery: [Img_12_2, Img_12_3, Img_50_1]
             },
             { 
-                id: "look_bandhagalaindowestern_29",
-                name: "Sunil Mehra - Look 29",
+                id: "look_bandhagalaindowestern_26",
+                name: "Sunil Mehra - Look 26",
                 coverImg: Img_50_2,
                 gallery: [Img_50_2, Img_12_4, Img_50_3]
             },
             { 
-                id: "look_bandhagalaindowestern_30",
-                name: "Sunil Mehra - Look 30",
+                id: "look_bandhagalaindowestern_27",
+                name: "Sunil Mehra - Look 27",
                 coverImg: Img_50_4,
                 gallery: [Img_50_4, Img_105_0, Img_12_5]
             },
             { 
-                id: "look_bandhagalaindowestern_31",
-                name: "Sunil Mehra - Look 31",
+                id: "look_bandhagalaindowestern_28",
+                name: "Sunil Mehra - Look 28",
                 coverImg: Img_13_0,
                 gallery: [Img_13_0]
             },
             { 
-                id: "look_bandhagalaindowestern_32",
-                name: "Sunil Mehra - Look 32",
+                id: "look_bandhagalaindowestern_29",
+                name: "Sunil Mehra - Look 29",
                 coverImg: Img_106_0,
                 gallery: [Img_106_0]
             },
             { 
-                id: "look_bandhagalaindowestern_33",
-                name: "Sunil Mehra - Look 33",
+                id: "look_bandhagalaindowestern_30",
+                name: "Sunil Mehra - Look 30",
                 coverImg: Img_51_0,
                 gallery: [Img_51_0]
             },
             { 
-                id: "look_bandhagalaindowestern_34",
-                name: "Sunil Mehra - Look 34",
+                id: "look_bandhagalaindowestern_31",
+                name: "Sunil Mehra - Look 31",
                 coverImg: Img_106_1,
                 gallery: [Img_106_1]
             },
             { 
-                id: "look_bandhagalaindowestern_35",
-                name: "Sunil Mehra - Look 35",
+                id: "look_bandhagalaindowestern_32",
+                name: "Sunil Mehra - Look 32",
                 coverImg: Img_51_1,
                 gallery: [Img_51_1, Img_51_2, Img_14_0]
             },
             { 
-                id: "look_bandhagalaindowestern_36",
-                name: "Sunil Mehra - Look 36",
+                id: "look_bandhagalaindowestern_33",
+                name: "Sunil Mehra - Look 33",
                 coverImg: Img_14_1,
                 gallery: [Img_14_1]
             },
             { 
-                id: "look_bandhagalaindowestern_37",
-                name: "Sunil Mehra - Look 37",
+                id: "look_bandhagalaindowestern_34",
+                name: "Sunil Mehra - Look 34",
                 coverImg: Img_15_0,
                 gallery: [Img_15_0]
             },
             { 
-                id: "look_bandhagalaindowestern_38",
-                name: "Sunil Mehra - Look 38",
+                id: "look_bandhagalaindowestern_35",
+                name: "Sunil Mehra - Look 35",
                 coverImg: Img_16_0,
                 gallery: [Img_16_0]
             },
             { 
-                id: "look_bandhagalaindowestern_39",
-                name: "Sunil Mehra - Look 39",
+                id: "look_bandhagalaindowestern_36",
+                name: "Sunil Mehra - Look 36",
                 coverImg: Img_16_1,
                 gallery: [Img_16_1]
             },
             { 
-                id: "look_bandhagalaindowestern_40",
-                name: "Sunil Mehra - Look 40",
+                id: "look_bandhagalaindowestern_37",
+                name: "Sunil Mehra - Look 37",
                 coverImg: Img_52_0,
                 gallery: [Img_52_0]
             },
             { 
-                id: "look_bandhagalaindowestern_41",
-                name: "Sunil Mehra - Look 41",
+                id: "look_bandhagalaindowestern_38",
+                name: "Sunil Mehra - Look 38",
                 coverImg: Img_17_0,
                 gallery: [Img_17_0, Img_17_1]
             },
             { 
-                id: "look_bandhagalaindowestern_42",
-                name: "Tripti - Look 42",
+                id: "look_bandhagalaindowestern_39",
+                name: "Tripti - Look 39",
                 coverImg: Img_18_0,
                 gallery: [Img_18_0, Img_53_0, Img_18_1, Img_18_2, Img_18_3, Img_18_4]
             },
             { 
-                id: "look_bandhagalaindowestern_43",
-                name: "Tripti - Look 43",
+                id: "look_bandhagalaindowestern_40",
+                name: "Tripti - Look 40",
                 coverImg: Img_18_5,
                 gallery: [Img_18_5, Img_18_6, Img_18_7, Img_18_8]
             },
@@ -1588,55 +1570,37 @@ export const WARDROBE_DATA = {
                 id: "look_suits_73",
                 name: "IMG - Look 73",
                 coverImg: Img_110_0,
-                gallery: [Img_110_0]
+                gallery: [Img_110_0, Img_110_1]
             },
             { 
                 id: "look_suits_74",
                 name: "IMG - Look 74",
-                coverImg: Img_110_1,
-                gallery: [Img_110_1]
-            },
-            { 
-                id: "look_suits_75",
-                name: "IMG - Look 75",
                 coverImg: Img_110_2,
                 gallery: [Img_110_2]
             },
             { 
+                id: "look_suits_75",
+                name: "IMG - Look 75",
+                coverImg: Img_111_0,
+                gallery: [Img_111_0, Img_75_0]
+            },
+            { 
                 id: "look_suits_76",
                 name: "IMG - Look 76",
-                coverImg: Img_111_0,
-                gallery: [Img_111_0]
-            },
-            { 
-                id: "look_suits_77",
-                name: "IMG - Look 77",
-                coverImg: Img_75_0,
-                gallery: [Img_75_0]
-            },
-            { 
-                id: "look_suits_78",
-                name: "IMG - Look 78",
                 coverImg: Img_75_1,
                 gallery: [Img_75_1, Img_88_0, Img_112_0]
             },
             { 
-                id: "look_suits_79",
-                name: "IMG - Look 79",
+                id: "look_suits_77",
+                name: "IMG - Look 77",
                 coverImg: Img_112_1,
                 gallery: [Img_112_1, Img_112_2, Img_112_3]
             },
             { 
-                id: "look_suits_80",
-                name: "Tripti - Look 80",
+                id: "look_suits_78",
+                name: "Tripti - Look 78",
                 coverImg: Img_85_0,
-                gallery: [Img_85_0, Img_85_1, Img_85_2, Img_85_3, Img_131_0, Img_131_1, Img_85_4, Img_131_2]
-            },
-            { 
-                id: "look_suits_81",
-                name: "Tripti - Look 81",
-                coverImg: Img_85_5,
-                gallery: [Img_85_5, Img_131_3, Img_85_6]
+                gallery: [Img_85_0, Img_85_1, Img_85_2, Img_85_3, Img_131_0, Img_131_1, Img_85_4, Img_131_2, Img_85_5, Img_131_3, Img_85_6]
             },
         ]
     },
