@@ -107,6 +107,12 @@ for (const [catId, prefixesObj] of Object.entries(grouped)) {
                 let threshold = 15;
                 if (prefix === 'IMG') {
                     threshold = 20;
+                } else if (prefix === '066A') {
+                    threshold = 20;
+                } else if (prefix === 'Sunil_Mehra') {
+                    threshold = 45;
+                } else if (prefix === 'Tripti') {
+                    threshold = 20;
                 }
                 if (gap > threshold) {
                     clusters.push(currentCluster);
